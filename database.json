@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_321b64_35dd74.bin",
-    "count": "0x3C210",
+    "path": "Blob_3239f0_35dd74.bin",
+    "count": "0x3A384",
     "addr": {
-      "us": "0x321B64"
+      "us": "0x3239F0"
     },
     "size": 1
   },
@@ -2900,6 +2900,22 @@
     "count": "0x30",
     "addr": {
       "us": "0x321018"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/zebesian_wall.gfx",
+    "count": "0x400",
+    "addr": {
+      "us": "0x321BEC"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/zebesian_wall.pal",
+    "count": "0x20",
+    "addr": {
+      "us": "0x322BEC"
     },
     "size": 2
   },
