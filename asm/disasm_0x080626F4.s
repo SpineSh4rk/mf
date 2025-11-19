@@ -1800,7 +1800,7 @@ _080634E8: @ jump table
 	.4byte _080635A2 @ case 18
 	.4byte _080635AE @ case 19
 _08063538:
-	bl AtmosphericSbabilizerCheckIsInfected
+	bl AtmosphericStabilizerCheckIsInfected
 	cmp r0, #0
 	bne _08063578
 	movs r0, #0

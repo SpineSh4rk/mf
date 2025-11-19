@@ -496,5 +496,3 @@ const struct FrameData sRechargePadOam_3257e0[2] = {
     },
     [1] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_3257f0_35dd74[] = INCBIN_U8("data/Blob_3257f0_35dd74.bin");

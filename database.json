@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3257f0_35dd74.bin",
-    "count": "0x38584",
+    "path": "Blob_327b10_35dd74.bin",
+    "count": "0x36264",
     "addr": {
-      "us": "0x3257F0"
+      "us": "0x327B10"
     },
     "size": 1
   },
@@ -2932,6 +2932,22 @@
     "count": "0x30",
     "addr": {
       "us": "0x3251F0"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/atmospheric_stabilizer.gfx",
+    "count": "0x600",
+    "addr": {
+      "us": "0x3257F0"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/atmospheric_stabilizer.pal",
+    "count": "0x30",
+    "addr": {
+      "us": "0x326FF0"
     },
     "size": 2
   },
