@@ -263,5 +263,3 @@ const struct FrameData sToxicGasOam[5] = {
     },
     [4] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_336850_35dd74[] = INCBIN_U8("data/Blob_336850_35dd74.bin");

@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_336850_35dd74.bin",
-    "count": "0x27524",
+    "path": "Blob_337de4_35dd74.bin",
+    "count": "0x25F90",
     "addr": {
-      "us": "0x336850"
+      "us": "0x337DE4"
     },
     "size": 1
   },
@@ -3060,6 +3060,22 @@
     "count": "0x20",
     "addr": {
       "us": "0x336468"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/kago.gfx",
+    "count": "0x400",
+    "addr": {
+      "us": "0x33688C"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/kago.pal",
+    "count": "0x20",
+    "addr": {
+      "us": "0x33788C"
     },
     "size": 2
   },
