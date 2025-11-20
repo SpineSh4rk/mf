@@ -6,7 +6,9 @@ These are known bugs and glitches in the game: code that clearly does not work a
 
 - [Bugs](#bugs)
   - [Y-flipped sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
+  - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
+  - [`BeamCoreXEyeHandleRotation` copies code from `SpriteUtilMakeSpriteRotateTowardsTarget`](#beamcorexeyehandlerotation-copies-code-from-spriteutilmakespriterotatetowardstarget)
 - [Uninitialized Variables](#uninitialized-variables)
 - [TODO](#todo)
   - [Bugs](#bugs-1)
@@ -30,7 +32,69 @@ These are known bugs and glitches in the game: code that clearly does not work a
   }
 ```
 
+### Sprites that rotate toward a target will never target directly up
+
+Beam Core-X eyes and BOX's missiles rotate in order to target Samus. The condition for Samus being directly above the sprite is checked, but the result is not used due to a typo, so other conditions are checked instead. Note that sprites can still aim up while rotating, but will never remain aiming up. If Samus is directly above, sprites will aim up-left or up-right instead.
+
+**Fix:** Edit `SpriteUtilMakeSpriteRotateTowardsTarget` in [sprite_util.c](../src/spite_util.c) to change the condition after the "directly above" check to `else if` instead of `if`.
+
+```diff
+  if (spriteX - BLOCK_SIZE < targetX && spriteX + BLOCK_SIZE > targetX)
+  {
+      // Target is directly above sprite
+      targetRotation = Q_8_8(6.f / 8);
+  }
+- // BUG: Should be "else if"
+- if (targetX > spriteX)
++ else if (targetX > spriteX)
+  {
+      // Target is right of sprite
+      if (spriteY - targetY < BLOCK_SIZE)
+      {
+          // Target is directly right of sprite
+          targetRotation = 0;
+      }
+      else
+      {
+          // Target is above and right of sprite
+          targetRotation = Q_8_8(7.f / 8);
+      }
+  }
+```
+
+
 ## Oversights and Design Flaws
+
+### `BeamCoreXEyeHandleRotation` copies code from `SpriteUtilMakeSpriteRotateTowardsTarget`
+
+`BeamCoreXEyeHandleRotation` contains code for calculating the target angle and new rotation that was likely directly copied from `SpriteUtilMakeSpriteRotateTowardsTarget`. It even includes [the same bug](#sprites-that-rotate-toward-a-target-will-never-target-directly-up). Given the size and complexity of the code, a function call makes more sense.
+
+**Fix:** Edit `BeamCoreXEyeHandleRotation` in [beam_core_x.c](../src/sprites_AI/beam_core_x.c) to replace all of the code from `SpriteUtilMakeSpriteRotateTowardsTarget` with a function call. Also remove the local variables `intensity` and `targetRotation`.
+
+```diff
+- u8 intensity;
+- s32 targetRotation;
+
+  ...
+
+- intensity = Q_8_8(1.f / 128);
+
+  ...
+
+- // OVERSIGHT: This is copied from SpriteUtilMakeSpriteRotateTowardsTarget
+- if (targetY < spriteY)
+- {
+-     ...
+- }
+-
+- ...
+-
+- else if (targetRotation == Q_8_8(7.f / 8))
+- {
+-     ...
+- }
++ oamRotation = SpriteUtilMakeSpriteRotateTowardsTarget(oamRotation, targetY, targetX, spriteY, spriteX);
+```
 
 
 ## Uninitialized Variables

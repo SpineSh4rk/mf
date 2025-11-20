@@ -2,6 +2,7 @@
 
 #include "globals.h"
 #include "macros.h"
+#include "sprite_util.h"
 
 #include "data/generic_data.h"
 #include "data/projectile_data.h"
@@ -468,8 +469,10 @@ void BeamCoreXEyeTransformation(void)
 
 void BeamCoreXEyeHandleRotation(void)
 {
-    // OVERSIGHT: Why not use the SpriteUtilMakeSpriteRotateTowardsTarget function?
+    #ifndef BUGFIX
     u8 intensity;
+    s32 targetRotation;
+    #endif // !BUGFIX
 
     u8 primary;
     u8 shellSlot;
@@ -480,15 +483,15 @@ void BeamCoreXEyeHandleRotation(void)
     s16 spriteY;
     s16 spriteX;
 
-    s32 targetRotation;
-
     s16 distance;
     s16 sin;
     s16 cos;
     s16 yOffset;
     s16 xOffset;
 
+    #ifndef BUGFIX
     intensity = Q_8_8(1.f / 128);
+    #endif // !BUGFIX
 
     primary = gCurrentSprite.primarySpriteRamSlot;
     shellSlot = gCurrentSprite.roomSlot;
@@ -499,13 +502,16 @@ void BeamCoreXEyeHandleRotation(void)
     spriteY = gSpriteData[primary].yPosition;
     spriteX = gSpriteData[primary].xPosition;
 
+    #ifdef BUGFIX
+    oamRotation = SpriteUtilMakeSpriteRotateTowardsTarget(oamRotation, targetY, targetX, spriteY, spriteX);
+    #else // !BUGFIX
+    // OVERSIGHT: This is copied from SpriteUtilMakeSpriteRotateTowardsTarget
     if (targetY < spriteY)
     {
         if (spriteX - BLOCK_SIZE < targetX && spriteX + BLOCK_SIZE > targetX)
         {
             targetRotation = Q_8_8(6.f / 8);
         }
-
         // BUG: Should be "else if"
         if (targetX > spriteX)
         {
@@ -602,6 +608,7 @@ void BeamCoreXEyeHandleRotation(void)
         else if ((u16)(oamRotation - Q_8_8(3.f / 8) - 1) >= Q_8_8(0.5f))
             oamRotation -= intensity;
     }
+    #endif
 
     gCurrentSprite.work1 = oamRotation;
     gSpriteData[shellSlot].rotation = oamRotation;
@@ -1196,7 +1203,6 @@ void CoreXWideBeamInit(void)
 
 void CoreXWideBeam(void)
 {
-    // BUG: SPRITE_POSE_STOPPED case is missing
     if (gCurrentSprite.roomSlot != 0 && gCurrentSprite.pose < 9)
         SpriteUtilMoveEyeCoreXBeamPart();
 

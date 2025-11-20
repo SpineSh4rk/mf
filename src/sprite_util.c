@@ -1475,7 +1475,7 @@ void SpriteUtilMoveXPosForwardOnSlopeXFlip(s16 movement)
 }
 
 /**
- * @brief 11734 | 200 | Calcultes the new oam rotation to rotate a sprite towards a target
+ * @brief 11734 | 200 | Calculates the new OAM rotation to rotate a sprite towards a target
  * 
  * @param oamRotation Current rotation
  * @param targetY Target Y
@@ -1489,107 +1489,136 @@ u8 SpriteUtilMakeSpriteRotateTowardsTarget(s16 oamRotation, s16 targetY, s16 tar
     u8 intensity;
     s32 targetRotation;
 
-    intensity = Q_8_8(0.01f);
+    intensity = Q_8_8(1.f / 128);
 
+    // Determine which angle to target
     if (targetY < spriteY)
     {
+        // Target is above sprite
         if (spriteX - BLOCK_SIZE < targetX && spriteX + BLOCK_SIZE > targetX)
         {
-            targetRotation = PI + PI / 2;
+            // Target is directly above sprite
+            targetRotation = Q_8_8(6.f / 8);
         }
-        if (targetX > spriteX) // BUG: replace it with "else if (targetX > spriteX)" to fix the bug.
+        #ifdef BUGFIX
+        else if (targetX > spriteX)
+        #else // !BUGFIX
+        // BUG: Should be "else if"
+        if (targetX > spriteX)
+        #endif // BUGFIX
         {
+            // Target is right of sprite
             if (spriteY - targetY < BLOCK_SIZE)
+            {
+                // Target is directly right of sprite
                 targetRotation = 0;
+            }
             else
-                targetRotation = PI + 3 * PI / 4;
+            {
+                // Target is above and right of sprite
+                targetRotation = Q_8_8(7.f / 8);
+            }
         }
         else if (spriteY - targetY < BLOCK_SIZE)
         {
-            targetRotation = PI;
+            // Target is directly left of sprite
+            targetRotation = Q_8_8(4.f / 8);
         }
         else
         {
-            targetRotation = PI + HALF_BLOCK_SIZE;
+            // Target is above and left of sprite
+            targetRotation = Q_8_8(5.f / 8);
         }
     }
     else
     {
+        // Target is below sprite
         if (spriteX - BLOCK_SIZE < targetX && spriteX + BLOCK_SIZE > targetX)
         {
-            targetRotation = PI / 2;
+            // Target is directly below sprite
+            targetRotation = Q_8_8(2.f / 8);
         }
         else if (targetX > spriteX)
         {
+            // Target is right of sprite
             if (targetY - spriteY < BLOCK_SIZE)
+            {
+                // Target is directly right of sprite
                 targetRotation = 0;
+            }
             else
-                targetRotation = PI / 4;
+            {
+                // Target is below and right of sprite
+                targetRotation = Q_8_8(1.f / 8);
+            }
         }
         else if (targetY - spriteY < BLOCK_SIZE)
         {
-            targetRotation = PI;
+            // Target is directly left of sprite
+            targetRotation = Q_8_8(4.f / 8);
         }
         else
         {
-            targetRotation = 3 * PI / 4;
+            // Target is below and left of sprite
+            targetRotation = Q_8_8(3.f / 8);
         }
     }
 
+    // Determine which direction to rotate
     if (targetRotation == 0)
     {
-        if ((u16)(oamRotation - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - 1) < Q_8_8(0.5f) - 1)
             oamRotation -= intensity;
-        else if (oamRotation > BLOCK_SIZE * 2 - 1)
+        else if (oamRotation >= Q_8_8(0.5f))
             oamRotation += intensity;
     }
-    else if (targetRotation == PI / 4)
+    else if (targetRotation == Q_8_8(1.f / 8))
     {
-        if ((u16)(oamRotation - HALF_BLOCK_SIZE - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - Q_8_8(1.f / 8) - 1) < Q_8_8(0.5f) - 1)
             oamRotation -= intensity;
-        else if ((u16)(oamRotation - HALF_BLOCK_SIZE) > BLOCK_SIZE * 2 - 1)
+        else if ((u16)(oamRotation - Q_8_8(1.f / 8)) >= Q_8_8(0.5f))
             oamRotation += intensity;
     }
-    else if (targetRotation == PI / 2)
+    else if (targetRotation == Q_8_8(2.f / 8))
     {
-        if ((u16)(oamRotation - BLOCK_SIZE - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - Q_8_8(2.f / 8) - 1) < Q_8_8(0.5f) - 1)
             oamRotation -= intensity;
-        else if ((u16)(oamRotation - BLOCK_SIZE) > BLOCK_SIZE * 2 - 1)
+        else if ((u16)(oamRotation - Q_8_8(2.f / 8)) >= Q_8_8(0.5f))
             oamRotation += intensity;
     }
-    else if (targetRotation == 3 * PI / 4)
+    else if (targetRotation == Q_8_8(3.f / 8))
     {
-        if ((u16)(oamRotation - (BLOCK_SIZE + HALF_BLOCK_SIZE) - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - Q_8_8(3.f / 8) - 1) < Q_8_8(0.5f) - 1)
             oamRotation -= intensity;
-        else if ((u16)(oamRotation - (BLOCK_SIZE + HALF_BLOCK_SIZE)) > BLOCK_SIZE * 2 - 1)
+        else if ((u16)(oamRotation - Q_8_8(3.f / 8)) >= Q_8_8(0.5f))
             oamRotation += intensity;
     }
-    else if (targetRotation == PI)
+    else if (targetRotation == Q_8_8(4.f / 8))
     {
-        if ((u16)(oamRotation - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - 1) < Q_8_8(0.5f) - 1)
             oamRotation += intensity;
-        else if (oamRotation > BLOCK_SIZE * 2)
+        else if (oamRotation > Q_8_8(0.5f))
             oamRotation -= intensity;
     }
-    else if (targetRotation == PI + PI / 4)
+    else if (targetRotation == Q_8_8(5.f / 8))
     {
-        if ((u16)(oamRotation - HALF_BLOCK_SIZE - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - Q_8_8(1.f / 8) - 1) < Q_8_8(0.5f) - 1)
             oamRotation += intensity;
-        else if ((u16)(oamRotation - HALF_BLOCK_SIZE - 1) > BLOCK_SIZE * 2 - 1)
+        else if ((u16)(oamRotation - Q_8_8(1.f / 8) - 1) >= Q_8_8(0.5f))
             oamRotation -= intensity;
     }
-    else if (targetRotation == PI + PI / 2)
+    else if (targetRotation == Q_8_8(6.f / 8))
     {
-        if ((u16)(oamRotation - BLOCK_SIZE - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - Q_8_8(2.f / 8) - 1) < Q_8_8(0.5f) - 1)
             oamRotation += intensity;
-        else if ((u16)(oamRotation - BLOCK_SIZE - 1) > BLOCK_SIZE * 2 - 1)
+        else if ((u16)(oamRotation - Q_8_8(2.f / 8) - 1) >= Q_8_8(0.5f))
             oamRotation -= intensity;
     }
-    else if (targetRotation == PI + 3 * PI / 4)
+    else if (targetRotation == Q_8_8(7.f / 8))
     {
-        if ((u16)(oamRotation - (BLOCK_SIZE + HALF_BLOCK_SIZE) - 1) < BLOCK_SIZE * 2 - 1)
+        if ((u16)(oamRotation - Q_8_8(3.f / 8) - 1) < Q_8_8(0.5f) - 1)
             oamRotation += intensity;
-        else if ((u16)(oamRotation - (BLOCK_SIZE + HALF_BLOCK_SIZE) - 1) > BLOCK_SIZE * 2 - 1)
+        else if ((u16)(oamRotation - Q_8_8(3.f / 8) - 1) >= Q_8_8(0.5f))
             oamRotation -= intensity;
     }
 
