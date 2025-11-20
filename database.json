@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_337fbc_35dd74.bin",
-    "count": "0x25DB8",
+    "path": "Blob_33931c_35dd74.bin",
+    "count": "0x24A58",
     "addr": {
-      "us": "0x337FBC"
+      "us": "0x33931C"
     },
     "size": 1
   },
@@ -3076,6 +3076,22 @@
     "count": "0x20",
     "addr": {
       "us": "0x33788C"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/gate.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x337FBC"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/gate.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x3387BC"
     },
     "size": 2
   },
