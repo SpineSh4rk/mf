@@ -252,6 +252,7 @@ SECTIONS {
         src/sprites_AI/zebesian_wall.o(.text);
         src/sprites_AI/recharge_pad.o(.text);
         src/sprites_AI/atmospheric_stabilizer.o(.text);
+        src/sprites_AI/chozo_statue.o(.text);
 
         asm/disasm_0x08026C7C.o(.text);
 
@@ -344,6 +345,7 @@ SECTIONS {
         src/data/sprites/zebesian_wall.o(.rodata);
         src/data/sprites/recharge_pad.o(.rodata);
         src/data/sprites/atmospheric_stabilizer.o(.rodata);
+        src/data/sprites/chozo_statue.o(.rodata);
 
         src/data/sprites/blue_x.o(.rodata);
         src/data/sprites/missile_hatch.o(.rodata);

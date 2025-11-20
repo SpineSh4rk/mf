@@ -1025,5 +1025,3 @@ const struct FrameData sAtmosphericStabilizerOam_327b00[2] = {
     },
     [1] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_327b10_35dd74[] = INCBIN_U8("data/Blob_327b10_35dd74.bin");

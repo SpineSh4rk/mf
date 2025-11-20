@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_327b10_35dd74.bin",
-    "count": "0x36264",
+    "path": "Blob_328480_35dd74.bin",
+    "count": "0x358F4",
     "addr": {
-      "us": "0x327B10"
+      "us": "0x328480"
     },
     "size": 1
   },
@@ -2948,6 +2948,22 @@
     "count": "0x30",
     "addr": {
       "us": "0x326FF0"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/chozo_statue.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x327B10"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/chozo_statue.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x328310"
     },
     "size": 2
   },
