@@ -7,6 +7,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
 - [Bugs](#bugs)
   - [Y-flipped Zoro uses the wrong size for top hitbox](#y-flipped-zoro-uses-the-wrong-size-for-top-hitbox)
   - [Y-flipped Sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
+  - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
   - [`BeamCoreXEyeHandleRotation` copies code from `SpriteUtilMakeSpriteRotateTowardsTarget`](#beamcorexeyehandlerotation-copies-code-from-spriteutilmakespriterotatetowardstarget)
@@ -46,6 +47,27 @@ These are known bugs and glitches in the game: code that clearly does not work a
       gCurrentSprite.hitboxBottom = BLOCK_TO_SUB_PIXEL(1.125f);
       gCurrentSprite.hitboxLeft = -BLOCK_TO_SUB_PIXEL(0.75f);
       gCurrentSprite.hitboxRight = BLOCK_TO_SUB_PIXEL(0.75f); 
+  }
+```
+
+### Kihunter hives don't check if spawning a Kihunter failed
+
+When spawning a new sprite, if all the sprite slots are full, the spawn function will return 0xFF instead of a sprite data index. When kihunter hives spawn a kihunter, it uses the return value to index `gSpriteData` and set some values. If spawning fails, the index will be out of bounds.
+
+**Note:** Kihunter hives don't appear in the final game, so this code was likely unfinished/untested.
+
+**Fix:** Edit `KihunterHiveSpawnKihunter` in [kihunter.c](../src/sprites_AI/kihunter.c) to check the spawn function return value before modifying data on the sprite.
+
+```diff
+  ramSlot = SpriteSpawnPrimary(PSPRITE_KIHUNTER_FLYING, 0, gCurrentSprite.spritesetGfxSlot, SSP_X_ABSORBABLE_BY_SAMUS,
+      gCurrentSprite.yPosition + BLOCK_TO_SUB_PIXEL(2.0f), gCurrentSprite.xPosition, flip);
+- // BUG: Doesn't check if spawning failed, so ramSlot can go out of bounds
++ if (ramSlot != UCHAR_MAX)
+  {
+      gSpriteData[ramSlot].pose = SPRITE_POSE_SPAWNING_FROM_X_INIT;
+      gSpriteData[ramSlot].status |= SPRITE_STATUS_MOSAIC | SPRITE_STATUS_IGNORE_PROJECTILES;
+      gSpriteData[ramSlot].status &= ~SPRITE_STATUS_HIDDEN;
+      gSpriteData[ramSlot].properties &= ~SP_CAN_ABSORB_X;
   }
 ```
 
@@ -169,7 +191,7 @@ To trigger the first BOX fight, the game calls `EventCheckRoomEventTrigger` to c
 - Getting frozen by the SA-X forces Samus to stand, even if morphed in a tunnel
 - Blue-X in blocks will teleport to Samus if touched before being freed
 - Touching a blue-X stuck in a block will prevent Samus from absorbing other blue-X
-- Ki-hunters can sink through blocks by making them turn
+- Kihunters can sink through blocks by making them turn
 - Diagonal X targets determine horizontal direction twice
 - Omega Metroid can get stuck in air
 - Doing a standing jump while keeping speedbooster

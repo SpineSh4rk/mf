@@ -232,5 +232,3 @@ const struct FrameData sZoroOam_TurningAroundVertical2[3] = {
     },
     [2] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_33c104_35dd74[] = INCBIN_U8("data/Blob_33c104_35dd74.bin");

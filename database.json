@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_33c104_35dd74.bin",
-    "count": "0x21C70",
+    "path": "Blob_33e724_35dd74.bin",
+    "count": "0x1F650",
     "addr": {
-      "us": "0x33C104"
+      "us": "0x33E724"
     },
     "size": 1
   },
@@ -3140,6 +3140,22 @@
     "count": "0x10",
     "addr": {
       "us": "0x33BE34"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/kihunter.gfx",
+    "count": "0x600",
+    "addr": {
+      "us": "0x33C33C"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/kihunter.pal",
+    "count": "0x30",
+    "addr": {
+      "us": "0x33DB3C"
     },
     "size": 2
   },
