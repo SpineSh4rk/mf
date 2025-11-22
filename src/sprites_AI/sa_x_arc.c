@@ -294,7 +294,7 @@ void SaXArcCheckCollisionRunning(void)
             if (gPreviousCollisionCheck != COLLISION_AIR && gSaXVision.samusOnRight == FALSE)
             {
                 gCurrentSprite.pose = 0x2D;
-                gCurrentSprite.work2 = gSaXVision.unk_0;
+                gCurrentSprite.work2 = gSaXVision.diagonalAim;
                 return;
             }
         }
@@ -388,7 +388,7 @@ void SaXArcCheckCollisionRunning(void)
 }
 
 /**
- * @brief 193c4 | 96 |  Initializes the SA-X (arc)
+ * @brief 193c4 | 96 | Initializes the SA-X (arc)
  * 
  */
 void SaXArcInit(void)
@@ -405,13 +405,13 @@ void SaXArcInit(void)
 
     gCurrentSprite.samusCollision = SSC_NONE;
 
-    if (EventCheckOn_PowerBombDataDownloaded())
+    if (EventCheckOn_PowerBombsDownloaded())
     {
         gCurrentSprite.status |= SPRITE_STATUS_HIDDEN;
         gCurrentSprite.pose = 0x19;
         SaXSetPose(SA_X_POSE_WALKING);
     }
-    else if (EventCheckOn_ArcSaXEncounter())
+    else if (EventCheckOn_EngagedSaXArc())
     {
         gCurrentSprite.status |= SPRITE_STATUS_HIDDEN;
         gCurrentSprite.pose = 0x1B;
@@ -472,7 +472,7 @@ void SaXArcOpeningDoorDuringChase(void)
  */
 void SaXArcWaitingInDoor(void)
 {
-    if (!EventCheckOn_NocSaXEncounter())
+    if (!EventCheckOn_EngagedSaXArc())
         return;
 
     gCurrentSprite.pose = 0x1A;
@@ -540,7 +540,7 @@ void SaXArcWalking(void)
         }
     }
 
-    unk_11604(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
+    SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
 
     if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXWalkingSpeed) * 8 - 1)
         gCurrentSprite.work3++;
@@ -642,7 +642,7 @@ void SaXArcRunning(void)
     if (gCurrentSprite.pose != 0x18)
         return;
 
-    unk_11604(sSaXRunningSpeed[gCurrentSprite.work3 / 8]);
+    SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXRunningSpeed[gCurrentSprite.work3 / 8]);
 
     if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXRunningSpeed) * 8 - 1)
         gCurrentSprite.work3++;
@@ -757,7 +757,7 @@ void SaXArcShootingBeam(void)
         if (gPreviousCollisionCheck != COLLISION_AIR && gSaXVision.samusOnRight == FALSE)
         {
             gCurrentSprite.pose = 0x2D;
-            gCurrentSprite.work2 = gSaXVision.unk_0;
+            gCurrentSprite.work2 = gSaXVision.diagonalAim;
         }
         else
         {
@@ -927,5 +927,5 @@ void SaXArc(void)
     SaXUpdateGraphics();
 
     if (gCurrentSprite.status & SPRITE_STATUS_SAMUS_DETECTED)
-        MusicPlay(0x17, 0x9);
+        PlayMusic(0x17, 0x9);
 }

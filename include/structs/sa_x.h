@@ -27,10 +27,10 @@ struct SaXData {
 };
 
 struct SaXVision {
-    u8 unk_0;
-    u8 unk_1;
+    u8 diagonalAim;
+    u8 detectedSamusOnRight;
     u8 inYRange;
-    u8 samusOnTop;
+    u8 samusBelow;
     u8 samusOnRight;
     u8 inXRange;
     u8 unk_6;

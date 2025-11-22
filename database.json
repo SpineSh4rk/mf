@@ -8,10 +8,18 @@
     "size": 1
   },
   {
-    "path": "Blob_28998c_28fd04.bin",
-    "count": "0x6378",
+    "path": "Blob_28998c_28d794.bin",
+    "count": "0x3E08",
     "addr": {
       "us": "0x28998C"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_28d8dc_28fd04.bin",
+    "count": "2428",
+    "addr": {
+      "us": "0x28D8DC"
     },
     "size": 1
   },

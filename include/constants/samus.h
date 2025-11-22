@@ -120,6 +120,28 @@ enum DiagonalAim {
     DIAG_AIM_END
 };
 
+enum SamusHitboxType {
+    SAMUS_HITBOX_TYPE_STANDING,
+    SAMUS_HITBOX_TYPE_MID_AIR,
+    SAMUS_HITBOX_TYPE_CROUCHED,
+    SAMUS_HITBOX_TYPE_UNK_3,
+    SAMUS_HITBOX_TYPE_MORPHED,
+    SAMUS_HITBOX_TYPE_SPINNING,
+    SAMUS_HITBOX_TYPE_HANGING,
+
+    SAMUS_HITBOX_TYPE_COUNT
+};
+
+enum SamusCollisionDataFields {
+    SCDF_HITBOX,
+    SCDF_UNK_1,
+    SCDF_UNK_2,
+    SCDF_UNK_3,
+    SCDF_STANDING_STATUS,
+
+    SCDF_COUNT
+};
+
 // --- Flags ---
 
 #define SMF_HIGH_JUMP (1 << 0)

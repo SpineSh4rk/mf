@@ -347,7 +347,7 @@ void SaXNocInit(void)
         gCurrentSprite.pose = 0x19;
         SaXSetPose(SA_X_POSE_WALKING);
     }
-    else if (EventCheckOn_NocSaXEncounter())
+    else if (EventCheckOn_EngagedSaXNoc())
     {
         gCurrentSprite.status |= SPRITE_STATUS_HIDDEN;
         gCurrentSprite.pose = 0x1B;
@@ -408,7 +408,7 @@ void SaXNocOpeningDoorDuringChase(void)
  */
 void SaXNocWaitingInDoorToLayPowerBomb(void)
 {
-    if (!EventCheckOn_NocSaXEncounter())
+    if (!EventCheckOn_EngagedSaXNoc())
         return;
 
     SaXWalkingInit();
@@ -452,7 +452,7 @@ void SaXNocWalkingToLayPowerBomb(void)
     SaXNocCheckCollisionWalkingToLayPowerBomb();
     if (gCurrentSprite.pose == 0x1A)
     {
-        unk_11604(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
+        SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
 
         if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXWalkingSpeed) * 8 - 1)
             gCurrentSprite.work3++;
@@ -544,15 +544,15 @@ void SaXNocLayingPowerBomb(void)
  */
 void SaXNocWalking(void)
 {
-    if (unk_15f54())
+    if (unk_15e88())
         return;
 
-    unk_1605c();
+    SaXNocCheckCollisionWalking();
 
     if (gCurrentSprite.pose != 0x2)
         return;
 
-    unk_11604(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
+    SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
 
     if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXWalkingSpeed) * 8 - 1)
         gCurrentSprite.work3++;
@@ -564,15 +564,15 @@ void SaXNocWalking(void)
  */
 void SaXNocRunning(void)
 {
-    if (unk_15f54())
+    if (unk_15dd4())
         return;
 
-    unk_1605c();
+    SaXNocCheckCollisionRunning();
 
     if (gCurrentSprite.pose != 0x18)
         return;
 
-    unk_11604(sSaXRunningSpeed[gCurrentSprite.work3 / 8]);
+    SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXRunningSpeed[gCurrentSprite.work3 / 8]);
 
     if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXRunningSpeed) * 8 - 1)
         gCurrentSprite.work3++;
@@ -748,10 +748,10 @@ void SaXNoc(void)
             break;
 
         case 0x31:
-            SaXDelayAfterShootingMissileInit();
+            SaXIdleAfterShootingMissileInit();
 
         case 0x32:
-            SaXDelayAfterShootingMissile();
+            SaXIdleAfterShootingMissile();
             break;
 
         case 0x37:
@@ -785,5 +785,5 @@ void SaXNoc(void)
     SaXUpdateGraphics();
 
     if (gCurrentSprite.status & SPRITE_STATUS_SAMUS_DETECTED)
-        MusicPlay(0x17, 0x9);
+        PlayMusic(0x17, 0x9);
 }

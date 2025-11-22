@@ -7,10 +7,9 @@
 
 #define SAMUS_SET_POSE(pose) (sSamusSetPoseFunctionPointer[gSamusData.unk_0](pose))
 
-extern const u8 sSamusCollisionData[SPOSE_END][6];
+extern const u8 sSamusCollisionData[SPOSE_END][SCDF_COUNT];
 
 typedef void (*SamusSetPose_T)(u8);
-
 extern const SamusSetPose_T sSamusSetPoseFunctionPointer[1];
 
 #endif /* SAMUS_DATA_H */

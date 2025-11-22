@@ -3,7 +3,6 @@
 #include "macros.h"
 #include "gba.h"
 #include "globals.h"
-#include "sprite_util.h"
 
 #include "data/sprites/sa_x.h"
 #include "data/sprite_data.h"
@@ -358,7 +357,7 @@ void SaXTro2CheckCollisionRunning(void)
                 if (gPreviousCollisionCheck != COLLISION_AIR && gSaXVision.samusOnRight == FALSE)
                 {
                     gCurrentSprite.pose = 0x2D;
-                    gCurrentSprite.work2 = gSaXVision.unk_0;
+                    gCurrentSprite.work2 = gSaXVision.diagonalAim;
                     return;
                 }
             }
@@ -573,7 +572,7 @@ void SaXTro2Walking(void)
         }
     }
 
-    unk_11604(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
+    SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXWalkingSpeed[gCurrentSprite.work3 / 8]);
 
     if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXWalkingSpeed) * 8 - 1)
         gCurrentSprite.work3++;
@@ -695,7 +694,7 @@ void SaXTro2Running(void)
     if (gCurrentSprite.pose != 0x18)
         return;
 
-    unk_11604(sSaXRunningSpeed[gCurrentSprite.work3 / 8]);
+    SpriteUtilMoveXPosForwardOnSlopeDirection(sSaXRunningSpeed[gCurrentSprite.work3 / 8]);
 
     if (gCurrentSprite.work3 < ARRAY_SIZE(sSaXRunningSpeed) * 8 - 1)
         gCurrentSprite.work3++;
@@ -811,7 +810,7 @@ void SaXTro2ShootingBeam(void)
         if (gPreviousCollisionCheck != COLLISION_AIR && gSaXVision.samusOnRight == FALSE)
         {
             gCurrentSprite.pose = 0x2D;
-            gCurrentSprite.work2 = gSaXVision.unk_0;
+            gCurrentSprite.work2 = gSaXVision.diagonalAim;
         }
         else
         {
@@ -885,7 +884,7 @@ void SaXTro2(void)
             SaXTurningAroundChaseInit();
 
         case 0x3A:
-            SaXTurningAroundChase();
+            SaXTro2TurningAroundChase();
             break;
 
         case 0x2D:
@@ -973,5 +972,5 @@ void SaXTro2(void)
     SaXUpdateGraphics();
 
     if (gCurrentSprite.status & SPRITE_STATUS_SAMUS_DETECTED)
-        MusicPlay(0x17, 9);
+        PlayMusic(0x17, 9);
 }

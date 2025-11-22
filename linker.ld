@@ -224,9 +224,14 @@ SECTIONS {
         src/sprites_AI/unused_sprites.o(.text);
         src/sprites_AI/bubbles.o(.text);
         src/sprites_AI/x_parasite.o(.text);
-
-        asm/disasm_0x080157cc.o(.text);
-
+        src/sprites_AI/sa_x.o(.text);
+        src/sprites_AI/sa_x_tro_1.o(.text);
+        src/sprites_AI/sa_x_noc.o(.text);
+        src/sprites_AI/sa_x_arc.o(.text);
+        src/sprites_AI/sa_x_lab.o(.text);
+        src/sprites_AI/sa_x_boss.o(.text);
+        src/sprites_AI/sa_x_omega.o(.text);
+        src/sprites_AI/sa_x_tro_2.o(.text);
         src/sprites_AI/hornoad.o(.text);
         src/sprites_AI/halzyn.o(.text);
         src/sprites_AI/movable_platform.o(.text);

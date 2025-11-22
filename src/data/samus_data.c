@@ -1,6 +1,468 @@
 #include "data/samus_data.h"
 #include "macros.h"
 
+const u8 sSamusCollisionData[SPOSE_END][SCDF_COUNT] = {
+    [SPOSE_STANDING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_TURNING_AROUND] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_SHOOTING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_RUNNING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_MID_AIR] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_TURNING_AROUND_MID_AIR] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_LANDING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_CROUCHING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_CROUCHED,
+        [SCDF_UNK_1] = 2,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 2,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_TURNING_AROUND_AND_CROUCHING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_CROUCHED,
+        [SCDF_UNK_1] = 2,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 2,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_SHOOTING_AND_CROUCHING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_CROUCHED,
+        [SCDF_UNK_1] = 2,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 2,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_STARTING_SPIN_JUMP] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_SPINNING,
+        [SCDF_UNK_1] = 4,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 4,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_SPINNING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_SPINNING,
+        [SCDF_UNK_1] = 4,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 4,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_MORPHING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_MORPH_BALL] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_ROLLING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_UNMORPHING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_MORPH_BALL_MID_AIR] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 6,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 6,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_GETTING_HURT] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_GETTING_HURT_IN_MORPH_BALL] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 6,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 6,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_GETTING_KNOCKED_BACK] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_GETTING_KNOCKED_BACK_IN_MORPH_BALL] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 6,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 6,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_STARTING_WALL_JUMP] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_SPINNING,
+        [SCDF_UNK_1] = 4,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 4,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_WALL_JUMPING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_SPINNING,
+        [SCDF_UNK_1] = 4,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 4,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_USING_AN_ELEVATOR] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_HANGING_ON_LEDGE] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_HANGING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_PULLING_YOURSELF_UP_FROM_HANGING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_PULLING_YOURSELF_FORWARD_FROM_HANGING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_PULLING_YOURSELF_INTO_MORPH_BALL_TUNNEL] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_PULLING_YOURSELF_DOWN_TO_START_HANGING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_SPACE_JUMPING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_SPINNING,
+        [SCDF_UNK_1] = 4,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 4,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_SCREW_ATTACKING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_SPINNING,
+        [SCDF_UNK_1] = 4,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 4,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_SKIDDING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_ON_SAVE_PAD] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_ON_RECHARGE_OR_SECURITY_PAD] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_TURNING_AROUND_TO_RECHARGE_OR_UNLOCK_DOORS] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_DELAY_BEFORE_SHINESPARKING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_SHINESPARKING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_DELAY_AFTER_SHINESPARKING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_HANGING_FROM_VERTICAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_STARTING_TO_HOLD_YOUR_ARM_CANNON_OUT_ON_A_VERTICAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_HOLDING_YOUR_ARM_CANNON_OUT_ON_A_VERTICAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_SHOOTING_ON_VERTICAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_STARTING_TO_PUT_AWAY_YOUR_ARM_CANNON_OUT_ON_A_VERTICAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_HANGING_ON_HORIZONTAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_HANGING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_MOVING_ON_HORIZONTAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_HANGING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_TURNING_AROUND_ON_HORIZONTAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_HANGING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_DELAY_AFTER_SHOOTING_ON_HORIZONTAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_HANGING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_SHOOTING_ON_HORIZONTAL_LADDER] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_HANGING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_FROZEN] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_FROZEN_AND_FALLING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_FROZEN_IN_MORPH_BALL] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_FROZEN_IN_MORPH_BALL_AND_FALLING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_MID_AIR
+    },
+    [SPOSE_UNLOCKING_SECURITY] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_SAVING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_ON_NAVIGATION_PAD] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_DOWNLOADING_ABILITY] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_BEING_RECHARGED] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_FACING_FOREGROUND] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_FACING_BACKGROUND] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_UNLOCKING_HABITATIONS_DECK] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_GRABBED_BY_ZAZABI] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MORPHED,
+        [SCDF_UNK_1] = 5,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 5,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_LOADING_SAVE] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_DYING] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+    [SPOSE_HIT_BY_OMEGA_METROID] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
+        [SCDF_UNK_1] = 0,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 0,
+        [SCDF_STANDING_STATUS] = STANDING_GROUND
+    },
+    [SPOSE_GRABBED_BY_YAKUZA] = {
+        [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_MID_AIR,
+        [SCDF_UNK_1] = 1,
+        [SCDF_UNK_2] = 0,
+        [SCDF_UNK_3] = 1,
+        [SCDF_STANDING_STATUS] = STANDING_NOT_IN_CONTROL
+    },
+};
+
+// TODO: Remove this when blob is updated
+static const u8 sPadding[3] = {0, 0, 0};
+static const u8 sBlob_28d8dc_28fd04[] = INCBIN_U8("data/Blob_28d8dc_28fd04.bin");
+
 const SamusSetPose_T sSamusSetPoseFunctionPointer[1] = {
     (SamusSetPose_T)0x8008fa1
 };

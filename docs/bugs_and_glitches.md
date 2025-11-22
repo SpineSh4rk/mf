@@ -8,6 +8,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Y-flipped Zoro uses the wrong size for top hitbox](#y-flipped-zoro-uses-the-wrong-size-for-top-hitbox)
   - [Y-flipped Sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
+  - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
   - [`BeamCoreXEyeHandleRotation` copies code from `SpriteUtilMakeSpriteRotateTowardsTarget`](#beamcorexeyehandlerotation-copies-code-from-spriteutilmakespriterotatetowardstarget)
@@ -69,6 +70,18 @@ When spawning a new sprite, if all the sprite slots are full, the spawn function
       gSpriteData[ramSlot].status &= ~SPRITE_STATUS_HIDDEN;
       gSpriteData[ramSlot].properties &= ~SP_CAN_ABSORB_X;
   }
+```
+
+### SA-X sprite AI has wrong declaration for `sSamusCollisionData`
+
+The function `SaXSeeAndLocateSamus` in the SA-X sprite AI accesses `sSamusCollisionData` as if it has 6 items per pose, even though there are actually 5. The result is that the value read will be an unexpected or invalid hitbox type. In practice, this only has a minor effect on the SA-X's detection of Samus.
+
+**Fix:** Edit [sa_x.c](../src/sprites_AI/sa_x.c) to remove the incorrect declaration and include samus_data.h instead.
+
+```diff
+- // Incorrectly declared here to produce matching code in SaXSeeAndLocateSamus
+- extern const u8 sSamusCollisionData[SPOSE_END][6];
++ #include "data/samus_data.h"
 ```
 
 ### Sprites that rotate toward a target will never target directly up
