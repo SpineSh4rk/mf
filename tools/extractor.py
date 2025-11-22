@@ -39,6 +39,25 @@ def extract_data(region: str, debug: bool, quiet: bool = False) -> None:
     rom.close()
 
 
+def total_blob_size() -> None:
+    total_size = 0x6f9d24
+    with open(DATABASE_PATH, "r") as f:
+        db = json.load(f)
+    blob_size = 0
+    for entry in db:
+        path: str = entry["path"]
+        if not path.startswith("Blob"):
+            continue
+        count: int = entry["count"]
+        size: int = int(count, 16) * entry["size"]
+        blob_size += size
+    assert blob_size <= total_size
+    non_blob = total_size - blob_size
+    fraction = f"0x{non_blob:x}/0x{total_size:x}"
+    percent = f"{non_blob / total_size:.2%}"
+    print(f"{fraction} bytes of data not in blobs ({percent}, 0x{blob_size:x} left)")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     group = parser.add_mutually_exclusive_group()
@@ -48,12 +67,15 @@ if __name__ == "__main__":
     # TODO: Support debug
     # group.add_argument("-d", "--debug", action="store_true",
     #     help="Extract debug data from the EU beta rom")
+    group.add_argument("-b", "--blob", action="store_true", help="Compute total blob size")
     parser.add_argument("-q", "--quiet", action="store_true", help="Suppress output")
     
     args = parser.parse_args()
-    # TODO: Remove this line
-    args.debug = False
-    if not args.region and not args.debug:
-        args.region = "us"
-
-    extract_data(args.region, args.debug, args.quiet)
+    if args.blob:
+        total_blob_size()
+    else:
+        # TODO: Remove this line
+        args.debug = False
+        if not args.region and not args.debug:
+            args.region = "us"
+        extract_data(args.region, args.debug, args.quiet)
