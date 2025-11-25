@@ -3904,7 +3904,7 @@ _080645C0: .4byte 0x80000010
 	thumb_func_start LoadRoom
 LoadRoom: @ 0x080645C4
 	push {lr}
-	bl SetupClipdataCode
+	bl ClipdataSetupCode
 	bl RoomResetInfo
 	bl LoadRoomEntry
 	bl LoadTileset
@@ -6343,14 +6343,14 @@ unk_659e4: @ 0x080659E4
 	cmp r0, #1
 	bne _08065A08
 	movs r0, #0x42
-	bl CheckUpdateSubEventAndMusic
+	bl SubEventUpdateMusic
 	b _08065A0E
 	.align 2, 0
 _08065A00: .4byte gSamusData
 _08065A04: .4byte gElevatorDirection
 _08065A08:
 	movs r0, #0x43
-	bl CheckUpdateSubEventAndMusic
+	bl SubEventUpdateMusic
 _08065A0E:
 	ldr r1, _08065A18 @ =gElevatorDirection
 	movs r0, #0

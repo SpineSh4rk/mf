@@ -54,7 +54,7 @@ void SubEventUpdateForAbility(void)
  * @brief 70120 | 44 | Updates the sub event for a navigation conversation
  * 
  */
-void SubEventUpdateForNavCounversation(void)
+void SubEventUpdateForNavConversation(void)
 {
     u32 i;
 

@@ -2,6 +2,8 @@
 #include "gba.h"
 #include "globals.h"
 #include "macros.h"
+#include "bg_clip.h"
+#include "block.h"
 #include "sub_event_and_music.h"
 
 #include "data/clipdata_data.h"
@@ -109,7 +111,7 @@ s32 unk_689f0(void)
         else
             continue;
 
-        SetVramBg1BlockTilemapValu(clipdata, yPosition, xPosition);
+        BgClipSetBg1BlockTilemapValue(clipdata, yPosition, xPosition);
     }
 
     gUnk_03004e48[1]++;
@@ -238,7 +240,7 @@ u32 ClipdataProcess(u16 yPosition, u16 xPosition)
     if (gCurrentClipdataAffectingAction != CAA_NONE)
     {
         // Apply CCAA if there's one
-        BlockApplyCCAA(collision.tileY, collision.tileX, type);
+        BlockApplyCcaa(collision.tileY, collision.tileX, type);
         gCurrentClipdataAffectingAction = CAA_NONE;
     }
 
@@ -261,6 +263,12 @@ u32 ClipdataProcess(u16 yPosition, u16 xPosition)
     return gClipdataCodePointer(&collision);
 }
 
+/**
+ * @brief 68cc8 | 1a8 | Returns the collision type for the current position
+ * 
+ * @param pCollision Pointer to a collision data structure
+ * @return u32 Clipdata type (including solid flag)
+ */
 u32 ClipdataConvertToCollision(struct CollisionData* pCollision)
 {
     // https://decomp.me/scratch/pP6WU
@@ -388,7 +396,7 @@ u32 ClipdataConvertToCollision(struct CollisionData* pCollision)
             break;
 
         case CLIPDATA_TYPE_DOOR:
-            clipdata = gBackgroundsData.pClipDecomp[pCollision->tileY * gBackgroundsData.clipdataWidth + pCollision->tileX];
+            clipdata = (gBackgroundsData.pClipDecomp + pCollision->tileY * gBackgroundsData.clipdataWidth)[pCollision->tileX];
 
             if (clipdata & CLIPDATA_TILEMAP_FLAG)
             {
@@ -598,11 +606,11 @@ u32 ClipdataCheckCurrentAffectingAtPosition(u16 yPosition, u16 xPosition)
 u32 ClipdataCheckCantUseElevator(u16 movementClip)
 {
     s32 i;
-    s32 canUse;
-    u8 cantUseFlags[ELEVATOR_END] = {0};
+    s32 j;
+    u8 disabledElevators[ELEVATOR_END] = {0};
 
     gLastElevatorUsed = UCHAR_MAX;
-    canUse = FALSE;
+    j = FALSE;
 
     // Try to find elevator room pair
     for (i = 0; i < ELEVATOR_END; i++)
@@ -610,15 +618,15 @@ u32 ClipdataCheckCantUseElevator(u16 movementClip)
         // First pair
         if (gCurrentArea == sElevatorRoomPairs[i].area1 && gCurrentRoom == sElevatorRoomPairs[i].room1)
         {
-            canUse = TRUE;
+            j = TRUE;
         }
         // Second pair
         else if (gCurrentArea == sElevatorRoomPairs[i].area2 && gCurrentRoom == sElevatorRoomPairs[i].room2)
         {
-            canUse = TRUE;
+            j = TRUE;
         }
 
-        if (canUse)
+        if (j)
         {
             // Register elevator
             gLastElevatorUsed = i;
@@ -626,36 +634,36 @@ u32 ClipdataCheckCantUseElevator(u16 movementClip)
         }
     }
 
-    if (canUse)
+    if (j)
     {
-        // Check for elevator ride events
-        canUse = ARRAY_SIZE(sElevatorRideEvents);
-        while (canUse > 0)
+        // Check for disabled elevators
+        j = ARRAY_SIZE(sElevatorDisabledEvents);
+        while (j > 0)
         {
-            canUse--;
+            j--;
 
             // Check in the event range
-            if (sElevatorRideEvents[canUse].eventStart <= gEventCounter && gEventCounter < sElevatorRideEvents[canUse].eventEnd)
+            if (sElevatorDisabledEvents[j].eventStart <= gEventCounter && gEventCounter < sElevatorDisabledEvents[j].eventEnd)
             {
                 // Apply flags
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_OPERATIONS_DECK]    |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_OPERATIONS_DECK];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_LOBBY]              |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_LOBBY];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_1]           |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_1];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_2]           |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_2];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_3]           |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_3];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_4]           |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_4];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_5]           |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_5];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_6]           |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_SECTOR_6];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_LOBBY_POWER_OUTAGE] |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_LOBBY_POWER_OUTAGE];
-                cantUseFlags[ELEVATOR_MAIN_DECK_TO_HABITATIONS_DECK]   |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_MAIN_DECK_TO_HABITATIONS_DECK];
-                cantUseFlags[ELEVATOR_RESTRICTED_ZONE_TO_SECTOR_1]     |= sElevatorRideEvents[canUse].cantUseFlags[ELEVATOR_RESTRICTED_ZONE_TO_SECTOR_1];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_OPERATIONS_DECK]    |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_OPERATIONS_DECK];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_LOBBY]              |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_LOBBY];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_1]           |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_1];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_2]           |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_2];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_3]           |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_3];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_4]           |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_4];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_5]           |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_5];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_6]           |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_SECTOR_6];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_LOBBY_POWER_OUTAGE] |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_LOBBY_POWER_OUTAGE];
+                disabledElevators[ELEVATOR_MAIN_DECK_TO_HABITATIONS_DECK]   |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_MAIN_DECK_TO_HABITATIONS_DECK];
+                disabledElevators[ELEVATOR_RESTRICTED_ZONE_TO_SECTOR_1]     |= sElevatorDisabledEvents[j].disabledElevators[ELEVATOR_RESTRICTED_ZONE_TO_SECTOR_1];
             }
         }
 
-        canUse = cantUseFlags[gLastElevatorUsed];
+        j = disabledElevators[gLastElevatorUsed];
 
-        if (canUse)
-            return canUse;
+        if (j)
+            return j;
     }
 
     // Get trigger type and set elevator direction
@@ -672,7 +680,7 @@ u32 ClipdataCheckCantUseElevator(u16 movementClip)
 
     SubEventUpdateMusic(i);
 
-    return canUse;
+    return j;
 }
 
 /**

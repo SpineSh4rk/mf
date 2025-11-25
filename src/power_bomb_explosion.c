@@ -106,7 +106,7 @@ void PowerBombExplosion(void)
                 {
                     clipdata = gBackgroundsData.pClipDecomp[yPositionTop * gBackgroundsData.clipdataWidth + horizontalAxis];
                     if (clipdata != 0)
-                        BlockApplyCCAA(yPositionTop, horizontalAxis, clipdata);
+                        BlockApplyCcaa(yPositionTop, horizontalAxis, clipdata);
 
                     yPositionTop--;
                 }
@@ -117,7 +117,7 @@ void PowerBombExplosion(void)
                 {
                     clipdata = gBackgroundsData.pClipDecomp[yPositionBottom * gBackgroundsData.clipdataWidth + horizontalAxis];
                     if (clipdata != 0)
-                        BlockApplyCCAA(yPositionBottom, horizontalAxis, clipdata);
+                        BlockApplyCcaa(yPositionBottom, horizontalAxis, clipdata);
 
                     yPositionBottom++;
                 }
@@ -146,7 +146,7 @@ void PowerBombExplosion(void)
             {
                 clipdata = gBackgroundsData.pClipDecomp[verticalAxis * gBackgroundsData.clipdataWidth + yPositionTop];
                 if (clipdata != 0)
-                    BlockApplyCCAA(verticalAxis, yPositionTop, clipdata);
+                    BlockApplyCcaa(verticalAxis, yPositionTop, clipdata);
 
                 yPositionTop--;
             }
@@ -157,7 +157,7 @@ void PowerBombExplosion(void)
             {
                 clipdata = gBackgroundsData.pClipDecomp[verticalAxis * gBackgroundsData.clipdataWidth + yPositionBottom];
                 if (clipdata != 0)
-                    BlockApplyCCAA(verticalAxis, yPositionBottom, clipdata);
+                    BlockApplyCcaa(verticalAxis, yPositionBottom, clipdata);
 
                 yPositionBottom++;
             }

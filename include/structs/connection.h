@@ -2,6 +2,7 @@
 #define CONNECTION_STRUCTS_H
 
 #include "types.h"
+#include "constants/connection.h"
 
 struct Hatch {
     u8 unk_0_0:1;
@@ -27,11 +28,34 @@ struct Door {
     s8 yExit;
 };
 
-struct EventBasedConnection {
-    u8 area;
-    u8 sourceDoor;
-    u8 event;
-    u8 destinationDoor;
+struct ElevatorRoomPair {
+    u8 area1;
+    u8 room1;
+    u8 area2;
+    u8 room2;
+};
+
+struct ElevatorDisabledEvent {
+    u8 eventStart;
+    u8 eventEnd;
+    u8 disabledElevators[ELEVATOR_END];
+};
+
+enum AreaConnectionField {
+    AREA_CONNECTION_FIELD_SOURCE_AREA,
+    AREA_CONNECTION_FIELD_SOURCE_DOOR,
+    AREA_CONNECTION_FIELD_DESTINATION_AREA,
+
+    AREA_CONNECTION_FIELD_COUNT
+};
+
+enum EventBasedConnectionField {
+    EVENT_BASED_CONNECTION_FIELD_SOURCE_AREA,
+    EVENT_BASED_CONNECTION_FIELD_SOURCE_DOOR,
+    EVENT_BASED_CONNECTION_FIELD_EVENT,
+    EVENT_BASED_CONNECTION_FIELD_DESTINATION_DOOR,
+
+    EVENT_BASED_CONNECTION_FIELD_COUNT
 };
 
 extern struct Hatch gHatchData[6];

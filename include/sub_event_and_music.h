@@ -5,7 +5,7 @@
 
 void SubEventUpdateForSaXEncounter(void);
 void SubEventUpdateForAbility(void);
-void SubEventUpdateForNavCounversation(void);
+void SubEventUpdateForNavConversation(void);
 void SubEventUpdate(u8 subEvent, u8 triggerType);
 void SubEventUpdateMusic(u8 triggerType);
 

@@ -34,19 +34,6 @@ struct TilemapAndClipPointers {
     const u16* pClipBehaviors;
 };
 
-struct ElevatorRoomPair {
-    u8 area1;
-    u8 room1;
-    u8 area2;
-    u8 room2;
-};
-
-struct ElevatorPairEvent {
-    u8 eventStart;
-    u8 eventEnd;
-    u8 cantUseFlags[ELEVATOR_END];
-};
-
 struct CurrentAffectingClipdata {
     u16 movement;
     u16 hazard;

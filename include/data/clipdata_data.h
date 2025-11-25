@@ -2,9 +2,10 @@
 #define CLIPDATA_DATA_H
 
 #include "types.h"
+#include "constants/clipdata.h"
 
-extern const u8 sClipdataTilemapCollisionTypes[464];
+extern const u16 sClipdataTilemapBehaviorTypes[CLIPDATA_TILEMAP_COUNT];
 
-extern const u16 sClipdataTilemapBehaviorTypes[464];
+extern const u8 sClipdataTilemapCollisionTypes[CLIPDATA_TILEMAP_COUNT];
 
 #endif /* CLIPDATA_DATA_H */
