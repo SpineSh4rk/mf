@@ -7,6 +7,7 @@ MEMORY {
 
 SECTIONS {
     ewram (NOLOAD) : ALIGN(4) {
+        . = 0x00035d20; gMakeSolidBlocks = .;
     } >ewram
 
     iwram (NOLOAD) : ALIGN(4) {
@@ -113,6 +114,7 @@ SECTIONS {
         . = 0x00000b80; gArmCannonY = .;
         . = 0x00000b82; gArmCannonX = .;
         . = 0x00000b84; gPauseScreenFlag = .;
+        . = 0x00000b85; gUnk_03000B85 = .;
         . = 0x00000b86; gPreviousArea = .;
         . = 0x00000b87; gEventCounter = .;
         . = 0x00000b88; gPreviousNavigationConversation = .;
@@ -296,8 +298,9 @@ SECTIONS {
         asm/disasm_0x080685b4.o(.text);
 
         src/clipdata.o(.text);
+        src/connection.o(.text);
 
-        asm/disasm_0x08069184.o(.text);
+        asm/disasm_0x080695b4.o(.text);
 
         src/demo.o(.text);
         src/hud.o(.text);
@@ -398,6 +401,6 @@ SECTIONS {
     } >rom
 
     .data : ALIGN(2) {
-
+        src/room.o(.data);
     } >rom
 }

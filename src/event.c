@@ -3,6 +3,7 @@
 #include "macros.h"
 #include "sub_event_and_music.h"
 
+#include "data/connection_data.h"
 #include "data/event_data.h"
 
 #include "constants/connection.h"
@@ -139,7 +140,82 @@ void EventSet(u8 event)
 
 u8 EventCheckPlayCutsceneDuringTransition(u8 dstRoom)
 {
+    u32 playMonologue;
+    u8 cutscene;
+    s32 i;
 
+    cutscene = 0x0;
+    
+    if (gSamusData.pose != SPOSE_USING_AN_ELEVATOR)
+    {
+        if (gEventCounter == EVENT_60_SECONDS_TO_DETACHMENT && dstRoom == 0x4D && gCurrentArea == AREA_MAIN_DECK)
+        {
+            gCurrentCutscene = 0xA;
+            SubEventUpdate(SUB_EVENT_141, SEVENT_TTYPE_CUTSCENE_START);
+            cutscene = 0x3;
+        }
+    }
+    else
+    {
+        playMonologue = FALSE;
+
+        for (i = 0; i < ARRAY_SIZE(sMonologueEvents); i++)
+        {
+            if (gEventCounter != sMonologueEvents[i].event)
+                continue;
+
+            if (sMonologueEvents[i].sourceRoom != 0)
+            {
+                if (sElevatorRoomPairs[sMonologueEvents[i].elevatorRoomPair].area2 == gCurrentArea &&
+                    sElevatorRoomPairs[sMonologueEvents[i].elevatorRoomPair].room2 == dstRoom)
+                {
+                    playMonologue = TRUE;
+                }
+            }
+            else
+            {
+                if (sElevatorRoomPairs[sMonologueEvents[i].elevatorRoomPair].area1 == gCurrentArea &&
+                    sElevatorRoomPairs[sMonologueEvents[i].elevatorRoomPair].room1 == dstRoom)
+                {
+                    playMonologue = TRUE;
+                }
+            }
+
+            if (!playMonologue)
+                return cutscene;
+
+            if (gPreviousCutscene != sMonologueEvents[i].cutscene)
+            {
+                gCurrentCutscene = sMonologueEvents[i].cutscene;
+                cutscene = 0x1;
+
+                if (sMonologueEvents[i].cutscene == 0x9)
+                {
+                    EventSet(gEventCounter + 1);
+                    gPreviousNavigationConversation = -2;
+                    gUnk_03000B85 = 0;
+                }
+
+                if (sMonologueEvents[i].subEventAtStart != SUB_EVENT_NONE)
+                {
+                    SubEventUpdate(sMonologueEvents[i].subEventAtStart, SEVENT_TTYPE_CUTSCENE_START);
+                }
+            }
+
+            break;
+        }
+
+        if (!playMonologue)
+        {
+            if (gEventCounter == EVENT_ENTERED_ELEVATOR_ROOM && dstRoom == 0x22 && gCurrentArea == AREA_MAIN_DECK)
+            {
+                SubEventUpdate(SUB_EVENT_POST_ARACHNUS_NAV_CONVERSATION_ENDED, SEVENT_TTYPE_CUTSCENE_START);
+                cutscene = 0x2;
+            }
+        }
+    }
+
+    return cutscene;
 }
 
 /**

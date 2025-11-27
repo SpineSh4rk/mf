@@ -17,17 +17,6 @@ struct CollisionData {
     u16 tileY;
 };
 
-struct BackgroundsData {
-    struct {
-        u16* pDecomp;
-        u16 width;
-        u16 height;
-    } backgrounds[3];
-    u16* pClipDecomp;
-    u16 clipdataWidth;
-    u16 clipdataHeight;
-};
-
 struct TilemapAndClipPointers {
     u16* pTilemap;
     const u8* pClipCollisions;
@@ -43,7 +32,6 @@ struct CurrentAffectingClipdata {
 typedef u32 (*CollisionFunc_T)(struct CollisionData*);
 
 extern CollisionFunc_T gClipdataCodePointer;
-extern struct BackgroundsData gBackgroundsData;
 extern struct CurrentAffectingClipdata gCurrentAffectingClipdata;
 extern struct TilemapAndClipPointers gTilemapAndClipPointers;
 extern u8 gLastElevatorUsed;

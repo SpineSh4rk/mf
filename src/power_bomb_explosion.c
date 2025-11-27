@@ -5,6 +5,7 @@
 
 #include "constants/clipdata.h"
 
+#include "structs/bg_clip.h"
 #include "structs/clipdata.h"
 #include "structs/room.h"
 #include "structs/power_bomb.h"
@@ -104,7 +105,7 @@ void PowerBombExplosion(void)
                 j = 0;
                 if (yPositionTop >= hitboxTop)
                 {
-                    clipdata = gBackgroundsData.pClipDecomp[yPositionTop * gBackgroundsData.clipdataWidth + horizontalAxis];
+                    clipdata = GET_CLIP_BLOCK(horizontalAxis, yPositionTop);
                     if (clipdata != 0)
                         BlockApplyCcaa(yPositionTop, horizontalAxis, clipdata);
 
@@ -115,7 +116,7 @@ void PowerBombExplosion(void)
                 
                 if ((s32)yPositionBottom <= hitboxBottom)
                 {
-                    clipdata = gBackgroundsData.pClipDecomp[yPositionBottom * gBackgroundsData.clipdataWidth + horizontalAxis];
+                    clipdata = GET_CLIP_BLOCK(horizontalAxis, yPositionBottom);
                     if (clipdata != 0)
                         BlockApplyCcaa(yPositionBottom, horizontalAxis, clipdata);
 
@@ -144,7 +145,7 @@ void PowerBombExplosion(void)
             j = 0;
             if (yPositionTop >= hitboxLeft)
             {
-                clipdata = gBackgroundsData.pClipDecomp[verticalAxis * gBackgroundsData.clipdataWidth + yPositionTop];
+                clipdata = GET_CLIP_BLOCK(yPositionTop, verticalAxis);
                 if (clipdata != 0)
                     BlockApplyCcaa(verticalAxis, yPositionTop, clipdata);
 
@@ -155,7 +156,7 @@ void PowerBombExplosion(void)
             
             if ((s32)yPositionBottom <= hitboxRight)
             {
-                clipdata = gBackgroundsData.pClipDecomp[verticalAxis * gBackgroundsData.clipdataWidth + yPositionBottom];
+                clipdata = GET_CLIP_BLOCK(yPositionBottom, verticalAxis);
                 if (clipdata != 0)
                     BlockApplyCcaa(verticalAxis, yPositionBottom, clipdata);
 

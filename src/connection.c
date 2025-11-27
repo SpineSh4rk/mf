@@ -6,9 +6,13 @@
 
 #include "constants/connection.h"
 
+#include "structs/bg_clip.h"
+#include "structs/block.h"
 #include "structs/connection.h"
 #include "structs/event.h"
 #include "structs/samus.h"
+
+extern const struct Door* sAreaDoorPointers[AREA_END];
 
 /**
  * @brief 69184 | 1f8 | Tries to find a door
@@ -121,7 +125,7 @@ u32 ConnectionCheckEnterDoor(u16 yPosition, u16 xPosition)
             }
 
             SetCurrentNavigationRoom(pDoor->srcRoom);
-            CheckPlayRoomMusicTrack(gCurrentArea, pDoor->srcRoom);
+            PlayRoomMusicTrack(gCurrentArea, pDoor->srcRoom);
             break;
         }
     }
@@ -148,7 +152,7 @@ u32 ConnectionCheckAreaConnection(u16 yPosition, u16 xPosition)
 
     pDoor = sAreaDoorPointers[gCurrentArea];
 
-    foundDoor = FALSE;
+    foundDoor = 0;
 
     for (i = 0; pDoor->type != DOOR_TYPE_NONE; pDoor++, i++)
     {
@@ -162,7 +166,7 @@ u32 ConnectionCheckAreaConnection(u16 yPosition, u16 xPosition)
         {
             door = i;
             gLastDoorUsed = pDoor->dstDoor;
-            foundDoor = TRUE;
+            foundDoor = 1;
             break;
         }
     }
@@ -170,20 +174,20 @@ u32 ConnectionCheckAreaConnection(u16 yPosition, u16 xPosition)
     if (!foundDoor)
         return FALSE;
 
-    for (i = 0; sAreaConnections[i][0] != UCHAR_MAX; i++)
+    for (i = 0; sAreaConnections[i][AREA_CONNECTION_FIELD_SOURCE_AREA] != UCHAR_MAX; i++)
     {
-        if (sAreaConnections[i][0] != gCurrentArea)
+        if (sAreaConnections[i][AREA_CONNECTION_FIELD_SOURCE_AREA] != gCurrentArea)
             continue;
 
-        if (sAreaConnections[i][1] == door)
+        if (sAreaConnections[i][AREA_CONNECTION_FIELD_SOURCE_DOOR] == door)
         {
-            gCurrentArea = sAreaConnections[i][2];
-            foundDoor = TRUE * 2;
+            gCurrentArea = sAreaConnections[i][AREA_CONNECTION_FIELD_DESTINATION_AREA];
+            foundDoor = 2;
             break;
         }
     }
 
-    if (foundDoor != TRUE * 2)
+    if (foundDoor != 2)
     {
         gLastDoorUsed = 0;
         return FALSE;
@@ -201,7 +205,7 @@ u32 ConnectionCheckAreaConnection(u16 yPosition, u16 xPosition)
         gColorFading = 0x2;
 
     SetCurrentNavigationRoom(pDoor->srcRoom);
-    CheckPlayRoomMusicTrack(gCurrentArea, pDoor->srcRoom);
+    PlayRoomMusicTrack(gCurrentArea, pDoor->srcRoom);
     return TRUE;
 }
 
@@ -246,17 +250,39 @@ u32 ConnectionFindEventBasedDoor(u8 srcDoor)
     for (i = ARRAY_SIZE(sEventBasedConnections) - 1; i >= 0; i--)
     {
         // Check area
-        if (gCurrentArea != sEventBasedConnections[i][0])
+        if (gCurrentArea != sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_SOURCE_AREA])
             continue;
 
         // Check correct door
-        if (srcDoor != sEventBasedConnections[i][1])
+        if (srcDoor != sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_SOURCE_DOOR])
             continue;
 
         // Check on or after event
-        if (gEventCounter >= sEventBasedConnections[i][2])
-            return sEventBasedConnections[i][3];
+        if (gEventCounter >= sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_EVENT])
+            return sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_DESTINATION_DOOR];
     }
 
     return UCHAR_MAX;
+}
+
+/**
+ * @brief 6956c | 48 | Unused function (related to make solid blocks)
+ * 
+ * @param value Clipdata value
+ */
+void unk_6956c(u16 value)
+{
+    u16* pMSB;
+    s32 i;
+
+    pMSB = gMakeSolidBlocks;
+
+    // BUG: i is decremented twice
+    for (i = MAX_AMOUNT_OF_MAKE_SOLID_BLOCKS; i > 0; i--)
+    {
+        if (pMSB[--i] != 0)
+        {
+            SET_CLIP_BLOCK_(value, pMSB[i] >> 8, pMSB[i] & 0xFF);
+        }
+    }
 }

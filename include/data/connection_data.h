@@ -14,7 +14,4 @@ extern const struct ElevatorRoomPair sElevatorRoomPairs[ELEVATOR_END];
 extern const struct ElevatorDisabledEvent sElevatorDisabledEvents[4];
 extern const u8 sEventBasedConnections[60][EVENT_BASED_CONNECTION_FIELD_COUNT];
 
-// TODO: Move
-extern const struct Door* sAreaDoorPointers[AREA_END];
-
 #endif /* CONNECTION_DATA_H */

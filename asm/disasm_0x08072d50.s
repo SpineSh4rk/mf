@@ -3973,8 +3973,8 @@ _08074BA0:
 	bx r0
 	.align 2, 0
 
-	thumb_func_start CheckPlayCutsceneDuringTransition
-CheckPlayCutsceneDuringTransition: @ 0x08074BA8
+	thumb_func_start EventCheckPlayCutsceneDuringTransition
+EventCheckPlayCutsceneDuringTransition: @ 0x08074BA8
 	push {r4, r5, r6, r7, lr}
 	mov r7, r8
 	push {r7}

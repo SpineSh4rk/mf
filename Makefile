@@ -88,9 +88,9 @@ EXTRACTOR = tools/extractor.py
 PREPROC = tools/preproc/preproc
 
 # Flags
-ASFLAGS = -mcpu=arm7tdmi
+ASFLAGS += -mcpu=arm7tdmi
 CFLAGS = -Werror -O2 -mthumb-interwork -fhex-asm
-CPPFLAGS = -nostdinc -Iinclude/
+CPPFLAGS += -nostdinc -Iinclude/
 PREPROCFLAGS = charmap.txt
 
 # Objects
@@ -105,6 +105,7 @@ AGBCC_DIR := $(dir $(AGBCC_BIN))/
 AGBCC_LIB := $(abspath $(AGBCC_DIR))
 
 LIBS := $(AGBCC_LIB)/libgcc.a $(AGBCC_LIB)/libc.a
+
 
 # Enable verbose output
 ifeq ($(V),1)

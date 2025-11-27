@@ -13,6 +13,7 @@
 #include "constants/event.h"
 #include "constants/samus.h"
 
+#include "structs/bg_clip.h"
 #include "structs/connection.h"
 #include "structs/event.h"
 #include "structs/room.h"
@@ -162,7 +163,7 @@ u32 ClipdataProcessForSamus(u16 yPosition, u16 xPosition)
     collision.tileX = SUB_PIXEL_TO_BLOCK(xPosition);
 
     // Get clipdata type
-    type = gBackgroundsData.pClipDecomp[collision.tileY * gBackgroundsData.clipdataWidth + collision.tileX];
+    type = GET_CLIP_BLOCK(collision.tileX, collision.tileY);
 
     if (type & CLIPDATA_TILEMAP_FLAG)
     {

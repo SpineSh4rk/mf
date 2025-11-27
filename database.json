@@ -120,10 +120,18 @@
     "size": 1
   },
   {
-    "path": "Blob_79afe0_79ecc8.bin",
-    "count": "0x3CE8",
+    "path": "Blob_79afe0_79b894.bin",
+    "count": "0x8B4",
     "addr": {
       "us": "0x79AFE0"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_79b8bc_79ecc8.bin",
+    "count": "0x340C",
+    "addr": {
+      "us": "0x79B8BC"
     },
     "size": 1
   },

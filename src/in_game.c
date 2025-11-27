@@ -7,7 +7,7 @@
 #include "constants/demo.h"
 #include "constants/sa_x.h"
 
-#include "structs/clipdata.h"
+#include "structs/bg_clip.h"
 #include "structs/demo.h"
 #include "structs/samus.h"
 #include "structs/sa_x.h"

@@ -45,6 +45,7 @@ struct EventLocationAndNavigationInfo {
 extern u8 gAbilityCount;
 extern u8 gSecurityHatchLevel;
 extern u8 gSecurityHatchLevelBackup;
+extern u8 gUnk_03000B85;
 extern u8 gEventCounter;
 extern u8 gPreviousNavigationConversation;
 extern u8 gPreviousCutscene;
