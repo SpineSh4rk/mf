@@ -45,6 +45,7 @@ void PauseDebugSubroutine(void)
         unk_7e224();
 }
 
+// BUG: return type should be void
 /**
  * @brief 7d3bc | 778 | Handles modifying the values in the pause debug menu
  * 
@@ -572,11 +573,11 @@ void PauseDebugDrawEventText(u8 event)
 
     for (i = 0; i < EVENT_NAME_SIZE; i++)
     {
-        // Event names are stored in shift JIS (https://en.wikipedia.org/wiki/Shift_JIS)
+        // Event names are stored in Shift JIS (https://en.wikipedia.org/wiki/Shift_JIS)
         // Converts a char from 0b12345678 to 0b1_23045678
         character = ((sPauseDebugEventNames[event][i] & 0xE0) << 1) | (sPauseDebugEventNames[event][i] & 0x1F);
 
-        TextDrawPauseDebugCharacter(character, &dst[i * PAUSE_DEBUG_TILE_SIZE * 2], 0);
+        DrawCharacterPauseDebug(character, &dst[i * PAUSE_DEBUG_TILE_SIZE * 2], 0);
     }
 }
 
@@ -778,10 +779,14 @@ void SetAbilityCount(u8 abilityCount)
     gEquipment.suitMiscStatus = status[2];
 }
 
+/**
+ * @brief 7df64 | f8 | Modifies the ability count
+ * 
+ * @param cursorX Cursor X
+ * @return u32 bool, modified
+ */
 u32 PauseDebugModifiyAbilityCount(u8 cursorX)
 {
-    // https://decomp.me/scratch/HMmb3
-
     s32 increment;
     s32 modified;
     s32 i;
@@ -798,6 +803,8 @@ u32 PauseDebugModifiyAbilityCount(u8 cursorX)
             gAbilityCount += increment;
 
         modified = TRUE;
+        // Needed to produce matching ASM
+        i = 0;
     }
     else if (gChangedInput & KEY_UP)
     {
@@ -806,6 +813,7 @@ u32 PauseDebugModifiyAbilityCount(u8 cursorX)
         else
             gAbilityCount -= increment;
 
+        modified = TRUE;
     }
     else if (gChangedInput & KEY_RIGHT)
     {
@@ -897,24 +905,25 @@ void PauseDebugDrawMenuAndDoor(void)
 
 void PauseDebugDrawIgt(void)
 {
-    // https://decomp.me/scratch/YsRkH
-
     u32 position;
     u16* dst;
     s32 power;
     s32 value;
+    // Needed to produce matching ASM
+    unsigned long long baseTile;
 
     dst = VRAM_BASE + 0xC800;
     position = PAUSE_DEBUG_SECTION_INFO_TOP(PAUSE_DEBUG_SECTION_IN_GAME_TIME) * HALF_BLOCK_SIZE + PAUSE_DEBUG_SECTION_INFO_LEFT(PAUSE_DEBUG_SECTION_IN_GAME_TIME);
 
     for (power = 100; power > 0; power /= 10, position++)
     {
+        baseTile = 0x3080;
         value = gInGameTimer.hours / power % 10;
 
         if (power == 100 && value == 0)
             dst[position] = 0x3080 + 12;
         else
-            dst[position] = 0x3080 + value;
+            do { dst[position] = value + baseTile; } while (0);
     }
 
     position++;

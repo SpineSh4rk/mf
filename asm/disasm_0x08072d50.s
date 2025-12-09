@@ -3662,8 +3662,8 @@ _08074860: .4byte gSamusData
 _08074864: .4byte 0x083ED18C
 _08074868: .4byte gPoseLock
 
-	thumb_func_start UpdateMenuOamDataID
-UpdateMenuOamDataID: @ 0x0807486C
+	thumb_func_start UpdateMenuOamDataId
+UpdateMenuOamDataId: @ 0x0807486C
 	lsls r0, r0, #0x18
 	lsrs r0, r0, #0x18
 	ldr r3, _0807488C @ =gNonGameplayRam

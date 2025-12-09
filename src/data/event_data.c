@@ -1746,4 +1746,4 @@ const struct SecurityUnlockEvent sSecurityUnlockEvents[SECURITY_LEVEL_END - 1] =
     },
 };
 
-static const u8 sBlob_5760e8_58b3cc[] = INCBIN_U8("data/Blob_5760e8_58b3cc.bin");
+static const u8 sBlob_5760e8_576168[] = INCBIN_U8("data/Blob_5760e8_576168.bin");

@@ -316,6 +316,10 @@ SECTIONS {
 
         asm/disasm_0x08074ffc.o(.text);
 
+        src/menus/pause_debug.o(.text);
+
+        asm/disasm_0x0807e678.o(.text);
+
         src/menus/title_screen.o(.text);
 
         asm/disasm_0x08087610.o(.text);
@@ -404,6 +408,7 @@ SECTIONS {
         src/data/escape_data.o(.rodata);
         src/data/particle_data.o(.rodata);
         src/data/event_data.o(.rodata);
+        src/data/menus/pause_debug.o(.rodata);
         src/data/projectile_data.o(.rodata);
         src/data/menus/title_screen.o(.rodata);
         src/data/engine_pointers.o(.rodata);

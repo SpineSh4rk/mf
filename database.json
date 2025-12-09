@@ -112,10 +112,26 @@
     "size": 1
   },
   {
-    "path": "Blob_5760e8_58b3cc.bin",
-    "count": "0x152E4",
+    "path": "Blob_5760e8_576168.bin",
+    "count": "0x80",
     "addr": {
       "us": "0x5760E8"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_576217_581510.bin",
+    "count": "0xB2F9",
+    "addr": {
+      "us": "0x576217"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_58217B_58b3cc.bin",
+    "count": "0x9251",
+    "addr": {
+      "us": "0x58217B"
     },
     "size": 1
   },
