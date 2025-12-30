@@ -1939,7 +1939,7 @@ void LowerMusicVolume(void)
  */
 void IncreaseMusicVolume(void)
 {
-    unk_3c84();
+    ResetMusicVolume();
     gCurrentMusicTrack.lowered = FALSE;
 
     return;

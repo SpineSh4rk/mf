@@ -309,8 +309,6 @@ SECTIONS {
 
         src/sound_event.o(.text);
 
-        /* asm/disasm_0x080715ac.o(.text); */
-
         src/demo.o(.text);
         src/hud.o(.text);
         src/escape.o(.text);

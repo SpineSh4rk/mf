@@ -30,5 +30,4 @@ const struct RoomEntryRom* sAreaRoomEntryPointers[10] = {
     [AREA_TEST_3] = (const struct RoomEntryRom*)0x83C87B4,
 };
 
-//static u8 sBlob_79b8bc_79bbcc[] = INCBIN_U8("data/Blob_79b8bc_79bbcc.bin");
 static u8 sBlob_79b8e4_79bbcc[] = INCBIN_U8("data/Blob_79b8e4_79bbcc.bin");
