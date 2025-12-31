@@ -17,7 +17,7 @@ const struct Door* sAreaDoorPointers[AREA_END] = {
     [AREA_TEST_3] = (const struct Door*)0x83C2B68,
 };
 
-const struct RoomEntryRom* sAreaRoomEntryPointers[10] = {
+const struct RoomEntryRom* sAreaRoomEntryPointers[AREA_END] = {
     [AREA_MAIN_DECK] = (const struct RoomEntryRom*)0x83C2C4C,
     [AREA_SECTOR_1] = (const struct RoomEntryRom*)0x83C40B0,
     [AREA_SECTOR_2] = (const struct RoomEntryRom*)0x83C4D58,

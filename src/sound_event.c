@@ -1868,9 +1868,7 @@ void PlayRoomMusicTrack(u8 area, u8 room)
     gCurrentMusicTrack.number = sAreaRoomEntryPointers[area][room].musicTrack;
     CheckSetNewMusicTrack(gCurrentMusicTrack.number);
     gDestinationDoor = room;
-    SoundEventUpdateMusic(33);
-
-    return;
+    SoundEventUpdateMusic(SEVENT_TTYPE_LEAVING_ROOM);
 }
 
 /**
@@ -1900,25 +1898,23 @@ void CheckUpdateMusicDuringRoomLoad(void)
         else
         {
             if (gCurrentArea + gCurrentRoom == 0)
-                SoundEventUpdateMusic(3);
+                SoundEventUpdateMusic(SEVENT_TTYPE_LEAVING_SHIP);
         }
     }
     else if (gPauseScreenFlag)
     {
-        if (gPauseScreenFlag == 3 && gCurrentNavigationRoom == 0)
+        if (gPauseScreenFlag == 3 && gCurrentNavigationRoom == NAV_ROOM_MAIN_DECK_ROOM_0)
         {
-            SoundEventUpdateMusic(3);
+            SoundEventUpdateMusic(SEVENT_TTYPE_LEAVING_SHIP);
 
-            if (gEventCounter == 71 && gSoundEventCounter == 100)
+            if (gEventCounter == EVENT_ENTERED_SHIP && gSoundEventCounter == SOUND_EVENT_POWER_OUTAGE_LEAVING_SHIP_ENDED)
                 SetCurrentEventBasedEffect(12);
         }
     }
     else
     {
-        SoundEventUpdateMusic(2);
+        SoundEventUpdateMusic(SEVENT_TTYPE_STARTING_ROOM_LOAD);
     }
-
-    return;
 }
 
 /**
@@ -1929,8 +1925,6 @@ void LowerMusicVolume(void)
 {
     DecreaseMusicVolume();
     gCurrentMusicTrack.lowered = TRUE;
-    
-    return;
 }
 
 /**
@@ -1941,6 +1935,4 @@ void IncreaseMusicVolume(void)
 {
     ResetMusicVolume();
     gCurrentMusicTrack.lowered = FALSE;
-
-    return;
 }
