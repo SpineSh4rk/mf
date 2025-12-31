@@ -12,47 +12,48 @@
 /**
  * @brief 7e678 | 34 | Subroutine for the status screen
  * 
- * 
  */
 void StatusScreenSubroutine(void)
 {
-    if ((gChangedInput & (KEY_B | KEY_L | KEY_R)) && (gNonGameplayRam.pauseScreen.debugMenuEditingValue == 0)) 
+    if ((gChangedInput & (KEY_B | KEY_L | KEY_R)) && !gNonGameplayRam.pauseScreen.pauseDebugEditingValue) 
     {
         gNonGameplayRam.pauseScreen.unk_28 = 7;
-        gNonGameplayRam.pauseScreen.timer = gNonGameplayRam.pauseScreen.debugMenuEditingValue;
-        gNonGameplayRam.pauseScreen.debugMenuEditingValue = gNonGameplayRam.pauseScreen.debugMenuEditingValue;
+        gNonGameplayRam.pauseScreen.timer = gNonGameplayRam.pauseScreen.pauseDebugEditingValue;
+        gNonGameplayRam.pauseScreen.pauseDebugEditingValue = gNonGameplayRam.pauseScreen.pauseDebugEditingValue;
     }
 }
 
 /**
  * @brief 7e6ac | a8 | Draws everything on the status screen menu
  * 
- * 
  */
 void StatusScreenDrawEverything(void)
 {
-    StatusScreenDrawBeamOrSuit(BEAM_UPGRADES, gEquipment.beamStatus); // draws the beam box
-    StatusScreenDrawMissileOrBomb(MISSILE_UPGRADES, gEquipment.weaponsStatus); // draws the missile box
-    StatusScreenDrawBeamOrSuit(SUIT_UPGRADES, gEquipment.suitMiscStatus); // draws the suit box
-    StatusScreenDrawMissileOrBomb(BOMB_UPGRADES, gEquipment.weaponsStatus); // draws the bomb box
-    StatusScreenDrawMisc(MISC_UPGRADES, gEquipment.suitMiscStatus); // draws the misc box
-    StatusScreenDrawNumber(ENERGY_CURRENT, gEquipment.currentEnergy, 6, FALSE);
-    StatusScreenDrawNumber(ENERGY_MAX, gEquipment.maxEnergy, 3, TRUE);
+    StatusScreenDrawBeamOrSuit(STATUS_SECTION_BEAM, gEquipment.beamStatus);
+    StatusScreenDrawMissileOrBomb(STATUS_SECTION_MISSILE, gEquipment.weaponsStatus);
+    StatusScreenDrawBeamOrSuit(STATUS_SECTION_SUIT, gEquipment.suitMiscStatus);
+    StatusScreenDrawMissileOrBomb(STATUS_SECTION_BOMB, gEquipment.weaponsStatus);
+    StatusScreenDrawMisc(STATUS_SECTION_MISC, gEquipment.suitMiscStatus);
+    StatusScreenDrawNumber(STATUS_SECTION_ENERGY_CURRENT, gEquipment.currentEnergy, 6, FALSE);
+    StatusScreenDrawNumber(STATUS_SECTION_ENERGY_MAX, gEquipment.maxEnergy, 3, TRUE);
+
     if (gEquipment.weaponsStatus & MBF_MISSILES)
     {
-        StatusScreenDrawNumber(MISSILES_CURRENT, gEquipment.currentMissiles, 6, FALSE);
-        StatusScreenDrawNumber(MISSILES_MAX, gEquipment.maxMissiles, 3, TRUE);
+        StatusScreenDrawNumber(STATUS_SECTION_MISSILES_CURRENT, gEquipment.currentMissiles, 6, FALSE);
+        StatusScreenDrawNumber(STATUS_SECTION_MISSILES_MAX, gEquipment.maxMissiles, 3, TRUE);
     } 
     else
     {
         StatusScreenRemoveAmmoHeader(1);
     }
+
     if ((gEquipment.weaponsStatus & (MBF_BOMBS | MBF_POWER_BOMBS)) == (MBF_BOMBS | MBF_POWER_BOMBS))
     {
-        StatusScreenDrawNumber(POWERBOMBS_CURRENT, gEquipment.currentPowerBombs, 6, FALSE);
-        StatusScreenDrawNumber(POWERBOMBS_MAX, gEquipment.maxPowerBombs, 3, TRUE);
+        StatusScreenDrawNumber(STATUS_SECTION_POWER_BOMBS_CURRENT, gEquipment.currentPowerBombs, 6, FALSE);
+        StatusScreenDrawNumber(STATUS_SECTION_POWER_BOMBS_MAX, gEquipment.maxPowerBombs, 3, TRUE);
         return;
     }
+
     StatusScreenRemoveAmmoHeader(2);
 }
 
@@ -64,7 +65,7 @@ void StatusScreenDrawEverything(void)
  * @param palette palette slot
  * @param is_max bool for current vs max ammo count
  */
-void StatusScreenDrawNumber(u8 section, u16 value, u8 palette, boolu8 is_max)
+void StatusScreenDrawNumber(u8 section, u16 value, u8 palette, boolu8 isMax)
 {
 
 }
