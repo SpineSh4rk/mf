@@ -2808,9 +2808,9 @@ u32 SpriteUtilCheckSamusPassThroughSprite(u8 spriteSlot)
             break;
 
         case SPOSE_HANGING_ON_LEDGE:
-        case SPOSE_PULLING_YOURSELF_UP_FROM_HANGING:
-        case SPOSE_PULLING_YOURSELF_FORWARD_FROM_HANGING:
-        case SPOSE_PULLING_YOURSELF_INTO_MORPH_BALL_TUNNEL:
+        case SPOSE_PULLING_UP_FROM_HANGING:
+        case SPOSE_PULLING_FORWARD_FROM_HANGING:
+        case SPOSE_PULLING_INTO_MORPH_FROM_HANGING:
         case SPOSE_SCREW_ATTACKING:
         case SPOSE_SHINESPARKING:
             passThrough++;
@@ -3002,9 +3002,9 @@ u32 SpriteUtilCheckSamusPullingSelfUp(void)
 {
     switch (gSamusData.pose)
     {
-        case SPOSE_PULLING_YOURSELF_UP_FROM_HANGING:
-        case SPOSE_PULLING_YOURSELF_FORWARD_FROM_HANGING:
-        case SPOSE_PULLING_YOURSELF_INTO_MORPH_BALL_TUNNEL:
+        case SPOSE_PULLING_UP_FROM_HANGING:
+        case SPOSE_PULLING_FORWARD_FROM_HANGING:
+        case SPOSE_PULLING_INTO_MORPH_FROM_HANGING:
             return TRUE;
     }
 

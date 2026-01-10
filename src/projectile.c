@@ -3,6 +3,7 @@
 #include "macros.h"
 #include "globals.h"
 #include "sprite_util.h"
+#include "samus.h"
 
 #include "data/generic_data.h"
 #include "data/particle_data.h"
@@ -178,7 +179,7 @@ void ProjectileUpdate(void)
         return;
 
     // Update arm cannon position offset fields
-    CallUpdateArmCannonOffset();
+    SamusCheckUpdateArmCannonOffset();
 
     // Samus position is in sub pixels, the offsets are in pixels, and the final result is in sub pixels
     gArmCannonY = PIXEL_TO_SUB_PIXEL(SUB_PIXEL_TO_PIXEL(gSamusData.yPosition) + gSamusGraphicsInfo.armCannonYOffset);

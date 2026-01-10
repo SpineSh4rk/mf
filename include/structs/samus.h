@@ -142,15 +142,13 @@ struct SamusAnimData {
     u8 timer;
 };
 
-struct ArmCannonOffsets {
-    u16 chargingYOffset;
-    u16 chargingXOffset;
-    u16 newProjectileYOffset;
-    u16 newProjectileXOffset;
+struct ArmCannonOffset {
+    s16 y;
+    s16 x;
 };
 
 struct ArmCannonAnimData {
-    const struct ArmCannonOffsets* pOffsets;
+    const struct ArmCannonOffset* pOffset;
     const u16* pOam;
 };
 
@@ -171,15 +169,15 @@ extern u8 gPreviousSamusField0;
 extern u16 gPreviousXPosition;
 extern u16 gPreviousYPosition;
 extern u8 gPoseLock;
-extern u8 gUnderwater;
+extern u8 gSamusUnderwaterFlag;
 extern u16 gPreventMovementTimer;
 extern u8 gDisableDrawingSamusAndScrollingFlag;
 extern u16 gPreviousPositionCounter;
 
 extern u8 gSamusUseYVelocityForX;
 extern s8 gUnk_03004d8c;
-extern s8 gUnk_0300144E;
-extern u8 gUnk_0300144F;
+extern s8 gUnk_0300144e;
+extern u8 gUnk_0300144f;
 
 extern u16 gPrevious64Positions[2][64];
 

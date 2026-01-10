@@ -154,8 +154,6 @@ struct ButtonAssignments {
     u16 pause;
 };
 
-extern u8 gUnk_0300144e;
-
 extern struct ButtonAssignments gButtonAssignments;
 
 extern u8 gMonochromeFading;
