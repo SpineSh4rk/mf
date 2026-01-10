@@ -4,12 +4,12 @@
 #include "types.h"
 #include "constants/connection.h"
 
-struct Hatch {
-    u8 unk_0_0:1;
+struct HatchData {
+    u8 exists:1;
     u8 unk_0_1:3;
     u8 unk_0_4:1;
     u8 unk_0_5:3;
-    u8 unk_1_0:2;
+    u8 state:2;
     u8 unk_1_2:1;
     u8 unk_1_3:5;
     u8 xPosition;
@@ -58,7 +58,7 @@ enum EventBasedConnectionField {
     EVENT_BASED_CONNECTION_FIELD_COUNT
 };
 
-extern struct Hatch gHatchData[6];
+extern struct HatchData gHatchData[MAX_AMOUNT_OF_HATCHES];
 extern u8 gCurrentArea;
 extern u8 gPreviousArea;
 extern u8 gDestinationDoor;

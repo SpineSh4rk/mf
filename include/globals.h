@@ -71,6 +71,10 @@ extern u16 gWrittenToWin1V;
 extern u16 gWrittenToBldcnt_Special;
 extern u8 gDisableScrolling;
 extern u8 gDisableMusicFlag;
+extern s8 gDisablePauseFlag;
+
+extern u16 gUnk_03004E3E;
+extern u16 gUnk_03004E40;
 
 struct WindowBorder {
     u8 left;
