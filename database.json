@@ -7680,7 +7680,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_0.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_0.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E43C"
@@ -7688,7 +7688,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_3.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_3.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E45C"
@@ -7696,7 +7696,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_5.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_5.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E47C"
@@ -7704,7 +7704,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_2.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_2.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E49C"
@@ -7712,7 +7712,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_4.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_4.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E4BC"
@@ -7720,7 +7720,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_10.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_10.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E4DC"
@@ -7728,7 +7728,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_12.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_12.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E4FC"
@@ -7736,7 +7736,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_14.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_14.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E51C"
@@ -7744,7 +7744,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_16.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_16.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E53C"
@@ -7752,7 +7752,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_18.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_18.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E55C"
@@ -7760,7 +7760,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_20.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_20.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E57C"
@@ -7768,7 +7768,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_22.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_22.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E59C"
@@ -7776,7 +7776,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_24.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_24.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E5BC"
@@ -7784,7 +7784,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_26.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_26.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E5DC"
@@ -7792,7 +7792,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_fusion_11.pal",
+    "path": "samus/palettes/loading_save_row_0_fusion_11.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E5FC"
@@ -7800,7 +7800,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_varia_20.pal",
+    "path": "samus/palettes/loading_save_row_0_varia_20.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E61C"
@@ -7808,7 +7808,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_varia_22.pal",
+    "path": "samus/palettes/loading_save_row_0_varia_22.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E63C"
@@ -7816,7 +7816,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_varia_24.pal",
+    "path": "samus/palettes/loading_save_row_0_varia_24.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E65C"
@@ -7824,7 +7824,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_varia_26.pal",
+    "path": "samus/palettes/loading_save_row_0_varia_26.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E67C"
@@ -7832,7 +7832,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_varia_11.pal",
+    "path": "samus/palettes/loading_save_row_0_varia_11.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E69C"
@@ -7840,7 +7840,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_gravity_20.pal",
+    "path": "samus/palettes/loading_save_row_0_gravity_20.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E6BC"
@@ -7848,7 +7848,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_gravity_22.pal",
+    "path": "samus/palettes/loading_save_row_0_gravity_22.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E6DC"
@@ -7856,7 +7856,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_gravity_24.pal",
+    "path": "samus/palettes/loading_save_row_0_gravity_24.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E6FC"
@@ -7864,7 +7864,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_gravity_26.pal",
+    "path": "samus/palettes/loading_save_row_0_gravity_26.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E71C"
@@ -7872,7 +7872,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_gravity_11.pal",
+    "path": "samus/palettes/loading_save_row_0_gravity_11.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E73C"
@@ -7880,7 +7880,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_0.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_0.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E75C"
@@ -7888,7 +7888,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_3.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_3.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E77C"
@@ -7896,7 +7896,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_5.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_5.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E79C"
@@ -7904,7 +7904,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_2.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_2.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E7BC"
@@ -7912,7 +7912,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_4.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_4.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E7DC"
@@ -7920,7 +7920,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_10.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_10.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E7FC"
@@ -7928,7 +7928,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_12.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_12.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E81C"
@@ -7936,7 +7936,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_14.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_14.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E83C"
@@ -7944,7 +7944,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_16.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_16.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E85C"
@@ -7952,7 +7952,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_18.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_18.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E87C"
@@ -7960,7 +7960,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_20.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_20.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E89C"
@@ -7968,7 +7968,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_22.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_22.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E8BC"
@@ -7976,7 +7976,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_24.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_24.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E8DC"
@@ -7984,7 +7984,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_26.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_26.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E8FC"
@@ -7992,7 +7992,7 @@
     "size": 2
   },
   {
-    "path": "samus/palettes/loading_save_sa_x_11.pal",
+    "path": "samus/palettes/loading_save_row_0_sa_x_11.pal",
     "count": "0x10",
     "addr": {
       "us": "0x28E91C"

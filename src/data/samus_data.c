@@ -5,7 +5,6 @@
 
 #include "data/particle_data.h"
 
-// 0x28fc8c
 const s16 sSamusDrawDistanceOffsets[8][4] = {
     [0] = {
         -30,
@@ -57,7 +56,6 @@ const s16 sSamusDrawDistanceOffsets[8][4] = {
     },
 };
 
-// 0x28fccc
 const s16 sSamusCollisionOffsets[7][SAMUS_HITBOX_END] = {
     [0] = {
         [SAMUS_HITBOX_LEFT] = -30,

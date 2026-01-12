@@ -818,7 +818,7 @@ void ProjectileMove(u8 distance)
             gCurrentProjectile.yPosition += distance;
             return;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             distance = distance * 3 / 4;
 
             gCurrentProjectile.yPosition -= distance;
@@ -829,7 +829,7 @@ void ProjectileMove(u8 distance)
                 gCurrentProjectile.xPosition -= distance;
             break;
 
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             distance = distance * 3 / 4;
 
             gCurrentProjectile.yPosition += distance;
@@ -970,8 +970,8 @@ u32 ProjectileCheckVerticalCollisionAtPosition(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_UP:
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_UP:
+        case ACD_DIAGONAL_DOWN:
             if (result == COLLISION_PASS_THROUGH_BOTTOM)
                 result = COLLISION_AIR;
             break;
@@ -1027,7 +1027,7 @@ void ProjectileMovePart(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
             {
                 if (gCurrentProjectile.part == 1)
@@ -1056,7 +1056,7 @@ void ProjectileMovePart(void)
             }
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
             {
                 if (gCurrentProjectile.part == 1)
@@ -1126,7 +1126,7 @@ void ProjectileMoveWaveBeamParts(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
             {
                 if (part == 1)
@@ -1155,7 +1155,7 @@ void ProjectileMoveWaveBeamParts(void)
             }
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
             {
                 if (part == 1)
@@ -1225,7 +1225,7 @@ void ProjectileMoveWaveBeamParts_Unused(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
             {
                 if (part == 1)
@@ -1254,7 +1254,7 @@ void ProjectileMoveWaveBeamParts_Unused(void)
             }
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
             {
                 if (part == 1)
@@ -1325,7 +1325,7 @@ void ProjectileSetMissileTrail(u8 particle, u8 delay)
                 y -= movement;
                 break;
 
-            case ACD_DIAGONALLY_UP:
+            case ACD_DIAGONAL_UP:
                 y += movement * 3 / 4;
                 if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
                     x -= movement * 3 / 4;
@@ -1333,7 +1333,7 @@ void ProjectileSetMissileTrail(u8 particle, u8 delay)
                     x += movement * 3 / 4;
                 break;
 
-            case ACD_DIAGONALLY_DOWN:
+            case ACD_DIAGONAL_DOWN:
                 y -= movement * 3 / 4;
                 if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
                 {
@@ -1383,7 +1383,7 @@ void ProjectileSetBeamTrail(u8 particle, u8 delay)
                 y -= movement;
                 break;
 
-            case ACD_DIAGONALLY_UP:
+            case ACD_DIAGONAL_UP:
                 y += movement * 3 / 4;
                 if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
                     x -= movement * 3 / 4;
@@ -1391,7 +1391,7 @@ void ProjectileSetBeamTrail(u8 particle, u8 delay)
                     x += movement * 3 / 4;
                 break;
 
-            case ACD_DIAGONALLY_DOWN:
+            case ACD_DIAGONAL_DOWN:
                 y -= movement * 3 / 4;
                 if (gCurrentProjectile.status & PROJ_STATUS_X_FLIP)
                 {
@@ -3394,10 +3394,10 @@ void ProjectileChargedNormalBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             gCurrentProjectile.pOam = sChargedNormalBeamOam_Diagonal;
             break;
 
@@ -3464,10 +3464,10 @@ void ProjectileNormalBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             gCurrentProjectile.pOam = sNormalBeamOam_Diagonal;
             break;
 
@@ -3535,10 +3535,10 @@ void ProjectileMissileInit(u8 type)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (type == 0)
                 gCurrentProjectile.pOam = sNormalSuperMissileOam_Diagonal;
             else if (type == 1)
@@ -4138,10 +4138,10 @@ void ProjectileChargedChargeBeamInit(void)
 
         switch (gCurrentProjectile.direction)
         {
-            case ACD_DIAGONALLY_DOWN:
+            case ACD_DIAGONAL_DOWN:
                 gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-            case ACD_DIAGONALLY_UP:
+            case ACD_DIAGONAL_UP:
                 gCurrentProjectile.pOam = sChargedChargeBeamOam_SingleDiagonal;
                 break;
 
@@ -4165,10 +4165,10 @@ void ProjectileChargedChargeBeamInit(void)
 
         switch (gCurrentProjectile.direction)
         {
-            case ACD_DIAGONALLY_DOWN:
+            case ACD_DIAGONAL_DOWN:
                 gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-            case ACD_DIAGONALLY_UP:
+            case ACD_DIAGONAL_UP:
                 gCurrentProjectile.pOam = sChargedChargeBeamOam_DoubleDiagonal;
                 break;
 
@@ -4260,10 +4260,10 @@ void ProjectileChargeBeamInit(void)
 
         switch (gCurrentProjectile.direction)
         {
-            case ACD_DIAGONALLY_DOWN:
+            case ACD_DIAGONAL_DOWN:
                 gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-            case ACD_DIAGONALLY_UP:
+            case ACD_DIAGONAL_UP:
                 gCurrentProjectile.pOam = sChargeBeamOam_SingleDiagonal;
                 break;
 
@@ -4287,10 +4287,10 @@ void ProjectileChargeBeamInit(void)
 
         switch (gCurrentProjectile.direction)
         {
-            case ACD_DIAGONALLY_DOWN:
+            case ACD_DIAGONAL_DOWN:
                 gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
 
-            case ACD_DIAGONALLY_UP:
+            case ACD_DIAGONAL_UP:
                 gCurrentProjectile.pOam = sChargeBeamOam_DoubleDiagonal;
                 break;
 
@@ -4380,12 +4380,12 @@ void ProjectileChargedWideBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             gCurrentProjectile.pOam = sChargedWideBeamOam_Diagonal;
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             gCurrentProjectile.pOam = sChargedWideBeamOam_Diagonal;
             break;
 
@@ -4457,12 +4457,12 @@ void ProjectileWideBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             gCurrentProjectile.pOam = sWideBeamOam_Diagonal;
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             gCurrentProjectile.pOam = sWideBeamOam_Diagonal;
             break;
 
@@ -4534,12 +4534,12 @@ void ProjectileChargedPlasmaBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             gCurrentProjectile.pOam = sChargedPlasmaBeamOam_Diagonal;
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             gCurrentProjectile.pOam = sChargedPlasmaBeamOam_Diagonal;
             break;
 
@@ -4611,12 +4611,12 @@ void ProjectilePlasmaBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             gCurrentProjectile.pOam = sPlasmaBeamOam_Diagonal;
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             gCurrentProjectile.pOam = sPlasmaBeamOam_Diagonal;
             break;
 
@@ -4702,7 +4702,7 @@ void ProjectileChargedWaveBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             if (equippedBeams & BF_ICE_BEAM)
                 gCurrentProjectile.pOam = sChargedIceBeamOam_Diagonal;
@@ -4710,7 +4710,7 @@ void ProjectileChargedWaveBeamInit(void)
                 gCurrentProjectile.pOam = sChargedWaveBeamOam_Diagonal;
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (equippedBeams & BF_ICE_BEAM)
                 gCurrentProjectile.pOam = sChargedIceBeamOam_Diagonal;
             else
@@ -4801,7 +4801,7 @@ void ProjectileWaveBeamInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             if (equippedBeams & BF_ICE_BEAM)
                 gCurrentProjectile.pOam = sIceBeamOam_Diagonal;
@@ -4809,7 +4809,7 @@ void ProjectileWaveBeamInit(void)
                 gCurrentProjectile.pOam = sWaveBeamOam_Diagonal;
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (equippedBeams & BF_ICE_BEAM)
                 gCurrentProjectile.pOam = sIceBeamOam_Diagonal;
             else
@@ -4870,8 +4870,8 @@ void ProjectileFlareLoadGraphics(u8 stage)
 {
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_UP:
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_UP:
+        case ACD_DIAGONAL_DOWN:
             DMA_SET(3, sFlareDiagonalGfx_Top + stage * 8 * VRAM_TILE_SIZE, VRAM_OBJ_ADDR_COORDS(0x14, 4), C_32_2_16(DMA_ENABLE, 8 * VRAM_TILE_SIZE / 2));
             DMA_SET(3, sFlareDiagonalGfx_Bottom + stage * 8 * VRAM_TILE_SIZE, VRAM_OBJ_ADDR_COORDS(0x14, 5), C_32_2_16(DMA_ENABLE, 8 * VRAM_TILE_SIZE / 2));
             break;
@@ -4907,10 +4907,10 @@ void ProjectileFlareInit(void)
 
     switch (gCurrentProjectile.direction)
     {
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             break;
 
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             gCurrentProjectile.status |= PROJ_STATUS_Y_FLIP;
             break;
 

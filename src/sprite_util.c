@@ -3234,7 +3234,7 @@ void SpriteUtilMoveEyeCoreXBeamPart(void)
 
     switch (gCurrentSprite.work0)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             if (gCurrentSprite.status & SPRITE_STATUS_X_FLIP)
             {
                 if (gCurrentSprite.roomSlot == 1)
@@ -3263,7 +3263,7 @@ void SpriteUtilMoveEyeCoreXBeamPart(void)
             }
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (gCurrentSprite.status & SPRITE_STATUS_X_FLIP)
             {
                 if (gCurrentSprite.roomSlot == 1)
@@ -3338,7 +3338,7 @@ void SpriteUtilMoveEyeCoreXWaveBeamPart(void)
 
     switch (gCurrentSprite.work0)
     {
-        case ACD_DIAGONALLY_DOWN:
+        case ACD_DIAGONAL_DOWN:
             if (gCurrentSprite.status & SPRITE_STATUS_X_FLIP)
             {
                 if (roomSlot == 1)
@@ -3367,7 +3367,7 @@ void SpriteUtilMoveEyeCoreXWaveBeamPart(void)
             }
             break;
 
-        case ACD_DIAGONALLY_UP:
+        case ACD_DIAGONAL_UP:
             if (gCurrentSprite.status & SPRITE_STATUS_X_FLIP)
             {
                 if (roomSlot == 1)

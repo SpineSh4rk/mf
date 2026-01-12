@@ -142,7 +142,7 @@ void SamusUpdatePhysics(void)
             break;
 
         default:
-            // TODO define for 0x80 slowed (nightmare related)
+            // TODO: Define for 0x80 slowed (nightmare related)
             if (gSamusPhysics.slowed & 0x80)
                 slowed++;
     }
@@ -879,13 +879,13 @@ void SamusAimCannonStanding(void)
         if (gButtonInput & KEY_DOWN)
         {
             // Aim diagonally down
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
             gSamusData.diagonalAim = DIAG_AIM_DOWN;
         }
         else if (gSamusData.diagonalAim == DIAG_AIM_NONE || gButtonInput & KEY_UP)
         {
             // Aim diagonally up
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_UP;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_UP;
             gSamusData.diagonalAim = DIAG_AIM_UP;
         }
 
@@ -917,13 +917,13 @@ void SamusAimCannonMidAir(void)
         if (gButtonInput & KEY_DOWN)
         {
             // Aim diagonally down
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
             gSamusData.diagonalAim = DIAG_AIM_DOWN;
         }
         else if (gSamusData.diagonalAim == DIAG_AIM_NONE || gButtonInput & KEY_UP)
         {
             // Aim diagonally up
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_UP;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_UP;
             gSamusData.diagonalAim = DIAG_AIM_UP;
         }
 
@@ -935,7 +935,7 @@ void SamusAimCannonMidAir(void)
         if (gButtonInput & gSamusData.direction)
         {
             // Aim diagonally up
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_UP;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_UP;
         }
         else
         {
@@ -952,7 +952,7 @@ void SamusAimCannonMidAir(void)
         if (gButtonInput & gSamusData.direction)
         {
             // Aim diagonally down
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
         }
         else
         {
@@ -984,13 +984,13 @@ void SamusAimCannonRunning(void)
         if (gButtonInput & KEY_DOWN)
         {
             // Aim diagonally down
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
             gSamusData.diagonalAim = DIAG_AIM_DOWN;
         }
         else if (gSamusData.diagonalAim == DIAG_AIM_NONE || gButtonInput & KEY_UP)
         {
             // Aim diagonally up
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_UP;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_UP;
             gSamusData.diagonalAim = DIAG_AIM_UP;
         }
 
@@ -1003,7 +1003,7 @@ void SamusAimCannonRunning(void)
     if (gButtonInput & KEY_UP)
     {
         // Aim diagonally up
-        gSamusData.armCannonDirection = ACD_DIAGONALLY_UP;
+        gSamusData.armCannonDirection = ACD_DIAGONAL_UP;
         gSamusData.armRunningFlag = FALSE;
         return;
     }
@@ -1011,7 +1011,7 @@ void SamusAimCannonRunning(void)
     if (gButtonInput & KEY_DOWN)
     {
         // Aim diagonally up
-        gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+        gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
         gSamusData.armRunningFlag = FALSE;
         return;
     }
@@ -1029,7 +1029,7 @@ void SamusAimCannonHorizontalLadder(void)
     if (gButtonInput & gButtonAssignments.diagonalAim)
     {
         // Can only aim diagonally down
-        gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+        gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
         gSamusData.diagonalAim = DIAG_AIM_DOWN;
         return;
     }
@@ -1040,7 +1040,7 @@ void SamusAimCannonHorizontalLadder(void)
         if (gSamusData.direction & gButtonInput)
         {
             // Holding down and the facing direction, so diagonally down
-            gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+            gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
         }
         else
         {
@@ -1762,7 +1762,7 @@ u8 SamusStanding(void)
         }
 
         // Check for crouch
-        if (gSamusData.diagonalAim == DIAG_AIM_NONE || gSamusData.armCannonDirection == ACD_DIAGONALLY_DOWN)
+        if (gSamusData.diagonalAim == DIAG_AIM_NONE || gSamusData.armCannonDirection == ACD_DIAGONAL_DOWN)
         {
             if (gSamusPhysics.slowed == TRUE)
                 SoundPlay(0x95);
@@ -1848,7 +1848,7 @@ u8 SamusTurningAround(void)
     }
 
     // Check for crouch
-    if (gChangedInput & KEY_DOWN && (gSamusData.diagonalAim == DIAG_AIM_NONE || gSamusData.armCannonDirection == ACD_DIAGONALLY_DOWN))
+    if (gChangedInput & KEY_DOWN && (gSamusData.diagonalAim == DIAG_AIM_NONE || gSamusData.armCannonDirection == ACD_DIAGONAL_DOWN))
     {
         // Don't return the value to smootly transition between the 2 turning around animations
         // otherwise the crouching turning animation would start from the beginning 
@@ -2305,7 +2305,7 @@ u8 SamusCrouching(void)
         }
     }
 
-    if (gChangedInput & KEY_DOWN && gEquipment.suitMiscStatus & SMF_MORPH_BALL && (gSamusData.diagonalAim == DIAG_AIM_NONE || gSamusData.armCannonDirection == ACD_DIAGONALLY_DOWN))
+    if (gChangedInput & KEY_DOWN && gEquipment.suitMiscStatus & SMF_MORPH_BALL && (gSamusData.diagonalAim == DIAG_AIM_NONE || gSamusData.armCannonDirection == ACD_DIAGONAL_DOWN))
     {
         SoundPlay(0x7F);
         return SPOSE_MORPHING;
@@ -5101,12 +5101,12 @@ void SamusSetLandingPose(void)
     {
         case SPOSE_RUNNING:
             if (gSamusDataCopy.armCannonDirection == ACD_UP)
-                gSamusData.armCannonDirection = ACD_DIAGONALLY_UP;
+                gSamusData.armCannonDirection = ACD_DIAGONAL_UP;
 
         case SPOSE_STANDING:
         case SPOSE_LANDING:
             if (gSamusDataCopy.armCannonDirection == ACD_DOWN)
-                gSamusData.armCannonDirection = ACD_DIAGONALLY_DOWN;
+                gSamusData.armCannonDirection = ACD_DIAGONAL_DOWN;
     }
 
     SamusCheckSetNewEnvironmentEffect(1, ENV_REQUEST_LANDING_EFFECT);
@@ -5332,7 +5332,7 @@ void SamusCheckCarryFromCopy(void)
             {
                 gSamusData.armCannonDirection = gSamusDataCopy.armCannonDirection;
 
-                if (gSamusData.armCannonDirection != ACD_FORWARD && gSamusData.armCannonDirection != ACD_DIAGONALLY_UP && gSamusData.armCannonDirection != ACD_DIAGONALLY_DOWN)
+                if (gSamusData.armCannonDirection != ACD_FORWARD && gSamusData.armCannonDirection != ACD_DIAGONAL_UP && gSamusData.armCannonDirection != ACD_DIAGONAL_DOWN)
                     gSamusData.armCannonDirection = ACD_FORWARD;
             }
             break;
@@ -5341,7 +5341,7 @@ void SamusCheckCarryFromCopy(void)
             gSamusData.armCannonDirection = gSamusDataCopy.armCannonDirection;
             gSamusData.currentAnimationFrame = 1;
 
-            if (gSamusDataCopy.armCannonDirection > ACD_DIAGONALLY_DOWN)
+            if (gSamusDataCopy.armCannonDirection > ACD_DIAGONAL_DOWN)
                 gSamusData.armCannonDirection = ACD_FORWARD;
 
             if ((gSamusData.chargeBeamCounter != 0 || gSamusData.newProjectile != NEW_PROJ_NONE) && gSamusData.armCannonDirection == ACD_NONE)
@@ -7205,16 +7205,16 @@ void SamusUpdateGraphics(u8 direction)
             case SPOSE_LOADING_SAVE:
                 gSamusPaletteLength = 2 * PAL_ROW_SIZE;
                 if (gEquipment.suitMiscStatus & SMF_SA_X_SUIT)
-                    pPalette = sSamusPalPointers_LoadingSave_SaX[gSamusData.currentAnimationFrame];
+                    pPalette = sSamusPalPointers_LoadingSave_Row0_SaX[gSamusData.currentAnimationFrame];
                 else if (gEquipment.suitMiscStatus & SMF_GRAVITY_SUIT)
-                    pPalette = sSamusPalPointers_LoadingSave_Gravity[gSamusData.currentAnimationFrame];
+                    pPalette = sSamusPalPointers_LoadingSave_Row0_Gravity[gSamusData.currentAnimationFrame];
                 else if (gEquipment.suitMiscStatus & SMF_VARIA_SUIT)
-                    pPalette = sSamusPalPointers_LoadingSave_Varia[gSamusData.currentAnimationFrame];
+                    pPalette = sSamusPalPointers_LoadingSave_Row0_Varia[gSamusData.currentAnimationFrame];
                 else
-                    pPalette = sSamusPalPointers_LoadingSave_Fusion[gSamusData.currentAnimationFrame];
+                    pPalette = sSamusPalPointers_LoadingSave_Row0_Fusion[gSamusData.currentAnimationFrame];
 
                 SET_SAMUS_PAL_ROW_0(pPalette);
-                pPalette = sSamusPal_LoadingSave_Varia_20;
+                pPalette = sSamusPal_LoadingSave_Row0_Varia_20;
                 SET_SAMUS_PAL_ROW_1(pPalette);
                 break;
 

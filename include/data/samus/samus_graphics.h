@@ -10,209 +10,220 @@
 #define SAMUS_GFX_PART_SIZE 32
 #define SAMUS_GFX_SIZE(size1, size2) (2 + size1 * SAMUS_GFX_PART_SIZE + size2 * SAMUS_GFX_PART_SIZE)
 
-extern const struct SamusAnimData sSamusAnim_Running_None_Left[11]; // 2bd0e8
-extern const struct SamusAnimData sSamusAnim_Running_DiagonalUp_Left[11]; // 2bd198
-extern const struct SamusAnimData sSamusAnim_Running_Forward_Left[11]; // 2bd248
-extern const struct SamusAnimData sSamusAnim_Running_DiagonalDown_Left[11]; // 2bd2f8
-extern const struct SamusAnimData sSamusAnim_Standing_Up_Left[4]; // 2bd3a8
-extern const struct SamusAnimData sSamusAnim_Shooting_Up_Left[3]; // 2bd3e8
-extern const struct SamusAnimData sSamusAnim_Standing_DiagonalUp_Left[4]; // 2bd418
-extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalUp_Left[3]; // 2bd458
-extern const struct SamusAnimData sSamusAnim_Standing_Forward_Left[4]; // 2bd488
-extern const struct SamusAnimData sSamusAnim_Shooting_Forward_Left[3]; // 2bd4c8
-extern const struct SamusAnimData sSamusAnim_Standing_DiagonalDown_Left[4]; // 2bd4f8
-extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalDown_Left[3]; // 2bd538
-extern const struct SamusAnimData sSamusAnim_Crouching_Up_Left[3]; // 2bd568
-extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalUp_Left[3]; // 2bd598
-extern const struct SamusAnimData sSamusAnim_Crouching_Forward_Left[3]; // 2bd5c8
-extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalDown_Left[3]; // 2bd5f8
-extern const struct SamusAnimData sSamusAnim_Running_None_Right[11]; // 2bd628
-extern const struct SamusAnimData sSamusAnim_Running_DiagonalUp_Right[11]; // 2bd6d8
-extern const struct SamusAnimData sSamusAnim_Running_Forward_Right[11]; // 2bd788
-extern const struct SamusAnimData sSamusAnim_Running_DiagonalDown_Right[11]; // 2bd838
-extern const struct SamusAnimData sSamusAnim_Standing_Up_Right[4]; // 2bd8e8
-extern const struct SamusAnimData sSamusAnim_Shooting_Up_Right[3]; // 2bd928
-extern const struct SamusAnimData sSamusAnim_Standing_DiagonalUp_Right[4]; // 2bd958
-extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalUp_Right[3]; // 2bd998
-extern const struct SamusAnimData sSamusAnim_Standing_Forward_Right[4]; // 2bd9c8
-extern const struct SamusAnimData sSamusAnim_Shooting_Forward_Right[3]; // 2bda08
-extern const struct SamusAnimData sSamusAnim_Standing_DiagonalDown_Right[4]; // 2bda38
-extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalDown_Right[3]; // 2bda78
-extern const struct SamusAnimData sSamusAnim_Crouching_Up_Right[3]; // 2bdaa8
-extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalUp_Right[3]; // 2bdad8
-extern const struct SamusAnimData sSamusAnim_Crouching_Forward_Right[3]; // 2bdb08
-extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalDown_Right[3]; // 2bdb38
-extern const struct SamusAnimData sSamusAnim_Unused_2bdb68[11]; // 2bdb68
-extern const struct SamusAnimData sSamusAnim_Unused_2bdc18[11]; // 2bdc18
-extern const struct SamusAnimData sSamusAnim_Unused_2bdcc8[11]; // 2bdcc8
-extern const struct SamusAnimData sSamusAnim_Unused_2bdd78[11]; // 2bdd78
-extern const struct SamusAnimData sSamusAnim_Skidding_Default_Left[2]; // 2bde28
-extern const struct SamusAnimData sSamusAnim_Skidding_Armed_Left[2]; // 2bde48
-extern const struct SamusAnimData sSamusAnim_Skidding_Default_Right[2]; // 2bde68
-extern const struct SamusAnimData sSamusAnim_Skidding_Armed_Right[2]; // 2bde88
-extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_Default_Left[5]; // 2bdea8
-extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_LookingUp_Left[5]; // 2bdef8
-extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_Default_Right[5]; // 2bdf48
-extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_LookingUp_Right[5]; // 2bdf98
-extern const struct SamusAnimData sSamusAnim_MidAir_None_Left[7]; // 2c3f88
-extern const struct SamusAnimData sSamusAnim_Landing_None_Left[3]; // 2c3ff8
-extern const struct SamusAnimData sSamusAnim_MidAir_Up_Left[7]; // 2c4028
-extern const struct SamusAnimData sSamusAnim_Landing_Up_Left[3]; // 2c4098
-extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalUp_Left[7]; // 2c40c8
-extern const struct SamusAnimData sSamusAnim_Landing_DiagonalUp_Left[3]; // 2c4138
-extern const struct SamusAnimData sSamusAnim_MidAir_Forward_Left[7]; // 2c4168
-extern const struct SamusAnimData sSamusAnim_Landing_Forward_Left[3]; // 2c41d8
-extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalDown_Left[7]; // 2c4208
-extern const struct SamusAnimData sSamusAnim_Landing_DiagonalDown_Left[3]; // 2c4278
-extern const struct SamusAnimData sSamusAnim_Unused_2c42a8[2]; // 2c42a8
-extern const struct SamusAnimData sSamusAnim_Unused_2c42c8[2]; // 2c42c8
-extern const struct SamusAnimData sSamusAnim_Unused_2c42e8[2]; // 2c42e8
-extern const struct SamusAnimData sSamusAnim_Unused_2c4308[2]; // 2c4308
-extern const struct SamusAnimData sSamusAnim_Unused_2c4328[2]; // 2c4328
-extern const struct SamusAnimData sSamusAnim_MidAir_None_Right[7]; // 2c4348
-extern const struct SamusAnimData sSamusAnim_Landing_None_Right[3]; // 2c43b8
-extern const struct SamusAnimData sSamusAnim_MidAir_Up_Right[7]; // 2c43e8
-extern const struct SamusAnimData sSamusAnim_Landing_Up_Right[3]; // 2c4458
-extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalUp_Right[7]; // 2c4488
-extern const struct SamusAnimData sSamusAnim_Landing_DiagonalUp_Right[3]; // 2c44f8
-extern const struct SamusAnimData sSamusAnim_MidAir_Forward_Right[7]; // 2c4528
-extern const struct SamusAnimData sSamusAnim_Landing_Forward_Right[3]; // 2c4598
-extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalDown_Right[7]; // 2c45c8
-extern const struct SamusAnimData sSamusAnim_Landing_DiagonalDown_Right[3]; // 2c4638
-extern const struct SamusAnimData sSamusAnim_MidAir_Down_Left[7]; // 2c4708
-extern const struct SamusAnimData sSamusAnim_MidAir_Down_Right[7]; // 2c4778
-extern const struct SamusAnimData sSamusAnim_Spinning_Left[9]; // 2c47e8
-extern const struct SamusAnimData sSamusAnim_Spinning_Right[9]; // 2c4878
-extern const struct SamusAnimData sSamusAnim_StartingSpinJump_Left[2]; // 2c4908
-extern const struct SamusAnimData sSamusAnim_StartingSpinJump_Right[2]; // 2c4928
-extern const struct SamusAnimData sSamusAnim_DelayBeforeShinesparking_Left[5]; // 2c4948
-extern const struct SamusAnimData sSamusAnim_Shinesparking_Upwards_Left[3]; // 2c4998
-extern const struct SamusAnimData sSamusAnim_DelayBeforeShinesparking_Right[5]; // 2c49c8
-extern const struct SamusAnimData sSamusAnim_Shinesparking_Upwards_Right[3]; // 2c4a18
-extern const struct SamusAnimData sSamusAnim_Shinesparking_Sideways_Left[3]; // 2c4a48
-extern const struct SamusAnimData sSamusAnim_Shinesparking_Sideways_Right[3]; // 2c4a78
-extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Upwards_Left[10]; // 2c4aa8
-extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Upwards_Right[10]; // 2c4b48
-extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Sideways_Left[10]; // 2c4be8
-extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Sideways_Right[10]; // 2c4c88
-extern const struct SamusAnimData sSamusAnim_Turning_Up_Left[3]; // 2caec8
-extern const struct SamusAnimData sSamusAnim_Turning_Up_Right[3]; // 2caef8
-extern const struct SamusAnimData sSamusAnim_Turning_DiagonalUp_Left[3]; // 2caf28
-extern const struct SamusAnimData sSamusAnim_Turning_DiagonalUp_Right[3]; // 2caf58
-extern const struct SamusAnimData sSamusAnim_Turning_Forward_Left[3]; // 2caf88
-extern const struct SamusAnimData sSamusAnim_Turning_Forward_Right[3]; // 2cafb8
-extern const struct SamusAnimData sSamusAnim_Turning_DiagonalDown_Left[3]; // 2cafe8
-extern const struct SamusAnimData sSamusAnim_Turning_DiagonalDown_Right[3]; // 2cb018
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Up_Left[3]; // 2cb048
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Up_Right[3]; // 2cb078
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalUp_Left[3]; // 2cb0a8
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalUp_Right[3]; // 2cb0d8
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Forward_Left[3]; // 2cb108
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Forward_Right[3]; // 2cb138
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalDown_Left[3]; // 2cb168
-extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalDown_Right[3]; // 2cb198
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_Up_Left[3]; // 2cb1c8
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_Up_Right[3]; // 2cb1f8
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_DiagonalUp_Left[3]; // 2cb228
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_DiagonalUp_Right[3]; // 2cb258
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_Forward_Left[3]; // 2cb288
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_Forward_Right[3]; // 2cb2b8
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_Down_Left[3]; // 2cb2e8
-extern const struct SamusAnimData sSamusAnim_TurningMidAir_Down_Right[3]; // 2cb318
-extern const struct SamusAnimData sSamusAnim_Landing_9_Left[2]; // 2cb348
-extern const struct SamusAnimData sSamusAnim_Landing_9_Right[2]; // 2cb368
-extern const struct SamusAnimData sSamusAnim_Landing_7_Left[2]; // 2cb388
-extern const struct SamusAnimData sSamusAnim_Landing_7_Right[2]; // 2cb3a8
-extern const struct SamusAnimData sSamusAnim_Landing_5_Left[2]; // 2cb3c8
-extern const struct SamusAnimData sSamusAnim_Landing_5_Right[2]; // 2cb3e8
-extern const struct SamusAnimData sSamusAnim_Landing_8_Left[2]; // 2cb408
-extern const struct SamusAnimData sSamusAnim_Landing_8_Right[2]; // 2cb428
-extern const struct SamusAnimData sSamusAnim_Morphing_Left[4]; // 2cb448
-extern const struct SamusAnimData sSamusAnim_MorphBall_Left[9]; // 2cb488
-extern const struct SamusAnimData sSamusAnim_Unmorphing_Left[4]; // 2cb518
-extern const struct SamusAnimData sSamusAnim_Morphing_Right[4]; // 2cb558
-extern const struct SamusAnimData sSamusAnim_MorphBall_Right[9]; // 2cb598
-extern const struct SamusAnimData sSamusAnim_Unmorphing_Right[4]; // 2cb628
-extern const struct SamusAnimData sSamusAnim_OnSavePad_Left[5]; // 2cb668
-extern const struct SamusAnimData sSamusAnim_OnSavePad_Right[5]; // 2cb6b8
-extern const struct SamusAnimData sSamusAnim_FacingForeground_Left[5]; // 2cb708
-extern const struct SamusAnimData sSamusAnim_FacingForeground_Right[5]; // 2cb758
-extern const struct SamusAnimData sSamusAnim_OnNavigationPad_Left[17]; // 2cb7a8
-extern const struct SamusAnimData sSamusAnim_FacingBackground_Left[5]; // 2cb8b8
-extern const struct SamusAnimData sSamusAnim_OnNavigationPad_Right[17]; // 2cb908
-extern const struct SamusAnimData sSamusAnim_FacingBackground_Right[5]; // 2cba18
-extern const struct SamusAnimData sSamusAnim_UsingElevator_Left[6]; // 2cba68
-extern const struct SamusAnimData sSamusAnim_UsingElevator_Right[6]; // 2cbac8
-extern const struct SamusAnimData sSamusAnim_DownloadingAbility_Left[17]; // 2cbb28
-extern const struct SamusAnimData sSamusAnim_DownloadingAbility_Right[17]; // 2cbc38
-extern const struct SamusAnimData sSamusAnim_BeingRecharged_Left[9]; // 2cbd48
-extern const struct SamusAnimData sSamusAnim_BeingRecharged_Right[9]; // 2cbdd8
-extern const struct SamusAnimData sSamusAnim_UnlockingSecurity_Left[2]; // 2cbe68
-extern const struct SamusAnimData sSamusAnim_UnlockingSecurity_Right[2]; // 2cbe88
-extern const struct SamusAnimData sSamusAnim_UnlockingHabitationsDeck[7]; // 2cbea8
-extern const struct SamusAnimData sSamusAnim_HangingOnVerticalLadder_Left[8]; // 2d607c
-extern const struct SamusAnimData sSamusAnim_HangingOnVerticalLadder_Right[8]; // 2d60fc
-extern const struct SamusAnimData sSamusAnim_StartingToHoldArmOutOnVerticalLadder_Left[3]; // 2d625c
-extern const struct SamusAnimData sSamusAnim_StartingToPutArmAwayOnVerticalLadder_Left[3]; // 2d628c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalUp_Left[2]; // 2d62bc
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalUp_Left[3]; // 2d62dc
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Forward_Left[2]; // 2d630c
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Forward_Left[3]; // 2d632c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalDown_Left[2]; // 2d635c
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalDown_Left[3]; // 2d637c
-extern const struct SamusAnimData sSamusAnim_StartingToHoldArmOutOnVerticalLadder_Right[3]; // 2d63ac
-extern const struct SamusAnimData sSamusAnim_StartingToPutArmAwayOnVerticalLadder_Right[3]; // 2d63dc
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalUp_Right[2]; // 2d640c
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalUp_Right[3]; // 2d642c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Forward_Right[2]; // 2d645c
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Forward_Right[3]; // 2d647c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalDown_Right[2]; // 2d64ac
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalDown_Right[3]; // 2d64cc
-extern const struct SamusAnimData sSamusAnim_StartingWallJump_Left[3]; // 2d64fc
-extern const struct SamusAnimData sSamusAnim_StartingWallJump_Right[3]; // 2d652c
-extern const struct SamusAnimData sSamusAnim_HangingOnLedge_Default_Left[8]; // 2d655c
-extern const struct SamusAnimData sSamusAnim_PullingUpFromHanging_Left[4]; // 2d65dc
-extern const struct SamusAnimData sSamusAnim_PullingForwardFromHanging_Left[5]; // 2d661c
-extern const struct SamusAnimData sSamusAnim_PullingIntoMorphFromHanging_Left[2]; // 2d666c
-extern const struct SamusAnimData sSamusAnim_HangingOnLedge_Default_Right[8]; // 2d668c
-extern const struct SamusAnimData sSamusAnim_PullingUpFromHanging_Right[4]; // 2d670c
-extern const struct SamusAnimData sSamusAnim_PullingForwardFromHanging_Right[5]; // 2d674c
-extern const struct SamusAnimData sSamusAnim_PullingIntoMorphFromHanging_Right[2]; // 2d679c
-extern const struct SamusAnimData sSamusAnim_MovingOnHorizontalLadder_Left[11]; // 2d680c
-extern const struct SamusAnimData sSamusAnim_TurningOnHorizontalLadder_Left[3]; // 2d68bc
-extern const struct SamusAnimData sSamusAnim_TurningOnHorizontalLadder_Right[3]; // 2d68ec
-extern const struct SamusAnimData sSamusAnim_MovingOnHorizontalLadder_Right[11]; // 2d696c
-extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Default_Left[2]; // 2d6a1c
-extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Default_Left[3]; // 2d6a3c
-extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_DiagonalDown_Left[2]; // 2d6a6c
-extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_DiagonalDown_Left[3]; // 2d6a8c
-extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Down_Left[2]; // 2d6abc
-extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Down_Left[3]; // 2d6adc
-extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Default_Right[2]; // 2d6b0c
-extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Default_Right[3]; // 2d6b2c
-extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_DiagonalDown_Right[2]; // 2d6b5c
-extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_DiagonalDown_Right[3]; // 2d6b7c
-extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Down_Right[2]; // 2d6bac
-extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Down_Right[3]; // 2d6bcc
-extern const struct SamusAnimData sSamusAnim_LoweringDownToStartHanging_Left[3]; // 2d6bfc
-extern const struct SamusAnimData sSamusAnim_LoweringDownToStartHanging_Right[3]; // 2d6c2c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Up_Right[2]; // 2d6d5c
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Up_Right[3]; // 2d6d7c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Down_Right[2]; // 2d6dac
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Down_Right[3]; // 2d6dcc
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Up_Left[2]; // 2d6dfc
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Up_Left[3]; // 2d6e1c
-extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Down_Left[2]; // 2d6e4c
-extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Down_Left[3]; // 2d6e6c
-extern const struct SamusAnimData sSamusAnim_HangingOnLedge_PushingAway_Left[8]; // 2d6e9c
-extern const struct SamusAnimData sSamusAnim_HangingOnLedge_PushingAway_Right[8]; // 2d6f1c
-extern const struct SamusAnimData sSamusAnim_SpaceJumping_Left[9]; // 2d7fe4
-extern const struct SamusAnimData sSamusAnim_SpaceJumping_Right[9]; // 2d8074
-extern const struct SamusAnimData sSamusAnim_ScrewAttacking_Left[17]; // 2d8104
-extern const struct SamusAnimData sSamusAnim_ScrewAttacking_Right[17]; // 2d8214
-extern const struct SamusAnimData sSamusAnim_Dying_Left[11]; // 2d90a8
-extern const struct SamusAnimData sSamusAnim_Dying_Right[11]; // 2d9158
-extern const struct SamusAnimData sSamusAnim_LoadingSave[29]; // 2d9c04
-extern const struct SamusAnimData sSamusAnim_Saving[73]; // 2de520
+extern const struct SamusAnimData sSamusAnim_Running_None_Left[11];
+extern const struct SamusAnimData sSamusAnim_Running_DiagonalUp_Left[11];
+extern const struct SamusAnimData sSamusAnim_Running_Forward_Left[11];
+extern const struct SamusAnimData sSamusAnim_Running_DiagonalDown_Left[11];
+extern const struct SamusAnimData sSamusAnim_Standing_Up_Left[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_Standing_DiagonalUp_Left[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_Standing_Forward_Left[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_Standing_DiagonalDown_Left[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_Running_None_Right[11];
+extern const struct SamusAnimData sSamusAnim_Running_DiagonalUp_Right[11];
+extern const struct SamusAnimData sSamusAnim_Running_Forward_Right[11];
+extern const struct SamusAnimData sSamusAnim_Running_DiagonalDown_Right[11];
+extern const struct SamusAnimData sSamusAnim_Standing_Up_Right[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_Standing_DiagonalUp_Right[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_Standing_Forward_Right[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_Standing_DiagonalDown_Right[4];
+extern const struct SamusAnimData sSamusAnim_Shooting_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_Crouching_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_Unused_2bdb68[11];
+extern const struct SamusAnimData sSamusAnim_Unused_2bdc18[11];
+extern const struct SamusAnimData sSamusAnim_Unused_2bdcc8[11];
+extern const struct SamusAnimData sSamusAnim_Unused_2bdd78[11];
+extern const struct SamusAnimData sSamusAnim_Skidding_Default_Left[2];
+extern const struct SamusAnimData sSamusAnim_Skidding_Armed_Left[2];
+extern const struct SamusAnimData sSamusAnim_Skidding_Default_Right[2];
+extern const struct SamusAnimData sSamusAnim_Skidding_Armed_Right[2];
+extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_Default_Left[5];
+extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_LookingUp_Left[5];
+extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_Default_Right[5];
+extern const struct SamusAnimData sSamusAnim_HitByOmegaMetroid_LookingUp_Right[5];
+extern const struct SamusAnimData sSamusAnim_MidAir_None_Left[7];
+extern const struct SamusAnimData sSamusAnim_Landing_None_Left[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_Up_Left[7];
+extern const struct SamusAnimData sSamusAnim_Landing_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalUp_Left[7];
+extern const struct SamusAnimData sSamusAnim_Landing_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_Forward_Left[7];
+extern const struct SamusAnimData sSamusAnim_Landing_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalDown_Left[7];
+extern const struct SamusAnimData sSamusAnim_Landing_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_Unused_2c42a8[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c42c8[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c42e8[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c4308[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c4328[2];
+extern const struct SamusAnimData sSamusAnim_MidAir_None_Right[7];
+extern const struct SamusAnimData sSamusAnim_Landing_None_Right[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_Up_Right[7];
+extern const struct SamusAnimData sSamusAnim_Landing_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalUp_Right[7];
+extern const struct SamusAnimData sSamusAnim_Landing_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_Forward_Right[7];
+extern const struct SamusAnimData sSamusAnim_Landing_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_MidAir_DiagonalDown_Right[7];
+extern const struct SamusAnimData sSamusAnim_Landing_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_Unused_2c4668[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c4688[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c46a8[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c46c8[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2c46e8[2];
+extern const struct SamusAnimData sSamusAnim_MidAir_Down_Left[7];
+extern const struct SamusAnimData sSamusAnim_MidAir_Down_Right[7];
+extern const struct SamusAnimData sSamusAnim_Spinning_Left[9];
+extern const struct SamusAnimData sSamusAnim_Spinning_Right[9];
+extern const struct SamusAnimData sSamusAnim_StartingSpinJump_Left[2];
+extern const struct SamusAnimData sSamusAnim_StartingSpinJump_Right[2];
+extern const struct SamusAnimData sSamusAnim_DelayBeforeShinesparking_Left[5];
+extern const struct SamusAnimData sSamusAnim_Shinesparking_Upwards_Left[3];
+extern const struct SamusAnimData sSamusAnim_DelayBeforeShinesparking_Right[5];
+extern const struct SamusAnimData sSamusAnim_Shinesparking_Upwards_Right[3];
+extern const struct SamusAnimData sSamusAnim_Shinesparking_Sideways_Left[3];
+extern const struct SamusAnimData sSamusAnim_Shinesparking_Sideways_Right[3];
+extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Upwards_Left[10];
+extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Upwards_Right[10];
+extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Sideways_Left[10];
+extern const struct SamusAnimData sSamusAnim_DelayAfterShinesparking_Sideways_Right[10];
+extern const struct SamusAnimData sSamusAnim_Turning_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_Turning_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_Turning_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_Turning_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_Turning_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_Turning_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_Turning_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_Turning_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningAndCrouching_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_Down_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningMidAir_Down_Right[3];
+extern const struct SamusAnimData sSamusAnim_Landing_9_Left[2];
+extern const struct SamusAnimData sSamusAnim_Landing_9_Right[2];
+extern const struct SamusAnimData sSamusAnim_Landing_7_Left[2];
+extern const struct SamusAnimData sSamusAnim_Landing_7_Right[2];
+extern const struct SamusAnimData sSamusAnim_Landing_5_Left[2];
+extern const struct SamusAnimData sSamusAnim_Landing_5_Right[2];
+extern const struct SamusAnimData sSamusAnim_Landing_8_Left[2];
+extern const struct SamusAnimData sSamusAnim_Landing_8_Right[2];
+extern const struct SamusAnimData sSamusAnim_Morphing_Left[4];
+extern const struct SamusAnimData sSamusAnim_MorphBall_Left[9];
+extern const struct SamusAnimData sSamusAnim_Unmorphing_Left[4];
+extern const struct SamusAnimData sSamusAnim_Morphing_Right[4];
+extern const struct SamusAnimData sSamusAnim_MorphBall_Right[9];
+extern const struct SamusAnimData sSamusAnim_Unmorphing_Right[4];
+extern const struct SamusAnimData sSamusAnim_OnSavePad_Left[5];
+extern const struct SamusAnimData sSamusAnim_OnSavePad_Right[5];
+extern const struct SamusAnimData sSamusAnim_FacingForeground_Left[5];
+extern const struct SamusAnimData sSamusAnim_FacingForeground_Right[5];
+extern const struct SamusAnimData sSamusAnim_OnNavigationPad_Left[17];
+extern const struct SamusAnimData sSamusAnim_FacingBackground_Left[5];
+extern const struct SamusAnimData sSamusAnim_OnNavigationPad_Right[17];
+extern const struct SamusAnimData sSamusAnim_FacingBackground_Right[5];
+extern const struct SamusAnimData sSamusAnim_UsingElevator_Left[6];
+extern const struct SamusAnimData sSamusAnim_UsingElevator_Right[6];
+extern const struct SamusAnimData sSamusAnim_DownloadingAbility_Left[17];
+extern const struct SamusAnimData sSamusAnim_DownloadingAbility_Right[17];
+extern const struct SamusAnimData sSamusAnim_BeingRecharged_Left[9];
+extern const struct SamusAnimData sSamusAnim_BeingRecharged_Right[9];
+extern const struct SamusAnimData sSamusAnim_UnlockingSecurity_Left[2];
+extern const struct SamusAnimData sSamusAnim_UnlockingSecurity_Right[2];
+extern const struct SamusAnimData sSamusAnim_UnlockingHabitationsDeck[7];
+extern const struct SamusAnimData sSamusAnim_HangingOnVerticalLadder_Left[8];
+extern const struct SamusAnimData sSamusAnim_HangingOnVerticalLadder_Right[8];
+extern const struct SamusAnimData sSamusAnim_Unused_2d617c[7];
+extern const struct SamusAnimData sSamusAnim_Unused_2d61ec[7];
+extern const struct SamusAnimData sSamusAnim_StartingToHoldArmOutOnVerticalLadder_Left[3];
+extern const struct SamusAnimData sSamusAnim_StartingToPutArmAwayOnVerticalLadder_Left[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalUp_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalUp_Left[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Forward_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Forward_Left[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalDown_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_StartingToHoldArmOutOnVerticalLadder_Right[3];
+extern const struct SamusAnimData sSamusAnim_StartingToPutArmAwayOnVerticalLadder_Right[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalUp_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalUp_Right[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Forward_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Forward_Right[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_DiagonalDown_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_StartingWallJump_Left[3];
+extern const struct SamusAnimData sSamusAnim_StartingWallJump_Right[3];
+extern const struct SamusAnimData sSamusAnim_HangingOnLedge_Default_Left[8];
+extern const struct SamusAnimData sSamusAnim_PullingUpFromHanging_Left[4];
+extern const struct SamusAnimData sSamusAnim_PullingForwardFromHanging_Left[5];
+extern const struct SamusAnimData sSamusAnim_PullingIntoMorphFromHanging_Left[2];
+extern const struct SamusAnimData sSamusAnim_HangingOnLedge_Default_Right[8];
+extern const struct SamusAnimData sSamusAnim_PullingUpFromHanging_Right[4];
+extern const struct SamusAnimData sSamusAnim_PullingForwardFromHanging_Right[5];
+extern const struct SamusAnimData sSamusAnim_PullingIntoMorphFromHanging_Right[2];
+extern const struct SamusAnimData sSamusAnim_Unused_2d67bc[5];
+extern const struct SamusAnimData sSamusAnim_MovingOnHorizontalLadder_Left[11];
+extern const struct SamusAnimData sSamusAnim_TurningOnHorizontalLadder_Left[3];
+extern const struct SamusAnimData sSamusAnim_TurningOnHorizontalLadder_Right[3];
+extern const struct SamusAnimData sSamusAnim_Unused_2d691c[5];
+extern const struct SamusAnimData sSamusAnim_MovingOnHorizontalLadder_Right[11];
+extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Default_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Default_Left[3];
+extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_DiagonalDown_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_DiagonalDown_Left[3];
+extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Down_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Down_Left[3];
+extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Default_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Default_Right[3];
+extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_DiagonalDown_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_DiagonalDown_Right[3];
+extern const struct SamusAnimData sSamusAnim_AfterShootingOnHorizontalLadder_Down_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnHorizontalLadder_Down_Right[3];
+extern const struct SamusAnimData sSamusAnim_LoweringDownToStartHanging_Left[3];
+extern const struct SamusAnimData sSamusAnim_LoweringDownToStartHanging_Right[3];
+extern const struct SamusAnimData sSamusAnim_Unused_2d6c5c[8];
+extern const struct SamusAnimData sSamusAnim_Unused_2d6cdc[8];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Up_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Up_Right[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Down_Right[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Down_Right[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Up_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Up_Left[3];
+extern const struct SamusAnimData sSamusAnim_ArmOutOnVerticalLadder_Down_Left[2];
+extern const struct SamusAnimData sSamusAnim_ShootingOnVerticalLadder_Down_Left[3];
+extern const struct SamusAnimData sSamusAnim_HangingOnLedge_PushingAway_Left[8];
+extern const struct SamusAnimData sSamusAnim_HangingOnLedge_PushingAway_Right[8];
+extern const struct SamusAnimData sSamusAnim_SpaceJumping_Left[9];
+extern const struct SamusAnimData sSamusAnim_SpaceJumping_Right[9];
+extern const struct SamusAnimData sSamusAnim_ScrewAttacking_Left[17];
+extern const struct SamusAnimData sSamusAnim_ScrewAttacking_Right[17];
+extern const struct SamusAnimData sSamusAnim_Dying_Left[11];
+extern const struct SamusAnimData sSamusAnim_Dying_Right[11];
+extern const struct SamusAnimData sSamusAnim_LoadingSave[29];
+extern const struct SamusAnimData sSamusAnim_Saving[73];
 
 #endif /* SAMUS_GRAPHICS_DATA_H */
