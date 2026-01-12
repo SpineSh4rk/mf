@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_33e724_35dd74.bin",
-    "count": "0x1F650",
+    "path": "Blob_33f198_35dd74.bin",
+    "count": "0x1EBDC",
     "addr": {
-      "us": "0x33E724"
+      "us": "0x33F198"
     },
     "size": 1
   },
@@ -8852,6 +8852,22 @@
     "count": "0x30",
     "addr": {
       "us": "0x33DB3C"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/reo.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x33E7F8"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/reo.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x33EFF8"
     },
     "size": 2
   },
