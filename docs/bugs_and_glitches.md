@@ -10,6 +10,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
+  - [Arm cannon OAM data for crouching while facing right is malformed](#arm-cannon-oam-data-for-crouching-while-facing-right-is-malformed)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
   - [`ClipdataConvertToCollision` is copied to RAM but still runs in ROM](#clipdataconverttocollision-is-copied-to-ram-but-still-runs-in-rom)
   - [`ClipdataCheckElevatorDisabled` checks every elevator when only one needs to be checked](#clipdatacheckelevatordisabled-checks-every-elevator-when-only-one-needs-to-be-checked)
@@ -114,6 +115,22 @@ Beam Core-X eyes and BOX's missiles rotate in order to target Samus. The conditi
           targetRotation = Q_8_8(7.f / 8);
       }
   }
+```
+
+### Arm cannon OAM data for crouching while facing right is malformed
+
+When crouching and facing right with the arm cannon direction set to none, the arm cannon isn't displayed. This is because the OAM data seems to be shifted by 2 bytes somehow, with the part count missing, and an extra 0 at the end. This was likely missed because the only way to get an arm cannon direction of none while crouching is to jump on an enemy close to a ceiling. Normally, the arm cannon direction is set to forward as expected.
+
+**Fix:** Edit `sArmCannonOam_ShootingAndCrouching_None_Right_Frame0` in [arm_cannon_data.c](../src/data/samus/arm_cannon_data.c) to add the part count and remove the trailing 0.
+
+```diff
+  static const u16 sArmCannonOam_ShootingAndCrouching_None_Right_Frame0[OAM_DATA_SIZE(3)] = {
++     3 | ARM_CANNON_OAM_ORDER_BEHIND,
+      OAM_ENTRY(1, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x42, 1, 0),
+      OAM_ENTRY(1, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x44, 1, 0),
+      OAM_ENTRY(11, -16, OAM_DIMS_8x8, OAM_NO_FLIP, 0x5f, 1, 0),
+-     0
+  };
 ```
 
 
@@ -240,7 +257,6 @@ To trigger the first BOX fight, the game calls `EventCheckRoomEventTrigger` to c
 - PowerBombExplosion doesn't check if out of bounds, which can lead to memory corruption
   - Fix: don't check collision with any blocks outside of the room
 - Clipping into slopes ([video](https://www.youtube.com/watch?v=OGtZYyUtl8s))
-- Landing on an enemy close to the ceiling doesn't draw the arm cannon when facing right
 - Frozen enemies
   - Double hitting a frozen enemy with ice missiles doesn't kill it
   - Killing, re-freezing, and running off of an enemy on the same frame lets Samus run in air ([video](https://www.youtube.com/watch?v=mjApFImfno0))
