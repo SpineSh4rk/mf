@@ -7,6 +7,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
 - [Bugs](#bugs)
   - [Y-flipped Zoro uses the wrong size for top hitbox](#y-flipped-zoro-uses-the-wrong-size-for-top-hitbox)
   - [Y-flipped Sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
+  - [Gerutas don't update their hitbox after turning around](#gerutas-dont-update-their-hitbox-after-turning-around)
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
@@ -51,6 +52,22 @@ These are known bugs and glitches in the game: code that clearly does not work a
       gCurrentSprite.hitboxBottom = BLOCK_TO_SUB_PIXEL(1.125f);
       gCurrentSprite.hitboxLeft = -BLOCK_TO_SUB_PIXEL(0.75f);
       gCurrentSprite.hitboxRight = BLOCK_TO_SUB_PIXEL(0.75f); 
+  }
+```
+
+### Gerutas don't update their hitbox after turning around
+
+Gerutas update their hitbox when returning to idle after attacking, but not after turning around. The difference is minor though, with the hitbox only being offset by a quarter of a block (4 pixels).
+
+**Fix:** Edit `GerutaTurningAround` in [geruta.c](../src/sprites_AI/geruta.c) to call `GerutaSetIdleHitboxes`
+
+```diff
+  if (SpriteUtilHasCurrentAnimationNearlyEnded())
+  {
+-     // BUG: Hitbox isn't updated after turning around
+      gCurrentSprite.pose = SPRITE_POSE_IDLE_INIT;
+      gCurrentSprite.status ^= SPRITE_STATUS_X_FLIP;
++     GerutaSetIdleHitboxes();
   }
 ```
 

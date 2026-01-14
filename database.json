@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3480c8_35dd74.bin",
-    "count": "0x15CAC",
+    "path": "Blob_348ca4_35dd74.bin",
+    "count": "0x150D0",
     "addr": {
-      "us": "0x3480C8"
+      "us": "0x348CA4"
     },
     "size": 1
   },
@@ -8916,6 +8916,22 @@
     "count": "0x80",
     "addr": {
       "us": "0x347090"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/geruta.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x34814C"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/geruta.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x34894C"
     },
     "size": 2
   },
