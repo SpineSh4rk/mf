@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3534c4_35dd74.bin",
-    "count": "0xA8B0",
+    "path": "Blob_355570_35dd74.bin",
+    "count": "0x8804",
     "addr": {
-      "us": "0x3534C4"
+      "us": "0x355570"
     },
     "size": 1
   },
@@ -9060,6 +9060,22 @@
     "count": "0x30",
     "addr": {
       "us": "0x352F1C"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/yard.gfx",
+    "count": "0x600",
+    "addr": {
+      "us": "0x3534C4"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/yard.pal",
+    "count": "0x30",
+    "addr": {
+      "us": "0x354CC4"
     },
     "size": 2
   },

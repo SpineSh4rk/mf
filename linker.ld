@@ -295,6 +295,7 @@ SECTIONS {
         src/sprites_AI/skultera.o(.text);
         src/sprites_AI/zeela.o(.text);
         src/sprites_AI/sova.o(.text);
+        src/sprites_AI/yard.o(.text);
 
         asm/disasm_0x08038A18.o(.text);
 
@@ -433,6 +434,7 @@ SECTIONS {
         src/data/sprites/skultera.o(.rodata);
         src/data/sprites/zeela.o(.rodata);
         src/data/sprites/sova.o(.rodata);
+        src/data/sprites/yard.o(.rodata);
 
         src/data/sprites/blue_x.o(.rodata);
         src/data/sprites/missile_hatch.o(.rodata);

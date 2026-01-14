@@ -8,6 +8,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Y-flipped Zoro uses the wrong size for top hitbox](#y-flipped-zoro-uses-the-wrong-size-for-top-hitbox)
   - [Y-flipped Sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
   - [Gerutas don't update their hitbox after turning around](#gerutas-dont-update-their-hitbox-after-turning-around)
+  - [Rolling Yards use wrong Y value for left wall collision check](#rolling-yards-use-wrong-y-value-for-left-wall-collision-check)
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
@@ -68,6 +69,27 @@ Gerutas update their hitbox when returning to idle after attacking, but not afte
       gCurrentSprite.pose = SPRITE_POSE_IDLE_INIT;
       gCurrentSprite.status ^= SPRITE_STATUS_X_FLIP;
 +     GerutaSetIdleHitboxes();
+  }
+```
+
+### Rolling Yards use wrong Y value for left wall collision check
+
+**Note:** Yards that can roll don't appear in the final game, so this code was likely unfinished/untested.
+
+**Fix:** Edit `YardRolling` in [yard.c](../src/sprites_AI/yard.c) to subtract one pixel from the Y position instead of a quarter block.
+
+```diff
+  // Still on ground or slope, check block above bottom-left
+- // BUG: Y position should be subtracted by one pixel
+- SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition - BLOCK_TO_SUB_PIXEL(0.25f),
+-     gCurrentSprite.xPosition - BLOCK_TO_SUB_PIXEL(0.5f));
++ SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition - BLOCK_TO_SUB_PIXEL(0.0625f),
++     gCurrentSprite.xPosition - BLOCK_TO_SUB_PIXEL(0.5f));
+  if (gPreviousCollisionCheck == COLLISION_SOLID)
+  {
+      // Hit a wall
+      gCurrentSprite.status |= SPRITE_STATUS_FACING_RIGHT;
+      return;
   }
 ```
 
