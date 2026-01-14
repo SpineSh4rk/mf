@@ -463,5 +463,3 @@ const struct FrameData sZeelaProjectileOam_Exploding2[5] = {
 
 const u32 sRedZeelaGfx[2 * 512] = INCBIN_U32("data/sprites/red_zeela.gfx");
 const u16 sRedZeelaPal[2 * 16] = INCBIN_U16("data/sprites/red_zeela.pal");
-
-static const u8 sBlob_3516fc_35dd74[] = INCBIN_U8("data/Blob_3516fc_35dd74.bin");

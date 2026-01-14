@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3516fc_35dd74.bin",
-    "count": "0xC678",
+    "path": "Blob_3534c4_35dd74.bin",
+    "count": "0xA8B0",
     "addr": {
-      "us": "0x3516FC"
+      "us": "0x3534C4"
     },
     "size": 1
   },
@@ -9044,6 +9044,22 @@
     "count": "0x20",
     "addr": {
       "us": "0x3516BC"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/sova.gfx",
+    "count": "0x600",
+    "addr": {
+      "us": "0x35171C"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/sova.pal",
+    "count": "0x30",
+    "addr": {
+      "us": "0x352F1C"
     },
     "size": 2
   },
