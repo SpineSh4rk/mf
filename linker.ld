@@ -289,6 +289,7 @@ SECTIONS {
         src/sprites_AI/fune_namihe.o(.text);
         src/sprites_AI/box.o(.text);
         src/sprites_AI/geruta.o(.text);
+        src/sprites_AI/misc_pad.o(.text);
 
         asm/disasm_0x08038A18.o(.text);
 
@@ -421,6 +422,7 @@ SECTIONS {
         src/data/sprites/fune_namihe.o(.rodata);
         src/data/sprites/box.o(.rodata);
         src/data/sprites/geruta.o(.rodata);
+        src/data/sprites/misc_pad.o(.rodata);
 
         src/data/sprites/blue_x.o(.rodata);
         src/data/sprites/missile_hatch.o(.rodata);

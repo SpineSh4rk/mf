@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_348ca4_35dd74.bin",
-    "count": "0x150D0",
+    "path": "Blob_34ad9c_35dd74.bin",
+    "count": "0x12FD8",
     "addr": {
-      "us": "0x348CA4"
+      "us": "0x34AD9C"
     },
     "size": 1
   },
@@ -8932,6 +8932,38 @@
     "count": "0x10",
     "addr": {
       "us": "0x34894C"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/control_pad.gfx",
+    "count": "0x400",
+    "addr": {
+      "us": "0x348CA4"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/control_pad.pal",
+    "count": "0x20",
+    "addr": {
+      "us": "0x349CA4"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/habitation_pad.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x34A104"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/habitation_pad.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x34A904"
     },
     "size": 2
   },

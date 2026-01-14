@@ -107,7 +107,7 @@ void MessageBannerInit(void)
             gCurrentSprite.pose = 1;
         }
 
-        gPreventMovementTimer = 1000;
+        gPreventMovementTimer = SAMUS_ITEM_PMT;
     }
     else
     {
@@ -204,7 +204,7 @@ void MessageBannerStatic(void)
 
     roomSlot = gCurrentSprite.roomSlot;
 
-    gPreventMovementTimer = 1000;
+    gPreventMovementTimer = SAMUS_ITEM_PMT;
 
     if (gCurrentSprite.workY > 0)
     {

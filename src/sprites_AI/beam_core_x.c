@@ -219,7 +219,7 @@ void BeamCoreXRestingAtTarget(void)
 
     if (gCurrentSprite.status & SPRITE_STATUS_SAMUS_COLLIDING)
     {
-        gPreventMovementTimer = 1000;
+        gPreventMovementTimer = SAMUS_ITEM_PMT;
         gCurrentSprite.properties |= SP_ALWAYS_ACTIVE;
         gCurrentSprite.pose = 0x5f;
         gCurrentSprite.ignoreSamusCollisionTimer = 1;
