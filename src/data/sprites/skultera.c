@@ -347,5 +347,3 @@ const struct FrameData sSkulteraOam_ChasingLarge[5] = {
     },
     [4] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_34f10c_35dd74[] = INCBIN_U8("data/Blob_34f10c_35dd74.bin");
