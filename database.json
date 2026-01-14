@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_34c37c_35dd74.bin",
-    "count": "0x119F8",
+    "path": "Blob_34dcf4_35dd74.bin",
+    "count": "0x10080",
     "addr": {
-      "us": "0x34C37C"
+      "us": "0x34DCF4"
     },
     "size": 1
   },
@@ -8980,6 +8980,22 @@
     "count": "0x20",
     "addr": {
       "us": "0x34BD9C"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/scientist.gfx",
+    "count": "0x400",
+    "addr": {
+      "us": "0x34C37C"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/scientist.pal",
+    "count": "0x20",
+    "addr": {
+      "us": "0x34D37C"
     },
     "size": 2
   },
