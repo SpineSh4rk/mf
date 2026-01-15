@@ -9,6 +9,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Y-flipped Sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
   - [Gerutas don't update their hitbox after turning around](#gerutas-dont-update-their-hitbox-after-turning-around)
   - [Rolling Yards use wrong Y value for left wall collision check](#rolling-yards-use-wrong-y-value-for-left-wall-collision-check)
+  - [Choot spit explosion uses wrong X value for collision check](#choot-spit-explosion-uses-wrong-x-value-for-collision-check)
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
@@ -91,6 +92,22 @@ Gerutas update their hitbox when returning to idle after attacking, but not afte
       gCurrentSprite.status |= SPRITE_STATUS_FACING_RIGHT;
       return;
   }
+```
+
+### Choot spit explosion uses wrong X value for collision check
+
+Choot spit checks collision when exploding to determine which animation to use (on ground vs mid-air). However, it checks one block to the right when it should just check at the spit's X position. Note that there are no setups in the original game where this bug can occur.
+
+**Fix:** Edit `ChootSpitExplodingInit` in [choot.c](../src/sprites_AI/choot.c) to not subtract one block from the X position.
+
+```diff
+- // BUG: Center of spit should be checked for collision, not one block to the right
+- SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition, gCurrentSprite.xPosition - BLOCK_TO_SUB_PIXEL(1.0f));
++ SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition, gCurrentSprite.xPosition);
+  if (gPreviousCollisionCheck & COLLISION_FLAGS_UNKNOWN_F0)
+      gCurrentSprite.pOam = sChootSpitOam_ExplodingOnGround;
+  else
+      gCurrentSprite.pOam = sChootSpitOam_ExplodingMidair;
 ```
 
 ### Kihunter hives don't check if spawning a Kihunter failed

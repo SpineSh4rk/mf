@@ -535,5 +535,3 @@ const struct FrameData sGerubossOam_GrabbingCeiling[5] = {
     },
     [4] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_358f64_35dd74[] = INCBIN_U8("data/Blob_358f64_35dd74.bin");

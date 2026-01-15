@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_358f64_35dd74.bin",
-    "count": "0x4E10",
+    "path": "Blob_3599fc_35dd74.bin",
+    "count": "0x4378",
     "addr": {
-      "us": "0x358F64"
+      "us": "0x3599FC"
     },
     "size": 1
   },
@@ -9140,6 +9140,22 @@
     "count": "0x10",
     "addr": {
       "us": "0x358764"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/choot.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x358FD0"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/choot.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x3597D0"
     },
     "size": 2
   },
