@@ -250,7 +250,7 @@ void DataPadSidesDownloadingData(void)
         gCurrentSprite.pose = 0x1c;
         SAMUS_SET_POSE(SPOSE_FACING_FOREGROUND);
         gSamusData.lastWallTouchedMidAir = 10;
-        gPreventMovementTimer = 1000;
+        gPreventMovementTimer = SAMUS_ITEM_PMT;
     }
 }
 

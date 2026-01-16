@@ -7,9 +7,13 @@ These are known bugs and glitches in the game: code that clearly does not work a
 - [Bugs](#bugs)
   - [Y-flipped Zoro uses the wrong size for top hitbox](#y-flipped-zoro-uses-the-wrong-size-for-top-hitbox)
   - [Y-flipped Sciser uses the wrong size for top hitbox](#y-flipped-sciser-uses-the-wrong-size-for-top-hitbox)
+  - [Gerutas don't update their hitbox after turning around](#gerutas-dont-update-their-hitbox-after-turning-around)
+  - [Rolling Yards use wrong Y value for left wall collision check](#rolling-yards-use-wrong-y-value-for-left-wall-collision-check)
+  - [Choot spit explosion uses wrong X value for collision check](#choot-spit-explosion-uses-wrong-x-value-for-collision-check)
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
+  - [Arm cannon OAM data for crouching while facing right is malformed](#arm-cannon-oam-data-for-crouching-while-facing-right-is-malformed)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
   - [`ClipdataConvertToCollision` is copied to RAM but still runs in ROM](#clipdataconverttocollision-is-copied-to-ram-but-still-runs-in-rom)
   - [`ClipdataCheckElevatorDisabled` checks every elevator when only one needs to be checked](#clipdatacheckelevatordisabled-checks-every-elevator-when-only-one-needs-to-be-checked)
@@ -51,6 +55,59 @@ These are known bugs and glitches in the game: code that clearly does not work a
       gCurrentSprite.hitboxLeft = -BLOCK_TO_SUB_PIXEL(0.75f);
       gCurrentSprite.hitboxRight = BLOCK_TO_SUB_PIXEL(0.75f); 
   }
+```
+
+### Gerutas don't update their hitbox after turning around
+
+Gerutas update their hitbox when returning to idle after attacking, but not after turning around. The difference is minor though, with the hitbox only being offset by a quarter of a block (4 pixels).
+
+**Fix:** Edit `GerutaTurningAround` in [geruta.c](../src/sprites_AI/geruta.c) to call `GerutaSetIdleHitboxes`
+
+```diff
+  if (SpriteUtilHasCurrentAnimationNearlyEnded())
+  {
+-     // BUG: Hitbox isn't updated after turning around
+      gCurrentSprite.pose = SPRITE_POSE_IDLE_INIT;
+      gCurrentSprite.status ^= SPRITE_STATUS_X_FLIP;
++     GerutaSetIdleHitboxes();
+  }
+```
+
+### Rolling Yards use wrong Y value for left wall collision check
+
+**Note:** Yards that can roll don't appear in the final game, so this code was likely unfinished/untested.
+
+**Fix:** Edit `YardRolling` in [yard.c](../src/sprites_AI/yard.c) to subtract one pixel from the Y position instead of a quarter block.
+
+```diff
+  // Still on ground or slope, check block above bottom-left
+- // BUG: Y position should be subtracted by one pixel
+- SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition - BLOCK_TO_SUB_PIXEL(0.25f),
+-     gCurrentSprite.xPosition - BLOCK_TO_SUB_PIXEL(0.5f));
++ SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition - BLOCK_TO_SUB_PIXEL(0.0625f),
++     gCurrentSprite.xPosition - BLOCK_TO_SUB_PIXEL(0.5f));
+  if (gPreviousCollisionCheck == COLLISION_SOLID)
+  {
+      // Hit a wall
+      gCurrentSprite.status |= SPRITE_STATUS_FACING_RIGHT;
+      return;
+  }
+```
+
+### Choot spit explosion uses wrong X value for collision check
+
+Choot spit checks collision when exploding to determine which animation to use (on ground vs mid-air). However, it checks one block to the right when it should just check at the spit's X position. Note that there are no setups in the original game where this bug can occur.
+
+**Fix:** Edit `ChootSpitExplodingInit` in [choot.c](../src/sprites_AI/choot.c) to not subtract one block from the X position.
+
+```diff
+- // BUG: Center of spit should be checked for collision, not one block to the right
+- SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition, gCurrentSprite.xPosition - BLOCK_TO_SUB_PIXEL(1.0f));
++ SpriteUtilCheckCollisionAtPosition(gCurrentSprite.yPosition, gCurrentSprite.xPosition);
+  if (gPreviousCollisionCheck & COLLISION_FLAGS_UNKNOWN_F0)
+      gCurrentSprite.pOam = sChootSpitOam_ExplodingOnGround;
+  else
+      gCurrentSprite.pOam = sChootSpitOam_ExplodingMidair;
 ```
 
 ### Kihunter hives don't check if spawning a Kihunter failed
@@ -114,6 +171,22 @@ Beam Core-X eyes and BOX's missiles rotate in order to target Samus. The conditi
           targetRotation = Q_8_8(7.f / 8);
       }
   }
+```
+
+### Arm cannon OAM data for crouching while facing right is malformed
+
+When crouching and facing right with the arm cannon direction set to none, the arm cannon isn't displayed. This is because the OAM data seems to be shifted by 2 bytes somehow, with the part count missing, and an extra 0 at the end. This was likely missed because the only way to get an arm cannon direction of none while crouching is to jump on an enemy close to a ceiling. Normally, the arm cannon direction is set to forward as expected.
+
+**Fix:** Edit `sArmCannonOam_ShootingAndCrouching_None_Right_Frame0` in [arm_cannon_data.c](../src/data/samus/arm_cannon_data.c) to add the part count and remove the trailing 0.
+
+```diff
+  static const u16 sArmCannonOam_ShootingAndCrouching_None_Right_Frame0[OAM_DATA_SIZE(3)] = {
++     3 | ARM_CANNON_OAM_ORDER_BEHIND,
+      OAM_ENTRY(1, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x42, 1, 0),
+      OAM_ENTRY(1, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x44, 1, 0),
+      OAM_ENTRY(11, -16, OAM_DIMS_8x8, OAM_NO_FLIP, 0x5f, 1, 0),
+-     0
+  };
 ```
 
 
@@ -240,7 +313,6 @@ To trigger the first BOX fight, the game calls `EventCheckRoomEventTrigger` to c
 - PowerBombExplosion doesn't check if out of bounds, which can lead to memory corruption
   - Fix: don't check collision with any blocks outside of the room
 - Clipping into slopes ([video](https://www.youtube.com/watch?v=OGtZYyUtl8s))
-- Landing on an enemy close to the ceiling doesn't draw the arm cannon when facing right
 - Frozen enemies
   - Double hitting a frozen enemy with ice missiles doesn't kill it
   - Killing, re-freezing, and running off of an enemy on the same frame lets Samus run in air ([video](https://www.youtube.com/watch?v=mjApFImfno0))

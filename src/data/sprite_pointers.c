@@ -1,4 +1,4 @@
-#include "data/engine_pointers.h"
+#include "data/sprite_pointers.h"
 #include "sprites_AI/sprites.h"
 
 const Func_T sPrimarySpritesAiPointers[PSPRITE_END] = {
@@ -102,7 +102,7 @@ const Func_T sPrimarySpritesAiPointers[PSPRITE_END] = {
 	[PSPRITE_FUNE] = (Func_T)0x803563d,
 	[PSPRITE_BOX] = (Func_T)0x803854d,
 	[PSPRITE_BLUE_ZORO] = (Func_T)0x8031a81,
-	[PSPRITE_GERUDA] = (Func_T)0x8039045,
+	[PSPRITE_GERUTA] = (Func_T)0x8039045,
 	[PSPRITE_PUMP_CONTROL_PAD] = (Func_T)0x80397f9,
 	[PSPRITE_BOILER_CONTROL_PAD] = (Func_T)0x80397f9,
 	[PSPRITE_AUXILARY_POWER_PAD] = (Func_T)0x80397f9,
@@ -296,7 +296,7 @@ const u32* const sSpritesGraphicsPointers[PSPRITE_END - 0x10] = {
 	[PSPRITE_FUNE - 0x10] = (const u32*)0x833ff08,
 	[PSPRITE_BOX - 0x10] = (const u32*)0x8343090,
 	[PSPRITE_BLUE_ZORO - 0x10] = (const u32*)0x833b614,
-	[PSPRITE_GERUDA - 0x10] = (const u32*)0x834814c,
+	[PSPRITE_GERUTA - 0x10] = (const u32*)0x834814c,
 	[PSPRITE_PUMP_CONTROL_PAD - 0x10] = (const u32*)0x8348ca4,
 	[PSPRITE_BOILER_CONTROL_PAD - 0x10] = (const u32*)0x8348ca4,
 	[PSPRITE_AUXILARY_POWER_PAD - 0x10] = (const u32*)0x8348ca4,
@@ -490,7 +490,7 @@ const u16* const sSpritesPalettePointers[PSPRITE_END - 0x10] = {
 	[PSPRITE_FUNE - 0x10] = (const u16*)0x8340f08,
 	[PSPRITE_BOX - 0x10] = (const u16*)0x8347090,
 	[PSPRITE_BLUE_ZORO - 0x10] = (const u16*)0x833be34,
-	[PSPRITE_GERUDA - 0x10] = (const u16*)0x834894c,
+	[PSPRITE_GERUTA - 0x10] = (const u16*)0x834894c,
 	[PSPRITE_PUMP_CONTROL_PAD - 0x10] = (const u16*)0x8349ca4,
 	[PSPRITE_BOILER_CONTROL_PAD - 0x10] = (const u16*)0x8349ca4,
 	[PSPRITE_AUXILARY_POWER_PAD - 0x10] = (const u16*)0x8349ca4,
@@ -864,5 +864,3 @@ const u8* const sSpritesetPointers[130] = {
 	[128] = (const u8*)0x82e615e,
 	[129] = (const u8*)0x82e5cb6
 };
-
-static const u8 sBlob_79afe0_79b894[] = INCBIN_U8("data/Blob_79afe0_79b894.bin");

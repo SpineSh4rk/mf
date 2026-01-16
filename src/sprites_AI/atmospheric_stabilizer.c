@@ -708,7 +708,7 @@ void AtmosphericStabilizerCoverExploding(void)
         if (count > 0)
         {
             TrySpawnMessageBanner(messageType);
-            gPreventMovementTimer = 1000;
+            gPreventMovementTimer = SAMUS_ITEM_PMT;
         }
     }
 }

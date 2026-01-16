@@ -155,7 +155,7 @@ enum PrimarySpriteId {
     PSPRITE_FUNE,
     PSPRITE_BOX,
     PSPRITE_BLUE_ZORO,
-    PSPRITE_GERUDA,
+    PSPRITE_GERUTA,
     PSPRITE_PUMP_CONTROL_PAD,
     PSPRITE_BOILER_CONTROL_PAD,
     PSPRITE_AUXILARY_POWER_PAD,
@@ -496,6 +496,11 @@ enum SuitDamageReduction {
 
 // Represents a 100% drop change for a sprite
 #define SPRITE_DROP_MAX_PROB (1024)
+
+// Maximum value for a sprite rng
+#define SPRITE_RNG_MAX (16)
+// Computes a probability for the sprite rng value [0;16[
+#define SPRITE_RNG_PROB(prob) ((s32)((prob) * SPRITE_RNG_MAX))
 
 #define SPRITE_ISFT_POWER_BOMB_STUNNED (1 << 7)
 

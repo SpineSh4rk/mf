@@ -227,7 +227,7 @@ void RechargePadRetracting(void)
     {
         gCurrentSprite.pose = 0x1e;
         SAMUS_SET_POSE(SPOSE_STANDING);
-        gPreventMovementTimer = 1000;
+        gPreventMovementTimer = SAMUS_ITEM_PMT;
 
         // TODO: Use message ID constants
         if (gCurrentSprite.spriteId == PSPRITE_ENERGY_RECHARGE_PAD)

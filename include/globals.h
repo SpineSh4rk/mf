@@ -153,6 +153,7 @@ struct ButtonAssignments {
 
 extern struct ButtonAssignments gButtonAssignments;
 
+extern u8 gMonochromeFading;
 extern u8 gWhichBgPositionIsWrittenToBg3Ofs;
 extern u8 gSkipDoorTransition;
 
