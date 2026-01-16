@@ -87,4 +87,6 @@ enum NavigationTargetLocation {
     NAV_TARGET_LOC_END
 };
 
+#define HATCH_VERTICAL_SIZE 4
+
 #endif /* CONNECTION_CONSTANTS_H */

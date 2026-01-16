@@ -132,7 +132,7 @@ void GadoraDeath(void)
     xPosition = gCurrentSprite.xPosition;
 
     // Free hatch linked to the gadora
-    UpdateGadoraHatch(xPosition, yPosition, TRUE);
+    GadoraHatchUpdate(xPosition, yPosition, TRUE);
 }
 
 /**
@@ -185,7 +185,7 @@ void GadoraInit(void)
         xPosition = gCurrentSprite.xPosition;
 
         // Lock hatch linked to the gadora
-        UpdateGadoraHatch(xPosition, yPosition, FALSE);
+        GadoraHatchUpdate(xPosition, yPosition, FALSE);
 
         // Spawn roots
         SpriteSpawnSecondary(SSPRITE_GADORA_ROOTS, 0, gCurrentSprite.spritesetGfxSlot, gCurrentSprite.primarySpriteRamSlot,

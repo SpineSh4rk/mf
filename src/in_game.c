@@ -84,7 +84,7 @@ u32 InGameSubroutine(void)
                 }
             }
 
-            UpdateInGameTimer();
+            InGameTimerUpdate();
             unk_659a0();
             break;
 

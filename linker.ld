@@ -33,6 +33,7 @@ SECTIONS {
         . = 0x00000024; gSkipDoorTransition = .;
         . = 0x00000025; gDisableSoftReset = .;
         . = 0x0000002a; gDisableDoorsAndTanks = .;
+        . = 0x0000002b; gDisablePauseFlag = .;
         . = 0x0000002c; gCurrentArea = .;
         . = 0x0000002d; gCurrentRoom = .;
         . = 0x0000002e; gLastDoorUsed = .;
@@ -201,6 +202,8 @@ SECTIONS {
         . = 0x00004e0c; gDoorPositionStart = .;
         . = 0x00004e38; gSamusDoorPositionOffset = .;
         . = 0x00004e3c; gDestinationDoor = .;
+        . = 0x00004e3e; gBg3CntDuringDoorTransition = .;
+        . = 0x00004e40; gBg1CntDuringDoorTransition = .;
         . = 0x00004e48; gUnk_03004e48 = .;
         . = 0x00004e58; gColorFading = .;
         . = 0x00005318; gClipdataCodePointer = .;
@@ -325,7 +328,10 @@ SECTIONS {
 
         src/power_bomb_explosion.o(.text);
 
-        asm/disasm_0x080685b4.o(.text);
+        src/gadora_hatch.o(.text);
+        src/in_game_timer.o(.text);
+        src/display.o(.text);
+        src/process_pause_press.o(.text);
 
         src/clipdata.o(.text);
         src/connection.o(.text);
