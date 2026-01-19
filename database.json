@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3787d0_3bdebc.bin",
-    "count": "0x456EC",
+    "path": "Blob_3791d4_3bdebc.bin",
+    "count": "0x44CE8",
     "addr": {
-      "us": "0x3787D0"
+      "us": "0x3791D4"
     },
     "size": 1
   },
@@ -9444,6 +9444,22 @@
     "count": "0x20",
     "addr": {
       "us": "0x378790"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/owtch.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x3787D0"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/owtch.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x378FD0"
     },
     "size": 2
   },

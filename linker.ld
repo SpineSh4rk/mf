@@ -317,6 +317,7 @@ SECTIONS {
         src/sprites_AI/zazabi.o(.text);
         src/sprites_AI/elevator_pad.o(.text);
         src/sprites_AI/serris.o(.text);
+        src/sprites_AI/owtch.o(.text);
 
         asm/disasm_0x08049888.o(.text);
 
@@ -462,6 +463,8 @@ SECTIONS {
         src/data/sprites/zazabi.o(.rodata);
         src/data/sprites/elevator_pad.o(.rodata);
         src/data/sprites/serris.o(.rodata);
+        src/data/sprites/owtch.o(.rodata);
+
         src/data/sprites/x_parasite.o(.rodata);
         src/data/clipdata_data.o(.rodata);
         src/data/connection_data.o(.rodata);
