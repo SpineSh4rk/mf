@@ -320,6 +320,7 @@ SECTIONS {
         src/sprites_AI/owtch.o(.text);
         src/sprites_AI/geega.o(.text);
         src/sprites_AI/pillar.o(.text);
+        src/sprites_AI/genesis.o(.text);
 
         asm/disasm_0x08049888.o(.text);
 
@@ -468,6 +469,7 @@ SECTIONS {
         src/data/sprites/owtch.o(.rodata);
         src/data/sprites/geega.o(.rodata);
         src/data/sprites/pillar.o(.rodata);
+        src/data/sprites/genesis.o(.rodata);
 
         src/data/sprites/x_parasite.o(.rodata);
         src/data/clipdata_data.o(.rodata);

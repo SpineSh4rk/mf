@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_37abc4_3bdebc.bin",
-    "count": "0x432F8",
+    "path": "Blob_37c578_3bdebc.bin",
+    "count": "0x41944",
     "addr": {
-      "us": "0x37ABC4"
+      "us": "0x37C578"
     },
     "size": 1
   },
@@ -9492,6 +9492,22 @@
     "count": "0x10",
     "addr": {
       "us": "0x37A2F8"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/genesis.gfx",
+    "count": "0x400",
+    "addr": {
+      "us": "0x37ABC4"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/genesis.pal",
+    "count": "0x20",
+    "addr": {
+      "us": "0x37BBC4"
     },
     "size": 2
   },
