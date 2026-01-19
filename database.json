@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3791d4_3bdebc.bin",
-    "count": "0x44CE8",
+    "path": "Blob_379af8_3bdebc.bin",
+    "count": "0x443C4",
     "addr": {
-      "us": "0x3791D4"
+      "us": "0x379AF8"
     },
     "size": 1
   },
@@ -9460,6 +9460,22 @@
     "count": "0x10",
     "addr": {
       "us": "0x378FD0"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/geega.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x379258"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/geega.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x379A58"
     },
     "size": 2
   },
