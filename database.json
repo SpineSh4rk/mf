@@ -32,10 +32,10 @@
     "size": 1
   },
   {
-    "path": "Blob_379af8_3bdebc.bin",
-    "count": "0x443C4",
+    "path": "Blob_37abc4_3bdebc.bin",
+    "count": "0x432F8",
     "addr": {
-      "us": "0x379AF8"
+      "us": "0x37ABC4"
     },
     "size": 1
   },
@@ -9476,6 +9476,22 @@
     "count": "0x10",
     "addr": {
       "us": "0x379A58"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/pillar.gfx",
+    "count": "0x200",
+    "addr": {
+      "us": "0x379AF8"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/pillar.pal",
+    "count": "0x10",
+    "addr": {
+      "us": "0x37A2F8"
     },
     "size": 2
   },

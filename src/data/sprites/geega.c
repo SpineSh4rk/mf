@@ -93,5 +93,3 @@ const struct FrameData sGeegaOam_GoingForward[5] = {
     },
     [4] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_379af8_3bdebc[] = INCBIN_U8("data/Blob_379af8_3bdebc.bin");
