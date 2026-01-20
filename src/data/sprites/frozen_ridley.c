@@ -625,5 +625,3 @@ const struct FrameData sFrozenRidleyOam_Crumbled[2] = {
     },
     [1] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_3a1304_3bdebc[] = INCBIN_U8("data/Blob_3a1304_3bdebc.bin");
