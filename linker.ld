@@ -326,6 +326,10 @@ SECTIONS {
 
         asm/disasm_0x0804C578.o(.text);
 
+        src/sprites_AI/zozoro.o(.text);
+
+        asm/disasm_0x080507F4.o(.text);
+
         src/event_checks.o(.text);
         src/x_parasite_util.o(.text);
         src/screen_shake.o(.text);
@@ -474,6 +478,8 @@ SECTIONS {
         src/data/sprites/genesis.o(.rodata);
         src/data/sprites/puyo.o(.rodata);
         src/data/sprites/mimic.o(.rodata);
+
+        src/data/sprites/zozoro.o(.rodata);
 
         src/data/sprites/x_parasite.o(.rodata);
         src/data/clipdata_data.o(.rodata);
