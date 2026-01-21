@@ -162,5 +162,3 @@ const struct FrameData sIceBeamAbilityOmegaOam_GettingAbsorbed[3] = {
     },
     [2] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_3a8704_3bdebc[] = INCBIN_U8("data/Blob_3a8704_3bdebc.bin");
