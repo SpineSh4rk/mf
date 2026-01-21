@@ -339,6 +339,7 @@ SECTIONS {
         src/sprites_AI/metroid_husk.o(.text);
         src/sprites_AI/ridley.o(.text);
         src/sprites_AI/ridley_pre_spawn.o(.text);
+        src/sprites_AI/yakuza.o(.text);
 
         asm/disasm_0x08057294.o(.text);
 
@@ -500,6 +501,7 @@ SECTIONS {
         src/data/sprites/metroid_husk.o(.rodata);
         src/data/sprites/ridley.o(.rodata);
         src/data/sprites/ridley_pre_spawn.o(.rodata);
+        src/data/sprites/yakuza.o(.rodata);
 
         src/data/sprites/x_parasite.o(.rodata);
         src/data/clipdata_data.o(.rodata);

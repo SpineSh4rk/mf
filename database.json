@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3b0b04_3bdebc.bin",
-    "count": "0xD3B8",
+    "path": "Blob_3b7380_3bdebc.bin",
+    "count": "0x6B3C",
     "addr": {
-      "us": "0x3B0B04"
+      "us": "0x3B7380"
     },
     "size": 1
   },
@@ -136,10 +136,10 @@
     "size": 1
   },
   {
-    "path": "Blob_79b784_79b894.bin",
-    "count": "0x110",
+    "path": "Blob_79b7fc_79b894.bin",
+    "count": "0x98",
     "addr": {
-      "us": "0x79B784"
+      "us": "0x79B7FC"
     },
     "size": 1
   },
@@ -9708,6 +9708,30 @@
     "count": "0x20",
     "addr": {
       "us": "0x3B0838"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/yakuza.gfx",
+    "count": "0x1000",
+    "addr": {
+      "us": "0x3B11D0"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/yakuza.pal",
+    "count": "0x80",
+    "addr": {
+      "us": "0x3B51D0"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/yakuza_mouth_glowing.pal",
+    "count": "0x80",
+    "addr": {
+      "us": "0x3B52D0"
     },
     "size": 2
   },

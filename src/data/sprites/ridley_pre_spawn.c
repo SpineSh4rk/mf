@@ -168,5 +168,3 @@ const struct FrameData sRidleyPreSpawnOam_ClosingEye[4] = {
     },
     [3] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_3b0b04_3bdebc[] = INCBIN_U8("data/Blob_3b0b04_3bdebc.bin");

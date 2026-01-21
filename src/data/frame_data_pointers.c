@@ -523,38 +523,38 @@ const struct FrameData* const sRidleyFrameDataPointers[RIDLEY_OAM_END] = {
     [RIDLEY_OAM_PART_BODY_GRABBING_SAMUS] = sRidleyPartOam_BodyGrabbingSamus,
 };
 
-// const struct FrameData* const sYakuzaFrameDataPointers[YAKUZA_OAM_END] = {
-//     [FRAMEDATA_3B6F08] = sYakuzaPartOam_3b6f08,
-//     [FRAMEDATA_3B6F30] = sYakuzaPartOam_3b6f30,
-//     [FRAMEDATA_3B6F40] = sYakuzaPartOam_3b6f40,
-//     [FRAMEDATA_3B6F58] = sYakuzaPartOam_3b6f58,
-//     [FRAMEDATA_3B6F68] = sYakuzaPartOam_3b6f68,
-//     [FRAMEDATA_3B6F90] = sYakuzaPartOam_3b6f90,
-//     [FRAMEDATA_3B6FA8] = sYakuzaPartOam_3b6fa8,
-//     [FRAMEDATA_3B6FC0] = sYakuzaPartOam_3b6fc0,
-//     [FRAMEDATA_3B6FD0] = sYakuzaPartOam_3b6fd0,
-//     [FRAMEDATA_3B6FE8] = sYakuzaPartOam_3b6fe8,
-//     [FRAMEDATA_3B7010] = sYakuzaPartOam_3b7010,
-//     [FRAMEDATA_3B7028] = sYakuzaPartOam_3b7028,
-//     [FRAMEDATA_3B7060] = sYakuzaPartOam_3b7060,
-//     [FRAMEDATA_3B7088] = sYakuzaPartOam_3b7088,
-//     [FRAMEDATA_3B70B0] = sYakuzaPartOam_3b70b0,
-//     [FRAMEDATA_3B70F8] = sYakuzaPartOam_3b70f8,
-//     [FRAMEDATA_3B7120] = sYakuzaPartOam_3b7120,
-//     [FRAMEDATA_3B7140] = sYakuzaPartOam_3b7140,
-//     [FRAMEDATA_3B7150] = sYakuzaPartOam_3b7150,
-//     [FRAMEDATA_3B7188] = sYakuzaPartOam_3b7188,
-//     [FRAMEDATA_3B7198] = sYakuzaPartOam_3b7198,
-//     [FRAMEDATA_3B71C0] = sYakuzaPartOam_3b71c0,
-//     [FRAMEDATA_3B7208] = sYakuzaPartOam_3b7208,
-//     [FRAMEDATA_3B7230] = sYakuzaPartOam_3b7230,
-//     [FRAMEDATA_3B7240] = sYakuzaPartOam_3b7240,
-//     [FRAMEDATA_3B7260] = sYakuzaPartOam_3b7260,
-//     [FRAMEDATA_3B7288] = sYakuzaProjectileSpitOam,
-//     [FRAMEDATA_3B72C0] = sYakuzaProjectileFireOam_Burning1,
-//     [FRAMEDATA_3B72E0] = sYakuzaProjectileFireOam_Burning2,
-//     [FRAMEDATA_3B7300] = sYakuzaProjectileFireOam_Burning3
-// };
+const struct FrameData* const sYakuzaFrameDataPointers[YAKUZA_OAM_END] = {
+    [YAKUZA_OAM_3B6F08] = sYakuzaPartOam_3b6f08,
+    [YAKUZA_OAM_3B6F30] = sYakuzaPartOam_3b6f30,
+    [YAKUZA_OAM_3B6F40] = sYakuzaPartOam_3b6f40,
+    [YAKUZA_OAM_3B6F58] = sYakuzaPartOam_3b6f58,
+    [YAKUZA_OAM_3B6F68] = sYakuzaPartOam_3b6f68,
+    [YAKUZA_OAM_3B6F90] = sYakuzaPartOam_3b6f90,
+    [YAKUZA_OAM_3B6FA8] = sYakuzaPartOam_3b6fa8,
+    [YAKUZA_OAM_3B6FC0] = sYakuzaPartOam_3b6fc0,
+    [YAKUZA_OAM_3B6FD0] = sYakuzaPartOam_3b6fd0,
+    [YAKUZA_OAM_3B6FE8] = sYakuzaPartOam_3b6fe8,
+    [YAKUZA_OAM_3B7010] = sYakuzaPartOam_3b7010,
+    [YAKUZA_OAM_3B7028] = sYakuzaPartOam_3b7028,
+    [YAKUZA_OAM_3B7060] = sYakuzaPartOam_3b7060,
+    [YAKUZA_OAM_3B7088] = sYakuzaPartOam_3b7088,
+    [YAKUZA_OAM_3B70B0] = sYakuzaPartOam_3b70b0,
+    [YAKUZA_OAM_3B70F8] = sYakuzaPartOam_3b70f8,
+    [YAKUZA_OAM_3B7120] = sYakuzaPartOam_3b7120,
+    [YAKUZA_OAM_3B7140] = sYakuzaPartOam_3b7140,
+    [YAKUZA_OAM_3B7150] = sYakuzaPartOam_3b7150,
+    [YAKUZA_OAM_3B7188] = sYakuzaPartOam_3b7188,
+    [YAKUZA_OAM_3B7198] = sYakuzaPartOam_3b7198,
+    [YAKUZA_OAM_3B71C0] = sYakuzaPartOam_3b71c0,
+    [YAKUZA_OAM_3B7208] = sYakuzaPartOam_3b7208,
+    [YAKUZA_OAM_3B7230] = sYakuzaPartOam_3b7230,
+    [YAKUZA_OAM_3B7240] = sYakuzaPartOam_3b7240,
+    [YAKUZA_OAM_3B7260] = sYakuzaPartOam_3b7260,
+    [YAKUZA_OAM_3B7288] = sYakuzaProjectileSpitOam,
+    [YAKUZA_OAM_3B72C0] = sYakuzaProjectileFireOam_Burning1,
+    [YAKUZA_OAM_3B72E0] = sYakuzaProjectileFireOam_Burning2,
+    [YAKUZA_OAM_3B7300] = sYakuzaProjectileFireOam_Burning3
+};
 
 // const struct FrameData* const sNightmareFrameDataPointers[NIGHTMARE_OAM_END] = {
 //     [NIGHTMARE_OAM_PART_BODY] = sNightmarePartBodyOam,
@@ -597,4 +597,5 @@ const struct FrameData* const sRidleyFrameDataPointers[RIDLEY_OAM_END] = {
 //     [NIGHTMARE_OAM_SLUDGE_EXPLODING] = sNightmareSludgeOam_Exploding
 // };
 
-static const u8 sBlob_79b784_79b894[] = INCBIN_U8("data/Blob_79b784_79b894.bin");
+// TODO: Update
+static const u8 sBlob_79b7fc_79b894[] = INCBIN_U8("data/Blob_79b7fc_79b894.bin");
