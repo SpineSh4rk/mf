@@ -48,10 +48,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3af838_3bdebc.bin",
-    "count": "0xE684",
+    "path": "Blob_3b0b04_3bdebc.bin",
+    "count": "0xD3B8",
     "addr": {
-      "us": "0x3AF838"
+      "us": "0x3B0B04"
     },
     "size": 1
   },
@@ -9692,6 +9692,22 @@
     "count": "0x80",
     "addr": {
       "us": "0x3AE00C"
+    },
+    "size": 2
+  },
+  {
+    "path": "sprites/ridley_pre_spawn.gfx",
+    "count": "0x400",
+    "addr": {
+      "us": "0x3AF838"
+    },
+    "size": 4
+  },
+  {
+    "path": "sprites/ridley_pre_spawn.pal",
+    "count": "0x20",
+    "addr": {
+      "us": "0x3B0838"
     },
     "size": 2
   },

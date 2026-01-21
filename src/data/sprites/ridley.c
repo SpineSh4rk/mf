@@ -3173,5 +3173,3 @@ const struct FrameData sRidleyPartOam_BodyGrabbingSamus[5] = {
     },
     [4] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_3af838_3bdebc[] = INCBIN_U8("data/Blob_3af838_3bdebc.bin");
