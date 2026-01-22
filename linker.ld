@@ -365,8 +365,9 @@ SECTIONS {
         src/hud.o(.text);
         src/escape.o(.text);
         src/hud_generic.o(.text);
+        src/particle.o(.text);
 
-        asm/disasm_0x08072e50.o(.text);
+        asm/update_menu_oam_data_id.o(.text);
 
         src/event.o(.text);
 
@@ -523,6 +524,7 @@ SECTIONS {
     .data : ALIGN(2) {
         src/room.o(.data);
         src/sound_event.o(.data);
+        src/particle.o(.data);
         src/projectile.o(.data);
     } >rom
 }
