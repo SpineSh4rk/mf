@@ -340,9 +340,7 @@ SECTIONS {
         src/sprites_AI/ridley.o(.text);
         src/sprites_AI/ridley_pre_spawn.o(.text);
         src/sprites_AI/yakuza.o(.text);
-
-        asm/disasm_0x08057294.o(.text);
-
+        src/sprites_AI/nightmare.o(.text);
         src/event_checks.o(.text);
         src/x_parasite_util.o(.text);
         src/screen_shake.o(.text);
@@ -402,7 +400,11 @@ SECTIONS {
     .rodata : ALIGN(2) {
         src/data/generic_data.o(.rodata);
 
+        src/data/music_track_data.o(.rodata);
+        sound/sound_entries.o(.rodata);
+        sound/tracks/null_track.o(.rodata);
         sound/direct_sound_data.o(.rodata);
+        sound/track_data.o(.rodata);
 
         src/sram/sram.o(.rodata);
 
@@ -502,7 +504,7 @@ SECTIONS {
         src/data/sprites/ridley.o(.rodata);
         src/data/sprites/ridley_pre_spawn.o(.rodata);
         src/data/sprites/yakuza.o(.rodata);
-
+        src/data/sprites/nightmare.o(.rodata);
         src/data/sprites/x_parasite.o(.rodata);
         src/data/clipdata_data.o(.rodata);
         src/data/connection_data.o(.rodata);

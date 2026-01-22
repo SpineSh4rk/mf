@@ -549,8 +549,10 @@ void RidleyWaveBeamCollision(void)
     {
         if (!(gProjectileData[i].status & PROJ_STATUS_EXISTS))
             continue;
+
         if (!(gProjectileData[i].status & PROJ_STATUS_CAN_AFFECT_ENVIRONMENT))
             continue;
+            
         if (gProjectileData[i].type != PROJ_TYPE_WAVE_BEAM)
             continue;
 

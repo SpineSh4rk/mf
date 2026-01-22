@@ -7,7 +7,7 @@
 // #include "data/sprites/omega_metroid.h"
 #include "data/sprites/ridley.h"
 #include "data/sprites/yakuza.h"
-// #include "data/sprites/nightmare.h"
+#include "data/sprites/nightmare.h"
 
 extern const struct FrameData* const sBoxFrameDataPointers[BOX_OAM_END];
 
@@ -26,4 +26,4 @@ extern const struct FrameData* const sRidleyFrameDataPointers[RIDLEY_OAM_END];
 
 extern const struct FrameData* const sYakuzaFrameDataPointers[YAKUZA_OAM_END];
 
-// extern const struct FrameData* const sNightmareFrameDataPointers[NIGHTMARE_OAM_END];
+extern const struct FrameData* const sNightmareFrameDataPointers[NIGHTMARE_OAM_END];

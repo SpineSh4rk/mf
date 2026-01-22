@@ -2710,5 +2710,3 @@ const struct FrameData sYakuzaPartOam_3b7370[2] = {
     },
     [1] = FRAME_DATA_TERMINATOR
 };
-
-static const u8 sBlob_3b7380_3bdebc[] = INCBIN_U8("data/Blob_3b7380_3bdebc.bin");
