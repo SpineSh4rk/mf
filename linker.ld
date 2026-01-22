@@ -7,6 +7,7 @@ MEMORY {
 
 SECTIONS {
     ewram (NOLOAD) : ALIGN(4) {
+        . = 0x0001c000; gSpriteGfxBackup = .;
         . = 0x00035d20; gMakeSolidBlocks = .;
     } >ewram
 
@@ -382,6 +383,10 @@ SECTIONS {
 
         asm/disasm_0x08087610.o(.text);
 
+        src/sa_x_close_up.o(.text);
+
+        asm/disasm_0x0809deb4.o(.text);
+
         *libgcc.a:_call_via_rX.o(.text);
         *libgcc.a:_divsi3.o(.text);
         *libgcc.a:_dvmd_tls.o(.text);
@@ -517,6 +522,7 @@ SECTIONS {
         src/data/menus/pause_debug.o(.rodata);
         src/data/projectile_data.o(.rodata);
         src/data/menus/title_screen.o(.rodata);
+        src/data/sa_x_close_up.o(.rodata);
         src/data/sprite_pointers.o(.rodata);
         src/data/frame_data_pointers.o(.rodata);
     } >rom

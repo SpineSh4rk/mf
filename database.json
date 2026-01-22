@@ -96,10 +96,18 @@
     "size": 1
   },
   {
-    "path": "Blob_597708_79a29c.bin",
-    "count": "0x202B94",
+    "path": "Blob_597708_72eee0.bin",
+    "count": "0x1977D8",
     "addr": {
       "us": "0x597708"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_73421e_79a29c.bin",
+    "count": "0x6607E",
+    "addr": {
+      "us": "0x73421E"
     },
     "size": 1
   },
@@ -8118,6 +8126,46 @@
       "us": "0x28F91C"
     },
     "size": 2
+  },
+  {
+    "path": "sa_x_close_up/palette.pal",
+    "count": "0x100",
+    "addr": {
+      "us": "0x72EEE0"
+    },
+    "size": 2
+  },
+  {
+    "path": "sa_x_close_up/palette_grayscale.pal",
+    "count": "0x100",
+    "addr": {
+      "us": "0x72F0E0"
+    },
+    "size": 2
+  },
+  {
+    "path": "sa_x_close_up/graphics.gfx.lz",
+    "count": "0x1178",
+    "addr": {
+      "us": "0x72F2E0"
+    },
+    "size": 4
+  },
+  {
+    "path": "sa_x_close_up/first.tt.lz",
+    "count": "0x126",
+    "addr": {
+      "us": "0x7338C0"
+    },
+    "size": 4
+  },
+  {
+    "path": "sa_x_close_up/second.tt.lz",
+    "count": "0x131",
+    "addr": {
+      "us": "0x733D58"
+    },
+    "size": 4
   },
   {
     "path": "sprites/hornoad.gfx",
