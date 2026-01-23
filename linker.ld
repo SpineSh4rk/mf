@@ -478,38 +478,38 @@ SECTIONS {
         src/data/tilesets/tilesets_set0.o(.rodata);
         src/data/tilesets/tilesets_set1.o(.rodata);
 
-        src/data/rooms/maindeck/MainDeck_0.o(.rodata);
-        src/data/rooms/maindeck/Bg3.o(.rodata);
+        src/data/rooms/maindeck/maindeck_0.o(.rodata);
+        src/data/rooms/maindeck/bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set2.o(.rodata);
 
-        src/data/rooms/sector1/Sector1_0.o(.rodata);
-        src/data/rooms/sector1/Bg3.o(.rodata);
+        src/data/rooms/sector1/sector1_0.o(.rodata);
+        src/data/rooms/sector1/bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set3.o(.rodata);
 
-        src/data/rooms/sector2/Sector2_0.o(.rodata);
-        src/data/rooms/sector2/Bg3.o(.rodata);
+        src/data/rooms/sector2/sector2_0.o(.rodata);
+        src/data/rooms/sector2/bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set4.o(.rodata);
 
-        src/data/rooms/sector3/Sector3_0.o(.rodata);
-        src/data/rooms/sector3/Bg3.o(.rodata);
+        src/data/rooms/sector3/sector3_0.o(.rodata);
+        src/data/rooms/sector3/bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set5.o(.rodata);
 
-        src/data/rooms/sector5/Sector5_0.o(.rodata);
-        src/data/rooms/sector5/Bg3.o(.rodata);
+        src/data/rooms/sector5/sector5_0.o(.rodata);
+        src/data/rooms/sector5/bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set6.o(.rodata);
 
-        src/data/rooms/sector4/Sector4_0.o(.rodata);
-        src/data/rooms/sector4/Bg3.o(.rodata);
+        src/data/rooms/sector4/sector4_0.o(.rodata);
+        src/data/rooms/sector4/bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set7.o(.rodata);
 
-        src/data/rooms/sector6/Sector6_0.o(.rodata);
-        src/data/rooms/sector6/Bg3.o(.rodata);
+        src/data/rooms/sector6/sector6_0.o(.rodata);
+        src/data/rooms/sector6/bg3.o(.rodata);
 
         src/data/event_data.o(.rodata);
         src/data/menus/pause_debug.o(.rodata);
