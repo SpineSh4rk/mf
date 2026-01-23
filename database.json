@@ -168,10 +168,26 @@
     "size": 1
   },
   {
-    "path": "Blob_3eed78_46f2f4.bin",
-    "count": "0x8057C",
+    "path": "Blob_3eed78_3f38c8.bin",
+    "count": "0x4B50",
     "addr": {
       "us": "0x3EED78"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_3f38c8_413afc.bin",
+    "count": "0x20234",
+    "addr": {
+      "us": "0x3F38C8"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_413afc_46f2f4.bin",
+    "count": "0x5B7F8",
+    "addr": {
+      "us": "0x413AFC"
     },
     "size": 1
   },
@@ -191,11 +207,155 @@
     },
     "size": 1
   },
-    {
-    "path": "Blob_48b1cc_575a60.bin",
-    "count": "0xEA894",
+  {
+    "path": "Blob_48b1cc_498e52.bin",
+    "count": "0xDC86",
     "addr": {
       "us": "0x48B1CC"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_498e52_4a2670.bin",
+    "count": "0x981E",
+    "addr": {
+      "us": "0x498E52"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_4a2670_4a38ec.bin",
+    "count": "0x127C",
+    "addr": {
+      "us": "0x4A2670"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_4a38ec_4cd200.bin",
+    "count": "0x29914",
+    "addr": {
+      "us": "0x4A38EC"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_4cd200_4dd11c.bin",
+    "count": "0xFF1C",
+    "addr": {
+      "us": "0x4CD200"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_4dd11c_4e0128.bin",
+    "count": "0x300C",
+    "addr": {
+      "us": "0x4DD11C"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_4e0128_4f8d30.bin",
+    "count": "0x18C08",
+    "addr": {
+      "us": "0x4E0128"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_4f8d30_502ed4.bin",
+    "count": "0xA1A4",
+    "addr": {
+      "us": "0x4F8D30"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_502ed4_504cc4.bin",
+    "count": "0x1DF0",
+    "addr": {
+      "us": "0x502ED4"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_504cc4_513e46.bin",
+    "count": "0xF182",
+    "addr": {
+      "us": "0x504CC4"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_513e46_51fba8.bin",
+    "count": "0xBD62",
+    "addr": {
+      "us": "0x513E46"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_51fba8_520fe4.bin",
+    "count": "0x143C",
+    "addr": {
+      "us": "0x51FBA8"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_520fe4_535cd0.bin",
+    "count": "0x14CEC",
+    "addr": {
+      "us": "0x520FE4"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_535cd0_542160.bin",
+    "count": "0xC490",
+    "addr": {
+      "us": "0x535CD0"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_542160_5438f8.bin",
+    "count": "0x1798",
+    "addr": {
+      "us": "0x542160"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_5438f8_55071a.bin",
+    "count": "0xCE22",
+    "addr": {
+      "us": "0x5438F8"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_55071a_557bf0.bin",
+    "count": "0x74D6",
+    "addr": {
+      "us": "0x55071A"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_557bf0_5594a8.bin",
+    "count": "0x18B8",
+    "addr": {
+      "us": "0x557BF0"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_5594a8_575a60.bin",
+    "count": "0x1C5B8",
+    "addr": {
+      "us": "0x5594A8"
     },
     "size": 1
   },
