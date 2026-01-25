@@ -514,10 +514,49 @@ SECTIONS {
         src/data/sprites/nightmare.o(.rodata);
         src/data/sprites/x_parasite.o(.rodata);
         src/data/clipdata_data.o(.rodata);
+        src/data/rooms_data.o(.rodata);
+        src/data/hatch_data.o(.rodata);
         src/data/connection_data.o(.rodata);
         src/data/demo_data.o(.rodata);
         src/data/hud_data.o(.rodata);
         src/data/particle_data.o(.rodata);
+
+        src/data/tilesets/tilesets_set0.o(.rodata);
+        src/data/tilesets/tilesets_set1.o(.rodata);
+
+        src/data/rooms/main_deck/main_deck_0.o(.rodata);
+        src/data/rooms/main_deck/bg3.o(.rodata);
+
+        src/data/tilesets/tilesets_set2.o(.rodata);
+
+        src/data/rooms/sector_1/sector_1_0.o(.rodata);
+        src/data/rooms/sector_1/bg3.o(.rodata);
+
+        src/data/tilesets/tilesets_set3.o(.rodata);
+
+        src/data/rooms/sector_2/sector_2_0.o(.rodata);
+        src/data/rooms/sector_2/bg3.o(.rodata);
+
+        src/data/tilesets/tilesets_set4.o(.rodata);
+
+        src/data/rooms/sector_3/sector_3_0.o(.rodata);
+        src/data/rooms/sector_3/bg3.o(.rodata);
+
+        src/data/tilesets/tilesets_set5.o(.rodata);
+
+        src/data/rooms/sector_5/sector_5_0.o(.rodata);
+        src/data/rooms/sector_5/bg3.o(.rodata);
+
+        src/data/tilesets/tilesets_set6.o(.rodata);
+
+        src/data/rooms/sector_4/sector_4_0.o(.rodata);
+        src/data/rooms/sector_4/bg3.o(.rodata);
+
+        src/data/tilesets/tilesets_set7.o(.rodata);
+
+        src/data/rooms/sector_6/sector_6_0.o(.rodata);
+        src/data/rooms/sector_6/bg3.o(.rodata);
+
         src/data/event_data.o(.rodata);
         src/data/menus/pause_debug.o(.rodata);
         src/data/projectile_data.o(.rodata);

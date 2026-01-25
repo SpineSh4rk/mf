@@ -94,7 +94,7 @@ CPPFLAGS += -nostdinc -Iinclude/
 PREPROCFLAGS = charmap.txt
 
 # Objects
-CSRC = $(wildcard src/**.c) $(wildcard src/**/**.c) $(wildcard src/**/**/**.c)
+CSRC = $(wildcard src/**.c) $(wildcard src/**/**.c) $(wildcard src/**/**/**.c) $(wildcard src/**/**/**/**.c)
 .PRECIOUS: $(CSRC:.c=.s)
 ASMSRC = $(CSRC:.c=.s) $(wildcard asm/*.s) $(wildcard sound/*.s) $(wildcard sound/**/*.s)
 OBJ = $(ASMSRC:.s=.o) 
