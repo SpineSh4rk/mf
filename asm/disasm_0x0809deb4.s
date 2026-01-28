@@ -4249,7 +4249,7 @@ FileSelectProcessAudioLogos: @ 0x080A0024
 	strb r3, [r2, #6]
 	movs r0, #0x80
 	lsls r0, r0, #0x12
-	bl unk_24ec
+	bl DoSoundAction
 	ldr r0, _080A0074 @ =0x00000206
 	bl SoundPlay
 	b _080A00DA
@@ -4278,7 +4278,7 @@ _080A0078:
 	strb r1, [r2, #6]
 	movs r0, #0x80
 	lsls r0, r0, #0x11
-	bl unk_24ec
+	bl DoSoundAction
 	movs r0, #0xfd
 	lsls r0, r0, #1
 	bl SoundPlay

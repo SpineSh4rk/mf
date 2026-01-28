@@ -20,6 +20,13 @@ struct Voice {
     struct Envelope envelope;
 };
 
+struct SoundQueue {
+    u8 exists;
+    u8 priority;
+    u16 fadingTimer;
+    const u8* pHeader;
+};
+
 struct SoundChannel {
     u8 unk_0;
     u8 unk_1;
@@ -46,6 +53,11 @@ struct SoundChannel {
     struct TrackVariables* pVariables;
     struct SoundChannel* pChannel1;
     struct SoundChannel* pChannel2;
+};
+
+struct SoundChannelBackup {
+    struct SoundChannel* pChannel;
+    struct SoundChannel channel;
 };
 
 struct PsgSoundData {
@@ -191,11 +203,10 @@ struct TrackData {
 };
 
 struct TrackGroupRomData {
-    // FIXME: Use actual pointers
-    u32 pTrack;
-    u32 pVariables;
+    struct TrackData* pTrack;
+    struct TrackVariables* pVariables;
     u16 maxAmountOfTracks;
-    u16 unknown_A;
+    u16 unk_A;
 };
 
 struct SoundEntry {
@@ -246,9 +257,19 @@ struct MusicTrack {
 
 typedef void (*MusicFunc_T)(struct TrackVariables*);
 
+// Linker variables
+extern char gNumMusicPlayers[];
+extern char gUnk_Audio0x64[];
+extern char gUnk_Audio0x193F600[];
+
 extern struct MusicInfo gMusicInfo;
 
-extern struct MusicTrack gCurrentMusicTrack;
+extern struct PsgSoundData gUnk_300343c[];
+extern struct PsgSoundData gPsgSounds[4];
+
+extern struct SoundChannelBackup gSoundChannelBackup[6]; // 0x3003504
+// extern struct SoundChannelBackup gSoundChannelTrack2Backup[6];
+// extern struct SoundQueue gSoundQueue[8];
 
 typedef void (*SoundCodeAFunc_T)(struct SoundChannel*, u32*, u8);
 typedef u8* (*SoundCodeBFunc_T)(u32*, u32*, u32*, u8);
@@ -261,7 +282,24 @@ extern u8 gSoundCodeB[164];
 extern SoundCodeCFunc_T gSoundCodeCPointer;
 extern u8 gSoundCodeC[176];
 
-extern struct PsgSoundData gUnk_300343c[];
-extern struct PsgSoundData gPsgSounds[4];
+extern struct TrackVariables gTrack0Variables[10];
+extern struct TrackVariables gTrack1Variables[10];
+extern struct TrackVariables gTrack2Variables[2];
+extern struct TrackVariables gTrack3Variables[2];
+extern struct TrackVariables gTrack4Variables[2];
+extern struct TrackVariables gTrack5Variables[2];
+extern struct TrackVariables gTrack6Variables[3];
+extern struct TrackVariables gTrack7Variables[1];
+
+extern struct MusicTrack gCurrentMusicTrack;
+
+extern struct TrackData gTrackData3;
+extern struct TrackData gTrackData1;
+extern struct TrackData gTrackData6;
+extern struct TrackData gTrackData4;
+extern struct TrackData gTrackData0;
+extern struct TrackData gTrackData7;
+extern struct TrackData gTrackData2;
+extern struct TrackData gTrackData5;
 
 #endif /* AUDIO_STRUCTS_H */

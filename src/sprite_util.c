@@ -274,11 +274,11 @@ void SpriteUtilTakeConstantDamageFromYakuza(void)
     {
         // Play hurt sounds
         if (MOD_AND(gEquipment.currentEnergy, 16) == 0)
-            SoundPlay_2894(SOUND_SAMUS_HURT);
+            unk_2894(SOUND_SAMUS_HURT);
         else if (MOD_AND(gEquipment.currentEnergy, 16) == 7)
-            SoundPlay_2894(SOUND_SAMUS_HURT);
+            unk_2894(SOUND_SAMUS_HURT);
 
-        SoundPlay_2894(SOUND_SAMUS_CONSTANT_DAMAGE);
+        unk_2894(SOUND_SAMUS_CONSTANT_DAMAGE);
     }
 }
 
@@ -731,14 +731,14 @@ void SpriteUtilSamusAndSpriteCollision(void)
                             gSamusData.invincibilityTimer = 8;
 
                             if (MOD_AND(gEquipment.currentEnergy, 16) == 0)
-                                SoundPlay_2894(SOUND_SAMUS_HURT);
+                                unk_2894(SOUND_SAMUS_HURT);
                             else if (MOD_AND(gEquipment.currentEnergy, 16) == 7)
-                                SoundPlay_2894(SOUND_SAMUS_HURT);
+                                unk_2894(SOUND_SAMUS_HURT);
 
                             if (gSpriteData[i].spriteId == PSPRITE_ELECTRIC_WATER_DAMAGE || gSpriteData[i].spriteId == PSPRITE_ELECTRIC_WATER_DAMAGE_BOX_2)
-                                SoundPlay_2894(SOUND_SAMUS_ELECTRIC_WATER_DAMAGE);
+                                unk_2894(SOUND_SAMUS_ELECTRIC_WATER_DAMAGE);
                             else
-                                SoundPlay_2894(SOUND_SAMUS_CONSTANT_DAMAGE);
+                                unk_2894(SOUND_SAMUS_CONSTANT_DAMAGE);
                         }
                     }
 
@@ -953,11 +953,11 @@ void SpriteUtilSamusAndSpriteCollision(void)
                             gSamusData.invincibilityTimer = 30;
 
                             if (MOD_AND(gEquipment.currentEnergy, 16) == 0)
-                                SoundPlay_2894(SOUND_SAMUS_HURT);
+                                unk_2894(SOUND_SAMUS_HURT);
                             else if (MOD_AND(gEquipment.currentEnergy, 16) == 7)
-                                SoundPlay_2894(SOUND_SAMUS_HURT);
+                                unk_2894(SOUND_SAMUS_HURT);
 
-                            SoundPlay_2894(SOUND_SAMUS_CONSTANT_DAMAGE);
+                            unk_2894(SOUND_SAMUS_CONSTANT_DAMAGE);
                         }
                     }
 

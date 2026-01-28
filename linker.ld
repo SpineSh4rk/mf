@@ -4,6 +4,9 @@ MEMORY {
     rom : ORIGIN = 0x08000000 LENGTH = 32M
 }
 
+gNumMusicPlayers = 8;
+gUnk_Audio0x64 = 0x64;
+gUnk_Audio0x193F600 = 0x193F600;
 
 SECTIONS {
     ewram (NOLOAD) : ALIGN(4) {
@@ -182,14 +185,25 @@ SECTIONS {
         . = 0x000019c8; gHBlankCallback = .;
         . = 0x000019cc; gVCountCallback = .;
         . = 0x000019d0; gMusicInfo = .;
+
         . = 0x0000343c; gUnk_300343c = .;
         . = 0x00003464; gPsgSounds = .;
+        . = 0x00003504; gSoundChannelBackup = .;
         . = 0x00003654; gSoundCodeAPointer = .;
         . = 0x00003658; gSoundCodeA = .;
         . = 0x00003cb0; gSoundCodeBPointer = .;
         . = 0x00003cb4; gSoundCodeB = .;
         . = 0x00003d58; gSoundCodeCPointer = .;
         . = 0x00003d5c; gSoundCodeC = .;
+        . = 0x00003e10; gTrack0Variables = .;
+        . = 0x00004130; gTrack1Variables = .;
+        . = 0x00004450; gTrack2Variables = .;
+        . = 0x000044f0; gTrack3Variables = .;
+        . = 0x00004590; gTrack4Variables = .;
+        . = 0x00004630; gTrack5Variables = .;
+        . = 0x000046d0; gTrack6Variables = .;
+        . = 0x000047c0; gTrack7Variables = .;
+
         . = 0x00004810; gSamusUseYVelocityForX = .;
         . = 0x00004812; gDemoInputs = .;
         . = 0x00004a12; gDemoInputDurations = .;
@@ -221,6 +235,15 @@ SECTIONS {
         . = 0x00005408; *libgcc.a:dp-bit.o(.bss);
         . = 0x00005420; *libgcc.a:fp-bit.o(.bss);
 
+        . = 0x00005430; gTrackData3 = .;
+        . = 0x00005470; gTrackData1 = .;
+        . = 0x000054b0; gTrackData6 = .;
+        . = 0x000054f0; gTrackData4 = .;
+        . = 0x00005530; gTrackData0 = .;
+        . = 0x00005570; gTrackData7 = .;
+        . = 0x000055b0; gTrackData2 = .;
+        . = 0x000055f0; gTrackData5 = .;
+
         . = 0x00007ffc; gInterruptCodePointer = .;
         
     } >iwram
@@ -241,8 +264,9 @@ SECTIONS {
         asm/disasm_0x08000c28.o(.text);
 
         src/audio.o(.text);
+        src/audio_wrappers.o(.text);
 
-        asm/disasm_0x08002298.o(.text);
+        asm/disasm_0x08002f1c.o(.text);
         asm/syscalls.o(.text);
 
         src/sram/sram.o(.text);
@@ -337,8 +361,9 @@ SECTIONS {
         src/sprites_AI/genesis.o(.text);
         src/sprites_AI/puyo.o(.text);
         src/sprites_AI/mimic.o(.text);
+        src/sprites_AI/flashing_number.o(.text);
 
-        asm/disasm_0x0804C578.o(.text);
+        asm/disasm_0x0804C744.o(.text);
 
         src/sprites_AI/zozoro.o(.text);
 
@@ -513,6 +538,7 @@ SECTIONS {
         src/data/sprites/genesis.o(.rodata);
         src/data/sprites/puyo.o(.rodata);
         src/data/sprites/mimic.o(.rodata);
+        src/data/sprites/flashing_number.o(.rodata);
 
         src/data/sprites/zozoro.o(.rodata);
 

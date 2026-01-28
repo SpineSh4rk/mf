@@ -4498,7 +4498,7 @@ u8 SamusDying(void)
     if (gSamusData.lastWallTouchedMidAir == 0)
     {
         gSamusData.lastWallTouchedMidAir++;
-        StopAllMusicsAndSounds();
+        StopAllMusicAndSounds();
     }
     else if (gSamusData.lastWallTouchedMidAir == 1)
     {

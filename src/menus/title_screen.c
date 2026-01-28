@@ -100,7 +100,7 @@ void unk_8690c(void)
     zero = 0;
     DMA_SET(3, &zero, &gNonGameplayRam, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_SRC_FIXED, sizeof(gNonGameplayRam) / sizeof(u32)));
 
-    unk_24ec(0x1000000);
+    DoSoundAction(0x1000000);
 
     write16(REG_BLDCNT, BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_ALPHA_BLENDING_EFFECT | BLDCNT_BRIGHTNESS_INCREASE_EFFECT);
     gWrittenToBldy = BLDY_MAX_VALUE;
@@ -584,7 +584,7 @@ void TitleScreenInit(void)
     zero = 0;
     DMA_SET(3, &zero, &gNonGameplayRam, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_SRC_FIXED, sizeof(gNonGameplayRam) / sizeof(u32)));
 
-    unk_24ec(0x1000000);
+    DoSoundAction(0x1000000);
 
     gWrittenToBldy = BLDY_MAX_VALUE;
     write16(REG_BLDY, BLDY_MAX_VALUE);
