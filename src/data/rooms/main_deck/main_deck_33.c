@@ -8,7 +8,7 @@ const u8 sMainDeck_33_Bg2[164] = INCBIN_U8("data/rooms/main_deck/main_deck_33_bg
 const u8 sMainDeck_33_Bg1[160] = INCBIN_U8("data/rooms/main_deck/main_deck_33_bg1.gfx");
 
 const u8 sMainDeck_33_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	10, 9, 17,
+	10, 9, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 

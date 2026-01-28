@@ -16,7 +16,7 @@ const u8 sMainDeck_60_Scrolls[SCROLL_DATA_SIZE(1)] = {
 const u8 sMainDeck_60_Clipdata[116] = INCBIN_U8("data/rooms/main_deck/main_deck_60_clipdata.gfx");
 
 const u8 sMainDeck_60_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	8, 9, 17,
+	8, 9, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
@@ -25,7 +25,7 @@ const u8 sMainDeck_60_Bg2[249] = INCBIN_U8("data/rooms/main_deck/main_deck_60_bg
 const u8 sMainDeck_60_Bg1[326] = INCBIN_U8("data/rooms/main_deck/main_deck_60_bg1.gfx");
 
 const u8 sMainDeck_60_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	8, 9, 17,
+	8, 9, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 

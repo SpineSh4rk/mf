@@ -6,8 +6,8 @@ const u8 sMainDeck_3_Clipdata[60] = INCBIN_U8("data/rooms/main_deck/main_deck_3_
 const u8 sMainDeck_3_Bg2[178] = INCBIN_U8("data/rooms/main_deck/main_deck_3_bg2.gfx");
 
 const u8 sMainDeck_3_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	10, 30, 25,
-	10, 33, 25,
+	10, 30, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(8),
+	10, 33, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(8),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 

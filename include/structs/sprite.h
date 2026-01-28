@@ -4,6 +4,8 @@
 #include "types.h"
 #include "oam.h"
 
+#include "constants/sprite.h"
+
 #define MAX_AMOUNT_OF_SPRITES 24
 #define MAX_AMOUNT_OF_SPRITE_TYPES 15
 #define ENEMY_ROOM_DATA_SIZE 3

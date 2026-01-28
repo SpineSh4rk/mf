@@ -23,28 +23,28 @@ const u8 sMainDeck_21_Scrolls[SCROLL_DATA_SIZE(2)] = {
 const u8 sMainDeck_21_Clipdata[190] = INCBIN_U8("data/rooms/main_deck/main_deck_21_clipdata.gfx");
 
 const u8 sMainDeck_21_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	7, 5, 2,
+	7, 5, SPRITESET_IDX(1),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sMainDeck_21_Bg2[253] = INCBIN_U8("data/rooms/main_deck/main_deck_21_bg2.gfx");
 
 const u8 sMainDeck_21_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
-	7, 5, 2,
-	15, 5, 34,
-	29, 27, 18,
-	33, 16, 56,
+	7, 5, SPRITESET_IDX(1),
+	15, 5, SSP_X_ABSORBABLE_BY_SAMUS | SPRITESET_IDX(1),
+	29, 27, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(1),
+	33, 16, SSP_X_UNABSORBABLE_BY_SAMUS | SPRITESET_IDX(7),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sMainDeck_21_Bg1[619] = INCBIN_U8("data/rooms/main_deck/main_deck_21_bg1.gfx");
 
 const u8 sMainDeck_21_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
-	7, 5, 2,
-	15, 5, 34,
-	16, 13, 36,
-	29, 27, 18,
-	33, 16, 56,
+	7, 5, SPRITESET_IDX(1),
+	15, 5, SSP_X_ABSORBABLE_BY_SAMUS | SPRITESET_IDX(1),
+	16, 13, SSP_X_ABSORBABLE_BY_SAMUS | SPRITESET_IDX(3),
+	29, 27, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(1),
+	33, 16, SSP_X_UNABSORBABLE_BY_SAMUS | SPRITESET_IDX(7),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 

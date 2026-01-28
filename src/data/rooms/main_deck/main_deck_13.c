@@ -25,16 +25,16 @@ const u8 sMainDeck_13_Clipdata[195] = INCBIN_U8("data/rooms/main_deck/main_deck_
 const u8 sMainDeck_13_Bg2[1047] = INCBIN_U8("data/rooms/main_deck/main_deck_13_bg2.gfx");
 
 const u8 sMainDeck_13_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(4)] = {
-	13, 16, 15,
-	16, 26, 17,
-	20, 18, 3,
+	13, 16, SPRITESET_IDX(14),
+	16, 26, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
+	20, 18, SPRITESET_IDX(2),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sMainDeck_13_Bg1[731] = INCBIN_U8("data/rooms/main_deck/main_deck_13_bg1.gfx");
 
 const u8 sMainDeck_13_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	16, 26, 20,
+	16, 26, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(3),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 

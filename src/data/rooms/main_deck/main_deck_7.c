@@ -25,14 +25,14 @@ const u8 sMainDeck_7_Clipdata[151] = INCBIN_U8("data/rooms/main_deck/main_deck_7
 const u8 sMainDeck_7_Bg2[297] = INCBIN_U8("data/rooms/main_deck/main_deck_7_bg2.gfx");
 
 const u8 sMainDeck_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	7, 17, 3,
+	7, 17, SPRITESET_IDX(2),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sMainDeck_7_Bg1[557] = INCBIN_U8("data/rooms/main_deck/main_deck_7_bg1.gfx");
 
 const u8 sMainDeck_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	7, 15, 3,
+	7, 15, SPRITESET_IDX(2),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
