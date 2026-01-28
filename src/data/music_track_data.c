@@ -6,51 +6,51 @@
 // FIXME: Replace pointers
 const struct TrackGroupRomData sMusicTrackDataRom[8] = {
     [0] = {
-        .pTrack = 0x3005530,
-        .pVariables = 0x3003E10,
+        .pTrack = &gTrackData0,
+        .pVariables = gTrack0Variables,
         .maxAmountOfTracks = 10,
-        .unknown_A = 0
+        .unk_A = 0
     },
     [1] = {
-        .pTrack = 0x3005470,
-        .pVariables = 0x3004130,
+        .pTrack = &gTrackData1,
+        .pVariables = gTrack1Variables,
         .maxAmountOfTracks = 10,
-        .unknown_A = 1
+        .unk_A = 1
     },
     [2] = {
-        .pTrack = 0x30055B0,
-        .pVariables = 0x3004450,
+        .pTrack = &gTrackData2,
+        .pVariables = gTrack2Variables,
         .maxAmountOfTracks = 2,
-        .unknown_A = 1
+        .unk_A = 1
     },
     [3] = {
-        .pTrack = 0x3005430,
-        .pVariables = 0x30044F0,
+        .pTrack = &gTrackData3,
+        .pVariables = gTrack3Variables,
         .maxAmountOfTracks = 2,
-        .unknown_A = 0
+        .unk_A = 0
     },
     [4] = {
-        .pTrack = 0x30054F0,
-        .pVariables = 0x3004590,
+        .pTrack = &gTrackData4,
+        .pVariables = gTrack4Variables,
         .maxAmountOfTracks = 2,
-        .unknown_A = 1
+        .unk_A = 1
     },
     [5] = {
-        .pTrack = 0x30055F0,
-        .pVariables = 0x3004630,
+        .pTrack = &gTrackData5,
+        .pVariables = gTrack5Variables,
         .maxAmountOfTracks = 2,
-        .unknown_A = 1
+        .unk_A = 1
     },
     [6] = {
-        .pTrack = 0x30054B0,
-        .pVariables = 0x30046D0,
+        .pTrack = &gTrackData6,
+        .pVariables = gTrack6Variables,
         .maxAmountOfTracks = 3,
-        .unknown_A = 0
+        .unk_A = 0
     },
     [7] = {
-        .pTrack = 0x3005570,
-        .pVariables = 0x30047C0,
+        .pTrack = &gTrackData7,
+        .pVariables = gTrack7Variables,
         .maxAmountOfTracks = 1,
-        .unknown_A = 1
+        .unk_A = 1
     }
 };

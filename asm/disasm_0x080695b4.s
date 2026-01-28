@@ -10440,11 +10440,11 @@ _0806E60E:
 	cmp r0, #0
 	bne _0806E634
 	ldr r0, _0806E65C @ =0x030054B0
-	bl StopMusic
+	bl StopMusicOrSound
 	ldr r0, _0806E660 @ =0x030055F0
-	bl StopMusic
+	bl StopMusicOrSound
 	ldr r0, _0806E664 @ =0x030054F0
-	bl StopMusic
+	bl StopMusicOrSound
 _0806E634:
 	ldr r1, _0806E668 @ =gNextOamSlot
 	movs r0, #0
@@ -10921,7 +10921,7 @@ _0806EA0C:
 	bl unk_6dacc
 	cmp r0, #0
 	beq _0806EA34
-	bl StopAllMusicsAndSounds
+	bl StopAllMusicAndSounds
 	ldrb r0, [r4, #1]
 	adds r0, #1
 	strb r0, [r4, #1]

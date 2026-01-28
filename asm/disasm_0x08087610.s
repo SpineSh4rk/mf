@@ -51,7 +51,7 @@ _08087664:
 	movs r0, #3
 	strh r0, [r3]
 	movs r0, #0x14
-	bl unk_27e8
+	bl FadeAllSounds
 	movs r0, #0x14
 	bl FadeMusic
 _0808767C:
@@ -162,7 +162,7 @@ _0808772C: @ jump table
 	.4byte _08087878 @ case 11
 	.4byte _080878A0 @ case 12
 _08087760:
-	bl StopAllMusicsAndSounds
+	bl StopAllMusicAndSounds
 	bl NewFileIntroInit
 	ldr r0, _08087778 @ =0x03000014
 	ldrb r0, [r0, #1]
@@ -419,7 +419,7 @@ _08087958:
 _0808795C:
 	cmp r0, #0
 	beq _08087966
-	bl StopAllMusicsAndSounds
+	bl StopAllMusicAndSounds
 _08087964:
 	movs r4, #1
 _08087966:
@@ -21763,7 +21763,7 @@ _080923E8:
 	bne _0809240C
 	ldr r0, _08092418 @ =0x000001EB
 	movs r1, #0
-	bl unk_2ad4
+	bl PlayFadingSound
 _0809240C:
 	ldrh r0, [r4]
 	adds r0, #1
@@ -22494,10 +22494,10 @@ _08092A68:
 	movs r0, #0xf6
 	lsls r0, r0, #1
 	movs r1, #0
-	bl unk_2ad4
+	bl PlayFadingSound
 	ldr r0, _08092A94 @ =0x000001ED
 	movs r1, #0
-	bl unk_2ad4
+	bl PlayFadingSound
 _08092A86:
 	ldrh r0, [r5]
 	subs r0, #2
@@ -24465,8 +24465,8 @@ IntroSpaceViewInit: @ 0x08093980
 	bl CallbackSetVBlank
 	movs r0, #0x80
 	lsls r0, r0, #0x11
-	bl unk_24ec
-	bl StopAllMusicsAndSounds
+	bl DoSoundAction
+	bl StopAllMusicAndSounds
 	movs r6, #0
 	str r6, [sp]
 	ldr r4, _08093B28 @ =0x040000D4
@@ -25032,7 +25032,7 @@ _08093E5C:
 	bl ApplyMusicSoundFading
 	ldr r0, _08093ED4 @ =0x000001EB
 	movs r1, #0x3c
-	bl unk_2ad4
+	bl PlayFadingSound
 _08093EB0:
 	ldrh r0, [r6]
 	adds r0, #1
@@ -25326,10 +25326,10 @@ _08094146:
 	movs r0, #0xf6
 	lsls r0, r0, #1
 	movs r1, #0
-	bl unk_2ad4
+	bl PlayFadingSound
 	ldr r0, _08094170 @ =0x000001ED
 	movs r1, #0
-	bl unk_2ad4
+	bl PlayFadingSound
 _08094164:
 	ldrh r0, [r4]
 	subs r0, #2
