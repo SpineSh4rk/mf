@@ -8,9 +8,9 @@ const u8 sMainDeck_79_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	2, 16, // X bounds
 	32, 41, // Y bounds
-	10, 32, // Breakeable block position
-	2, // Breakeable block direction
-	2, // Breakeable block Y bound extension
+	10, 32, // Breakable block position
+	2, // Breakable block direction
+	2, // Breakable block Y bound extension
 };
 
 const u8 sMainDeck_79_Clipdata[188] = INCBIN_U8("data/rooms/main_deck/main_deck_79_clipdata.gfx");

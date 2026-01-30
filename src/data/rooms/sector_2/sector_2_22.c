@@ -8,16 +8,16 @@ const u8 sSector2_22_Scrolls[SCROLL_DATA_SIZE(2)] = {
 	// Scroll 0
 	3, 17, // X bounds
 	2, 11, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 
 	// Scroll 1
 	2, 16, // X bounds
 	11, 20, // Y bounds
-	17, 19, // Breakeable block position
-	1, // Breakeable block direction
-	31, // Breakeable block Y bound extension
+	17, 19, // Breakable block position
+	1, // Breakable block direction
+	31, // Breakable block Y bound extension
 };
 
 const u8 sSector2_22_Clipdata[191] = INCBIN_U8("data/rooms/sector_2/sector_2_22_clipdata.gfx");

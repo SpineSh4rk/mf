@@ -8,9 +8,9 @@ const u8 sSector6_28_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	17, 31, // X bounds
 	2, 11, // Y bounds
-	17, 10, // Breakeable block position
-	0, // Breakeable block direction
-	2, // Breakeable block Y bound extension
+	17, 10, // Breakable block position
+	0, // Breakable block direction
+	2, // Breakable block Y bound extension
 };
 
 const u8 sSector6_28_Clipdata[118] = INCBIN_U8("data/rooms/sector_6/sector_6_28_clipdata.gfx");
