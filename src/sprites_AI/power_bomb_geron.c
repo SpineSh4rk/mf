@@ -32,12 +32,16 @@ void PowerBombGeronInit(void)
     }
     else
     {
-        // All geron sprite idsx are next to each other numerically, so doing spriteId - firstGeronId offsets the id to start at 0
-        // For some reason this offsets to the super missile geron ids
+        // All power bomb geron sprite IDs are next to each other numerically, so
+        // subtracting by the first power bomb geron ID offsets the ID to start at 0
         spriteId = gCurrentSprite.spriteId;
+        #ifdef BUGFIX
+        spriteId -= PSPRITE_GERON_POWER_BOMB_1;
+        #else // !BUGFIX
+        // BUG: The first super missile geron is used insead of the first power bomb geron
         spriteId -= PSPRITE_GERON_SUPER_MISSILE_1;
+        #endif // BUGFIX
 
-        // Get bit affected by the current geron
         geronBit = gPowerBombGeronsDestroyed >> spriteId;
 
         if (geronBit & 1)
@@ -128,13 +132,17 @@ void PowerBombGeronDying(void)
     u8 spriteId;
     u16 geronBit;
 
-    // All geron sprite ids are next to each other numerically, so doing spriteId - firstGeronId offsets the id to start at 0
-    // For some reason this offsets to the super missile geron ids
-    spriteId = gCurrentSprite.spriteId - PSPRITE_GERON_SUPER_MISSILE_1;
+    // All power bomb geron sprite IDs are next to each other numerically, so
+    // subtracting by the first power bomb geron ID offsets the ID to start at 0
+    spriteId = gCurrentSprite.spriteId;
+    #ifdef BUGFIX
+    spriteId -= PSPRITE_GERON_POWER_BOMB_1;
+    #else // !BUGFIX
+    // BUG: The first super missile geron is used insead of the first power bomb geron
+    spriteId -= PSPRITE_GERON_SUPER_MISSILE_1;
+    #endif // BUGFIX
 
-    // Get bit affected by the current geron
     geronBit = 1 << spriteId;
-
     gPowerBombGeronsDestroyed |= geronBit;
 
     GeronSetCollision(CAA_REMOVE_SOLID);

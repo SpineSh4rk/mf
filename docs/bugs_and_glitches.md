@@ -10,6 +10,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Gerutas don't update their hitbox after turning around](#gerutas-dont-update-their-hitbox-after-turning-around)
   - [Rolling Yards use wrong Y value for left wall collision check](#rolling-yards-use-wrong-y-value-for-left-wall-collision-check)
   - [Choot spit explosion uses wrong X value for collision check](#choot-spit-explosion-uses-wrong-x-value-for-collision-check)
+  - [Power bomb gerons use the wrong sprite ID to calculate their destroyed bit position](#power-bomb-gerons-use-the-wrong-sprite-id-to-calculate-their-destroyed-bit-position)
   - [Kihunter hives don't check if spawning a Kihunter failed](#kihunter-hives-dont-check-if-spawning-a-kihunter-failed)
   - [SA-X sprite AI has wrong declaration for `sSamusCollisionData`](#sa-x-sprite-ai-has-wrong-declaration-for-ssamuscollisiondata)
   - [Sprites that rotate toward a target will never target directly up](#sprites-that-rotate-toward-a-target-will-never-target-directly-up)
@@ -111,6 +112,38 @@ Choot spit checks collision when exploding to determine which animation to use (
       gCurrentSprite.pOam = sChootSpitOam_ExplodingOnGround;
   else
       gCurrentSprite.pOam = sChootSpitOam_ExplodingMidair;
+```
+### Power bomb gerons use the wrong sprite ID to calculate their destroyed bit position
+
+Each geron type uses a variable to track which ones have been destroyed. Since the variables are 16-bit, up to 16 of each type can be tracked. The sprite IDs for each type appear sequentially, so subtracting the first geron's ID from the current geron's ID will get its bit position. However, power bomb gerons subtract the first *super missile* geron ID instead of the first *power bomb* geron ID. This ends up not causing any problems, because power bomb geron IDs are immediately after super missile geron IDs, and there are only 8 of each, so power bomb gerons end up using the top 8 bits of their destroyed variable.
+
+**Fix:** Edit `PowerBombGeronInit` and `PowerBombGeronDying` in [power_bomb_geron.c](../src/sprites_AI/power_bomb_geron.c) to subtract the first power bomb geron sprite ID.
+
+```diff
+  spriteId = gCurrentSprite.spriteId;
+- // BUG: The first super missile geron is used insead of the first power bomb geron
+- spriteId -= PSPRITE_GERON_SUPER_MISSILE_1;
++ spriteId -= PSPRITE_GERON_POWER_BOMB_1;
+
+  geronBit = gPowerBombGeronsDestroyed >> spriteId;
+
+  if (geronBit & 1)
+  {
+      gCurrentSprite.status = 0;
+      return;
+  }
+
+...
+
+  spriteId = gCurrentSprite.spriteId;
+- // BUG: The first super missile geron is used insead of the first power bomb geron
+- spriteId -= PSPRITE_GERON_SUPER_MISSILE_1;
++ spriteId -= PSPRITE_GERON_POWER_BOMB_1;
+
+  geronBit = 1 << spriteId;
+  gPowerBombGeronsDestroyed |= geronBit;
+
+  GeronSetCollision(CAA_REMOVE_SOLID);
 ```
 
 ### Kihunter hives don't check if spawning a Kihunter failed
@@ -412,7 +445,6 @@ To trigger the first BOX fight, the game calls `EventCheckRoomEventTrigger` to c
 
 - Floating point math is used when fixed point could have been used
 - Bomb's hitbox isn't centered
-- Power bomb gerons use the wrong sprite ID to calculate the destroyed bit position
 - Geemers hide when any button is pressed
 - Pseudo-screw collision with Nettori spores is inconsistent
 - The Metroids in the Restricted Lab check Samus's Y position to set their X position

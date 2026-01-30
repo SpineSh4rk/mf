@@ -32,11 +32,11 @@ void SuperMissileGeronInit(void)
     }
     else
     {
-        // All geron sprite ids are next to each other numerically, so doing spriteId - firstGeronId offsets the id to start at 0
+        // All super missile geron sprite IDs are next to each other numerically, so
+        // subtracting by the first super missile geron ID offsets the ID to start at 0
         spriteId = gCurrentSprite.spriteId;
         spriteId -= PSPRITE_GERON_SUPER_MISSILE_1;
 
-        // Get bit affected by the current geron
         geronBit = gSuperMissileGeronsDestroyed >> spriteId;
 
         if (geronBit & 1)
@@ -124,7 +124,8 @@ void SuperMissileGeronDying(void)
     u8 spriteId;
     u16 geronBit;
 
-    // All geron sprite ids are next to each other numerically, so doing spriteId - firstGeronId offsets the id to start at 0
+    // All super missile geron sprite IDs are next to each other numerically, so
+    // subtracting by the first super missile geron ID offsets the ID to start at 0
     spriteId = gCurrentSprite.spriteId;
     spriteId -= PSPRITE_GERON_SUPER_MISSILE_1;
 

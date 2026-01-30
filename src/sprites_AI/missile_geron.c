@@ -47,12 +47,11 @@ void MissileGeronInit(void)
     }
     else
     {
-        // All geron sprite IDs are next to each other numerically, so doing spriteId - firstGeronId offsets the ID to
-        // start at 0
+        // All missile geron sprite IDs are next to each other numerically, so
+        // subtracting by the first missile geron ID offsets the ID to start at 0
         spriteId = gCurrentSprite.spriteId;
         spriteId -= PSPRITE_GERON_MISSILE_1;
 
-        // Get bit affected by the current geron
         geronBit = gMissileGeronsDestroyed >> spriteId;
 
         if (geronBit & 1)
@@ -129,14 +128,12 @@ void MissileGeronDeath(void)
     u8 spriteId;
     u16 geronBit;
 
-    // All geron sprite IDs are next to each other numerically, so doing spriteId - firstGeronId offsets the ID to start
-    // at 0
+    // All missile geron sprite IDs are next to each other numerically, so
+    // subtracting by the first missile geron ID offsets the ID to start at 0
     spriteId = gCurrentSprite.spriteId;
     spriteId -= PSPRITE_GERON_MISSILE_1;
 
-    // Get bit affected by the current geron
     geronBit = 1 << spriteId;
-
     gMissileGeronsDestroyed |= geronBit;
 
     GeronSetCollision(CAA_REMOVE_SOLID);
