@@ -266,6 +266,8 @@ SECTIONS {
         src/audio_wrappers.o(.text);
 
         asm/disasm_0x08002f1c.o(.text);
+        asm/sound_code.o(.text);
+        asm/audio_internal.o(.text);
         asm/syscalls.o(.text);
 
         src/sram/sram.o(.text);
