@@ -4144,12 +4144,36 @@
     "size": 1
   },
   {
-    "path": "Blob_4a2670_4a38ec.bin",
-    "count": "0x127C",
+    "path": "rooms/sector_1/sector_1_bg3_0.tm.lz",
+    "count": "0x15E",
     "addr": {
-      "us": "0x4A2670"
+      "us": "0x4A2674"
     },
-    "size": 1
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_1/sector_1_bg3_1.tm.lz",
+    "count": "0x15B",
+    "addr": {
+      "us": "0x4A2BF0"
+    },
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_1/sector_1_bg0_0.tm.lz",
+    "count": "0xB1",
+    "addr": {
+      "us": "0x4A3160"
+    },
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_1/sector_1_bg3_2.tm.lz",
+    "count": "0x131",
+    "addr": {
+      "us": "0x4A3428"
+    },
+    "size": 4
   },
   {
     "path": "Blob_4a38ec_4cd200.bin",
