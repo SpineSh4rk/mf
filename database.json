@@ -20609,12 +20609,52 @@
     "size": 1
   },
   {
-    "path": "Blob_51fba8_520fe4.bin",
-    "count": "0x143C",
+    "path": "rooms/sector_5/sector_5_bg3_0.tm.lz",
+    "count": "0x111",
     "addr": {
-      "us": "0x51FBA8"
+      "us": "0x51FBAC"
     },
-    "size": 1
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_5/sector_5_bg3_1.tm.lz",
+    "count": "0x14F",
+    "addr": {
+      "us": "0x51FFF4"
+    },
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_5/sector_5_bg0_0.tm.lz",
+    "count": "0x41",
+    "addr": {
+      "us": "0x520534"
+    },
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_5/sector_5_bg3_2.tm.lz",
+    "count": "0x166",
+    "addr": {
+      "us": "0x52063C"
+    },
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_5/sector_5_bg0_1.tm.lz",
+    "count": "0x4F",
+    "addr": {
+      "us": "0x520BD8"
+    },
+    "size": 4
+  },
+  {
+    "path": "rooms/sector_5/sector_5_bg0_2.tm.lz",
+    "count": "0xB3",
+    "addr": {
+      "us": "0x520D18"
+    },
+    "size": 4
   },
   {
     "path": "Blob_520fe4_535cd0.bin",
