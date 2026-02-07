@@ -1,9 +1,17 @@
 #include "data/rooms/sector_4_rooms_data.h"
 #include "macros.h"
 
-const u8 sSector4_20_Clipdata[234] = INCBIN_U8("data/rooms/sector_4/sector_4_20_clipdata.gfx");
+const u8 sSector4_20_Clipdata[234] = {
+    64, // Room width
+    24, // Room height
+    _INCBIN_U8("data/rooms/sector_4/sector_4_20_clipdata.rle")
+};
 
-const u8 sSector4_20_Bg2[417] = INCBIN_U8("data/rooms/sector_4/sector_4_20_bg2.gfx");
+const u8 sSector4_20_Bg2[417] = {
+    64, // Room width
+    24, // Room height
+    _INCBIN_U8("data/rooms/sector_4/sector_4_20_bg2.rle")
+};
 
 const u8 sSector4_20_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
 	12, 16, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(2),
@@ -22,7 +30,11 @@ const u8 sSector4_20_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sSector4_20_Bg1[838] = INCBIN_U8("data/rooms/sector_4/sector_4_20_bg1.gfx");
+const u8 sSector4_20_Bg1[838] = {
+    64, // Room width
+    24, // Room height
+    _INCBIN_U8("data/rooms/sector_4/sector_4_20_bg1.rle")
+};
 
 const u8 sSector4_20_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(12)] = {
 	3, 35, SSP_X_ABSORBABLE_BY_SAMUS | SPRITESET_IDX(3),
