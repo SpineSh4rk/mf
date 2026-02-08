@@ -279,8 +279,10 @@ SECTIONS {
         src/sram_misc.o(.text);
         src/audio.o(.text);
         src/audio_wrappers.o(.text);
+        src/dma.o(.text);
 
-        asm/disasm_0x08002f1c.o(.text);
+        asm/disasm_0x080030b8.o(.text);
+
         asm/sound_code.o(.text);
         asm/audio_internal.o(.text);
         asm/syscalls.o(.text);
