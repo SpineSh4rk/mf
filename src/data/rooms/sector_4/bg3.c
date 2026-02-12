@@ -4,12 +4,12 @@
 
 const u32 sWater_Bg0[137] = {
     BGCNT_SIZE_256x512,
-    _INCBIN_U32("data/rooms/sector_4/sector_4_bg0_0.tm.lz")
+    _INCBIN_U32("data/rooms/sector_4/water_bg0.tm.lz")
 };
 
 const u32 sElectrifiedWater_Bg0[135] = {
     BGCNT_SIZE_256x512,
-    _INCBIN_U32("data/rooms/sector_4/sector_4_bg0_1.tm.lz")
+    _INCBIN_U32("data/rooms/sector_4/electrified_water_bg0.tm.lz")
 };
 
 const u32 sSector4_Bg3_0[278] = {

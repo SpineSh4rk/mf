@@ -14,7 +14,7 @@ const u32 sMainDeck_Bg3_1[287] = {
 
 const u32 sPlanetSR388_Bg0[331] = {
     BGCNT_SIZE_512x256,
-    _INCBIN_U32("data/rooms/main_deck/main_deck_bg0_0.tm.lz")
+    _INCBIN_U32("data/rooms/main_deck/planet_sr388_bg0.tm.lz")
 };
 
 const u32 sMainDeck_Bg3_2[316] = {
@@ -79,7 +79,7 @@ const u32 sMainDeck_Bg3_13[336] = {
 
 const u32 sBeforeQuarantineBaySpotlight_Bg0[168] = {
     BGCNT_SIZE_512x256,
-    _INCBIN_U32("data/rooms/main_deck/main_deck_bg0_1.tm.lz")
+    _INCBIN_U32("data/rooms/main_deck/before_quarantine_bay_spotlight_bg0.tm.lz")
 };
 
 const u32 sMainDeck_Bg3_14[353] = {
@@ -89,7 +89,7 @@ const u32 sMainDeck_Bg3_14[353] = {
 
 const u32 sQuarantineBaySpotlight_Bg0[168] = {
     BGCNT_SIZE_512x256,
-    _INCBIN_U32("data/rooms/main_deck/main_deck_bg0_2.tm.lz")
+    _INCBIN_U32("data/rooms/main_deck/quarantine_bay_spotlight_bg0.tm.lz")
 };
 
 const u32 sMainDeck_Bg3_15[368] = {
@@ -109,7 +109,7 @@ const u32 sMainDeck_Bg3_17[225] = {
 
 const u32 sMainDeck_Spotlight_Bg0[166] = {
     BGCNT_SIZE_512x256,
-    _INCBIN_U32("data/rooms/main_deck/main_deck_bg0_3.tm.lz")
+    _INCBIN_U32("data/rooms/main_deck/main_deck_spotlight_bg0.tm.lz")
 };
 
 const u32 sMainDeck_Bg3_18[296] = {
@@ -119,7 +119,7 @@ const u32 sMainDeck_Bg3_18[296] = {
 
 const u32 sMainDeck_GrayColumnsSpotlight_Bg0[169] = {
     BGCNT_SIZE_512x256,
-    _INCBIN_U32("data/rooms/main_deck/main_deck_bg0_4.tm.lz")
+    _INCBIN_U32("data/rooms/main_deck/main_deck_gray_columns_spotlight_bg0.tm.lz")
 };
 
 const u32 sMainDeck_Bg3_19[291] = {
