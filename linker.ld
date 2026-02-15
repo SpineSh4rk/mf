@@ -390,6 +390,8 @@ SECTIONS {
         src/sprites_AI/continual_x_spawner.o(.text);
 
         asm/disasm_0x080519AC.o(.text);
+        asm/disasm_0x08056C24.o(.text);
+
 
         src/sprites_AI/frozen_ridley.o(.text);
         src/sprites_AI/gold_enemy_door_lock.o(.text);
