@@ -32,7 +32,7 @@ void ContinualXSpawner()
             if (!gDebugFlag)
             gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN;
 
-           break;
+            break;
 
         case SPRITE_POSE_IDLE:
             ContinualXSpawnerIdle();
