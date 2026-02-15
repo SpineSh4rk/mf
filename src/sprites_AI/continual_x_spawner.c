@@ -98,7 +98,7 @@ void ContinualXSpawner(void)
     {
         case SPRITE_POSE_UNINITIALIZED:
             gCurrentSprite.samusCollision = 0;
-            gCurrentSprite.pose = 2;
+            gCurrentSprite.pose = SPRITE_POSE_IDLE;
             gCurrentSprite.drawDistanceTop = 1;
             gCurrentSprite.drawDistanceBottom = 1;
             gCurrentSprite.drawDistanceHorizontal = 1;
