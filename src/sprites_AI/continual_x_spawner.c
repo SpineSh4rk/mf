@@ -10,7 +10,6 @@
 
 void ContinualXSpawnerIdle(void)
 {
-    u32 rng;
     u16 xPosition;
     u16 yPosition;
     u8 tmp;
