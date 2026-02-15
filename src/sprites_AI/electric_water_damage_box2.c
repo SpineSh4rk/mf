@@ -7,6 +7,7 @@
 #include "constants/sprite.h"
 #include "constants/event.h"
 
+#include "structs/samus.h"
 #include "structs/sprite.h"
 
 
@@ -30,8 +31,14 @@ void ElectricWaterDamageBox2Init(void) {
 
 void ElectricWaterDamageBox2Idle(void)
 {
-
+    gCurrentSprite.ignoreSamusCollisionTimer = 1;
+    if (gSamusUnderwaterFlag) {
+        gCurrentSprite.pose = 0x18; // TODO: replace with pose enum for ElectricWaterDamageBox2_DamagingSamus
+        gCurrentSprite.work1 = 0;
+    }
+    return;
 }
+
 
 void ElectricWaterDamageBox2DamagingSamus(void)
 {
@@ -53,11 +60,11 @@ void ElectricWaterDamageBox2(void) {
         ElectricWaterDamageBox2Idle();
         break;
 
-    case 24:
+    case 24: //ElectricWaterDamageBox2_DamagingSamus
         ElectricWaterDamageBox2DamagingSamus();
         break;
 
-    case 26:
+    case 26: //ElectricWaterDamageBox2_Stopping
         ElectricWaterDamageBox2Stopping();
         break;
     }
