@@ -41,16 +41,4 @@ extern const u16 sTileset_11_Pal[14 * 16];
 extern const u16 sTileset_43_Pal[14 * 16];
 extern const u16 sTileset_10_Pal[14 * 16];
 
-extern const u8 sTileset_14_Tilemap[4228];
-extern const u8 sTileset_51_Tilemap[2820];
-extern const u8 sTileset_19_Tilemap[876];
-extern const u8 sTileset_32_Tilemap[4100];
-extern const u8 sTileset_12_Tilemap[3588];
-extern const u8 sTileset_49_Tilemap[3588];
-extern const u8 sTileset_9_Tilemap[3588];
-extern const u8 sTileset_59_Tilemap[2308];
-extern const u8 sTileset_11_Tilemap[3588];
-extern const u8 sTileset_33_Tilemap[2436];
-extern const u8 sTileset_10_Tilemap[3588];
-
 #endif /* TILESETS_SET_0_DATA_H */
