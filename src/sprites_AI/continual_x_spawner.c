@@ -54,16 +54,14 @@ void ContinualXSpawnerIdle(void)
     tmp = FALSE;
     for (i = 0; i < MAX_AMOUNT_OF_SPRITES; i++)
     {
-        if (!(gSpriteData[i].status & SPRITE_STATUS_EXISTS) ||
-            !(gSpriteData[i].properties & SP_CAN_ABSORB_X) ||
-            gSpriteData[i].health == 0 ||
-            gSpriteData[i].freezeTimer != 0)
+        if ((gSpriteData[i].status & SPRITE_STATUS_EXISTS) &&
+            (gSpriteData[i].properties & SP_CAN_ABSORB_X) &&
+            gSpriteData[i].health > 0 &&
+            gSpriteData[i].freezeTimer == 0)
         {
-            continue;
+            tmp += TRUE;
+            break;
         }
-
-        tmp += TRUE;
-        break;
     }
 
     if (tmp && CountPrimarySpritesThatCantAbsorbX() < 4)
@@ -77,15 +75,8 @@ void ContinualXSpawnerIdle(void)
         else
             yPosition += BLOCK_SIZE;
 
-        SpriteSpawnNewXParasite(
-            PSPRITE_X_PARASITE,
-            0,
-            0,
-            gCurrentSprite.primarySpriteRamSlot,
-            gCurrentSprite.spritesetSlotAndProperties,
-            yPosition, xPosition,
-            0
-        );
+        SpriteSpawnNewXParasite(PSPRITE_X_PARASITE, 0, 0, gCurrentSprite.primarySpriteRamSlot,
+            gCurrentSprite.spritesetSlotAndProperties, yPosition, xPosition, 0);
     }
 }
 
