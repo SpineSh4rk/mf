@@ -4,6 +4,7 @@
 #include "data/sprite_data.h"
 #include "data/sprites/electric_water_damage_box2.h"
 
+#include "constants/samus.h"
 #include "constants/sprite.h"
 #include "constants/event.h"
 
@@ -12,16 +13,17 @@
 
 
 
-void ElectricWaterDamageBox2Init(void) {
+void ElectricWaterDamageBox2Init(void)
+{
     gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN;
     gCurrentSprite.samusCollision = 0;
     gCurrentSprite.drawDistanceTop = 48;
     gCurrentSprite.drawDistanceBottom = 8;
     gCurrentSprite.drawDistanceHorizontal = 16;
-    gCurrentSprite.hitboxTop = -128;
-    gCurrentSprite.hitboxBottom = 32;
-    gCurrentSprite.hitboxLeft = -32;
-    gCurrentSprite.hitboxRight = 32;
+    gCurrentSprite.hitboxTop = -BLOCK_TO_SUB_PIXEL(2.f);
+    gCurrentSprite.hitboxBottom = BLOCK_TO_SUB_PIXEL(0.5f);
+    gCurrentSprite.hitboxLeft = -BLOCK_TO_SUB_PIXEL(0.5f);
+    gCurrentSprite.hitboxRight = BLOCK_TO_SUB_PIXEL(0.5f);
     gCurrentSprite.pose = SPRITE_POSE_IDLE;
     gCurrentSprite.pOam = sElectricWaterDamageBox2Oam_Idle;
     gCurrentSprite.animationDurationCounter = 0;
@@ -32,18 +34,38 @@ void ElectricWaterDamageBox2Init(void) {
 void ElectricWaterDamageBox2Idle(void)
 {
     gCurrentSprite.ignoreSamusCollisionTimer = 1;
+
     if (gSamusUnderwaterFlag) {
         gCurrentSprite.pose = 0x18; // TODO: replace with pose enum for ElectricWaterDamageBox2_DamagingSamus
         gCurrentSprite.work1 = 0;
     }
-    return;
 }
 
 
 void ElectricWaterDamageBox2DamagingSamus(void)
 {
+    gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
+    gCurrentSprite.yPosition = gSamusData.yPosition;
+    gCurrentSprite.xPosition = gSamusData.xPosition;
 
+    if ((gCurrentSprite.work1 & 3) == 0) {
+        gCurrentSprite.samusCollision = SSC_YAMEBA;
+    }
+    else {
+        gCurrentSprite.samusCollision = SSC_NONE;
+    }
+
+    gCurrentSprite.work1++;
+    if (!gSamusUnderwaterFlag) {
+        gCurrentSprite.pose = 0x1a; // TODO: replace with pose enum for ElectricWaterDamageBox2_Stopping
+        gCurrentSprite.pOam = sElectricWaterDamageBox2Oam_DamagingSamus;
+        gCurrentSprite.animationDurationCounter = 0;
+        gCurrentSprite.currentAnimationFrame = 0;
+        gCurrentSprite.samusCollision = SSC_NONE;
+    }
 }
+
+
 
 void ElectricWaterDamageBox2Stopping(void)
 {
@@ -60,11 +82,11 @@ void ElectricWaterDamageBox2(void) {
         ElectricWaterDamageBox2Idle();
         break;
 
-    case 24: //ElectricWaterDamageBox2_DamagingSamus
+    case 24: // TODO: ElectricWaterDamageBox2_DamagingSamus
         ElectricWaterDamageBox2DamagingSamus();
         break;
 
-    case 26: //ElectricWaterDamageBox2_Stopping
+    case 26: // TODO: ElectricWaterDamageBox2_Stopping
         ElectricWaterDamageBox2Stopping();
         break;
     }
