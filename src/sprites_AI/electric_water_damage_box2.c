@@ -83,7 +83,7 @@ void ElectricWaterDamageBox2Stopping(void) {
         gCurrentSprite.animationDurationCounter = 0;
         gCurrentSprite.currentAnimationFrame = 0;
         gCurrentSprite.samusCollision = SSC_NONE;
-        gCurrentSprite.pose = 2;
+        gCurrentSprite.pose = SPRITE_POSE_IDLE;
     }
 }
 
