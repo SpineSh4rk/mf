@@ -18,9 +18,9 @@ void ElectricWaterDamageBox2Init(void)
 {
     gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN;
     gCurrentSprite.samusCollision = 0;
-    gCurrentSprite.drawDistanceTop = 48;
-    gCurrentSprite.drawDistanceBottom = 8;
-    gCurrentSprite.drawDistanceHorizontal = 16;
+    gCurrentSprite.drawDistanceTop = SUB_PIXEL_TO_PIXEL(BLOCK_SIZE * 3);
+    gCurrentSprite.drawDistanceBottom = SUB_PIXEL_TO_PIXEL(HALF_BLOCK_SIZE);
+    gCurrentSprite.drawDistanceHorizontal = SUB_PIXEL_TO_PIXEL(BLOCK_SIZE);
     gCurrentSprite.hitboxTop = -BLOCK_TO_SUB_PIXEL(2.f);
     gCurrentSprite.hitboxBottom = BLOCK_TO_SUB_PIXEL(0.5f);
     gCurrentSprite.hitboxLeft = -BLOCK_TO_SUB_PIXEL(0.5f);
