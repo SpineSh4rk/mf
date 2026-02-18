@@ -1,6 +1,9 @@
 #ifndef CLIPDATA_CONSTANTS_H
 #define CLIPDATA_CONSTANTS_H
 
+#include "types.h"
+#include "macros.h"
+
 enum ClipdataAffectingAction {
     CAA_NONE,
     CAA_REMOVE_SOLID,
@@ -266,7 +269,7 @@ enum ClipBehavior {
     CLIP_BEHAVIOR_END
 };
 
-enum Clipdata {
+MAKE_ENUM(u16, Clipdata) {
     CLIPDATA_AIR,
     CLIPDATA_PASS_THROUGH_BOTTOM,
 
@@ -383,7 +386,7 @@ enum Clipdata {
     CLIPDATA_HORIZONTAL_BOMB_CHAIN_3,
     CLIPDATA_HORIZONTAL_BOMB_CHAIN_4,
 
-    CLIPDATA_END = 176
+    CLIPDATA_COUNT = 176
 };
 
 enum ClipdataTilemap {

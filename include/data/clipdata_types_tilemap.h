@@ -2,8 +2,9 @@
 #define CLIPDATA_TYPES_TILEMAP_H
 
 #include "types.h"
+#include "constants/clipdata.h"
 
-extern const u8 sClipdataCollisionTypes[];
+extern const u8 sClipdataCollisionTypes[CLIPDATA_COUNT];
 
 extern const u8 sClipdataCollisionTypes_Test[];
 

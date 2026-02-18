@@ -12961,14 +12961,6 @@
     "size": 4
   },
   {
-    "path": "Blob_3f0834_3f08e4.bin",
-    "count": "0xB0",
-    "addr": {
-      "us": "0x3F0834"
-    },
-    "size": 1
-  },
-  {
     "path": "Blob_3f08e4_3f09e4.bin",
     "count": "0x100",
     "addr": {
