@@ -194,8 +194,6 @@ const u8 sClipdataCollisionTypes_Test[CLIPDATA_TEST_END] = {
 	[CLIPDATA_TEST_RED_DOOR_SLOT_5] = CLIPDATA_TYPE_DOOR
 };
 
-static const u8 padding[1] = {0};
-
 const u8 sTileset_0_Tilemap[1604] = INCBIN_U8("data/tilesets/0.tm");
 
 const u16 sTileset_0_Pal[14 * 16] = INCBIN_U16("data/tilesets/0.pal");
