@@ -12,7 +12,7 @@ extern const u8 sTileset_0_Tilemap[1604];
 
 extern const u16 sTileset_0_Pal[14 * 16];
 
-extern const u8 sClipdataBehaviorTypes[];
+extern const u16 sClipdataBehaviorTypes[CLIPDATA_COUNT];
 
 extern const u8 sClipdataBehaviorTypes_Test[];
 

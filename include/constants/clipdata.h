@@ -96,7 +96,7 @@ enum Hazard {
     HAZARD_END,
 };
 
-enum ClipBehavior {
+MAKE_ENUM(u16, ClipBehavior) {
     CLIP_BEHAVIOR_NONE,
     CLIP_BEHAVIOR_ELEVATOR_DOWN,
     CLIP_BEHAVIOR_ELEVATOR_UP,
