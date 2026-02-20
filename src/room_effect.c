@@ -1453,7 +1453,7 @@ void RoomEffectCheckStopEventBased(void)
         case EVENT_EFFECT_SA_X_ELEVATOR_POWER:
             if (gSamusData.pose != SPOSE_USING_ELEVATOR)
             {
-                SoundPlay_3b1c(MUSIC_OPERATIONS_DECK_ELEVATOR_OFFLINE);
+                SoundPlay_3b1c(MUSIC_OPERATIONS_DECK_ELEVATOR_OFFLINE_SOUND);
                 stop = TRUE;
             }
             break;

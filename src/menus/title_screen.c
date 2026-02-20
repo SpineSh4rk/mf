@@ -7,6 +7,7 @@
 #include "data/menus/title_screen.h"
 #include "data/menus/internal_title_screen_data.h"
 
+#include "constants/audio.h"
 #include "constants/menus/title_screen.h"
 
 /**
@@ -160,7 +161,7 @@ void unk_8690c(void)
 
     TitleScreenDrawAllObjects();
 
-    PlayMusic(0x4A, 16);
+    PlayMusic(MUSIC_TITLE, 16);
 }
 
 /**
@@ -214,7 +215,7 @@ s32 unk_86b58(void)
                 TITLE_SCREEN_DATA.unk_2 = 0;
                 TITLE_SCREEN_DATA.unk_5 = 1;
 
-                SoundPlay(0x1FF);
+                SoundPlay(SOUND_1FF);
             }
             else if (TITLE_SCREEN_DATA.unk_2 == 1200)
             {
@@ -670,7 +671,7 @@ s32 TitleScreenSpawningIn(void)
                 WRITE_16(REG_BLDCNT, BLDCNT_BG1_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT | BLDCNT_BG3_SECOND_TARGET_PIXEL | BLDCNT_BACKDROP_SECOND_TARGET_PIXEL);
                 WRITE_16(REG_DISPCNT, READ_16(REG_DISPCNT) | DCNT_BG1);
                 TITLE_SCREEN_DATA.unk_0 = 0;
-                PlayMusic(0x4A, 16);
+                PlayMusic(MUSIC_TITLE, 16);
                 TITLE_SCREEN_DATA.unk_5 = 1;
             }
             break;
@@ -766,7 +767,7 @@ s32 TitleScreenSpawningIn(void)
                 TITLE_SCREEN_DATA.unk_2 = 0;
                 TITLE_SCREEN_DATA.unk_5 = 6;
 
-                SoundPlay(0x1FF);
+                SoundPlay(SOUND_1FF);
             }
             else if (TITLE_SCREEN_DATA.unk_2 == 1200)
             {
@@ -818,9 +819,7 @@ s32 TitleScreenSpawningIn(void)
                 TITLE_SCREEN_DATA.unk_2 = 0;
 
                 if (TITLE_SCREEN_DATA.unk_5 == 0)
-                {
-                    PlayMusic(0x4A, 16);
-                }
+                    PlayMusic(MUSIC_TITLE, 16);
 
                 TITLE_SCREEN_DATA.unk_5 = 5;
             }
