@@ -2,7 +2,7 @@
 #define AUDIO_CONSTANTS_H
 
 // Soundtrack
-// 04 - セクター1（SRX）SR388再現エリア - Sector 1 (SRX) Reproduction Area
+// 04 - セクター1（SRX）SR388再現エリア - Sector 1 (SRX) SR388 Reproduction Area
 // 06 - セクター2（TRO）熱帯エリア - Sector 2 (TRO) Tropical Area
 // 07 - セクター3（PYR）高温地帯エリア - Sector 3 (PYR) High Temperature Zone Area
 // 08 - セクター5（ARC）低温地帯エリア - Sector 5 (ARC) Low Temperature Zone Area
