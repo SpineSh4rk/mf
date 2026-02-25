@@ -62,7 +62,7 @@ struct RoomEntryRom {
     const u8* pBg1Data;
     const u8* pBg2Data;
     const u8* pClipData;
-    const u8* pBg3Data;
+    const u32* pBg3Data;
     u8 bg3Scrolling;
     u8 transparency;
     const u8* pDefaultSpriteData;

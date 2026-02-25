@@ -1,4 +1,4 @@
-#include "types.h"
+#include "data/common_bgs.h"
 #include "macros.h"
 #include "gba/display.h"
 
