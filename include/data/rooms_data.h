@@ -13,8 +13,8 @@ extern const u8 sEnemyRoomData_Empty[3];
 extern const struct TilesetEntry sTilesetEntries[98];
 
 extern const struct RoomEntryRom sMainDeckRoomEntries[87];
-// extern const struct RoomEntryRom sSector1RoomEntries[];
-// extern const struct RoomEntryRom sSector2RoomEntries[];
+extern const struct RoomEntryRom sSector1RoomEntries[54];
+extern const struct RoomEntryRom sSector2RoomEntries[61];
 // extern const struct RoomEntryRom sSector3RoomEntries[];
 // extern const struct RoomEntryRom sSector5RoomEntries[];
 // extern const struct RoomEntryRom sSector4RoomEntries[];
