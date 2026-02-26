@@ -17,7 +17,7 @@ extern const struct RoomEntryRom sSector1RoomEntries[54];
 extern const struct RoomEntryRom sSector2RoomEntries[61];
 extern const struct RoomEntryRom sSector3RoomEntries[39];
 // extern const struct RoomEntryRom sSector5RoomEntries[];
-// extern const struct RoomEntryRom sSector4RoomEntries[];
+extern const struct RoomEntryRom sSector4RoomEntries[48];
 // extern const struct RoomEntryRom sSector6RoomEntries[];
 // extern const struct RoomEntryRom sTest1RoomEntries[];
 // extern const struct RoomEntryRom sTest2RoomEntries[];
