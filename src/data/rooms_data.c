@@ -824,8 +824,63 @@ const struct TilesetEntry sTilesetEntries[98] = {
 };
 
 // door entries
-// test room sprite layouts
-static const u8 sBlob_3c0030_3c2c4c[] = INCBIN_U8("data/Blob_3c0030_3c2c4c.bin");
+static const u8 sBlob_3c0030_3c2c10[] = INCBIN_U8("data/Blob_3c0030_3c2c10.bin");
+
+const u8 sTest1_0_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
+	4, 10, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest1_1_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest1_2_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest1_3_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest2_0_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
+	4, 10, SSP_X_ABSORBABLE_BY_SAMUS | SPRITESET_IDX(0),
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest2_1_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest2_2_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest2_3_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest3_0_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
+	3, 14, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(1),
+	8, 12, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(3),
+	8, 15, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(2),
+	7, 21, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(3),
+	7, 22, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(2),
+	3, 22, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(1),
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest3_1_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest3_2_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
+
+const u8 sTest3_3_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
+	ROOM_SPRITE_DATA_TERMINATOR
+};
 
 const struct RoomEntryRom sMainDeckRoomEntries[87] = {
 	[0] = {
@@ -11162,8 +11217,337 @@ const struct RoomEntryRom sSector6RoomEntries[41] = {
 	}
 };
 
-static const u8 sTest1RoomEntries[] = INCBIN_U8("data/Blob_3c85d4_3c86c4.bin");
+const struct RoomEntryRom sTest1RoomEntries[4] = {
+	[0] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sTest12_0_Bg1,
+		.pBg1Data = sTest12_0_Bg1,
+		.pBg2Data = sTest12_0_Bg2,
+		.pClipData = sTest12_0_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 1,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest1_0_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest1_0_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest1_0_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	},
+	[1] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sTest123_1_Bg1,
+		.pBg1Data = sTest123_1_Bg1,
+		.pBg2Data = sTest123_1_Bg2,
+		.pClipData = sTest123_1_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 3,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest1_1_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest1_1_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest1_1_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	},
+	[2] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_LZ77_COMPRESSED,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sBg0_TestWater,
+		.pBg1Data = sTest123_2_Bg1,
+		.pBg2Data = sTest123_2_Bg2,
+		.pClipData = sTest123_2_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 3,
+		.transparency = 41,
+		.pDefaultSpriteData = sTest1_2_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest1_2_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest1_2_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_WATER,
+		.effectY = 9,
+		.musicTrack = MUSIC_NONE
+	},
+	[3] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sBackground_Empty,
+		.pBg1Data = sTest123_3_Bg1,
+		.pBg2Data = sTest123_3_Bg2,
+		.pClipData = sTest123_3_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 1,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest1_3_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest1_3_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest1_3_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	}
+};
 
-static const u8 sTest2RoomEntries[] = INCBIN_U8("data/Blob_3c86c4_3c87b4.bin");
+const struct RoomEntryRom sTest2RoomEntries[4] = {
+	[0] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sTest12_0_Bg1,
+		.pBg1Data = sTest12_0_Bg1,
+		.pBg2Data = sTest12_0_Bg2,
+		.pClipData = sTest12_0_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 1,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest2_0_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest2_0_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest2_0_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_BG3_GRADIENT,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	},
+	[1] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sTest123_1_Bg1,
+		.pBg1Data = sTest123_1_Bg1,
+		.pBg2Data = sTest123_1_Bg2,
+		.pClipData = sTest123_1_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 3,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest2_1_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest2_1_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest2_1_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	},
+	[2] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_LZ77_COMPRESSED,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sBg0_TestWater,
+		.pBg1Data = sTest123_2_Bg1,
+		.pBg2Data = sTest123_2_Bg2,
+		.pClipData = sTest123_2_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 3,
+		.transparency = 41,
+		.pDefaultSpriteData = sTest2_2_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest2_2_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest2_2_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_WATER,
+		.effectY = 9,
+		.musicTrack = MUSIC_NONE
+	},
+	[3] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sBackground_Empty,
+		.pBg1Data = sTest123_3_Bg1,
+		.pBg2Data = sTest123_3_Bg2,
+		.pClipData = sTest123_3_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 1,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest2_3_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest2_3_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest2_3_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	}
+};
 
-static const u8 sTest3RoomEntries[] = INCBIN_U8("data/Blob_3c87b4_3c88f0.bin");
+const struct RoomEntryRom sTest3RoomEntries[4] = {
+	[0] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sTest3_0_Bg1,
+		.pBg1Data = sTest3_0_Bg1,
+		.pBg2Data = sTest3_0_Bg2,
+		.pClipData = sTest3_0_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 1,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest3_0_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest3_0_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest3_0_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	},
+	[1] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sTest123_1_Bg1,
+		.pBg1Data = sTest123_1_Bg1,
+		.pBg2Data = sTest123_1_Bg2,
+		.pClipData = sTest123_1_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 3,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest3_1_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest3_1_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest3_1_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	},
+	[2] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_LZ77_COMPRESSED,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sBg0_TestWater,
+		.pBg1Data = sTest123_2_Bg1,
+		.pBg2Data = sTest123_2_Bg2,
+		.pClipData = sTest123_2_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 3,
+		.transparency = 41,
+		.pDefaultSpriteData = sTest3_2_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest3_2_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest3_2_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_WATER,
+		.effectY = 9,
+		.musicTrack = MUSIC_NONE
+	},
+	[3] = {
+		.tileset = 0,
+		.bg0Prop = BG_PROP_NONE,
+		.bg1Prop = BG_PROP_RLE_COMPRESSED,
+		.bg2Prop = BG_PROP_RLE_COMPRESSED,
+		.bg3Prop = BG_PROP_LZ77_COMPRESSED,
+		.pBg0Data = sBackground_Empty,
+		.pBg1Data = sTest123_3_Bg1,
+		.pBg2Data = sTest123_3_Bg2,
+		.pClipData = sTest123_3_Clipdata,
+		.pBg3Data = sBg3_TestRoom,
+		.bg3Scrolling = 1,
+		.transparency = 0,
+		.pDefaultSpriteData = sTest3_3_Spriteset,
+		.defaultSpriteset = 255,
+		.firstSpritesetEvent = EVENT_NONE,
+		.pFirstSpriteData = sTest3_3_Spriteset,
+		.firstSpriteset = 255,
+		.secondSpritesetEvent = EVENT_NONE,
+		.pSecondSpriteData = sTest3_3_Spriteset,
+		.secondSpriteset = 255,
+		.mapX = 0,
+		.mapY = 0,
+		.effect = EFFECT_NONE,
+		.effectY = 0,
+		.musicTrack = MUSIC_NONE
+	}
+};
+
+static const u8 sBlob_3c88a4_3c88f0[] = INCBIN_U8("data/Blob_3c88a4_3c88f0.bin");
