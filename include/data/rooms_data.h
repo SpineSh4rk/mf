@@ -13,6 +13,10 @@ extern const u8 sEnemyRoomData_Empty[3];
 
 extern const struct TilesetEntry sTilesetEntries[98];
 
+extern const struct Door sMainDeckDoors[206];
+extern const struct Door sSector1Doors[116];
+extern const struct Door sSector2Doors[147];
+
 extern const u8 sTest1_0_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(2)];
 extern const u8 sTest1_1_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)];
 extern const u8 sTest1_2_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(1)];
