@@ -12753,34 +12753,18 @@
     "size": 1
   },
   {
-    "path": "Blob_3c0030_3c2c4c.bin",
-    "count": "0x2C1C",
+    "path": "Blob_3c0030_3c2c10.bin",
+    "count": "0x2BE0",
     "addr": {
       "us": "0x3C0030"
     },
     "size": 1
   },
   {
-    "path": "Blob_3c85d4_3c86c4.bin",
-    "count": "0xF0",
+    "path": "Blob_3c88a4_3c88f0.bin",
+    "count": "0x4C",
     "addr": {
-      "us": "0x3C85D4"
-    },
-    "size": 1
-  },
-  {
-    "path": "Blob_3c86c4_3c87b4.bin",
-    "count": "0xF0",
-    "addr": {
-      "us": "0x3C86C4"
-    },
-    "size": 1
-  },
-  {
-    "path": "Blob_3c87b4_3c88f0.bin",
-    "count": "0x13C",
-    "addr": {
-      "us": "0x3C87B4"
+      "us": "0x3C88A4"
     },
     "size": 1
   },
