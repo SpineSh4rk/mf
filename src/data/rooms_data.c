@@ -827,7 +827,7 @@ const struct TilesetEntry sTilesetEntries[98] = {
 
 const struct Door sMainDeckDoors[206] = {
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 0,
 		.xStart = 24,
 		.xEnd = 25,
@@ -838,7 +838,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = -8
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
@@ -849,7 +849,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 3,
 		.xStart = 31,
 		.xEnd = 31,
@@ -860,7 +860,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 86,
 		.xStart = 16,
 		.xEnd = 16,
@@ -871,7 +871,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 4,
 		.xStart = 31,
 		.xEnd = 31,
@@ -882,7 +882,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
@@ -893,7 +893,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 16,
 		.xEnd = 16,
@@ -904,7 +904,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
@@ -926,7 +926,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
@@ -937,7 +937,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
@@ -948,7 +948,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
@@ -959,7 +959,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
@@ -981,7 +981,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 7,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1003,7 +1003,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1014,7 +1014,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1025,7 +1025,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 9,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1036,7 +1036,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1058,7 +1058,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1069,7 +1069,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 13,
 		.xStart = 46,
 		.xEnd = 46,
@@ -1080,7 +1080,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1091,7 +1091,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1102,7 +1102,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 61,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1113,7 +1113,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 60,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1124,7 +1124,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1135,7 +1135,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 14,
 		.xStart = 46,
 		.xEnd = 46,
@@ -1146,7 +1146,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 21,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1157,7 +1157,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1168,7 +1168,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1179,7 +1179,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1190,7 +1190,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1201,7 +1201,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1212,7 +1212,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1223,7 +1223,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1234,7 +1234,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1245,7 +1245,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1256,7 +1256,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1267,7 +1267,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 19,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1278,7 +1278,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1289,7 +1289,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1300,7 +1300,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1311,7 +1311,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 21,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1322,7 +1322,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1333,7 +1333,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 22,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1344,7 +1344,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 22,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1355,7 +1355,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 23,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1366,7 +1366,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 19,
 		.xStart = 8,
 		.xEnd = 11,
@@ -1388,7 +1388,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 24,
 		.xStart = 46,
 		.xEnd = 46,
@@ -1399,7 +1399,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1410,7 +1410,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 25,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1421,7 +1421,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1432,7 +1432,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1443,7 +1443,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1454,7 +1454,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 24,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1465,7 +1465,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 28,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1476,7 +1476,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1487,7 +1487,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 29,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1498,7 +1498,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 29,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1509,7 +1509,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 30,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1520,7 +1520,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 43,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1531,7 +1531,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1542,7 +1542,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1553,7 +1553,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1564,7 +1564,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 28,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1575,7 +1575,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 25,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1586,7 +1586,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 29,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1597,7 +1597,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 26,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1608,7 +1608,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 30,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1619,7 +1619,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 27,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1630,7 +1630,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1652,7 +1652,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 34,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1663,7 +1663,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 34,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1674,7 +1674,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1685,7 +1685,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 35,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1707,7 +1707,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1718,7 +1718,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1729,7 +1729,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 36,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1740,7 +1740,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1751,7 +1751,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1762,7 +1762,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1773,7 +1773,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1784,7 +1784,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1795,7 +1795,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 38,
 		.xStart = 32,
 		.xEnd = 32,
@@ -1806,7 +1806,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 38,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1817,7 +1817,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 39,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1828,7 +1828,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 21,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1839,7 +1839,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 41,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1850,7 +1850,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 41,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1861,7 +1861,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 40,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1872,7 +1872,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 40,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1883,7 +1883,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 42,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1894,7 +1894,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 42,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1905,7 +1905,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 43,
 		.xStart = 8,
 		.xEnd = 10,
@@ -1927,7 +1927,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 76,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1938,7 +1938,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1949,7 +1949,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 45,
 		.xStart = 16,
 		.xEnd = 16,
@@ -1960,7 +1960,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1971,7 +1971,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
@@ -1982,7 +1982,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 31,
 		.xStart = 31,
 		.xEnd = 31,
@@ -1993,7 +1993,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 46,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2004,7 +2004,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 47,
 		.xStart = 91,
 		.xEnd = 91,
@@ -2015,7 +2015,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2026,7 +2026,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 48,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2037,7 +2037,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 48,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2059,7 +2059,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2070,7 +2070,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 49,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2092,7 +2092,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 50,
 		.xStart = 61,
 		.xEnd = 61,
@@ -2103,7 +2103,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 51,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2114,7 +2114,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 51,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2125,7 +2125,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 52,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2147,7 +2147,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 53,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2158,7 +2158,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 86,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2169,7 +2169,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 54,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2180,7 +2180,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 54,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2191,7 +2191,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 49,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2202,7 +2202,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2213,7 +2213,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 55,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2224,7 +2224,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 55,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2235,7 +2235,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 56,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2246,7 +2246,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 56,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2257,7 +2257,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 49,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2268,7 +2268,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2279,7 +2279,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2312,7 +2312,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 59,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2323,7 +2323,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 59,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2334,7 +2334,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 59,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2345,7 +2345,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 59,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2367,7 +2367,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 61,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2378,7 +2378,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2389,7 +2389,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2400,7 +2400,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 62,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2411,7 +2411,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 62,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2422,7 +2422,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 63,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2433,7 +2433,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 85,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2444,7 +2444,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 64,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2455,7 +2455,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 64,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2466,7 +2466,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 65,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2488,7 +2488,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 66,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2510,7 +2510,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 67,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2521,7 +2521,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 67,
 		.xStart = 8,
 		.xEnd = 10,
@@ -2532,7 +2532,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 68,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2543,7 +2543,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 68,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2554,7 +2554,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2565,7 +2565,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2576,7 +2576,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 69,
 		.xStart = 46,
 		.xEnd = 46,
@@ -2587,7 +2587,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 69,
 		.xStart = 46,
 		.xEnd = 46,
@@ -2598,7 +2598,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 69,
 		.xStart = 46,
 		.xEnd = 46,
@@ -2609,7 +2609,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 69,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2620,7 +2620,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 69,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2631,7 +2631,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 70,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2642,7 +2642,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 70,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2653,7 +2653,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 23,
 		.xStart = 17,
 		.xEnd = 17,
@@ -2664,7 +2664,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 71,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2675,7 +2675,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2686,7 +2686,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 72,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2697,7 +2697,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 73,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2708,7 +2708,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 40,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2719,7 +2719,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 74,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2730,7 +2730,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 74,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2741,7 +2741,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 74,
 		.xStart = 31,
 		.xEnd = 31,
@@ -2752,7 +2752,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 74,
 		.xStart = 46,
 		.xEnd = 46,
@@ -2763,7 +2763,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 75,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2774,7 +2774,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 75,
 		.xStart = 8,
 		.xEnd = 10,
@@ -2785,7 +2785,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 76,
 		.xStart = 8,
 		.xEnd = 10,
@@ -2796,7 +2796,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 76,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2807,7 +2807,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 77,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2818,7 +2818,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 77,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2829,7 +2829,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 77,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2840,7 +2840,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 77,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2851,7 +2851,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 78,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2862,7 +2862,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 78,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2873,7 +2873,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 78,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2884,7 +2884,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 80,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2906,7 +2906,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 79,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2917,7 +2917,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 79,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2928,7 +2928,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 81,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2939,7 +2939,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 44,
 		.xStart = 16,
 		.xEnd = 16,
@@ -2950,7 +2950,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
@@ -2972,7 +2972,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 46,
 		.xStart = 11,
 		.xEnd = 11,
@@ -2983,7 +2983,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = -16
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 47,
 		.xStart = 26,
 		.xEnd = 26,
@@ -2994,7 +2994,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 16
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 83,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3005,7 +3005,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 83,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3016,7 +3016,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 83,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3027,7 +3027,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 38,
 		.xStart = 61,
 		.xEnd = 61,
@@ -3038,7 +3038,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 84,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3049,7 +3049,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 20,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3060,7 +3060,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3071,7 +3071,7 @@ const struct Door sMainDeckDoors[206] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 85,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3096,7 +3096,7 @@ const struct Door sMainDeckDoors[206] = {
 
 const struct Door sSector1Doors[116] = {
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 41,
 		.xStart = 8,
 		.xEnd = 10,
@@ -3107,7 +3107,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3118,7 +3118,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3129,7 +3129,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3140,7 +3140,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 1,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3151,7 +3151,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3162,7 +3162,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 2,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3173,7 +3173,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 36,
 		.xStart = 46,
 		.xEnd = 46,
@@ -3184,7 +3184,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3195,7 +3195,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3206,7 +3206,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 3,
 		.xStart = 46,
 		.xEnd = 46,
@@ -3217,7 +3217,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3228,7 +3228,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 4,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3239,7 +3239,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3250,7 +3250,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3261,7 +3261,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3272,7 +3272,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3283,7 +3283,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3294,7 +3294,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3305,7 +3305,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 7,
 		.xStart = 76,
 		.xEnd = 76,
@@ -3316,7 +3316,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3327,7 +3327,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 8,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3338,7 +3338,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 14,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3349,7 +3349,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3360,7 +3360,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3371,7 +3371,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 37,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3382,7 +3382,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 44,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3393,7 +3393,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3404,7 +3404,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3415,7 +3415,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3426,7 +3426,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3437,7 +3437,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 8,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3448,7 +3448,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3459,7 +3459,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3470,7 +3470,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3481,7 +3481,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3492,7 +3492,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3503,7 +3503,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 46,
 		.xEnd = 46,
@@ -3514,7 +3514,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3525,7 +3525,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3536,7 +3536,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 19,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3547,7 +3547,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 28,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3558,7 +3558,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 20,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3569,7 +3569,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 20,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3580,7 +3580,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3591,7 +3591,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3602,7 +3602,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 21,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3613,7 +3613,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3624,7 +3624,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 22,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3635,7 +3635,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3646,7 +3646,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 23,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3657,7 +3657,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 23,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3668,7 +3668,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 23,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3679,7 +3679,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 23,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3690,7 +3690,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 24,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3701,7 +3701,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3712,7 +3712,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3723,7 +3723,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3734,7 +3734,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 27,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3745,7 +3745,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3756,7 +3756,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 29,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3767,7 +3767,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 29,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3778,7 +3778,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 30,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3789,7 +3789,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3800,7 +3800,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 31,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3811,7 +3811,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 31,
 		.xStart = 8,
 		.xEnd = 10,
@@ -3822,7 +3822,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3833,7 +3833,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3844,7 +3844,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3855,7 +3855,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3866,7 +3866,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3877,7 +3877,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3888,7 +3888,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3899,7 +3899,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3910,7 +3910,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 34,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3921,7 +3921,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3932,7 +3932,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 31,
 		.xEnd = 31,
@@ -3943,7 +3943,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3954,7 +3954,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 11,
 		.xStart = 16,
 		.xEnd = 16,
@@ -3965,7 +3965,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 38,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3976,7 +3976,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 38,
 		.xStart = 46,
 		.xEnd = 46,
@@ -3987,7 +3987,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 39,
 		.xStart = 2,
 		.xEnd = 2,
@@ -3998,7 +3998,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 40,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4009,7 +4009,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4020,7 +4020,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4031,7 +4031,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 40,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4042,7 +4042,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 41,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4053,7 +4053,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4064,7 +4064,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 9,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4075,7 +4075,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4086,7 +4086,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4097,7 +4097,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 42,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4108,7 +4108,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4119,7 +4119,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 43,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4130,7 +4130,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4141,7 +4141,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 21,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4152,7 +4152,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 45,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4163,7 +4163,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 45,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4174,7 +4174,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4185,7 +4185,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4196,7 +4196,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 37,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4207,7 +4207,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 47,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4218,7 +4218,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 39,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4229,7 +4229,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 48,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4240,7 +4240,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 48,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4251,7 +4251,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 49,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4262,7 +4262,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4273,7 +4273,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4284,7 +4284,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 34,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4295,7 +4295,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 50,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4306,7 +4306,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 21,
 		.xStart = 10,
 		.xEnd = 11,
@@ -4317,7 +4317,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = -16
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 51,
 		.xStart = 25,
 		.xEnd = 26,
@@ -4328,7 +4328,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 16
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 51,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4339,7 +4339,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 52,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4350,7 +4350,7 @@ const struct Door sSector1Doors[116] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 53,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4375,7 +4375,7 @@ const struct Door sSector1Doors[116] = {
 
 const struct Door sSector2Doors[147] = {
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 29,
 		.xStart = 8,
 		.xEnd = 10,
@@ -4386,7 +4386,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4408,7 +4408,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 0,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4419,7 +4419,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4430,7 +4430,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4441,7 +4441,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 1,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4452,7 +4452,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4463,7 +4463,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 2,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4474,7 +4474,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 3,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4485,7 +4485,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4496,7 +4496,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4507,7 +4507,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 4,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4518,7 +4518,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4529,7 +4529,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4540,7 +4540,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4551,7 +4551,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 7,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4562,7 +4562,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4573,7 +4573,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4595,7 +4595,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 9,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4606,7 +4606,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 9,
 		.xStart = 17,
 		.xEnd = 17,
@@ -4617,7 +4617,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4628,7 +4628,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4639,7 +4639,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4650,7 +4650,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4661,7 +4661,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4683,7 +4683,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4694,7 +4694,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4705,7 +4705,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4716,7 +4716,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4727,7 +4727,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 0,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4738,7 +4738,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4749,7 +4749,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 14,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4771,7 +4771,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 15,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4782,7 +4782,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4793,7 +4793,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4804,7 +4804,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 46,
 		.xEnd = 46,
@@ -4815,7 +4815,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4826,7 +4826,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 19,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4848,7 +4848,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4859,7 +4859,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
@@ -4870,7 +4870,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4881,7 +4881,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4892,7 +4892,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 20,
 		.xStart = 61,
 		.xEnd = 61,
@@ -4903,7 +4903,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 20,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4925,7 +4925,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 22,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4936,7 +4936,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 22,
 		.xStart = 3,
 		.xEnd = 3,
@@ -4958,7 +4958,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 23,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4969,7 +4969,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
@@ -4980,7 +4980,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 24,
 		.xStart = 31,
 		.xEnd = 31,
@@ -4991,7 +4991,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 42,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5002,7 +5002,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 25,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5013,7 +5013,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5024,7 +5024,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5035,7 +5035,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5046,7 +5046,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5057,7 +5057,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5068,7 +5068,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5079,7 +5079,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 28,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5090,7 +5090,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5101,7 +5101,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 29,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5112,7 +5112,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5123,7 +5123,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 30,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5134,7 +5134,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5156,7 +5156,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5167,7 +5167,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5178,7 +5178,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 46,
 		.xEnd = 46,
@@ -5189,7 +5189,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 34,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5200,7 +5200,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 34,
 		.xStart = 61,
 		.xEnd = 61,
@@ -5211,7 +5211,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 34,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5222,7 +5222,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5233,7 +5233,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 35,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5244,7 +5244,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 35,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5255,7 +5255,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5266,7 +5266,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 35,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5277,7 +5277,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 58,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5288,7 +5288,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 36,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5299,7 +5299,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 31,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5310,7 +5310,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5321,7 +5321,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 37,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5332,7 +5332,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 38,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5343,7 +5343,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 19,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5354,7 +5354,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 39,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5365,7 +5365,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 39,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5376,7 +5376,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 40,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5387,7 +5387,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 40,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5398,7 +5398,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 17,
 		.xStart = 32,
 		.xEnd = 32,
@@ -5409,7 +5409,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5431,7 +5431,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5442,7 +5442,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 41,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5453,7 +5453,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 43,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5464,7 +5464,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 43,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5475,7 +5475,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 44,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5486,7 +5486,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 44,
 		.xStart = 6,
 		.xEnd = 6,
@@ -5497,7 +5497,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 45,
 		.xStart = 6,
 		.xEnd = 6,
@@ -5508,7 +5508,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 45,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5519,7 +5519,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5530,7 +5530,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5541,7 +5541,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5552,7 +5552,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5563,7 +5563,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 19,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5574,7 +5574,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 47,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5596,7 +5596,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5607,7 +5607,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 46,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5618,7 +5618,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 46,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5629,7 +5629,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 50,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5640,7 +5640,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 47,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5662,7 +5662,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5673,7 +5673,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5695,7 +5695,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5706,7 +5706,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5717,7 +5717,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_NO_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
 		.srcRoom = 35,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5728,7 +5728,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 51,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5739,7 +5739,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 51,
 		.xStart = 3,
 		.xEnd = 3,
@@ -5750,7 +5750,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5761,7 +5761,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 52,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5772,7 +5772,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 52,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5783,7 +5783,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5794,7 +5794,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 53,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5805,7 +5805,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_EXISTS | DOOR_TYPE_AREA_CONNECTION,
+		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
 		.srcRoom = 53,
 		.xStart = 16,
 		.xEnd = 16,
@@ -5816,7 +5816,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5827,7 +5827,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 54,
 		.xStart = 46,
 		.xEnd = 46,
@@ -5838,7 +5838,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 18,
 		.xStart = 46,
 		.xEnd = 46,
@@ -5849,7 +5849,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_HATCH_CAN_LOCK,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
 		.srcRoom = 55,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5860,7 +5860,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 24,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5871,7 +5871,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 56,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5882,7 +5882,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 56,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5893,7 +5893,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 57,
 		.xStart = 46,
 		.xEnd = 46,
@@ -5904,7 +5904,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 57,
 		.xStart = 17,
 		.xEnd = 17,
@@ -5926,7 +5926,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 58,
 		.xStart = 17,
 		.xEnd = 17,
@@ -5937,7 +5937,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 58,
 		.xStart = 46,
 		.xEnd = 46,
@@ -5948,7 +5948,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 60,
 		.xStart = 2,
 		.xEnd = 2,
@@ -5959,7 +5959,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 60,
 		.xStart = 31,
 		.xEnd = 31,
@@ -5970,7 +5970,7 @@ const struct Door sSector2Doors[147] = {
 		.yExit = 0
 	},
 	{
-		.type = DOOR_TYPE_EXISTS | DOOR_TYPE_OPEN_HATCH,
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
 		.srcRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,

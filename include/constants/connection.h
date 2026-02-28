@@ -48,7 +48,7 @@ enum DoorType {
 
     DOOR_TYPE_NO_FLAGS = 0xF,
 
-    DOOR_TYPE_EXISTS = (1 << 4),
+    DOOR_TYPE_NORMAL = (1 << 4),
     DOOR_TYPE_LOAD_EVENT_BASED_ROOM = (1 << 5),
     DOOR_TYPE_DISPLAY_LOCATION_NAME = (1 << 6),
 };
