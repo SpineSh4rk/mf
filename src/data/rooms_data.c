@@ -834,8 +834,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 7,
 		.dstDoor = 0,
-		.xExit = 8,
-		.yExit = -8
+		.xExit = BLOCK_TO_PIXEL(0.5),
+		.yExit = -BLOCK_TO_PIXEL(0.5)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -845,8 +845,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -856,8 +856,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -867,8 +867,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 117,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -878,8 +878,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 145,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -889,8 +889,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -900,8 +900,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 5,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -911,8 +911,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 8,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -922,8 +922,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -933,8 +933,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 8,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -944,8 +944,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 9,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -955,8 +955,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -966,8 +966,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_NO_HATCH,
@@ -977,8 +977,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 38,
 		.dstDoor = 110,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -988,8 +988,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 17,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -999,8 +999,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 109,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1010,8 +1010,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 29,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1021,8 +1021,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 14,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1032,8 +1032,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 77,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1043,8 +1043,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 36,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1054,8 +1054,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 27,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1065,8 +1065,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 176,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1076,8 +1076,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 17,
 		.dstDoor = 79,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1087,8 +1087,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 44,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1098,8 +1098,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 100,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1109,8 +1109,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 26,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1120,8 +1120,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 25,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1131,8 +1131,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 20,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1142,8 +1142,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 4,
 		.yEnd = 6,
 		.dstDoor = 89,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1153,8 +1153,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 16,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1164,8 +1164,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 179,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1175,8 +1175,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 26,
 		.yEnd = 29,
 		.dstDoor = 159,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1186,8 +1186,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 152,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1197,8 +1197,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 39,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1208,8 +1208,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 150,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1219,8 +1219,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 4,
 		.yEnd = 6,
 		.dstDoor = 91,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1230,8 +1230,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 19,
-		.xExit = -24,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1.5),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1241,8 +1241,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 42,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1252,8 +1252,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 164,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1263,8 +1263,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 33,
-		.xExit = 24,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1.5),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1274,8 +1274,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 92,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1285,8 +1285,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 165,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -1296,8 +1296,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 37,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1307,8 +1307,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 48,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1318,8 +1318,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 23,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1329,8 +1329,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 73,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1340,8 +1340,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 4,
 		.yEnd = 6,
 		.dstDoor = 163,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1351,8 +1351,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 24,
 		.yEnd = 26,
 		.dstDoor = 162,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -1362,8 +1362,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 43,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1373,8 +1373,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 17,
 		.yEnd = 17,
 		.dstDoor = 75,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_NO_HATCH,
@@ -1384,8 +1384,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 76,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1395,8 +1395,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 52,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1406,8 +1406,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 51,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1417,8 +1417,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 54,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1428,8 +1428,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 53,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1439,8 +1439,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 56,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1450,8 +1450,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 55,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1461,8 +1461,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 58,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1472,8 +1472,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 57,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1483,8 +1483,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 60,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1494,8 +1494,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 59,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1505,8 +1505,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 62,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1516,8 +1516,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 61,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1527,8 +1527,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 6,
 		.dstDoor = 64,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1538,8 +1538,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 6,
 		.dstDoor = 63,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1549,8 +1549,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 99,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1560,8 +1560,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 90,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -1571,8 +1571,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -1582,8 +1582,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -1593,8 +1593,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -1604,8 +1604,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -1615,8 +1615,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -1626,8 +1626,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1637,8 +1637,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1648,8 +1648,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 93,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1659,8 +1659,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 94,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1670,8 +1670,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 11,
 		.yEnd = 11,
 		.dstDoor = 50,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1681,8 +1681,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 18,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1692,8 +1692,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 68,
 		.yEnd = 70,
 		.dstDoor = 84,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_NO_HATCH,
@@ -1703,8 +1703,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 7,
 		.dstDoor = 22,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1714,8 +1714,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 81,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1725,8 +1725,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 80,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1736,8 +1736,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 83,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1747,8 +1747,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 82,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1758,8 +1758,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 18,
 		.yEnd = 20,
 		.dstDoor = 78,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1769,8 +1769,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 87,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1780,8 +1780,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 88,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1791,8 +1791,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 85,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1802,8 +1802,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 86,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1813,8 +1813,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 24,
 		.yEnd = 26,
 		.dstDoor = 28,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1824,8 +1824,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1835,8 +1835,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 24,
 		.yEnd = 26,
 		.dstDoor = 35,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1846,8 +1846,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 40,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1857,8 +1857,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 74,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1868,8 +1868,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 75,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1879,8 +1879,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 96,
-		.xExit = -24,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1.5),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1890,8 +1890,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 95,
-		.xExit = 24,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1.5),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1901,8 +1901,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 74,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1912,8 +1912,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 11,
 		.yEnd = 11,
 		.dstDoor = 50,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1923,8 +1923,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 65,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1934,8 +1934,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 24,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1945,8 +1945,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 67,
 		.yEnd = 69,
 		.dstDoor = 102,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1956,8 +1956,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 9,
 		.dstDoor = 101,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1967,8 +1967,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 104,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -1978,8 +1978,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 26,
 		.yEnd = 29,
 		.dstDoor = 103,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -1989,8 +1989,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 3,
 		.yEnd = 3,
 		.dstDoor = 106,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2000,8 +2000,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 3,
 		.yEnd = 3,
 		.dstDoor = 105,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2011,8 +2011,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 8,
 		.dstDoor = 108,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2022,8 +2022,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 18,
 		.dstDoor = 107,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2033,8 +2033,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 15,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2044,8 +2044,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 17,
 		.yEnd = 18,
 		.dstDoor = 13,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -2055,8 +2055,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 112,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2066,8 +2066,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 111,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2077,8 +2077,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 114,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -2088,8 +2088,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 113,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2099,8 +2099,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 116,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2110,8 +2110,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 115,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2121,8 +2121,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 33,
 		.yEnd = 36,
 		.dstDoor = 3,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2132,8 +2132,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 129,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -2143,8 +2143,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 124,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2154,8 +2154,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 117,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2165,8 +2165,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 7,
 		.dstDoor = 122,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2176,8 +2176,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 7,
 		.dstDoor = 121,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2187,8 +2187,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 128,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2198,8 +2198,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 45,
 		.yEnd = 48,
 		.dstDoor = 119,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2209,8 +2209,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 15,
 		.dstDoor = 126,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2220,8 +2220,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 125,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -2231,8 +2231,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 55,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2242,8 +2242,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 123,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2253,8 +2253,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 118,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2264,8 +2264,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 133,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2275,8 +2275,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 132,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2286,8 +2286,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 131,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -2297,8 +2297,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 130,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -2308,8 +2308,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 111,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2319,8 +2319,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 15,
 		.dstDoor = 155,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2330,8 +2330,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 114,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2341,8 +2341,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 45,
 		.yEnd = 48,
 		.dstDoor = 119,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2352,8 +2352,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 133,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2363,8 +2363,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 141,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2374,8 +2374,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 142,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2385,8 +2385,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 139,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2396,8 +2396,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 140,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -2407,8 +2407,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 7,
 		.dstDoor = 45,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2418,8 +2418,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 147,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2429,8 +2429,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2440,8 +2440,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 194,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2451,8 +2451,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 144,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2462,8 +2462,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 149,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2473,8 +2473,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 148,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2484,8 +2484,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 183,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2495,8 +2495,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 153,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2506,8 +2506,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 181,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2517,8 +2517,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 151,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -2528,8 +2528,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 65,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2539,8 +2539,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 135,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -2550,8 +2550,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 83,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2561,8 +2561,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 160,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2572,8 +2572,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 161,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2583,8 +2583,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 26,
 		.yEnd = 29,
 		.dstDoor = 31,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2594,8 +2594,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 157,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2605,8 +2605,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 158,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2616,8 +2616,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 24,
 		.yEnd = 26,
 		.dstDoor = 47,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2627,8 +2627,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 4,
 		.yEnd = 6,
 		.dstDoor = 46,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2638,8 +2638,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 38,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2649,8 +2649,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 41,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -2660,8 +2660,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 167,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2671,8 +2671,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 166,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2682,8 +2682,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 17,
 		.yEnd = 17,
 		.dstDoor = 169,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2693,8 +2693,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 7,
 		.dstDoor = 168,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2704,8 +2704,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 171,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2715,8 +2715,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 170,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2726,8 +2726,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 20,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2737,8 +2737,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 99,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2748,8 +2748,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 139,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2759,8 +2759,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 17,
 		.dstDoor = 79,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2770,8 +2770,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 21,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2781,8 +2781,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 178,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2792,8 +2792,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 177,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2803,8 +2803,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 30,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2814,8 +2814,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 189,
-		.xExit = 64,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(4),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2825,8 +2825,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 152,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2836,8 +2836,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 184,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2847,8 +2847,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 150,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2858,8 +2858,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 182,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2869,8 +2869,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 188,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2880,8 +2880,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 187,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2891,8 +2891,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 186,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2902,8 +2902,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 17,
 		.yEnd = 20,
 		.dstDoor = 185,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2913,8 +2913,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 180,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2924,8 +2924,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 188,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2935,8 +2935,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 192,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2946,8 +2946,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 191,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2957,8 +2957,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 194,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -2968,8 +2968,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 193,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2979,8 +2979,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 11,
 		.yEnd = 11,
 		.dstDoor = 196,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -2990,8 +2990,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 195,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3001,8 +3001,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 15,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -3012,8 +3012,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 134,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -3023,8 +3023,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 17,
 		.yEnd = 18,
 		.dstDoor = 13,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -3034,8 +3034,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 4,
 		.yEnd = 5,
 		.dstDoor = 201,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -3045,8 +3045,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 4,
 		.yEnd = 5,
 		.dstDoor = 200,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -3056,8 +3056,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 203,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -3067,8 +3067,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 15,
 		.yEnd = 15,
 		.dstDoor = 202,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3078,8 +3078,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 139,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -3089,8 +3089,8 @@ const struct Door sMainDeckDoors[206] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.dstDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
@@ -3103,8 +3103,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 67,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3114,8 +3114,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 42,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3125,8 +3125,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 78,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3136,8 +3136,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 9,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3147,8 +3147,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 90,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3158,8 +3158,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3169,8 +3169,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 5,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3180,8 +3180,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3191,8 +3191,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 39,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3202,8 +3202,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 3,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3213,8 +3213,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3224,8 +3224,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 10,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3235,8 +3235,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3246,8 +3246,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3257,8 +3257,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 15,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3268,8 +3268,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 14,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3279,8 +3279,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3290,8 +3290,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 19,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3301,8 +3301,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 67,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3312,8 +3312,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 17,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3323,8 +3323,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3334,8 +3334,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 20,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3345,8 +3345,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 69,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3356,8 +3356,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 4,
 		.yEnd = 7,
 		.dstDoor = 24,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3367,8 +3367,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 4,
 		.yEnd = 7,
 		.dstDoor = 23,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3378,8 +3378,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 79,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3389,8 +3389,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 32,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3400,8 +3400,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 29,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3411,8 +3411,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 94,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3422,8 +3422,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 27,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3433,8 +3433,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 97,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3444,8 +3444,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 96,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3455,8 +3455,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 26,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3466,8 +3466,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 34,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3477,8 +3477,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 33,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3488,8 +3488,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 7,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3499,8 +3499,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 17,
 		.yEnd = 20,
 		.dstDoor = 43,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3510,8 +3510,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 44,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3521,8 +3521,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 41,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3532,8 +3532,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3543,8 +3543,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 95,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3554,8 +3554,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 38,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3565,8 +3565,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3576,8 +3576,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 27,
 		.yEnd = 30,
 		.dstDoor = 36,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3587,8 +3587,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 37,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -3598,8 +3598,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 48,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3609,8 +3609,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 59,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3620,8 +3620,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 60,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -3631,8 +3631,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3642,8 +3642,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 50,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3653,8 +3653,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 49,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3664,8 +3664,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 54,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3675,8 +3675,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 55,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3686,8 +3686,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 56,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3697,8 +3697,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 51,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3708,8 +3708,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 52,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3719,8 +3719,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 53,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3730,8 +3730,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 58,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3741,8 +3741,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 57,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3752,8 +3752,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 46,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3763,8 +3763,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 47,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3774,8 +3774,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 62,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3785,8 +3785,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 61,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3796,8 +3796,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 64,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3807,8 +3807,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 63,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -3818,8 +3818,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 154,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3829,8 +3829,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 16,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3840,8 +3840,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 18,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3851,8 +3851,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 74,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3862,8 +3862,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 22,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3873,8 +3873,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 80,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3884,8 +3884,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 72,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3895,8 +3895,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 71,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3906,8 +3906,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 37,
 		.yEnd = 40,
 		.dstDoor = 75,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3917,8 +3917,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 68,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3928,8 +3928,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 17,
 		.yEnd = 20,
 		.dstDoor = 73,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3939,8 +3939,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 81,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3950,8 +3950,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 99,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3961,8 +3961,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 2,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3972,8 +3972,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3983,8 +3983,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 70,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -3994,8 +3994,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 76,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4005,8 +4005,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 83,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4016,8 +4016,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 82,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4027,8 +4027,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 85,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4038,8 +4038,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 84,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4049,8 +4049,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 87,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4060,8 +4060,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 86,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4071,8 +4071,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 89,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4082,8 +4082,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 88,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4093,8 +4093,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 4,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4104,8 +4104,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 98,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4115,8 +4115,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 93,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4126,8 +4126,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 92,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4137,8 +4137,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 28,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4148,8 +4148,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 40,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4159,8 +4159,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 31,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4170,8 +4170,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 30,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4181,8 +4181,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 91,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4192,8 +4192,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 77,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4203,8 +4203,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 17,
 		.yEnd = 18,
 		.dstDoor = 101,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4214,8 +4214,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 7,
 		.yEnd = 8,
 		.dstDoor = 100,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4225,8 +4225,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 103,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4236,8 +4236,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 102,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -4247,8 +4247,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 7,
 		.yEnd = 8,
 		.dstDoor = 127,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4258,8 +4258,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 106,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4269,8 +4269,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 105,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -4280,8 +4280,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 7,
 		.yEnd = 8,
 		.dstDoor = 86,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4291,8 +4291,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 8,
 		.yEnd = 8,
 		.dstDoor = 109,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4302,8 +4302,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 28,
 		.yEnd = 28,
 		.dstDoor = 108,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4313,8 +4313,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 41,
 		.yEnd = 41,
 		.dstDoor = 111,
-		.xExit = 8,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0.5),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4324,8 +4324,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 110,
-		.xExit = 8,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0.5),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4335,8 +4335,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 113,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4346,8 +4346,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 112,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4357,8 +4357,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 57,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -4368,8 +4368,8 @@ const struct Door sSector1Doors[116] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.dstDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
@@ -4382,8 +4382,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 68,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4393,8 +4393,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 86,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4404,8 +4404,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 9,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4415,8 +4415,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 28,
 		.yEnd = 28,
 		.dstDoor = 53,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4426,8 +4426,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 14,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4437,8 +4437,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4448,8 +4448,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 85,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4459,8 +4459,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 8,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4470,8 +4470,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4481,8 +4481,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 2,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4492,8 +4492,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 16,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4503,8 +4503,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 5,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4514,8 +4514,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4525,8 +4525,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4536,8 +4536,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 4,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4547,8 +4547,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 73,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4558,8 +4558,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4569,8 +4569,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 19,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4580,8 +4580,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 26,
 		.yEnd = 29,
 		.dstDoor = 20,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4591,8 +4591,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 17,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4602,8 +4602,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 18,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4613,8 +4613,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 98,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4624,8 +4624,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 99,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4635,8 +4635,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 24,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4646,8 +4646,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 23,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4657,8 +4657,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 75,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4668,8 +4668,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 123,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4679,8 +4679,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 28,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4690,8 +4690,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 75,
 		.yEnd = 78,
 		.dstDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4701,8 +4701,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 75,
 		.yEnd = 78,
 		.dstDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4712,8 +4712,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 33,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4723,8 +4723,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 65,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4734,8 +4734,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 38,
 		.yEnd = 38,
 		.dstDoor = 62,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4745,8 +4745,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 30,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4756,8 +4756,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4767,8 +4767,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 29,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4778,8 +4778,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 37,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4789,8 +4789,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 36,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4800,8 +4800,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 41,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4811,8 +4811,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 40,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4822,8 +4822,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 39,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4833,8 +4833,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 38,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4844,8 +4844,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 34,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -4855,8 +4855,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 46,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4866,8 +4866,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 49,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4877,8 +4877,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 52,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -4888,8 +4888,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 43,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4899,8 +4899,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 25,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -4910,8 +4910,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 51,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4921,8 +4921,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 44,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4932,8 +4932,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 26,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4943,8 +4943,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 48,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4954,8 +4954,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -4965,8 +4965,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 8,
 		.yEnd = 8,
 		.dstDoor = 3,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -4976,8 +4976,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 72,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -4987,8 +4987,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 127,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -4998,8 +4998,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 17,
 		.yEnd = 20,
 		.dstDoor = 57,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5009,8 +5009,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 56,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5020,8 +5020,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 59,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5031,8 +5031,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 58,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5042,8 +5042,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 61,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5053,8 +5053,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 60,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -5064,8 +5064,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 8,
 		.yEnd = 8,
 		.dstDoor = 32,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5075,8 +5075,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 64,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5086,8 +5086,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 63,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5097,8 +5097,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 31,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5108,8 +5108,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 67,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5119,8 +5119,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 66,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5130,8 +5130,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 2,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5141,8 +5141,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 19,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -5152,8 +5152,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 71,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5163,8 +5163,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 63,
 		.yEnd = 66,
 		.dstDoor = 70,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5174,8 +5174,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 65,
 		.yEnd = 68,
 		.dstDoor = 54,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5185,8 +5185,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 15,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5196,8 +5196,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 124,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5207,8 +5207,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 25,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5218,8 +5218,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 79,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5229,8 +5229,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 52,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5240,8 +5240,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 49,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5251,8 +5251,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 76,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5262,8 +5262,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 63,
 		.yEnd = 66,
 		.dstDoor = 70,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5273,8 +5273,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 65,
 		.yEnd = 68,
 		.dstDoor = 82,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5284,8 +5284,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 81,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -5295,8 +5295,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 5,
 		.dstDoor = 156,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5306,8 +5306,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 87,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5317,8 +5317,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5328,8 +5328,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5339,8 +5339,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 84,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5350,8 +5350,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 91,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5361,8 +5361,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 92,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5372,8 +5372,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 93,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5383,8 +5383,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 88,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5394,8 +5394,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 89,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5405,8 +5405,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 90,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5416,8 +5416,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 95,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5427,8 +5427,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 94,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5438,8 +5438,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 67,
 		.yEnd = 70,
 		.dstDoor = 97,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5449,8 +5449,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 96,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5460,8 +5460,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 21,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5471,8 +5471,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 22,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5482,8 +5482,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -5493,8 +5493,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 17,
 		.yEnd = 17,
 		.dstDoor = 102,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -5504,8 +5504,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 101,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5515,8 +5515,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 107,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5526,8 +5526,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 75,
 		.yEnd = 78,
 		.dstDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5537,8 +5537,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 75,
 		.yEnd = 78,
 		.dstDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5548,8 +5548,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 55,
 		.yEnd = 58,
 		.dstDoor = 95,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5559,8 +5559,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 67,
 		.yEnd = 70,
 		.dstDoor = 103,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5570,8 +5570,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 109,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5581,8 +5581,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 33,
 		.yEnd = 36,
 		.dstDoor = 108,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -5592,8 +5592,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 111,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5603,8 +5603,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 45,
 		.yEnd = 48,
 		.dstDoor = 110,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5614,8 +5614,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 45,
 		.yEnd = 48,
 		.dstDoor = 110,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5625,8 +5625,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 26,
 		.yEnd = 29,
 		.dstDoor = 114,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5636,8 +5636,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.dstDoor = 113,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5647,8 +5647,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 118,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_NO_HATCH,
@@ -5658,8 +5658,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 10,
 		.yEnd = 10,
 		.dstDoor = 117,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -5669,8 +5669,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 20,
 		.yEnd = 20,
 		.dstDoor = 116,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5680,8 +5680,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 115,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -5691,8 +5691,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 120,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5702,8 +5702,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 119,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5713,8 +5713,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 35,
 		.yEnd = 38,
 		.dstDoor = 119,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -5724,8 +5724,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 20,
 		.yEnd = 20,
 		.dstDoor = 116,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5735,8 +5735,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.dstDoor = 26,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5746,8 +5746,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 74,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5757,8 +5757,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 126,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5768,8 +5768,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 125,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -5779,8 +5779,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 7,
 		.yEnd = 8,
 		.dstDoor = 104,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5790,8 +5790,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 25,
 		.yEnd = 28,
 		.dstDoor = 129,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5801,8 +5801,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 128,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_DISPLAY_LOCATION_NAME | DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -5812,8 +5812,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 7,
 		.yEnd = 8,
 		.dstDoor = 108,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5823,8 +5823,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 132,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5834,8 +5834,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 131,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5845,8 +5845,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.dstDoor = 134,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -5856,8 +5856,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.dstDoor = 133,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5867,8 +5867,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 136,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5878,8 +5878,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 135,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5889,8 +5889,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 138,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5900,8 +5900,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 137,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5911,8 +5911,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 140,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_OPEN_HATCH,
@@ -5922,8 +5922,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 139,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5933,8 +5933,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 140,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5944,8 +5944,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 143,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5955,8 +5955,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 142,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5966,8 +5966,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.dstDoor = 145,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_OPEN_HATCH,
@@ -5977,8 +5977,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.dstDoor = 144,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -5988,8 +5988,8 @@ const struct Door sSector2Doors[147] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.dstDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
