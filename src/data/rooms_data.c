@@ -10724,7 +10724,412 @@ const struct Door sSector6Doors[94] = {
 	}
 };
 
-static const u8 sBlob_3c2a48_3c2c10[] = INCBIN_U8("data/Blob_3c2a48_3c2c10.bin");
+const struct Door sTest1Doors[12] = {
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 0,
+		.xStart = 5,
+		.xEnd = 5,
+		.yStart = 8,
+		.yEnd = 9,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 0,
+		.xStart = 141,
+		.xEnd = 141,
+		.yStart = 7,
+		.yEnd = 10,
+		.dstDoor = 2,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 1,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 57,
+		.yEnd = 60,
+		.dstDoor = 1,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 3,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 14,
+		.yEnd = 17,
+		.dstDoor = 4,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 2,
+		.xStart = 51,
+		.xEnd = 51,
+		.yStart = 5,
+		.yEnd = 8,
+		.dstDoor = 3,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 5,
+		.yEnd = 8,
+		.dstDoor = 6,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 3,
+		.xStart = 41,
+		.xEnd = 41,
+		.yStart = 14,
+		.yEnd = 17,
+		.dstDoor = 5,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 2,
+		.xStart = 16,
+		.xEnd = 18,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 8,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(1.875)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 2,
+		.xStart = 16,
+		.xEnd = 18,
+		.yStart = 27,
+		.yEnd = 27,
+		.dstDoor = 7,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(3.125)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
+		.srcRoom = 1,
+		.xStart = 9,
+		.xEnd = 11,
+		.yStart = 61,
+		.yEnd = 61,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(1)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
+		.srcRoom = 1,
+		.xStart = 9,
+		.xEnd = 11,
+		.yStart = 6,
+		.yEnd = 6,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(1)
+	},
+	{
+		.type = DOOR_TYPE_NONE,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	}
+};
+
+const struct Door sTest2Doors[12] = {
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 0,
+		.xStart = 5,
+		.xEnd = 5,
+		.yStart = 8,
+		.yEnd = 9,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 0,
+		.xStart = 141,
+		.xEnd = 141,
+		.yStart = 7,
+		.yEnd = 10,
+		.dstDoor = 2,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 1,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 57,
+		.yEnd = 60,
+		.dstDoor = 1,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 3,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 14,
+		.yEnd = 17,
+		.dstDoor = 4,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 2,
+		.xStart = 51,
+		.xEnd = 51,
+		.yStart = 5,
+		.yEnd = 8,
+		.dstDoor = 3,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 5,
+		.yEnd = 8,
+		.dstDoor = 6,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 3,
+		.xStart = 41,
+		.xEnd = 41,
+		.yStart = 14,
+		.yEnd = 17,
+		.dstDoor = 5,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 2,
+		.xStart = 16,
+		.xEnd = 18,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 8,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(1.875)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 2,
+		.xStart = 16,
+		.xEnd = 18,
+		.yStart = 27,
+		.yEnd = 27,
+		.dstDoor = 7,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(3.125)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
+		.srcRoom = 1,
+		.xStart = 9,
+		.xEnd = 11,
+		.yStart = 61,
+		.yEnd = 61,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(1)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
+		.srcRoom = 1,
+		.xStart = 9,
+		.xEnd = 11,
+		.yStart = 6,
+		.yEnd = 6,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(1)
+	},
+	{
+		.type = DOOR_TYPE_NONE,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	}
+};
+
+const struct Door sTest3Doors[12] = {
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 0,
+		.xStart = 5,
+		.xEnd = 5,
+		.yStart = 8,
+		.yEnd = 9,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 0,
+		.xStart = 141,
+		.xEnd = 141,
+		.yStart = 7,
+		.yEnd = 10,
+		.dstDoor = 2,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 1,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 57,
+		.yEnd = 60,
+		.dstDoor = 1,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 3,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 14,
+		.yEnd = 17,
+		.dstDoor = 4,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 2,
+		.xStart = 51,
+		.xEnd = 51,
+		.yStart = 5,
+		.yEnd = 8,
+		.dstDoor = 3,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 5,
+		.yEnd = 8,
+		.dstDoor = 6,
+		.xExit = BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
+		.srcRoom = 3,
+		.xStart = 41,
+		.xEnd = 41,
+		.yStart = 14,
+		.yEnd = 17,
+		.dstDoor = 5,
+		.xExit = -BLOCK_TO_PIXEL(1.25),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 2,
+		.xStart = 16,
+		.xEnd = 18,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 8,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(1.875)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 2,
+		.xStart = 16,
+		.xEnd = 18,
+		.yStart = 27,
+		.yEnd = 27,
+		.dstDoor = 7,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(3.125)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
+		.srcRoom = 1,
+		.xStart = 9,
+		.xEnd = 11,
+		.yStart = 61,
+		.yEnd = 61,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(1)
+	},
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
+		.srcRoom = 1,
+		.xStart = 9,
+		.xEnd = 11,
+		.yStart = 6,
+		.yEnd = 6,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(1)
+	},
+	{
+		.type = DOOR_TYPE_NONE,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	}
+};
+
+static const u8 sBlob_3c2bf8_3c2c10[] = INCBIN_U8("data/Blob_3c2bf8_3c2c10.bin");
 
 const u8 sTest1_0_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
 	4, 10, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
