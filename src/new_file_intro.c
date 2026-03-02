@@ -1,7 +1,7 @@
 #include "globals.h"
 
 /**
- * @brief 87610 | f8 | To document
+ * @brief 87610 | f8 | Subroutine for intro
  * 
  */
 u32 IntroSubroutine(void) 
@@ -15,13 +15,13 @@ u32 IntroSubroutine(void)
     {
         if (gSubGameMode1 == 3)
         {
-            if (gNonGameplayRam.intro.unk_20E != 0) 
+            if (gNonGameplayRam.intro.unk_20E != 0)
                 gNonGameplayRam.intro.unk_20E = 0;
         }
         else if (gSubGameMode1 != 0 && gSubGameMode1 != 3)
         {
             if (READ_16(REG_BLDCNT) & BLDCNT_ALPHA_BLENDING_EFFECT)
-                WRITE_16(REG_BLDCNT, 255);
+                WRITE_16(REG_BLDCNT, BLDCNT_BRIGHTNESS_DECREASE_EFFECT | BLDCNT_SCREEN_FIRST_TARGET);
             
             gNonGameplayRam.intro.unk_20E = 0;
             gSubGameMode1 = 3;
@@ -52,10 +52,8 @@ u32 IntroSubroutine(void)
         case 3:
             if (gNonGameplayRam.intro.unk_20E == 0)
             {
-                if (gWrittenToBldy < 16)
-                {
+                if (gWrittenToBldy < BLDY_MAX_VALUE)
                     gWrittenToBldy++;
-                }
                 else
                     result = TRUE;
             }
@@ -69,7 +67,7 @@ u32 IntroSubroutine(void)
 }
 
  /**
- * @brief  |  | To document
+ * @brief 87708 | 218 | Subroutine for new file intro
  * 
  */
 u32 NewFileIntroSubroutine(void) 
@@ -89,7 +87,6 @@ u32 NewFileIntroSubroutine(void)
                 return TRUE;
             else 
                 gSubGameMode1 = 1;
-            
             break;
 
         case 1:
@@ -105,63 +102,54 @@ u32 NewFileIntroSubroutine(void)
             done = NewFileIntroSr388Preview();
             if (done)
                 gSubGameMode1 = 3;
-            
             break;
 
         case 3:
             done = NewFileIntroInSr388();
             if (done)
                 gSubGameMode1 = 4;
-            
             break;
 
         case 4:
             done = NewFileIntroSamusShipFlying();
             if (done)
                 gSubGameMode1 = 5;
-            
             break;
 
         case 5:
             done = NewFileIntroSamusFainting();
             if (done)
                 gSubGameMode1 = 6;
-            
             break;
 
         case 6:
             done = NewFileIntroSamusDrifting();
             if (done)
                 gSubGameMode1 = 7;
-            
             break;
 
         case 7:
             done = NewFileIntroSamusFound();
             if (done)
                 gSubGameMode1 = 8;
-            
             break;
 
         case 8:
             done = NewFileIntroSamusGettingCured();
             if (done)
                 gSubGameMode1 = 9;
-            
             break;
 
         case 9:
             done = NewFileIntroSamusCured();
             if (done)
                 gSubGameMode1 = 10;
-            
             break;
 
         case 10:
             done = NewFileIntroArrivingAtBsl();
             if (done)
                 gSubGameMode1 = 11;
-            
             break;
 
         case 11:
@@ -171,12 +159,11 @@ u32 NewFileIntroSubroutine(void)
                 gNonGameplayRam.intro.unk_20E = 0;
                 gSubGameMode1 = 12;
             }
-            
             break;
         
         case 12:
             gNonGameplayRam.intro.unk_20E += 1;
-            if (gWrittenToBldy < 16)
+            if (gWrittenToBldy < BLDY_MAX_VALUE)
             {
                 if (gNonGameplayRam.intro.unk_20E == 1)
                 {
@@ -208,36 +195,39 @@ u32 NewFileIntroSubroutine(void)
             }
 
             SpecialCutsceneDrawAllOam();
-            break;
     }
 
     return result;
 }
 
  /**
- * @brief  |  | To document
+ * @brief 87920 | 50 | To document
  * 
  */
 u32 unk_87920(void) 
 {
-    u32 done;
     u32 result;
+    u32 done;
     
     result = FALSE;
 
     switch (gCurrentCutscene)
     {
         default:
-            goto returnTrue;
+            goto returnTrue; // return TRUE doesn't match
+
         case 1:
             done = IntroSubroutine();
             break;
+
         case 2:
             done = NewFileIntroSubroutine();
             break;
+
         case 3:
             done = EndingSubroutine();
             break;
+
         case 4:
             done = DiedFromSr388CollisionSubroutine();
     }
@@ -254,7 +244,7 @@ u32 unk_87920(void)
 }
 
  /**
- * @brief  |  | To document
+ * @brief 87970 | 94 | V-blank for the new file intro Samus ship flying cutscene
  * 
  */
 void NewFileIntroSamusShipFlyingVblank(void) 
