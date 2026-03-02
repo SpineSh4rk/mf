@@ -1,0 +1,274 @@
+#include "globals.h"
+
+/**
+ * @brief 87610 | f8 | To document
+ * 
+ */
+u32 IntroSubroutine(void) 
+{
+    u32 result;
+    u32 done;
+
+    result = FALSE;
+    
+    if (gChangedInput & (KEY_START | KEY_A))
+    {
+        if (gSubGameMode1 == 3)
+        {
+            if (gNonGameplayRam.intro.unk_20E != 0) 
+                gNonGameplayRam.intro.unk_20E = 0;
+        }
+        else if (gSubGameMode1 != 0 && gSubGameMode1 != 3)
+        {
+            if (READ_16(REG_BLDCNT) & BLDCNT_ALPHA_BLENDING_EFFECT)
+                WRITE_16(REG_BLDCNT, 255);
+            
+            gNonGameplayRam.intro.unk_20E = 0;
+            gSubGameMode1 = 3;
+            FadeAllSounds(20);
+            FadeMusic(20);
+        }
+    }
+
+    switch (gSubGameMode1)
+    {
+        case 0:
+            NewFileIntroInit();
+            gSubGameMode1 = 1;
+            break;
+        
+        case 1:
+            done = IntroSpaceView();
+            if (done)
+                gSubGameMode1 = 2;
+            break;
+        
+        case 2:
+            done = IntroSamusShipCrashing();
+            if (done)
+                gSubGameMode1 = 3;
+            break;
+        
+        case 3:
+            if (gNonGameplayRam.intro.unk_20E == 0)
+            {
+                if (gWrittenToBldy < 16)
+                {
+                    gWrittenToBldy++;
+                }
+                else
+                    result = TRUE;
+            }
+            else
+                gNonGameplayRam.intro.unk_20E--;
+            
+            SpecialCutsceneDrawAllOam(); 
+    }
+
+    return result;
+}
+
+ /**
+ * @brief  |  | To document
+ * 
+ */
+u32 NewFileIntroSubroutine(void) 
+{
+    u32 result;
+    u32 done;
+
+    result = FALSE;
+
+    switch (gSubGameMode1)
+    {
+        case 0:
+            StopAllMusicAndSounds();
+            NewFileIntroInit();
+
+            if (gGameCompletion.introPlayed == TRUE)
+                return TRUE;
+            else 
+                gSubGameMode1 = 1;
+            
+            break;
+
+        case 1:
+            gNonGameplayRam.intro.unk_210 += 1;
+            if (gNonGameplayRam.intro.unk_210 < 100)
+                return result;
+            
+            gNonGameplayRam.intro.unk_210 = 0;
+            gSubGameMode1 = 2;
+            break;
+
+        case 2:
+            done = NewFileIntroSr388Preview();
+            if (done)
+                gSubGameMode1 = 3;
+            
+            break;
+
+        case 3:
+            done = NewFileIntroInSr388();
+            if (done)
+                gSubGameMode1 = 4;
+            
+            break;
+
+        case 4:
+            done = NewFileIntroSamusShipFlying();
+            if (done)
+                gSubGameMode1 = 5;
+            
+            break;
+
+        case 5:
+            done = NewFileIntroSamusFainting();
+            if (done)
+                gSubGameMode1 = 6;
+            
+            break;
+
+        case 6:
+            done = NewFileIntroSamusDrifting();
+            if (done)
+                gSubGameMode1 = 7;
+            
+            break;
+
+        case 7:
+            done = NewFileIntroSamusFound();
+            if (done)
+                gSubGameMode1 = 8;
+            
+            break;
+
+        case 8:
+            done = NewFileIntroSamusGettingCured();
+            if (done)
+                gSubGameMode1 = 9;
+            
+            break;
+
+        case 9:
+            done = NewFileIntroSamusCured();
+            if (done)
+                gSubGameMode1 = 10;
+            
+            break;
+
+        case 10:
+            done = NewFileIntroArrivingAtBsl();
+            if (done)
+                gSubGameMode1 = 11;
+            
+            break;
+
+        case 11:
+            done = NewFileIntroLandingOnBsl();
+            if (done)
+            {
+                gNonGameplayRam.intro.unk_20E = 0;
+                gSubGameMode1 = 12;
+            }
+            
+            break;
+        
+        case 12:
+            gNonGameplayRam.intro.unk_20E += 1;
+            if (gWrittenToBldy < 16)
+            {
+                if (gNonGameplayRam.intro.unk_20E == 1)
+                {
+                    gNonGameplayRam.intro.unk_20E = 0;
+                    gWrittenToBldy += 1;
+                }
+            }
+            else
+            {
+                if (gNonGameplayRam.intro.unk_20E == 1)
+                {
+                    Sram_ProcessIntroSave(0);
+                }
+                else if (gNonGameplayRam.intro.unk_20E == 2)
+                {
+                    Sram_ProcessIntroSave(1);
+                } 
+                else if (gNonGameplayRam.intro.unk_20E == 3)
+                {
+                    Sram_ProcessIntroSave(2);
+                }
+                else if (gNonGameplayRam.intro.unk_20E == 4)
+                {
+                    Sram_ProcessIntroSave(3);
+                    gNonGameplayRam.intro.unk_210 = 0;
+                    gNonGameplayRam.intro.unk_20E = 0;
+                    result = TRUE;
+                }
+            }
+
+            SpecialCutsceneDrawAllOam();
+            break;
+    }
+
+    return result;
+}
+
+ /**
+ * @brief  |  | To document
+ * 
+ */
+u32 unk_87920(void) 
+{
+    u32 done;
+    u32 result;
+    
+    result = FALSE;
+
+    switch (gCurrentCutscene)
+    {
+        default:
+            goto returnTrue;
+        case 1:
+            done = IntroSubroutine();
+            break;
+        case 2:
+            done = NewFileIntroSubroutine();
+            break;
+        case 3:
+            done = EndingSubroutine();
+            break;
+        case 4:
+            done = DiedFromSr388CollisionSubroutine();
+    }
+
+    if (done)
+    {
+        StopAllMusicAndSounds();
+
+    returnTrue:
+        result = TRUE;
+    }
+    
+    return result;
+}
+
+ /**
+ * @brief  |  | To document
+ * 
+ */
+void NewFileIntroSamusShipFlyingVblank(void) 
+{
+    DMA3_COPY_32(gOamData, OAM_BASE, 256);
+
+    WRITE_16(REG_BLDALPHA, C_16_2_8(gWrittenToBldalpha_Evb, gWrittenToBldalpha_Eva));
+
+    WRITE_16(REG_BLDY, gWrittenToBldy);
+
+    WRITE_16(REG_BG1HOFS, gBg1XPosition);
+    WRITE_16(REG_BG1VOFS, gBg1YPosition);
+    WRITE_16(REG_BG2HOFS, gBg2XPosition);
+    WRITE_16(REG_BG2VOFS, gBg2YPosition);
+    WRITE_16(REG_BG3HOFS, gBg3XPosition);
+    WRITE_16(REG_BG3VOFS, gBg3YPosition);
+}

@@ -11,11 +11,18 @@ struct InGameData {
     u8 clipdataCode[640];
 };
 
+struct IntroData {
+    u8 padding[526];
+    u16 unk_20E;
+    u16 unk_210;
+};
+
 union NonGameplayRam {
     struct PauseScreenData pauseScreen;
     struct InGameData inGame;
     struct TitleScreenData titleScreen;
     struct SaXCloseUpData saXCloseUp;
+    struct IntroData intro;
     u8 size[1344];
 };
 
@@ -56,8 +63,14 @@ extern u16 gButtonInputCopy;
 extern u16 gChangedInput;
 extern u8 gDisableSoftReset;
 
+extern u16 gBg0XPosition;
+extern u16 gBg0YPosition;
 extern u16 gBg1XPosition;
 extern u16 gBg1YPosition;
+extern u16 gBg2XPosition;
+extern u16 gBg2YPosition;
+extern u16 gBg3XPosition;
+extern u16 gBg3YPosition;
 
 extern u8 gSpritesetNumber;
 
@@ -78,7 +91,7 @@ extern u16 gBg1CntDuringDoorTransition;
 
 struct GameCompletion {
     s8 completedGame;
-    u8 introPlayed;
+    s8 introPlayed;
 };
 
 extern struct GameCompletion gGameCompletion;

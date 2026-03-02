@@ -159,8 +159,14 @@ SECTIONS {
         . = 0x0000121e; gWrittenToBldy = .;
         . = 0x00001220; gWrittenToBldalpha_Eva = .;
         . = 0x00001222; gWrittenToBldalpha_Evb = .;
+        . = 0x00001224; gBg0XPosition = .;
+        . = 0x00001226; gBg0YPosition = .;
         . = 0x00001228; gBg1XPosition = .;
         . = 0x0000122A; gBg1YPosition = .;
+        . = 0x0000122C; gBg2XPosition = .;
+        . = 0x0000122E; gBg2YPosition = .;
+        . = 0x00001230; gBg3XPosition = .;
+        . = 0x00001232; gBg3YPosition = .;
         . = 0x00001242; gDemoState = .;
         . = 0x00001243; gPoseLock = .;
         . = 0x00001244; gSamusData = .;
@@ -441,8 +447,9 @@ SECTIONS {
 
         src/projectile.o(.text);
         src/menus/title_screen.o(.text);
+        src/new_file_intro.o(.text);
 
-        asm/disasm_0x08087610.o(.text);
+        asm/disasm_0x08087a04.o(.text);
 
         src/sa_x_close_up.o(.text);
 
