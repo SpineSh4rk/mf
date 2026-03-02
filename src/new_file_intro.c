@@ -7,7 +7,6 @@
 u32 IntroSubroutine(void) 
 {
     u32 result;
-    u32 done;
 
     result = FALSE;
     
@@ -38,14 +37,12 @@ u32 IntroSubroutine(void)
             break;
         
         case 1:
-            done = IntroSpaceView();
-            if (done)
+            if (IntroSpaceView())
                 gSubGameMode1 = 2;
             break;
         
         case 2:
-            done = IntroSamusShipCrashing();
-            if (done)
+            if (IntroSamusShipCrashing())
                 gSubGameMode1 = 3;
             break;
         
@@ -73,7 +70,6 @@ u32 IntroSubroutine(void)
 u32 NewFileIntroSubroutine(void) 
 {
     u32 result;
-    u32 done;
 
     result = FALSE;
 
@@ -90,71 +86,61 @@ u32 NewFileIntroSubroutine(void)
             break;
 
         case 1:
-            gNonGameplayRam.intro.unk_210 += 1;
-            if (gNonGameplayRam.intro.unk_210 < 100)
-                return result;
-            
-            gNonGameplayRam.intro.unk_210 = 0;
-            gSubGameMode1 = 2;
+            gNonGameplayRam.intro.unk_210++;
+            if (gNonGameplayRam.intro.unk_210 >= 100)
+            {
+                gNonGameplayRam.intro.unk_210 = 0;
+                gSubGameMode1 = 2;
+            }
             break;
 
         case 2:
-            done = NewFileIntroSr388Preview();
-            if (done)
+            if (NewFileIntroSr388Preview())
                 gSubGameMode1 = 3;
             break;
 
         case 3:
-            done = NewFileIntroInSr388();
-            if (done)
+            if (NewFileIntroInSr388())
                 gSubGameMode1 = 4;
             break;
 
         case 4:
-            done = NewFileIntroSamusShipFlying();
-            if (done)
+            if (NewFileIntroSamusShipFlying())
                 gSubGameMode1 = 5;
             break;
 
         case 5:
-            done = NewFileIntroSamusFainting();
-            if (done)
+            if (NewFileIntroSamusFainting())
                 gSubGameMode1 = 6;
             break;
 
         case 6:
-            done = NewFileIntroSamusDrifting();
-            if (done)
+            if (NewFileIntroSamusDrifting())
                 gSubGameMode1 = 7;
             break;
 
         case 7:
-            done = NewFileIntroSamusFound();
-            if (done)
+            if (NewFileIntroSamusFound())
                 gSubGameMode1 = 8;
             break;
 
         case 8:
-            done = NewFileIntroSamusGettingCured();
-            if (done)
+            if (NewFileIntroSamusGettingCured())
                 gSubGameMode1 = 9;
             break;
 
         case 9:
-            done = NewFileIntroSamusCured();
-            if (done)
+            if (NewFileIntroSamusCured())
                 gSubGameMode1 = 10;
             break;
 
         case 10:
-            done = NewFileIntroArrivingAtBsl();
-            if (done)
+            if (NewFileIntroArrivingAtBsl())
                 gSubGameMode1 = 11;
             break;
 
         case 11:
-            done = NewFileIntroLandingOnBsl();
-            if (done)
+            if (NewFileIntroLandingOnBsl())
             {
                 gNonGameplayRam.intro.unk_20E = 0;
                 gSubGameMode1 = 12;
@@ -162,13 +148,13 @@ u32 NewFileIntroSubroutine(void)
             break;
         
         case 12:
-            gNonGameplayRam.intro.unk_20E += 1;
+            gNonGameplayRam.intro.unk_20E++;
             if (gWrittenToBldy < BLDY_MAX_VALUE)
             {
                 if (gNonGameplayRam.intro.unk_20E == 1)
                 {
                     gNonGameplayRam.intro.unk_20E = 0;
-                    gWrittenToBldy += 1;
+                    gWrittenToBldy++;
                 }
             }
             else
@@ -214,7 +200,9 @@ u32 unk_87920(void)
     switch (gCurrentCutscene)
     {
         default:
-            goto returnTrue; // return TRUE doesn't match
+            result = TRUE;
+            done = FALSE;
+            break;
 
         case 1:
             done = IntroSubroutine();
@@ -235,8 +223,6 @@ u32 unk_87920(void)
     if (done)
     {
         StopAllMusicAndSounds();
-
-    returnTrue:
         result = TRUE;
     }
     
