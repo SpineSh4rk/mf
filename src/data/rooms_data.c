@@ -6409,7 +6409,7 @@ const struct Door sSector3Doors[91] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.dstDoor = 38,
-		.xExit = BLOCK_TO_PIXEL(0.875),
+		.xExit = BLOCK_TO_PIXEL(7/8.f),
 		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
@@ -6420,7 +6420,7 @@ const struct Door sSector3Doors[91] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.dstDoor = 37,
-		.xExit = BLOCK_TO_PIXEL(0.875),
+		.xExit = BLOCK_TO_PIXEL(7/8.f),
 		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
@@ -6663,7 +6663,7 @@ const struct Door sSector3Doors[91] = {
 		.yEnd = 21,
 		.dstDoor = 59,
 		.xExit = BLOCK_TO_PIXEL(0.5),
-		.yExit = -BLOCK_TO_PIXEL(2.625)
+		.yExit = -BLOCK_TO_PIXEL(2 + 5/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -6696,7 +6696,7 @@ const struct Door sSector3Doors[91] = {
 		.yEnd = 21,
 		.dstDoor = 59,
 		.xExit = BLOCK_TO_PIXEL(0.5),
-		.yExit = -BLOCK_TO_PIXEL(2.625)
+		.yExit = -BLOCK_TO_PIXEL(2 + 5/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_HATCH_CAN_LOCK,
@@ -9627,7 +9627,7 @@ const struct Door sSector4Doors[119] = {
 		.yStart = 17,
 		.yEnd = 17,
 		.dstDoor = 114,
-		.xExit = BLOCK_TO_PIXEL(1.125),
+		.xExit = BLOCK_TO_PIXEL(1 + 1/8.f),
 		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
@@ -10811,7 +10811,7 @@ const struct Door sTest1Doors[12] = {
 		.yEnd = 0,
 		.dstDoor = 8,
 		.xExit = BLOCK_TO_PIXEL(1),
-		.yExit = BLOCK_TO_PIXEL(1.875)
+		.yExit = BLOCK_TO_PIXEL(1 + 7/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -10822,7 +10822,7 @@ const struct Door sTest1Doors[12] = {
 		.yEnd = 27,
 		.dstDoor = 7,
 		.xExit = BLOCK_TO_PIXEL(1),
-		.yExit = -BLOCK_TO_PIXEL(3.125)
+		.yExit = -BLOCK_TO_PIXEL(3 + 1/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -10946,7 +10946,7 @@ const struct Door sTest2Doors[12] = {
 		.yEnd = 0,
 		.dstDoor = 8,
 		.xExit = BLOCK_TO_PIXEL(1),
-		.yExit = BLOCK_TO_PIXEL(1.875)
+		.yExit = BLOCK_TO_PIXEL(1 + 7/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -10957,7 +10957,7 @@ const struct Door sTest2Doors[12] = {
 		.yEnd = 27,
 		.dstDoor = 7,
 		.xExit = BLOCK_TO_PIXEL(1),
-		.yExit = -BLOCK_TO_PIXEL(3.125)
+		.yExit = -BLOCK_TO_PIXEL(3 + 1/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -11081,7 +11081,7 @@ const struct Door sTest3Doors[12] = {
 		.yEnd = 0,
 		.dstDoor = 8,
 		.xExit = BLOCK_TO_PIXEL(1),
-		.yExit = BLOCK_TO_PIXEL(1.875)
+		.yExit = BLOCK_TO_PIXEL(1 + 7/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
@@ -11092,7 +11092,7 @@ const struct Door sTest3Doors[12] = {
 		.yEnd = 27,
 		.dstDoor = 7,
 		.xExit = BLOCK_TO_PIXEL(1),
-		.yExit = -BLOCK_TO_PIXEL(3.125)
+		.yExit = -BLOCK_TO_PIXEL(3 + 1/8.f)
 	},
 	{
 		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_AREA_CONNECTION,
@@ -11129,7 +11129,30 @@ const struct Door sTest3Doors[12] = {
 	}
 };
 
-static const u8 sBlob_3c2bf8_3c2c10[] = INCBIN_U8("data/Blob_3c2bf8_3c2c10.bin");
+const struct Door sTestDoors_Unused[2] = {
+	{
+		.type = DOOR_TYPE_NORMAL | DOOR_TYPE_NO_HATCH,
+		.srcRoom = 0,
+		.xStart = 5,
+		.xEnd = 5,
+		.yStart = 8,
+		.yEnd = 9,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	},
+	{
+		.type = DOOR_TYPE_NONE,
+		.srcRoom = 0,
+		.xStart = 0,
+		.xEnd = 0,
+		.yStart = 0,
+		.yEnd = 0,
+		.dstDoor = 0,
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
+	}
+};
 
 const u8 sTest1_0_Spriteset[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
 	4, 10, SSP_UNINFECTED_OR_BOSS | SPRITESET_IDX(0),
