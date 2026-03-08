@@ -1,4 +1,4 @@
-#include "scroll.h"
+#include "types.h"
 #include "macros.h"
 
 #include "data/rooms/main_deck_rooms_data.h"
