@@ -2237,5 +2237,3 @@ const u8 sEventBasedConnections[60][EVENT_BASED_CONNECTION_FIELD_COUNT] = {
         [EVENT_BASED_CONNECTION_FIELD_DESTINATION_DOOR] = 0x09
     },
 };
-
-static const u8 sBlob_3c8d58_3e392c[] = INCBIN_U8("data/Blob_3c8d58_3e392c.bin");
