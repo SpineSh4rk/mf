@@ -1,4 +1,6 @@
 #include "globals.h"
+#include "new_file_intro.h"
+#include "data/new_file_intro_data.h"
 
 /**
  * @brief 87610 | f8 | Handler for intro
@@ -248,3 +250,85 @@ void NewFileIntroSamusShipFlyingVblank(void)
     WRITE_16(REG_BG3HOFS, gBg3XPosition);
     WRITE_16(REG_BG3VOFS, gBg3YPosition);
 }
+
+ /**
+ * @brief  |  | 
+ * 
+ */
+/*
+void NewFileIntroSamusShipFlyingInit(void) 
+{
+    u16 i;
+    
+    CallbackSetVBlank(unk_99940());
+    
+    DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam));
+
+    for (i = 0; i < 8; i++)
+    {
+        LZ77UncompVram(sGfxPtr_79C3FC[i], 0x6010000 + i * 0x1000);
+    }
+    
+    DMA3_COPY_32(&sPal_5980B0, 0x05000200, 40);
+    DMA3_COPY_32(&sPal_598150, 0x05000300, 16);
+    DMA3_COPY_32(&sGfx_613148, 0x06017fe0, 8);
+    DMA3_COPY_32(&sPal_6131A8, 0x050003e0, 8);
+
+    LZ77UncompWram(&sGfx_60BCA4, 0x02010000);
+
+    DMA3_COPY_32(0x02010000, 0x6000000, 0x2000);
+
+    LZ77UncompVram(&sTilemap_60B670, 0x0600e800);
+    LZ77UncompVram(&sTilemap_60B148, 0x0600f800);
+
+    DMA3_COPY_32(&sPal_612E48, PALRAM_BASE + 0x100, 0x40);
+
+    WRITE_16(PALRAM_BASE, 0);
+
+    LZ77UncompVram(&sTilemap_598898, 0x0600e000);
+
+    WRITE_16(REG_BG0HOFS, -8);
+    WRITE_16(REG_BG0VOFS, 0);
+    WRITE_16(REG_BG1HOFS, 0);
+    WRITE_16(REG_BG1VOFS, 0);
+    WRITE_16(REG_BG2HOFS, 0);
+    WRITE_16(REG_BG2VOFS, 0);
+    WRITE_16(REG_BG3HOFS, 0);
+    WRITE_16(REG_BG3VOFS, 0);
+
+    gBg1XPosition = 0;
+    gBg1YPosition = 0;
+    gBg2XPosition = 0x30;
+    gBg2YPosition = -8;
+    gBg3XPosition = 0;
+    gBg3YPosition = 0;
+
+    WRITE_16(REG_BLDCNT, 0xff);
+    WRITE_16(REG_BG0CNT, 0x1c08);
+    WRITE_16(REG_BG2CNT, 0x5d02);
+    WRITE_16(REG_BG3CNT, 0x1f03);
+
+    NewFileIntroSetupOam(200, 0xfa, 0, 0);
+    NewFileIntroSetupOam(1, (s16)gBg2XPosition, (s16)gBg2YPosition, 0);
+    NewFileIntroSetupOam(2, 0xa0, 0x5a, 0);
+    NewFileIntroSetupOam(4, 0, 0, 1);
+
+    for (i = 0; i < 10; i++)
+    {
+        NewFileIntroSetupOam(3, (u8)SpecialCutsceneGetRandomNumber(), (u8)SpecialCutsceneGetRandomNumber(), 1);
+    }
+
+    SpecialCutsceneProcessOam();
+    SpecialCutsceneDrawAllOam();
+
+    DMA3_FILL_32(0, VRAM_BASE + 0xD000, 0x1000);
+
+    gNonGameplayRam.intro.pText = &sCutsceneTextNone;
+    WRITE_16(REG_DISPCNT, 0x1c00);
+
+    CallbackSetVBlank(NewFileIntroSamusShipFlyingVblank);
+}
+*/
+
+
+

@@ -12,7 +12,8 @@ struct InGameData {
 };
 
 struct IntroData {
-    u8 padding[526];
+    u32* pText;
+    u8 padding[522];
     u16 unk_20E;
     u16 unk_210;
 };
