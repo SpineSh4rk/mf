@@ -2,15 +2,15 @@
 #include "new_file_intro.h"
 #include "data/new_file_intro_data.h"
 
-static u8* sIntroBslObjectGfxPointers[8] = {
-    (u8*)0x08642A30,
-    (u8*)0x08643130,
-    (u8*)0x08643778,
-    (u8*)0x08643E08,
-    (u8*)0x08643FF8,
-    (u8*)0x086444A0,
-    (u8*)0x08644788,
-    (u8*)0x08645004
+static const u32* sIntroBslObjectGfxPointers[8] = {
+    sIntroBslObjectGfx0,
+    sIntroBslObjectGfx1,
+    sIntroBslObjectGfx2,
+    sIntroBslObjectGfx3,
+    sIntroBslObjectGfx4,
+    sIntroBslObjectGfx5,
+    sIntroBslObjectGfx6,
+    sIntroBslObjectGfx7
 };
 
 static u8 sBlob_79c41c_79c5a4[] = INCBIN_U8("data/Blob_79c41c_79c5a4.bin");
