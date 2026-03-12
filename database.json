@@ -26146,19 +26146,19 @@
   },
   {
     "path": "new_file_intro/samus_ship.pal",
-    "count": "0xA0",
+    "count": "0x50",
     "addr": {
       "us": "0x5980B0"
     },
-    "size": 1
+    "size": 2
   },
   {
     "path": "new_file_intro/598150.pal",
-    "count": "0x40",
+    "count": "0x20",
     "addr": {
       "us": "0x598150"
     },
-    "size": 1
+    "size": 2
   },
   {
     "path": "Blob_598190_598898.bin",
@@ -26202,11 +26202,11 @@
   },
   {
     "path": "new_file_intro/bsl_space_bg.gfx.lz",
-    "count": "0x4514",
+    "count": "0x1145",
     "addr": {
       "us": "0x60BCA4"
     },
-    "size": 1
+    "size": 4
   },
   {
     "path": "Blob_6101b8_612e48.bin",
@@ -26218,11 +26218,11 @@
   },
   {
     "path": "new_file_intro/bsl_space_bg.pal",
-    "count": "0x100",
+    "count": "0x80",
     "addr": {
       "us": "0x612E48"
     },
-    "size": 1
+    "size": 2
   },
   {
     "path": "Blob_612f48_613148.bin",
@@ -26234,11 +26234,11 @@
   },
   {
     "path": "new_file_intro/next_page_arrow.gfx",
-    "count": "0x20",
+    "count": "0x8",
     "addr": {
       "us": "0x613148"
     },
-    "size": 1
+    "size": 4
   },
   {
     "path": "Blob_613168_6131a8.bin",
@@ -26250,11 +26250,11 @@
   },
   {
     "path": "new_file_intro/next_page_arrow.pal",
-    "count": "0x20",
+    "count": "0x10",
     "addr": {
       "us": "0x6131A8"
     },
-    "size": 1
+    "size": 2
   },
   {
     "path": "Blob_6131c8_63a19c.bin",
@@ -26433,10 +26433,18 @@
     "size": 1
   },
   {
-    "path": "Blob_79c5c0_79ecc8.bin",
-    "count": "0x2708",
+    "path": "Blob_79c5c0_79e6a0.bin",
+    "count": "0x20E0",
     "addr": {
       "us": "0x79C5C0"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_79e868_79ecc8.bin",
+    "count": "0x460",
+    "addr": {
+      "us": "0x79E868"
     },
     "size": 1
   }

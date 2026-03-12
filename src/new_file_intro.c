@@ -16,16 +16,150 @@ static const u32* sIntroBslObjectGfxPointers[8] = {
 static u8 sBlob_79c41c_79c5a4[] = INCBIN_U8("data/Blob_79c41c_79c5a4.bin");
 
 static u16** sMonologueTextPointers[7] = {
-    (u16**)0x0879E6A0,
-    (u16**)0x0879E6A0,
-    (u16**)0x0879E6EC,
-    (u16**)0x0879E738,
-    (u16**)0x0879E784,
-    (u16**)0x0879E7D0,
-    (u16**)0x0879E81C
+    sMonologueTextPointersJapanese,
+    sMonologueTextPointersJapanese,
+    sMonologueTextPointersEnglish,
+    sMonologueTextPointersGerman,
+    sMonologueTextPointersFrench,
+    sMonologueTextPointersItalian,
+    sMonologueTextPointersSpanish
 };
 
-static u8 sBlob_79c5c0_79ecc8[] = INCBIN_U8("data/Blob_79c5c0_79ecc8.bin");
+static u8 sBlob_79c5c0_79e6a0[] = INCBIN_U8("data/Blob_79c5c0_79e6a0.bin");
+
+static u16* sMonologueTextPointersJapanese[19] = {
+	(u16*)0x871e20c,
+	(u16*)0x871e4e4,
+	(u16*)0x871e67e,
+	(u16*)0x871e814,
+	(u16*)0x871e9b6,
+	(u16*)0x871eb34,
+	(u16*)0x871ecac,
+	(u16*)0x871efc2,
+	(u16*)0x871f498,
+	(u16*)0x871f52c,
+	(u16*)0x871f56c,
+	(u16*)0x871f5fc,
+	(u16*)0x871f656,
+	(u16*)0x871f71a,
+	(u16*)0x871f7cc,
+	(u16*)0x871f896,
+	(u16*)0x871f98a,
+	(u16*)0x871fa32,
+	(u16*)0x871fa92
+};
+
+static u16* sMonologueTextPointersEnglish[19] = {
+	(u16*)0x871fad4,
+	(u16*)0x87200ee,
+	(u16*)0x8720310,
+	(u16*)0x8720528,
+	(u16*)0x8720748,
+	(u16*)0x872094a,
+	(u16*)0x8720b4a,
+	(u16*)0x8721116,
+	(u16*)0x872192e,
+	(u16*)0x8721a12,
+	(u16*)0x8721ab6,
+	(u16*)0x8721c28,
+	(u16*)0x8721d12,
+	(u16*)0x8721f20,
+	(u16*)0x8722068,
+	(u16*)0x8722238,
+	(u16*)0x8722438,
+	(u16*)0x8722550,
+	(u16*)0x87225f8
+};
+
+static u16* sMonologueTextPointersGerman[19] = {
+	(u16*)0x87226a0,
+	(u16*)0x8723016,
+	(u16*)0x8723324,
+	(u16*)0x8723624,
+	(u16*)0x8723958,
+	(u16*)0x8723be2,
+	(u16*)0x8723e44,
+	(u16*)0x872475e,
+	(u16*)0x87252c6,
+	(u16*)0x8725412,
+	(u16*)0x87254ea,
+	(u16*)0x87256d8,
+	(u16*)0x872581e,
+	(u16*)0x8725a60,
+	(u16*)0x8725b94,
+	(u16*)0x8725dac,
+	(u16*)0x872603c,
+	(u16*)0x87261c6,
+	(u16*)0x87262aa
+};
+
+static u16* sMonologueTextPointersFrench[19] = {
+	(u16*)0x872638c,
+	(u16*)0x8726aa6,
+	(u16*)0x8726cfe,
+	(u16*)0x8726f04,
+	(u16*)0x8727106,
+	(u16*)0x8727314,
+	(u16*)0x8727522,
+	(u16*)0x8727b08,
+	(u16*)0x87282bc,
+	(u16*)0x87283a6,
+	(u16*)0x8728466,
+	(u16*)0x8728608,
+	(u16*)0x87286e8,
+	(u16*)0x87288ba,
+	(u16*)0x8728a12,
+	(u16*)0x8728bfc,
+	(u16*)0x8728e4a,
+	(u16*)0x8728f96,
+	(u16*)0x872904e
+};
+
+static u16* sMonologueTextPointersItalian[19] = {
+	(u16*)0x87290fc,
+	(u16*)0x8729792,
+	(u16*)0x8729a6e,
+	(u16*)0x8729c84,
+	(u16*)0x8729f24,
+	(u16*)0x872a124,
+	(u16*)0x872a330,
+	(u16*)0x872a8f6,
+	(u16*)0x872b142,
+	(u16*)0x872b254,
+	(u16*)0x872b2c8,
+	(u16*)0x872b446,
+	(u16*)0x872b56e,
+	(u16*)0x872b7a6,
+	(u16*)0x872b8e6,
+	(u16*)0x872bab4,
+	(u16*)0x872bcc2,
+	(u16*)0x872bdb8,
+	(u16*)0x872be4a
+};
+
+static u16* sMonologueTextPointersSpanish[19] = {
+	(u16*)0x872bef8,
+	(u16*)0x872c69c,
+	(u16*)0x872c8f2,
+	(u16*)0x872cb02,
+	(u16*)0x872cd92,
+	(u16*)0x872d002,
+	(u16*)0x872d212,
+	(u16*)0x872d81e,
+	(u16*)0x872e0b8,
+	(u16*)0x872e1b6,
+	(u16*)0x872e220,
+	(u16*)0x872e3d2,
+	(u16*)0x872e4ea,
+	(u16*)0x872e70a,
+	(u16*)0x872e848,
+	(u16*)0x872ea20,
+	(u16*)0x872ebf6,
+	(u16*)0x872ed50,
+	(u16*)0x872ee1c
+};
+
+static u8 sBlob_79e868_79ecc8[] = INCBIN_U8("data/Blob_79e868_79ecc8.bin");
 
 /**
  * @brief 87610 | f8 | Handler for intro
@@ -293,23 +427,23 @@ static void NewFileIntroSamusShipFlyingInit(void)
         LZ77UncompVram(sIntroBslObjectGfxPointers[i], VRAM_OBJ + i * 0x1000);
     }
     
-    DMA3_COPY_32(&sIntroSamusShipPal, PALRAM_OBJ, 5 * PAL_ROW_SIZE / 4);
-    DMA3_COPY_32(&sPal_598150, PALRAM_OBJ + 0x100, 16);
-    DMA3_COPY_32(&sNextPageArrowGfx, VRAM_OBJ + 0x7FE0, 8);
-    DMA3_COPY_32(&sNextPageArrowPal, PALRAM_OBJ + 0x1E0, 8);
+    DMA3_COPY_32(sIntroSamusShipPal, PALRAM_OBJ, 5 * PAL_ROW_SIZE / 4);
+    DMA3_COPY_32(sPal_598150, PALRAM_OBJ + 0x100, 2 * PAL_ROW_SIZE / 4);
+    DMA3_COPY_32(sNextPageArrowGfx, VRAM_OBJ + 0x7FE0, 8);
+    DMA3_COPY_32(sNextPageArrowPal, PALRAM_OBJ + 0x1E0, PAL_ROW_SIZE / 4);
 
-    LZ77UncompWram(&sIntroBslSpaceBgGfx, EWRAM_BASE + 0x10000);
+    LZ77UncompWram(sIntroBslSpaceBgGfx, EWRAM_BASE + 0x10000);
 
     DMA3_COPY_32(EWRAM_BASE + 0x10000, VRAM_BASE, (VRAM_SIZE / 3) / 4);
 
-    LZ77UncompVram(&sIntroBslTilemap, VRAM_BASE + 0xE800);
-    LZ77UncompVram(&sIntroSpaceTilemap, VRAM_BASE + 0xF800);
+    LZ77UncompVram(sIntroBslTilemap, VRAM_BASE + 0xE800);
+    LZ77UncompVram(sIntroSpaceTilemap, VRAM_BASE + 0xF800);
 
-    DMA3_COPY_32(&sIntroBslSpaceBgPal, PALRAM_BASE + 0x100, 64);
+    DMA3_COPY_32(sIntroBslSpaceBgPal, PALRAM_BASE + 0x100, 8 * PAL_ROW_SIZE / 4);
 
     WRITE_16(PALRAM_BASE, 0);
 
-    LZ77UncompVram(&sIntroSamusShipFlyingTextTilemap, VRAM_BASE + 0xE000);
+    LZ77UncompVram(sIntroSamusShipFlyingTextTilemap, VRAM_BASE + 0xE000);
 
     WRITE_16(REG_BG0HOFS, -8);
     WRITE_16(REG_BG0VOFS, 0);
@@ -347,7 +481,7 @@ static void NewFileIntroSamusShipFlyingInit(void)
 
     DMA3_FILL_32(0, VRAM_BASE + 0xD000, (VRAM_SIZE / 6) / 4 );
 
-    gNonGameplayRam.intro.pText = (u16*)&sCutsceneTextNone;
+    gNonGameplayRam.intro.pText = (u16*)sCutsceneTextNone;
     WRITE_16(REG_DISPCNT, DCNT_OBJ | DCNT_BG3 | DCNT_BG2);
 
     CallbackSetVBlank(NewFileIntroSamusShipFlyingVblank);
