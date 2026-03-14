@@ -143,7 +143,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GO_TO_SRX1,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = FALSE
     },
@@ -551,7 +551,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GO_TO_NOC1_AFTER_FEDERATION,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = TRUE
     },
@@ -779,7 +779,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GO_TO_ARC2,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = FALSE
     },
@@ -863,7 +863,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_REACTIVATE_THE_AUXILIARY_POWER_SYSTEM,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = TRUE
     },
@@ -911,7 +911,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_FIND_SOURCE_OF_VEGETATION,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = FALSE
     },
@@ -959,7 +959,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GO_TO_ARC3,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = FALSE
     },
@@ -1175,7 +1175,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_FEDERATION_ON_THEIR_WAY,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = FALSE
     },
@@ -1199,7 +1199,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GO_TO_OPERATIONS_ROOM,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = FALSE
     },
@@ -1211,7 +1211,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GO_TO_OPERATIONS_ROOM_2,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = TRUE
     },
@@ -1259,7 +1259,7 @@ const struct EventLocationAndNavigationInfo sEventLocationAndNavigationInfo[EVEN
         .xEnd = UCHAR_MAX,
         .yEnd = UCHAR_MAX,
         .navConversation = NAV_CONVO_GET_OUT_BEFORE_IMPACT_UNUSED,
-        .navRoom = NAV_ROOM_END,
+        .navRoom = NAV_ROOM_ANY,
         .download = FALSE,
         .skippable = TRUE
     },
@@ -1547,7 +1547,7 @@ const struct AbilityRamValue sAbilityRamValues[ABILITY_COUNT_END] = {
     },
 };
 
-const u8 sNavigationRoomLocations[NAV_ROOM_END + 1][2] = {
+const u8 sNavigationRoomLocations[NAV_ROOM_COUNT][2] = {
     [NAV_ROOM_MAIN_DECK_ROOM_0] = {
         AREA_MAIN_DECK,
         0 + 1
@@ -1596,7 +1596,7 @@ const u8 sNavigationRoomLocations[NAV_ROOM_END + 1][2] = {
         AREA_MAIN_DECK,
         66 + 1
     },
-    [NAV_ROOM_END] = {
+    [NAV_ROOM_ANY] = {
         UCHAR_MAX,
         UCHAR_MAX
     },

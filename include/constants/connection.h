@@ -35,7 +35,9 @@ enum NavigationRoom {
     NAV_ROOM_MAIN_DECK_ROOM_56,
     NAV_ROOM_MAIN_DECK_ROOM_66,
 
-    NAV_ROOM_END
+    NAV_ROOM_ANY,
+
+    NAV_ROOM_COUNT
 };
 
 enum DoorType {
