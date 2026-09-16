@@ -11,6 +11,7 @@ extern const u32 sTileset_23_Bg_Gfx[1048];
 extern const u32 sTileset_1_Bg_Gfx[1971];
 
 extern const u16 sTileset_41_Pal[14 * 16];
+extern const u16 sAnimatedPal_18[7 * 16];
 extern const u16 sTileset_73_Pal[14 * 16];
 extern const u16 sTileset_3_Pal[14 * 16];
 

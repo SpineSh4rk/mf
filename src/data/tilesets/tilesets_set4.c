@@ -15,17 +15,17 @@ const u32 sTileset_20_Bg_Gfx[1430] = INCBIN_U32("data/tilesets/20_bg.gfx.lz");
 const u32 sTileset_21_Bg_Gfx[1457] = INCBIN_U32("data/tilesets/21_bg.gfx.lz");
 
 const u16 sTileset_49_Pal[14 * 16] = INCBIN_U16("data/tilesets/49.pal");
-static const u8 sBlob_4f1ef8_4f1f98[] = INCBIN_U8("data/Blob_4f1ef8_4f1f98.bin");
+const u16 sAnimatedPal_23[5 * 16] = INCBIN_U16("data/tilesets/animated_palettes/23.pal");
 const u16 sTileset_62_Pal[14 * 16] = INCBIN_U16("data/tilesets/62.pal");
-static const u8 sBlob_4f2158_4f21f8[] = INCBIN_U8("data/Blob_4f2158_4f21f8.bin");
+const u16 sAnimatedPal_25[5 * 16] = INCBIN_U16("data/tilesets/animated_palettes/25.pal");
 const u16 sTileset_30_Pal[14 * 16] = INCBIN_U16("data/tilesets/30.pal");
 const u16 sTileset_31_Pal[14 * 16] = INCBIN_U16("data/tilesets/31.pal");
 const u16 sTileset_47_Pal[14 * 16] = INCBIN_U16("data/tilesets/47.pal");
-static const u8 sBlob_4f2738_4f27b8[] = INCBIN_U8("data/Blob_4f2738_4f27b8.bin");
+const u16 sAnimatedPal_22[4 * 16] = INCBIN_U16("data/tilesets/animated_palettes/22.pal");
 const u16 sTileset_37_Pal[14 * 16] = INCBIN_U16("data/tilesets/37.pal");
-static const u8 sBlob_4f2978_4f2a58[] = INCBIN_U8("data/Blob_4f2978_4f2a58.bin");
+const u16 sAnimatedPal_15[7 * 16] = INCBIN_U16("data/tilesets/animated_palettes/15.pal");
 const u16 sTileset_39_Pal[14 * 16] = INCBIN_U16("data/tilesets/39.pal");
-static const u8 sBlob_4f2c18_4f2d18[] = INCBIN_U8("data/Blob_4f2c18_4f2d18.bin");
+const u16 sAnimatedPal_16[8 * 16] = INCBIN_U16("data/tilesets/animated_palettes/16.pal");
 
 const u8 sTileset_39_Tilemap[4100] = INCBIN_U8("data/tilesets/39.tm");
 const u8 sTileset_25_Tilemap[596] = INCBIN_U8("data/tilesets/25.tm");

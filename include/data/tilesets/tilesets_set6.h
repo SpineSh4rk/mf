@@ -21,6 +21,7 @@ extern const u8 sTileset_55_Tilemap[5764];
 extern const u8 sTileset_58_Tilemap[2564];
 
 extern const u16 sTileset_40_Pal[14 * 16];
+extern const u16 sAnimatedPal_20[9 * 16];
 extern const u16 sTileset_48_Pal[14 * 16];
 extern const u16 sTileset_64_Pal[14 * 16];
 extern const u16 sTileset_68_Pal[14 * 16];

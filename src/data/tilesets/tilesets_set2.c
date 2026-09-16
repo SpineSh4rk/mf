@@ -20,6 +20,6 @@ const u8 sTileset_4_Tilemap[1924] = INCBIN_U8("data/tilesets/4.tm");
 const u16 sTileset_2_Pal[14 * 16] = INCBIN_U16("data/tilesets/2.pal");
 const u16 sTileset_69_Pal[14 * 16] = INCBIN_U16("data/tilesets/69.pal");
 const u16 sTileset_13_Pal[14 * 16] = INCBIN_U16("data/tilesets/13.pal");
-static const u8 sBlob_4989c8_498ac8[] = INCBIN_U8("data/Blob_4989c8_498ac8.bin");
+const u16 sAnimatedPal_17[8 * 16] = INCBIN_U16("data/tilesets/animated_palettes/17.pal");
 const u16 sTileset_38_Pal[14 * 16] = INCBIN_U16("data/tilesets/38.pal");
 const u16 sTileset_4_Pal[14 * 16] = INCBIN_U16("data/tilesets/4.pal");

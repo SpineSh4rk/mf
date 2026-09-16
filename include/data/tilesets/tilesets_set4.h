@@ -17,12 +17,17 @@ extern const u32 sTileset_20_Bg_Gfx[1430];
 extern const u32 sTileset_21_Bg_Gfx[1457];
 
 extern const u16 sTileset_49_Pal[14 * 16];
+extern const u16 sAnimatedPal_23[5 * 16];
 extern const u16 sTileset_62_Pal[14 * 16];
+extern const u16 sAnimatedPal_25[5 * 16];
 extern const u16 sTileset_30_Pal[14 * 16];
 extern const u16 sTileset_31_Pal[14 * 16];
 extern const u16 sTileset_47_Pal[14 * 16];
+extern const u16 sAnimatedPal_22[4 * 16];
 extern const u16 sTileset_37_Pal[14 * 16];
+extern const u16 sAnimatedPal_15[7 * 16];
 extern const u16 sTileset_39_Pal[14 * 16];
+extern const u16 sAnimatedPal_16[8 * 16];
 
 extern const u8 sTileset_39_Tilemap[4100];
 extern const u8 sTileset_25_Tilemap[596];

@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#include "constants/animated_graphics.h"
+
 struct AnimatedPaletteAndTileset {
     u8 animatedPalette;
     u8 animatedTileset;
@@ -38,24 +40,26 @@ struct AnimatedGraphicsData {
     const u8* const pGraphics;
 };
 
-struct HatchFlashAnimation {
-    u8 coloredAnimTimer;
-    s8 coloredAnimState;
-    u8 unlockedAnimTimer;
-    s8 unlockedAnimState;
+struct AnimatedPaletteData {
+    AnimatedPaletteType type;
+    u8 framesPerState;
+    u8 numberOfStates;
+    const u16* pPalette;
 };
 
 extern u8 gUseAlternateAnimatedTilesetFlags[5];
 
 extern struct AnimatedTiming gTankAnimations[3];
 extern struct AnimatedGraphicsInfo gAnimatedGraphicsData[16];
-extern struct AnimatedPaletteTiming gAnimatedPaletteTiming;
 
-extern struct HatchFlashAnimation gHatchFlashAnimation;
+extern struct AnimatedPaletteTiming gAnimatedPaletteTiming;
+extern struct AnimatedPaletteTiming gHatchFlashAnimation;
 
 extern struct AnimatedPaletteAndTileset gAnimatedPaletteAndTileset;
 
 extern u8 gDisableAnimatedGraphicsTimer;
 extern u16 gAnimatedGraphicsToUpdate;
+
+extern s8 gUnk_3004e3a;
 
 #endif /* ANIMATED_GRAPHICS_STRUCT_H */

@@ -242,7 +242,6 @@ enum SubGameMode {
 
 
 extern u16 gUnk_3000050;
-extern s8 gUnk_3004e3a;
 extern u8 gUnk_3004e42;
 
 struct Unk_3004e44 {

@@ -9,7 +9,7 @@ const u32 sTileset_23_Bg_Gfx[1048] = INCBIN_U32("data/tilesets/23_bg.gfx.lz");
 const u32 sTileset_1_Bg_Gfx[1971] = INCBIN_U32("data/tilesets/1_bg.gfx.lz");
 
 const u16 sTileset_41_Pal[14 * 16] = INCBIN_U16("data/tilesets/41.pal");
-static const u8 sBlob_54d29c_54d37c[] = INCBIN_U8("data/Blob_54d29c_54d37c.bin");
+const u16 sAnimatedPal_18[7 * 16] = INCBIN_U16("data/tilesets/animated_palettes/18.pal");
 const u16 sTileset_73_Pal[14 * 16] = INCBIN_U16("data/tilesets/73.pal");
 const u16 sTileset_3_Pal[14 * 16] = INCBIN_U16("data/tilesets/3.pal");
 

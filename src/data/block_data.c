@@ -497,4 +497,4 @@ const s8 sEndingSamusPosingSineTable[128] = {
     -49, -43, -37, -31, -25, -19, -12, -6,
 };
 
-static const u8 sBlob_3c9550_3e392c[] = INCBIN_U8("data/Blob_3c9550_3e392c.bin");
+static const u8 sBlob_3c9550_3e3760[] = INCBIN_U8("data/Blob_3c9550_3e3760.bin");

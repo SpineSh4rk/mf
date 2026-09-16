@@ -1267,7 +1267,7 @@ void RoomUpdateAnimatedGraphicsAndPalette(void)
         {
             AnimatedGraphicsUpdate();
             AnimatedGraphicsUpdateTanks();
-            UpdateAnimatedPalette();
+            AnimatedPaletteUpdate();
             RoomUpdateHatchFlashingAnimation();
         }
         else
@@ -1288,17 +1288,18 @@ void RoomUpdateHatchFlashingAnimation(void)
 
     if (gSecurityHatchLevel <= 4)
     {
-        gHatchFlashAnimation.coloredAnimTimer++;
+        // Colored hatch animation
+        gHatchFlashAnimation.timer1++;
 
-        if (gHatchFlashAnimation.coloredAnimTimer > 7)
+        if (gHatchFlashAnimation.timer1 > 7)
         {
-            gHatchFlashAnimation.coloredAnimTimer = 0;
-            gHatchFlashAnimation.coloredAnimState++;
+            gHatchFlashAnimation.timer1 = 0;
+            gHatchFlashAnimation.row1++;
 
-            if (gHatchFlashAnimation.coloredAnimState > 5)
-                gHatchFlashAnimation.coloredAnimState = 0;
+            if (gHatchFlashAnimation.row1 > 5)
+                gHatchFlashAnimation.row1 = 0;
             
-            DMA3_COPY_16(&sHatchFlashingPal[gHatchFlashAnimation.coloredAnimState * PAL_ROW + 6],
+            DMA3_COPY_16(&sHatchFlashingPal[gHatchFlashAnimation.row1 * PAL_ROW + 6],
                 PALRAM_BASE + (PAL_ROW_SIZE * 1) + (6 * 2), (gSecurityHatchLevel + 1) * 2);
         }
     }
@@ -1306,17 +1307,18 @@ void RoomUpdateHatchFlashingAnimation(void)
     if (gCurrentNavigationRoom == NAV_ROOM_NONE &&
         gLockedHatches != 0 && gDoorUnlockTimer < 0)
     {
-        gHatchFlashAnimation.unlockedAnimTimer++;
+        // Unlocked hatch animation
+        gHatchFlashAnimation.timer2++;
         
-        if (gHatchFlashAnimation.unlockedAnimTimer > 7)
+        if (gHatchFlashAnimation.timer2 > 7)
         {
-            gHatchFlashAnimation.unlockedAnimTimer = 0;
-            gHatchFlashAnimation.unlockedAnimState++;
+            gHatchFlashAnimation.timer2 = 0;
+            gHatchFlashAnimation.row2++;
 
-            if (gHatchFlashAnimation.unlockedAnimState > 7)
-                gHatchFlashAnimation.unlockedAnimState = 0;
+            if (gHatchFlashAnimation.row2 > 7)
+                gHatchFlashAnimation.row2 = 0;
             
-            DMA3_COPY_16(&sUnlockedHatchFlashingPal[gHatchFlashAnimation.unlockedAnimState * PAL_ROW + 13],
+            DMA3_COPY_16(&sUnlockedHatchFlashingPal[gHatchFlashAnimation.row2 * PAL_ROW + 13],
                 PALRAM_BASE + (PAL_ROW_SIZE * 2) + (13 * 2), 3);
         }
     }

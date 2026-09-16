@@ -24,6 +24,7 @@ extern const u32 sTileset_50_Bg_Gfx[621];
 extern const u32 sTileset_7_Bg_Gfx[918];
 
 extern const u16 sTileset_14_Pal[14 * 16];
+extern const u16 sAnimatedPal_4[4 * 16];
 extern const u16 sTileset_63_Pal[14 * 16];
 extern const u16 sTileset_19_Pal[14 * 16];
 extern const u16 sTileset_20_Pal[14 * 16];
@@ -32,12 +33,18 @@ extern const u16 sTileset_22_Pal[14 * 16];
 extern const u16 sTileset_23_Pal[14 * 16];
 extern const u16 sTileset_24_Pal[14 * 16];
 extern const u16 sTileset_42_Pal[14 * 16];
+extern const u16 sAnimatedPal_19[4 * 16];
 extern const u16 sTileset_12_Pal[14 * 16];
+extern const u16 sAnimatedPal_3[4 * 16];
 extern const u16 sTileset_59_Pal[14 * 16];
+extern const u16 sAnimatedPal_30[6 * 16];
 extern const u16 sTileset_60_Pal[14 * 16];
+extern const u16 sAnimatedPal_31[6 * 16];
 extern const u16 sTileset_9_Pal[14 * 16];
+extern const u16 sAnimatedPal_1[4 * 16];
 extern const u16 sTileset_74_Pal[14 * 16];
 extern const u16 sTileset_11_Pal[14 * 16];
+extern const u16 sAnimatedPal_2[4 * 16];
 extern const u16 sTileset_43_Pal[14 * 16];
 extern const u16 sTileset_10_Pal[14 * 16];
 

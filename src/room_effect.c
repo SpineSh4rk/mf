@@ -1088,7 +1088,7 @@ void RoomEffectSetupCurrentEventBased(void)
             break;
     }
 
-    CheckDisableAnimatedPalette();
+    AnimatedPaletteCheckDisableOnTransition();
 }
 
 /**
