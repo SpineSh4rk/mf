@@ -26457,10 +26457,122 @@
     "size": 2
   },
   {
-    "path": "Blob_5a9620_60093c.bin",
-    "count": "0x5731C",
+    "path": "new_file_intro/metroid_vaccine_obj.gfx.lz",
+    "count": "0x5CD",
     "addr": {
-      "us": "0x5A9620"
+      "us": "0x5A965C"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/metroid_vaccine_obj.pal",
+    "count": "0x100",
+    "addr": {
+      "us": "0x5B0F3C"
+    },
+    "size": 2
+  },
+  {
+    "path": "new_file_intro/metroid_vaccine_bg.gfx.lz",
+    "count": "0xAEA",
+    "addr": {
+      "us": "0x5B113C"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/metroid_vaccine_bg.pal",
+    "count": "0x100",
+    "addr": {
+      "us": "0x5B3CE4"
+    },
+    "size": 2
+  },
+  {
+    "path": "new_file_intro/metroid_vaccine_bg1.tm.lz",
+    "count": "0x6A",
+    "addr": {
+      "us": "0x5B3EE4"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/metroid_vaccine_bg2.tm.lz",
+    "count": "0x6D",
+    "addr": {
+      "us": "0x5B408C"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/metroid_vaccine_bg3.tm.lz",
+    "count": "0xD0",
+    "addr": {
+      "us": "0x5B4240"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_obj.gfx.lz",
+    "count": "0x9BF",
+    "addr": {
+      "us": "0x5B4580"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_obj.pal",
+    "count": "0x100",
+    "addr": {
+      "us": "0x5BA054"
+    },
+    "size": 2
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_bg.gfx.lz",
+    "count": "0x1305",
+    "addr": {
+      "us": "0x5BA254"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_bg.pal",
+    "count": "0x100",
+    "addr": {
+      "us": "0x5BEE68"
+    },
+    "size": 2
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_bg3.tm.lz",
+    "count": "0x171",
+    "addr": {
+      "us": "0x5BF068"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_bg2.tm.lz",
+    "count": "0x3F",
+    "addr": {
+      "us": "0x5BF62C"
+    },
+    "size": 4
+  },
+  {
+    "path": "new_file_intro/samus_nervous_system_bg1.tm.lz",
+    "count": "0x44",
+    "addr": {
+      "us": "0x5BF728"
+    },
+    "size": 4
+  },
+  {
+    "path": "Blob_5bf838_60093c.bin",
+    "count": "0x41104",
+    "addr": {
+      "us": "0x5BF838"
     },
     "size": 1
   },
@@ -27513,10 +27625,10 @@
     "size": 1
   },
   {
-    "path": "Blob_79c2e4_79c3c8.bin",
-    "count": "0xE4",
+    "path": "Blob_79c314_79c3c8.bin",
+    "count": "0xB4",
     "addr": {
-      "us": "0x79C2E4"
+      "us": "0x79C314"
     },
     "size": 1
   },

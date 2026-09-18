@@ -108,6 +108,54 @@ extern const u32 sTilemap_5a9044[135];
 extern const u16 sPal_5a9260[15 * PAL_ROW];
 extern const u16 sPal_5a9440[15 * PAL_ROW];
 
+extern const u16 sArray_5a9620[30];
+
+extern const u32 sIntroMetroidVaccineObjGfx[1485];
+
+extern const struct FrameData sOam_5b0824[60];
+extern const struct FrameData sOam_5b0a04[21];
+extern const struct FrameData sOam_5b0aac[146];
+
+extern const u16 sIntroMetroidVaccineObjPal[16 * PAL_ROW];
+
+extern const u32 sIntroMetroidVaccineBgGfx[2794];
+
+extern const u16 sIntroMetroidVaccineBgPal[16 * PAL_ROW];
+
+extern const u32 sIntroMetroidVaccineBg1Tilemap[106];
+extern const u32 sIntroMetroidVaccineBg2Tilemap[109];
+extern const u32 sIntroMetroidVaccineBg3Tilemap[208];
+
+extern const u32 sIntroSamusNervousSystemObjGfx[2495];
+
+extern const struct FrameData sOam_5b7c2c[171];
+extern const struct FrameData sOam_5b8184[171];
+extern const struct FrameData sOam_5b86dc[171];
+extern const struct FrameData sOam_5b8c34[171];
+extern const struct FrameData sOam_5b918c[171];
+extern const struct FrameData sOam_5b96e4[171];
+extern const struct FrameData sOam_5b9c3c[11];
+extern const struct FrameData sOam_5b9c94[11];
+extern const struct FrameData sOam_5b9cec[2];
+extern const struct FrameData sOam_5b9cfc[3];
+extern const struct FrameData sOam_5b9d14[2];
+extern const struct FrameData sOam_5b9d24[17];
+extern const struct FrameData sOam_5b9dac[17];
+extern const struct FrameData sOam_5b9e34[17];
+extern const struct FrameData sOam_5b9ebc[17];
+extern const struct FrameData sOam_5b9f44[17];
+extern const struct FrameData sOam_5b9fcc[17];
+
+extern const u16 sIntroSamusNervousSystemObjPal[16 * PAL_ROW];
+
+extern const u32 sIntroSamusNervousSystemBgGfx[4869];
+
+extern const u16 sIntroSamusNervousSystemBgPal[16 * PAL_ROW];
+
+extern const u32 sIntroSamusNervousSystemBg3Tilemap[369];
+extern const u32 sIntroSamusNervousSystemBg2Tilemap[63];
+extern const u32 sIntroSamusNervousSystemBg1Tilemap[68];
+
 extern const u32 sIntroSamusSittingGfx[4818];
 extern const u16 sIntroSamusSittingPal[16 * PAL_ROW];
 extern const u32 sIntroSamusSittingTilemap[171];

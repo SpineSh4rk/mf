@@ -164,6 +164,7 @@
 #define COLOR_GRAD(r, g, b) ((r) | ((g) << 5) | ((b) << 10))
 #define COLOR_WHITE COLOR(COLOR_MASK, COLOR_MASK, COLOR_MASK)
 #define COLOR_BLACK COLOR(0, 0, 0)
+#define COLOR_GREEN COLOR(0, COLOR_MASK, 0)
 
 #define SET_BACKDROP_COLOR(color) (WRITE_16(PALRAM_BASE, (color)))
 

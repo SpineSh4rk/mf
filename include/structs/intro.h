@@ -9,14 +9,19 @@
 
 struct IntroData {
     const u16* pText;
-    u8 unk_1[4];
+    const u16* pText2;
     u16 stage;
     u16 unk_A;
     u16 unk_C;
     u16 unk_E;
     u8 unk_10[256];
     u8 unk_110;
-    u8 unk_111[251];
+    u8 unk_111;
+    u8 unk_112[225];
+    u8 unk_1F3;
+    u8 unk_1F4;
+    u8 unk_1F5;
+    u8 unk_1F6[22];
     u16 unk_20C;
     u16 unk_20E;
     u16 timer;
@@ -29,6 +34,8 @@ struct IntroData {
     u8 unk_218;
     u8 unk_219[3];
     struct SpecialCutsceneOam oam[20];
+    u8 hBlankCode[80];
+    u8* hBlankCodePointer;
 };
 
 #endif /* INTRO_STRUCT_H */
