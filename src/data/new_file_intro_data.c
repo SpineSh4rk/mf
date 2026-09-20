@@ -8952,7 +8952,7 @@ static const u16 sOamFrame_5b081c[OAM_DATA_SIZE(1)] = {
 	OAM_ENTRY(120, 72, OAM_DIMS_32x8, OAM_NO_FLIP, 328, 5, 0),
 };
 
-const struct FrameData sOam_5b0824[60] = {
+const struct FrameData sIntroMetroidVaccineDoubleHelixOam[60] = {
 	[0] = {
 		.pFrame = sOamFrame_5aad90,
 		.timer = 2
@@ -9192,7 +9192,7 @@ const struct FrameData sOam_5b0824[60] = {
 	[59] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b0a04[21] = {
+const struct FrameData sIntroMetroidVaccineTextboxesOam[21] = {
 	[0] = {
 		.pFrame = sOamFrame_5b00fe,
 		.timer = 2
@@ -9276,7 +9276,7 @@ const struct FrameData sOam_5b0a04[21] = {
 	[20] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b0aac[146] = {
+const struct FrameData sIntroMetroidVaccineElectrocardiogramOam[146] = {
 	[0] = {
 		.pFrame = sOamFrame_5b0306,
 		.timer = 1
@@ -11249,7 +11249,7 @@ static const u16 sOamFrame_5b7c00[OAM_DATA_SIZE(7)] = {
 	OAM_ENTRY(-8, 12, OAM_DIMS_8x8, OAM_NO_FLIP, 272, 5, 0),
 };
 
-const struct FrameData sOam_5b7c2c[171] = {
+const struct FrameData sIntroSamusNervousSystemXLockOnOam_1[171] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6eb8,
 		.timer = 1
@@ -11933,7 +11933,7 @@ const struct FrameData sOam_5b7c2c[171] = {
 	[170] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b8184[171] = {
+const struct FrameData sIntroSamusNervousSystemXLockOnOam_2[171] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6eb8,
 		.timer = 1
@@ -12617,7 +12617,7 @@ const struct FrameData sOam_5b8184[171] = {
 	[170] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b86dc[171] = {
+const struct FrameData sIntroSamusNervousSystemXLockOnOam_3[171] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6eb8,
 		.timer = 1
@@ -13301,7 +13301,7 @@ const struct FrameData sOam_5b86dc[171] = {
 	[170] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b8c34[171] = {
+const struct FrameData sIntroSamusNervousSystemXLockOnOam_4[171] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6eb8,
 		.timer = 1
@@ -13985,7 +13985,7 @@ const struct FrameData sOam_5b8c34[171] = {
 	[170] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b918c[171] = {
+const struct FrameData sIntroSamusNervousSystemXLockOnOam_5[171] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6eb8,
 		.timer = 1
@@ -14669,7 +14669,7 @@ const struct FrameData sOam_5b918c[171] = {
 	[170] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b96e4[171] = {
+const struct FrameData sIntroSamusNervousSystemXLockOnOam_6[171] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6eb8,
 		.timer = 1
@@ -15353,7 +15353,7 @@ const struct FrameData sOam_5b96e4[171] = {
 	[170] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9c3c[11] = {
+const struct FrameData sIntroSamusNervousSystemCountdownOam_Fast[11] = {
 	[0] = {
 		.pFrame = sOamFrame_5b79f0,
 		.timer = 8
@@ -15397,7 +15397,7 @@ const struct FrameData sOam_5b9c3c[11] = {
 	[10] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9c94[11] = {
+const struct FrameData sIntroSamusNervousSystemCountdownOam_Slow[11] = {
 	[0] = {
 		.pFrame = sOamFrame_5b79f0,
 		.timer = 80
@@ -15441,7 +15441,7 @@ const struct FrameData sOam_5b9c94[11] = {
 	[10] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9cec[2] = {
+const struct FrameData sIntroSamusNervousSystemNumber281Oam[2] = {
 	[0] = {
 		.pFrame = sOamFrame_5b79f8,
 		.timer = 255
@@ -15449,7 +15449,7 @@ const struct FrameData sOam_5b9cec[2] = {
 	[1] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9cfc[3] = {
+const struct FrameData sIntroSamusNervousSystemCornerTextOam[3] = {
 	[0] = {
 		.pFrame = sOamFrame_5b7a00,
 		.timer = 40
@@ -15461,7 +15461,7 @@ const struct FrameData sOam_5b9cfc[3] = {
 	[2] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9d14[2] = {
+const struct FrameData sIntroSamusNervousSystemNervePartsOam[2] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6c7c,
 		.timer = 255
@@ -15469,7 +15469,7 @@ const struct FrameData sOam_5b9d14[2] = {
 	[1] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9d24[17] = {
+const struct FrameData sIntroSamusNervousSystemXParasiteOam_1[17] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6d38,
 		.timer = 3
@@ -15537,7 +15537,7 @@ const struct FrameData sOam_5b9d24[17] = {
 	[16] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9dac[17] = {
+const struct FrameData sIntroSamusNervousSystemXParasiteOam_2[17] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6d98,
 		.timer = 3
@@ -15605,7 +15605,7 @@ const struct FrameData sOam_5b9dac[17] = {
 	[16] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9e34[17] = {
+const struct FrameData sIntroSamusNervousSystemXParasiteOam_3[17] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6df0,
 		.timer = 3
@@ -15673,7 +15673,7 @@ const struct FrameData sOam_5b9e34[17] = {
 	[16] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9ebc[17] = {
+const struct FrameData sIntroSamusNervousSystemXParasiteOam_4[17] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6d68,
 		.timer = 3
@@ -15741,7 +15741,7 @@ const struct FrameData sOam_5b9ebc[17] = {
 	[16] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9f44[17] = {
+const struct FrameData sIntroSamusNervousSystemXParasiteOam_5[17] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6e50,
 		.timer = 3
@@ -15809,7 +15809,7 @@ const struct FrameData sOam_5b9f44[17] = {
 	[16] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sOam_5b9fcc[17] = {
+const struct FrameData sIntroSamusNervousSystemXParasiteOam_6[17] = {
 	[0] = {
 		.pFrame = sOamFrame_5b6e10,
 		.timer = 3

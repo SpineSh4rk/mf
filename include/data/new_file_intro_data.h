@@ -112,9 +112,9 @@ extern const u16 sArray_5a9620[30];
 
 extern const u32 sIntroMetroidVaccineObjGfx[1485];
 
-extern const struct FrameData sOam_5b0824[60];
-extern const struct FrameData sOam_5b0a04[21];
-extern const struct FrameData sOam_5b0aac[146];
+extern const struct FrameData sIntroMetroidVaccineDoubleHelixOam[60];
+extern const struct FrameData sIntroMetroidVaccineTextboxesOam[21];
+extern const struct FrameData sIntroMetroidVaccineElectrocardiogramOam[146];
 
 extern const u16 sIntroMetroidVaccineObjPal[16 * PAL_ROW];
 
@@ -128,23 +128,23 @@ extern const u32 sIntroMetroidVaccineBg3Tilemap[208];
 
 extern const u32 sIntroSamusNervousSystemObjGfx[2495];
 
-extern const struct FrameData sOam_5b7c2c[171];
-extern const struct FrameData sOam_5b8184[171];
-extern const struct FrameData sOam_5b86dc[171];
-extern const struct FrameData sOam_5b8c34[171];
-extern const struct FrameData sOam_5b918c[171];
-extern const struct FrameData sOam_5b96e4[171];
-extern const struct FrameData sOam_5b9c3c[11];
-extern const struct FrameData sOam_5b9c94[11];
-extern const struct FrameData sOam_5b9cec[2];
-extern const struct FrameData sOam_5b9cfc[3];
-extern const struct FrameData sOam_5b9d14[2];
-extern const struct FrameData sOam_5b9d24[17];
-extern const struct FrameData sOam_5b9dac[17];
-extern const struct FrameData sOam_5b9e34[17];
-extern const struct FrameData sOam_5b9ebc[17];
-extern const struct FrameData sOam_5b9f44[17];
-extern const struct FrameData sOam_5b9fcc[17];
+extern const struct FrameData sIntroSamusNervousSystemXLockOnOam_1[171];
+extern const struct FrameData sIntroSamusNervousSystemXLockOnOam_2[171];
+extern const struct FrameData sIntroSamusNervousSystemXLockOnOam_3[171];
+extern const struct FrameData sIntroSamusNervousSystemXLockOnOam_4[171];
+extern const struct FrameData sIntroSamusNervousSystemXLockOnOam_5[171];
+extern const struct FrameData sIntroSamusNervousSystemXLockOnOam_6[171];
+extern const struct FrameData sIntroSamusNervousSystemCountdownOam_Fast[11];
+extern const struct FrameData sIntroSamusNervousSystemCountdownOam_Slow[11];
+extern const struct FrameData sIntroSamusNervousSystemNumber281Oam[2];
+extern const struct FrameData sIntroSamusNervousSystemCornerTextOam[3];
+extern const struct FrameData sIntroSamusNervousSystemNervePartsOam[2];
+extern const struct FrameData sIntroSamusNervousSystemXParasiteOam_1[17];
+extern const struct FrameData sIntroSamusNervousSystemXParasiteOam_2[17];
+extern const struct FrameData sIntroSamusNervousSystemXParasiteOam_3[17];
+extern const struct FrameData sIntroSamusNervousSystemXParasiteOam_4[17];
+extern const struct FrameData sIntroSamusNervousSystemXParasiteOam_5[17];
+extern const struct FrameData sIntroSamusNervousSystemXParasiteOam_6[17];
 
 extern const u16 sIntroSamusNervousSystemObjPal[16 * PAL_ROW];
 
