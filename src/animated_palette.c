@@ -99,7 +99,7 @@ void AnimatedPaletteUpdate(void)
         else
         {
             DMA3_COPY_16(&CURR_ANIM_PAL_DATA.pPalette[row * PAL_ROW],
-                gBackgroundPalette + PAL_ROW_SIZE * 15, PAL_ROW);
+                gBackgroundPalette2 + PAL_ROW_SIZE * 15, PAL_ROW);
         }
         
         if (update == 2)

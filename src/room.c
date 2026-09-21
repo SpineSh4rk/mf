@@ -339,7 +339,7 @@ void RoomReset(void)
 
     gColorFading.unk_3 = 0;
     gColorFading.fadeTimer = 0;
-    gColorFading.useSecondColorSet &= -0x10;
+    gColorFading.usePalette3 = 0;
     gColorFading.status = 0;
     gColorFading.stage = 0;
 
@@ -353,7 +353,7 @@ void RoomReset(void)
 
     if (gUnk_3000be3 == 0)
     {
-        gColorFading.type = 2;
+        gColorFading.type = COLOR_FADING_2;
         
         gCurrentMusicTrack.number = 0;
         gCurrentMusicTrack.lowered = 0;
@@ -388,7 +388,7 @@ void RoomReset(void)
         SramWrite_MostRecentSaveFile();
     }
 
-    if (gColorFading.type == 4 || gColorFading.type == 6)
+    if (gColorFading.type == COLOR_FADING_4 || gColorFading.type == COLOR_FADING_6)
         gWhichBgPositionIsWrittenToBg3Ofs = 4;
     else
         gWhichBgPositionIsWrittenToBg3Ofs = 3;

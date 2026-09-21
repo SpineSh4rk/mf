@@ -23,6 +23,10 @@
 #include "structs/sa_x.h"
 #include "structs/screen_shake.h"
 
+#define SET_SAMUS_PAL_ROW_1(pPal) SamusSetPalette(pPal, OBJ_PAL_ROW_SAMUS_1 * PAL_ROW, 1 * PAL_ROW, FALSE)
+#define SET_SAMUS_PAL_ROW_2(pPal) SamusSetPalette(pPal, OBJ_PAL_ROW_SAMUS_2 * PAL_ROW, 1 * PAL_ROW, FALSE)
+#define SET_SAMUS_PAL_ROWS_1_2(pPal) SamusSetPalette(pPal, OBJ_PAL_ROW_SAMUS_1 * PAL_ROW, 2 * PAL_ROW, FALSE)
+
 void BlockApplySpeedBoosterScrewAttackDamage(u16, u16, u16);
 
 /**
@@ -7097,7 +7101,7 @@ void SamusUpdateGraphics(u8 direction)
     {
         gSamusPaletteLength = 2 * PAL_ROW_SIZE;
         pPalette = sSamusPal_Dying_Row0;
-        SET_SAMUS_PAL_ROW_0(pPalette);
+        SET_SAMUS_PAL_ROW_1(pPalette);
         pPalette = sSamusPal_DyingFade_Row1;
 
         if (gSamusAnimationInfo.currentPaletteRow > 4)
@@ -7120,7 +7124,7 @@ void SamusUpdateGraphics(u8 direction)
             pPalette += (row * PAL_ROW);
         }
         
-        SET_SAMUS_PAL_ROW_1(pPalette);
+        SET_SAMUS_PAL_ROW_2(pPalette);
         return;
     }
 
@@ -7129,8 +7133,8 @@ void SamusUpdateGraphics(u8 direction)
     {
         gSamusPaletteLength = 2 * PAL_ROW_SIZE;
         pPalette = sSamusPal_Flashing_BothRows;
-        SET_SAMUS_PAL_ROW_0(pPalette);
         SET_SAMUS_PAL_ROW_1(pPalette);
+        SET_SAMUS_PAL_ROW_2(pPalette);
         return;
     }
 
@@ -7140,8 +7144,8 @@ void SamusUpdateGraphics(u8 direction)
         gSamusPaletteLength = 2 * PAL_ROW_SIZE;
         row = DIV_SHIFT(48 - gSamusEnvironmentalEffects[0].externalTimer, 2);
         pPalette = sSamusPal_AbsorbX_BothRows + (row * PAL_ROW);
-        SET_SAMUS_PAL_ROW_0(pPalette);
         SET_SAMUS_PAL_ROW_1(pPalette);
+        SET_SAMUS_PAL_ROW_2(pPalette);
         return;
     }
 
@@ -7150,8 +7154,8 @@ void SamusUpdateGraphics(u8 direction)
     {
         gSamusPaletteLength = 2 * PAL_ROW_SIZE;
         pPalette = sSamusPal_Flashing_BothRows;
-        SET_SAMUS_PAL_ROW_0(pPalette);
         SET_SAMUS_PAL_ROW_1(pPalette);
+        SET_SAMUS_PAL_ROW_2(pPalette);
     }
     else
     {
@@ -7163,7 +7167,7 @@ void SamusUpdateGraphics(u8 direction)
             case SPOSE_FROZEN_IN_MORPH_BALL_AND_FALLING:
                 gSamusPaletteLength = 2 * PAL_ROW_SIZE;
                 pPalette = sSamusPal_Frozen_Row0;
-                SET_SAMUS_PAL_ROWS_0_1(pPalette);
+                SET_SAMUS_PAL_ROWS_1_2(pPalette);
                 break;
     
             case SPOSE_SCREW_ATTACKING:
@@ -7196,9 +7200,9 @@ void SamusUpdateGraphics(u8 direction)
                     pPalette = sSamusPal_ScrewAttacking_Row0;
                 }
 
-                SET_SAMUS_PAL_ROW_0(pPalette);
-                pPalette = sSamusPal_ScrewAttacking_Row1;
                 SET_SAMUS_PAL_ROW_1(pPalette);
+                pPalette = sSamusPal_ScrewAttacking_Row1;
+                SET_SAMUS_PAL_ROW_2(pPalette);
                 break;
     
             case SPOSE_SAVING:
@@ -7213,7 +7217,7 @@ void SamusUpdateGraphics(u8 direction)
                 else
                     pPalette = sSamusPal_SavingGame_Row0_Fusion + row * PAL_ROW;
                 
-                SET_SAMUS_PAL_ROW_0(pPalette);
+                SET_SAMUS_PAL_ROW_1(pPalette);
                 break;
     
             case SPOSE_LOADING_SAVE:
@@ -7227,9 +7231,9 @@ void SamusUpdateGraphics(u8 direction)
                 else
                     pPalette = sSamusPalPointers_LoadingSave_Row0_Fusion[gSamusData.currentAnimationFrame];
 
-                SET_SAMUS_PAL_ROW_0(pPalette);
-                pPalette = sSamusPal_LoadingSave_Row0_Varia_20;
                 SET_SAMUS_PAL_ROW_1(pPalette);
+                pPalette = sSamusPal_LoadingSave_Row0_Varia_20;
+                SET_SAMUS_PAL_ROW_2(pPalette);
                 break;
 
             default:
@@ -7242,8 +7246,8 @@ void SamusUpdateGraphics(u8 direction)
                     else
                         pPalette = sSamusPal_Speedboost1_BothRows;
 
-                    SET_SAMUS_PAL_ROW_0(pPalette);
                     SET_SAMUS_PAL_ROW_1(pPalette);
+                    SET_SAMUS_PAL_ROW_2(pPalette);
                     break;
                 }
 
@@ -7273,8 +7277,8 @@ void SamusUpdateGraphics(u8 direction)
                     else
                         pPalette = sSamusPal_ChargingNormalBeam_BothRows + (row * PAL_ROW);
 
-                    SET_SAMUS_PAL_ROW_0(pPalette);
                     SET_SAMUS_PAL_ROW_1(pPalette);
+                    SET_SAMUS_PAL_ROW_2(pPalette);
                     break;
                 }
                 
@@ -7291,10 +7295,10 @@ void SamusUpdateGraphics(u8 direction)
                 else
                     pPalette = sSamusPal_Default_Row0_Fusion;
 
-                SET_SAMUS_PAL_ROW_0(pPalette);
+                SET_SAMUS_PAL_ROW_1(pPalette);
                 if (pose != SPOSE_UNLOCKING_SECURITY)
                     pPalette = sSamusPal_Default_Row1;
-                SET_SAMUS_PAL_ROW_1(pPalette);
+                SET_SAMUS_PAL_ROW_2(pPalette);
                 break;
         }
     }

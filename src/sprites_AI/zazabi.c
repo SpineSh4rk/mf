@@ -133,7 +133,7 @@ void ZazabiProjectilesCollision(void)
         if ((gCurrentSprite.invincibilityStunFlashTimer % 4) == 0)
         {
             if (gCurrentSprite.invincibilityStunFlashTimer & 4)
-                SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+                SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
             else
                 gCurrentSprite.paletteRow = 0;
         }

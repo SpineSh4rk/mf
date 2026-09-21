@@ -18,7 +18,6 @@ SECTIONS {
         . = 0x0002c000; gDecompBg1Map = .;
         . = 0x0002f000; gDecompBg2Map = .;
         . = 0x00032000; gDecompBg3Map = .;
-        . = 0x00035400; gBackgroundPalette = .;
         . = 0x00035d20; gMakeSolidBlocks = .;
     } >ewram
 
@@ -451,20 +450,19 @@ SECTIONS {
         src/room_effect.o(.text);
         src/room.o(.text);
         src/power_bomb_explosion.o(.text);
-
         src/gadora_hatch.o(.text);
         src/in_game_timer.o(.text);
         src/display.o(.text);
         src/process_pause_press.o(.text);
-
         src/clipdata.o(.text);
         src/connection.o(.text);
         src/animated_graphics.o(.text);
         src/scroll.o(.text);
         src/block.o(.text);
         src/bg_clip.o(.text);
+        src/color_effects.o(.text);
 
-        asm/disasm_0x0806cf0c.o(.text);
+        asm/disasm_0x0806dacc.o(.text);
 
         src/animated_palette.o(.text);
         src/sound_event.o(.text);

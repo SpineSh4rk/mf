@@ -112,7 +112,7 @@ u32 ConnectionCheckEnterDoor(u16 yPosition, u16 xPosition)
 
             if (i != 0x0)
             {
-                gColorFading.type = 0x2;
+                gColorFading.type = COLOR_FADING_2;
 
                 if (i == 0x2)
                 {
@@ -121,7 +121,7 @@ u32 ConnectionCheckEnterDoor(u16 yPosition, u16 xPosition)
                 }
                 else if (i == 0x3)
                 {
-                    gColorFading.type = 0xA;
+                    gColorFading.type = COLOR_FADING_10;
                 }
             }
 
@@ -197,13 +197,13 @@ u32 ConnectionCheckAreaConnection(u16 yPosition, u16 xPosition)
     gSubGameMode1 = SUB_GAME_MODE_LOADING_ROOM;
 
     StartColorFading(0x6);
-    unk_6cf0c();
+    ColorEffectCopyPalramToEwramPal2And1();
 
     pDoor = sAreaDoorPointers[gCurrentArea];
     pDoor = &pDoor[gLastDoorUsed];
 
     if (EventCheckPlayCutsceneDuringTransition(pDoor->srcRoom))
-        gColorFading.type = 0x2;
+        gColorFading.type = COLOR_FADING_2;
 
     RoomEffectSetCurrentNavigationRoom(pDoor->srcRoom);
     PlayRoomMusicTrack(gCurrentArea, pDoor->srcRoom);
@@ -234,7 +234,7 @@ void ConnectionProcessDoorType(u8 type)
             gWhichBgPositionIsWrittenToBg3Ofs = 4;
     }
 
-    unk_6cf0c();
+    ColorEffectCopyPalramToEwramPal2And1();
     StartColorFading(transition);
 }
 

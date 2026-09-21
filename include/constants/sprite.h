@@ -500,8 +500,6 @@ enum SpritePose {
 
 #define SPRITE_CONSTANT_DAMAGE_INTERVAL 8
 
-#define SPRITE_FLASHING_PALETTE_ROW 5
-#define SPRITE_FROZEN_PALETTE_ROW 7
 // A special gfx slot, used to spawn generic sprites such as the message banner
 #define SPRITE_GFX_SLOT_SPECIAL 6
 

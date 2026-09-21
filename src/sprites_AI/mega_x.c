@@ -516,7 +516,7 @@ void MegaX(void)
             if (MOD_AND(gFrameCounter8Bit, 4) == 0)
             {
                 if ((gFrameCounter8Bit & 4) != 0)
-                    SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+                    SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
                 else
                     gCurrentSprite.paletteRow = 0;
             }
@@ -583,7 +583,7 @@ void MegaX(void)
                 if (MOD_AND(tmp, 4) == 0)
                 {
                     if ((tmp & 4) != 0)
-                        SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+                        SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
                     else
                         gCurrentSprite.paletteRow = 0;
                 }
@@ -742,7 +742,7 @@ void CoreXShellVaria(void)
                     if (MOD_AND(tmp, 4) == 0)
                     {
                         if ((tmp & 4) != 0)
-                            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+                            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
                         else
                             gCurrentSprite.paletteRow = 0;
                     }

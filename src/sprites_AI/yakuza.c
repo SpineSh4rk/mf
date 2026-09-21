@@ -712,7 +712,7 @@ void YakuzaPhase1Dying(void)
     if ((work1 & 3) == 0)
     {
         if (work1 & 4)
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
         else
             gCurrentSprite.paletteRow = 0;
     }

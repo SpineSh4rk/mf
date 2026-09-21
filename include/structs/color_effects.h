@@ -8,13 +8,20 @@
 // Structs
 
 struct ColorFading {
-   ColorFadingEffect type;
-   u8 stage;
-   u8 fadeTimer;
-   u8 unk_3;
-   ColorFadingStatus status;
-   bools8 useSecondColorSet; // Possibly part of a bit field
-   u16 workTimer;
+    ColorFadingEffect type;
+    u8 stage;
+    u8 fadeTimer;
+    u8 unk_3;
+    ColorFadingStatus status;
+    u8 usePalette3:4;
+    u8 unk_5_4:4;
+    u16 workTimer;
+};
+
+struct ColorMultiplier {
+    s32 red;
+    s32 green;
+    s32 blue;
 };
 
 // Globals

@@ -2272,7 +2272,7 @@ void SpriteUtilUpdateFreezeTimer(void)
     {
         if (MOD_AND(freezeTimer, 2))
         {
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FROZEN_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FROZEN_SPRITE);
         }
         else
         {
@@ -2311,7 +2311,7 @@ void SpriteUtilUpdateSecondarySpriteFreezeTimerOfCurrent(u8 spriteId, u8 ramSlot
         if (gSpriteData[i].freezeTimer < gCurrentSprite.freezeTimer && !(gSpriteData[i].properties & SP_DESTROYED))
         {
             gSpriteData[i].freezeTimer = gCurrentSprite.freezeTimer;
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gSpriteData[i], SPRITE_FROZEN_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gSpriteData[i], OBJ_PAL_ROW_FROZEN_SPRITE);
         }
     }
 }
@@ -2332,7 +2332,7 @@ void SpriteUtilUpdatePrimarySpriteFreezeTimerOfCurrent(void)
     if (gSpriteData[ramSlot].freezeTimer < gCurrentSprite.freezeTimer && !(gSpriteData[ramSlot].properties & SP_DESTROYED))
     {
         gSpriteData[ramSlot].freezeTimer = gCurrentSprite.freezeTimer;
-        SPRITE_SET_ABSOLUTE_PALETTE_ROW(gSpriteData[ramSlot], SPRITE_FROZEN_PALETTE_ROW);
+        SPRITE_SET_ABSOLUTE_PALETTE_ROW(gSpriteData[ramSlot], OBJ_PAL_ROW_FROZEN_SPRITE);
     }
 }
 
@@ -4656,7 +4656,7 @@ void SpriteUtilUpdateStunTimer(void)
     if (isft & 4)
     {
         if (gCurrentSprite.health != 0)
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
 
         return;
     }
@@ -4664,7 +4664,7 @@ void SpriteUtilUpdateStunTimer(void)
     if (gCurrentSprite.health != 0)
     {
         if (gCurrentSprite.freezeTimer != 0)
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FROZEN_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FROZEN_SPRITE);
         else
             gCurrentSprite.paletteRow = 0;
     }

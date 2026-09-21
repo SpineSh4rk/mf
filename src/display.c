@@ -48,7 +48,7 @@ void IoWriteRegisters(void)
         gWrittenToBldcnt_Special = 0;
     }
 
-    CheckTransferFadedPalette();
+    ColorEffectCheckTransferFadedPalette_SkipSamus();
     AnimatedGraphicsTransfer();
 }
 
@@ -108,6 +108,6 @@ void IoWriteRegistersDuringTransition(void)
         gBg3CntDuringDoorTransition = 0;
     }
     
-    CheckTransferFadedPalette();
+    ColorEffectCheckTransferFadedPalette_SkipSamus();
     AnimatedGraphicsTransfer();
 }

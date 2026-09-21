@@ -476,7 +476,15 @@ const u8 sBlockTouchOffsets[4][2] = {
 
 // TODO: Move these
 
-static const u8 sBlob_3c942c_3c94d0[] = INCBIN_U8("data/Blob_3c942c_3c94d0.bin");
+static const u8 sBlob_3c942c_3c94c0[] = INCBIN_U8("data/Blob_3c942c_3c94c0.bin");
+
+const struct ColorMultiplier sMonochromeMultiplier = {
+    .red = 1,
+    .green = 1,
+    .blue = 1
+};
+
+static const u8 sBlob_3c94cc_3c94d0[] = INCBIN_U8("data/Blob_3c94cc_3c94d0.bin");
 
 const s8 sEndingSamusPosingSineTable[128] = {
     0, 6, 12, 19, 25, 31, 37, 43,

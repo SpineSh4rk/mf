@@ -12873,10 +12873,18 @@
     "size": 1
   },
   {
-    "path": "Blob_3c942c_3c94d0.bin",
-    "count": "0xA4",
+    "path": "Blob_3c942c_3c94c0.bin",
+    "count": "0x94",
     "addr": {
       "us": "0x3C942C"
+    },
+    "size": 1
+  },
+  {
+    "path": "Blob_3c94cc_3c94d0.bin",
+    "count": "0x4",
+    "addr": {
+      "us": "0x3C94CC"
     },
     "size": 1
   },

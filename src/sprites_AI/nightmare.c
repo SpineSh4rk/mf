@@ -601,7 +601,7 @@ void NightmareDeathFlash(void)
     if ((work2 & 3) == 0)
     {
         if ((work2 & 4) != 0)
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
         else
             gCurrentSprite.paletteRow = 0;
     }
@@ -1653,7 +1653,7 @@ void NightmarePartEye(void)
             if ((work1 & 3) == 0)
             {
                 if ((work1 & 4) != 0)
-                    SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+                    SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
                 else
                     gCurrentSprite.paletteRow = 0;
             }
@@ -1883,7 +1883,7 @@ void NightmarePartGeneratorUpdateDyingPalette(void)
     if ((work1 & 3) == 0)
     {
         if ((work1 & 4) != 0)
-            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, SPRITE_FLASHING_PALETTE_ROW);
+            SPRITE_SET_ABSOLUTE_PALETTE_ROW(gCurrentSprite, OBJ_PAL_ROW_FLASHING_SPRITE);
         else
             gCurrentSprite.paletteRow = 0;
     }

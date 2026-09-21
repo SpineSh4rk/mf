@@ -285,7 +285,7 @@ void RoomEffectSetTransparency(void)
     if (gCurrentRoomEntry.bg0Prop == BG_PROP_DISABLE_TRANSPARENCY)
         gUnk_3004e44.unk_0_L = 1;
 
-    if (gColorFading.type == 0xD)
+    if (gColorFading.type == COLOR_FADING_13)
     {
         gWindow1Border.left = DIV_SHIFT(gSamusData.xPosition - gBg1XPosition, 4);
         if (gWindow1Border.left > SCREEN_SIZE_X)
@@ -995,11 +995,11 @@ void RoomEffectSetupCurrentEventBased(void)
     {
         if (gAnimatedPaletteAndTileset.animatedPalette != 0)
         {
-            DMA3_COPY_16(&gBackgroundPalette + 15 * PAL_ROW_SIZE, PALRAM_BASE + 15 * PAL_ROW_SIZE, PAL_ROW);
+            DMA3_COPY_16(gBackgroundPalette2 + 15 * PAL_ROW_SIZE, PALRAM_BASE + 15 * PAL_ROW_SIZE, PAL_ROW);
         }
         else if (gQueuedEventBasedEffect == EVENT_EFFECT_OMEGA_METROID_ROOM)
         {
-            DMA3_COPY_16(&gBackgroundPalette + 4 * PAL_ROW_SIZE, PALRAM_BASE + 4 * PAL_ROW_SIZE, PAL_ROW);
+            DMA3_COPY_16(gBackgroundPalette2 + 4 * PAL_ROW_SIZE, PALRAM_BASE + 4 * PAL_ROW_SIZE, PAL_ROW);
         }
 
         return;
@@ -1031,7 +1031,7 @@ void RoomEffectSetupCurrentEventBased(void)
             break;
 
         case EVENT_EFFECT_SA_X_ELEVATOR_EXPLOSION:
-            unk_6cf0c();
+            ColorEffectCopyPalramToEwramPal2And1();
             break;
 
         case EVENT_EFFECT_POWER_OUTAGE_MISSILES:
@@ -1230,7 +1230,7 @@ void RoomEffectProcessEventBased(void)
             {
                 if (gAnimatedPaletteAndTileset.animatedPalette == 0)
                 {
-                    DMA3_COPY_16(PALRAM_BASE, gBackgroundPalette, COLORS_IN_PAL);
+                    DMA3_COPY_16(PALRAM_BASE, gBackgroundPalette2, COLORS_IN_PAL);
                     action = 1;
                 }
             }

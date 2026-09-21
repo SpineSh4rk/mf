@@ -3,10 +3,6 @@
 
 #include "types.h"
 
-#define SET_SAMUS_PAL_ROW_0(pPal) SamusSetPalette(pPal, 0, PAL_ROW, FALSE)
-#define SET_SAMUS_PAL_ROW_1(pPal) SamusSetPalette(pPal, PAL_ROW, PAL_ROW, FALSE)
-#define SET_SAMUS_PAL_ROWS_0_1(pPal) SamusSetPalette(pPal, 0, 2 * PAL_ROW, FALSE)
-
 void SamusCopyData(void);
 s16 SamusChangeVelocityOnSlope(void);
 void SamusSetPalette(const u16* src, s32 offset, s32 length, boolu32 isSaX);

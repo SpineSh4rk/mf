@@ -156,15 +156,17 @@
 
 #define EMPTY_DO_WHILE {do {} while(0);}
 
-#define COLOR_MASK 0x1F
+#define COLOR_RANGE (1 << 5)
+#define COLOR_MASK (COLOR_RANGE - 1)
+#define COLOR_MAX (COLOR_RANGE - 1)
 #define RED(c) ((c) & COLOR_MASK)
 #define GREEN(c) (((c) & (COLOR_MASK << 5)) >> 5)
 #define BLUE(c) (((c) & (COLOR_MASK << 10)) >> 10)
 #define COLOR(r, g, b) (((b) << 10) | ((g) << 5) | (r))
 #define COLOR_GRAD(r, g, b) ((r) | ((g) << 5) | ((b) << 10))
-#define COLOR_WHITE COLOR(COLOR_MASK, COLOR_MASK, COLOR_MASK)
+#define COLOR_WHITE COLOR(COLOR_MAX, COLOR_MAX, COLOR_MAX)
 #define COLOR_BLACK COLOR(0, 0, 0)
-#define COLOR_GREEN COLOR(0, COLOR_MASK, 0)
+#define COLOR_GREEN COLOR(0, COLOR_MAX, 0)
 
 #define SET_BACKDROP_COLOR(color) (WRITE_16(PALRAM_BASE, (color)))
 

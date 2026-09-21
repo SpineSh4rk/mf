@@ -1872,7 +1872,7 @@ void RidleyPart(void)
         RidleyPartIdle();
 
         if (gSpriteData[primaryRamSlot].paletteRow != 0)
-            gCurrentSprite.paletteRow = SPRITE_FLASHING_PALETTE_ROW + 8 - gCurrentSprite.frozenPaletteRowOffset;
+            gCurrentSprite.paletteRow = OBJ_PAL_ROW_FLASHING_SPRITE + 8 - gCurrentSprite.frozenPaletteRowOffset;
         else
             gCurrentSprite.paletteRow = 0;
 

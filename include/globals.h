@@ -33,7 +33,46 @@ extern union NonGameplayRam gNonGameplayRam;
 
 extern u8 gCommonSpriteGfxBackup[0x4000];
 extern u8 gRoomSpriteGfxBackup[0x4000];
-extern u16 gBackgroundPalette[COLORS_IN_PAL];
+
+enum BackgroundPaletteRow {
+    BG_PAL_ROW_BLOCKS,
+    BG_PAL_ROW_HATCHES,
+    BG_PAL_ROW_ANIMATED = 15
+};
+
+enum ObjectPaletteRow {
+    OBJ_PAL_ROW_SAMUS_1,
+    OBJ_PAL_ROW_SAMUS_2,
+    OBJ_PAL_ROW_BEAM,
+    OBJ_PAL_ROW_RED_X = OBJ_PAL_ROW_BEAM,
+    OBJ_PAL_ROW_HUD_AMMO,
+    OBJ_PAL_ROW_GREEN_X = OBJ_PAL_ROW_HUD_AMMO,
+    OBJ_PAL_ROW_ICE_EFFECTS,
+    OBJ_PAL_ROW_YELLOW_X = OBJ_PAL_ROW_ICE_EFFECTS,
+    OBJ_PAL_ROW_FLASHING_SPRITE,
+    OBJ_PAL_ROW_MINIMAP,
+    OBJ_PAL_ROW_FROZEN_SPRITE
+};
+
+#ifdef USE_EWRAM_SYMBOLS
+extern u16 gBackgroundPalette1[COLORS_IN_PAL];
+extern u16 gObjectPalette1[COLORS_IN_PAL];
+
+extern u16 gBackgroundPalette2[COLORS_IN_PAL];
+extern u16 gObjectPalette2[COLORS_IN_PAL];
+
+extern u16 gBackgroundPalette3[COLORS_IN_PAL];
+extern u16 gObjectPalette3[COLORS_IN_PAL];
+#else
+#define gBackgroundPalette1 CAST_TO_ARRAY(u16, [COLORS_IN_PAL], EWRAM_BASE + 0x35000)
+#define gObjectPalette1 CAST_TO_ARRAY(u16, [COLORS_IN_PAL], EWRAM_BASE + 0x35200)
+
+#define gBackgroundPalette2 CAST_TO_ARRAY(u16, [COLORS_IN_PAL], EWRAM_BASE + 0x35400)
+#define gObjectPalette2 CAST_TO_ARRAY(u16, [COLORS_IN_PAL], EWRAM_BASE + 0x35600)
+
+#define gBackgroundPalette3 CAST_TO_ARRAY(u16, [COLORS_IN_PAL], EWRAM_BASE + 0x35800)
+#define gObjectPalette3 CAST_TO_ARRAY(u16, [COLORS_IN_PAL], EWRAM_BASE + 0x35a00)
+#endif // USE_EWRAM_SYMBOLS
 
 extern u8 gRebootGame;
 extern u8 gClearedEveryFrame;
