@@ -5,7 +5,7 @@
 #include "globals.h"
 #include "macros.h"
 
-#include "data/block_data.h" // TODO: This is for sMonochromeMultiplier, fix later
+#include "data/color_fading_data.h"
 
 #include "structs/animated_graphics.h"
 #include "structs/color_effects.h"
@@ -218,7 +218,7 @@ void ColorEffectFadePalette_SkipHud(boolu8 fadeOut, u8 step)
             if (i == 0)
             {
                 // Background palette
-                if (gColorFading.type == COLOR_FADING_3 || gColorFading.type == COLOR_FADING_4)
+                if (gColorFading.type == COLOR_FADING_DOOR_WHITE || gColorFading.type == COLOR_FADING_DOOR_BLACK)
                 {
                     // Skip row 1 (hatches)
                     if (DIV_SHIFT(j, PAL_ROW) == BG_PAL_ROW_HATCHES)

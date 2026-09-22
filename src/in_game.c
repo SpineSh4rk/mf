@@ -47,7 +47,7 @@ u32 InGameHandler(void)
         case SUB_GAME_MODE_DOOR_TRANSITION:
             IoWriteRegisters();
 
-            if (!unk_6e3c0())
+            if (!ColorFadingReveal())
                 break;
 
             if (gSaXElevatorData.stage != 0)
@@ -92,7 +92,7 @@ u32 InGameHandler(void)
         case SUB_GAME_MODE_LOADING_ROOM:
             IoWriteRegistersDuringTransition();
 
-            if (unk_6e4bc())
+            if (ColorFadingProcess())
             {
                 gSubGameMode1 = 0;
                 if (gPauseScreenFlag != 0 || gCurrentCutscene != 0)
@@ -489,7 +489,7 @@ void InitAndLoadGenerics(void)
     }
 
     RoomEffectSetupCurrentEventBased();
-    unk_6dd30();
+    ColorFadingTransferPaletteOnTransition();
     CheckUpdateMusicDuringRoomLoad();
 
     if (gUnk_3000be3 == 0)

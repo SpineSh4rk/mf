@@ -37,6 +37,8 @@ extern const u8 sTest123_3_Bg2[48];
 extern const u8 sTest123_3_Bg1[168];
 extern const u8 sTest123_3_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(1)];
 
+extern const u8 sDoorTransitionTilemap[172];
+
 extern const u32 sBg3_Empty[64];
 
 extern const u8 sBg0_TestWater[504];

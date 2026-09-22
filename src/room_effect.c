@@ -285,7 +285,7 @@ void RoomEffectSetTransparency(void)
     if (gCurrentRoomEntry.bg0Prop == BG_PROP_DISABLE_TRANSPARENCY)
         gUnk_3004e44.unk_0_L = 1;
 
-    if (gColorFading.type == COLOR_FADING_13)
+    if (gColorFading.type == COLOR_FADING_WINDOW)
     {
         gWindow1Border.left = DIV_SHIFT(gSamusData.xPosition - gBg1XPosition, 4);
         if (gWindow1Border.left > SCREEN_SIZE_X)

@@ -26,10 +26,4 @@ extern const s8 sSubBombChainPositionOffset[SUB_BOMB_CHAIN_REQUEST_COUNT][4];
 
 extern const u8 sBlockTouchOffsets[4][2];
 
-
-#include "structs/color_effects.h"
-extern const struct ColorMultiplier sMonochromeMultiplier;
-
-extern const s8 sEndingSamusPosingSineTable[128];
-
 #endif /* BLOCK_DATA_H */

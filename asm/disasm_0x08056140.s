@@ -883,7 +883,7 @@ GunshipEndTakingOff: @ 0x08056804
 	adds r1, #0x24
 	movs r0, #0x3c
 	strb r0, [r1]
-	bl unk_6df04
+	bl ColorFadingStartFinalEscape
 	b _0805685A
 	.align 2, 0
 _08056828: .4byte gCurrentSprite

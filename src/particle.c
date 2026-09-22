@@ -1625,7 +1625,7 @@ void ParticleEscape(void)
                 gPreventMovementTimer = 1000;
                 gCurrentParticle.stage = 3;
                 gCurrentParticle.frameCounter = UCHAR_MAX;
-                unk_6dee8();
+                ColorFadingStartEscapeFailed();
             }
             else if (gEscapeStatus == ESCAPE_STATUS_HAPPENNING && EventCheckOn_EndEscape())
             {

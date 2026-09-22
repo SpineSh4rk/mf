@@ -176,7 +176,7 @@ void DemoEnd(void)
 
         gSubGameMode2 = 0x1;
     }
-    else if (gColorFading.type == COLOR_FADING_16)
+    else if (gColorFading.type == COLOR_FADING_DEMO_END_AUTO)
     {
         gMusicInfo.priority = 0x10;
         gDemoState = DEMO_STATE_NONE;

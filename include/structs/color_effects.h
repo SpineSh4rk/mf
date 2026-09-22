@@ -18,6 +18,11 @@ struct ColorFading {
     u16 workTimer;
 };
 
+struct ColorFadingColorInfo {
+    const u8* const colorArray;
+    u8 size;
+};
+
 struct ColorMultiplier {
     s32 red;
     s32 green;

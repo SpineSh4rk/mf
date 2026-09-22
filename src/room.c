@@ -353,7 +353,7 @@ void RoomReset(void)
 
     if (gUnk_3000be3 == 0)
     {
-        gColorFading.type = COLOR_FADING_2;
+        gColorFading.type = COLOR_FADING_BLACK;
         
         gCurrentMusicTrack.number = 0;
         gCurrentMusicTrack.lowered = 0;
@@ -388,7 +388,7 @@ void RoomReset(void)
         SramWrite_MostRecentSaveFile();
     }
 
-    if (gColorFading.type == COLOR_FADING_4 || gColorFading.type == COLOR_FADING_6)
+    if (gColorFading.type == COLOR_FADING_DOOR_BLACK || gColorFading.type == COLOR_FADING_BLACK_KEEP_HUD)
         gWhichBgPositionIsWrittenToBg3Ofs = 4;
     else
         gWhichBgPositionIsWrittenToBg3Ofs = 3;
@@ -617,7 +617,7 @@ void RoomLoadScrollsAndEventBasedEffects(void)
                 if (gCurrentArea == AREA_MAIN_DECK && gCurrentRoom == 34)
                 {
                     gQueuedEventBasedEffect = EVENT_EFFECT_SA_X_ELEVATOR_EXPLOSION;
-                    unk_6dec0();
+                    ColorFadingStartNoTransition();
                     SoundPlay(SOUND_FC);
                     gWhichBgPositionIsWrittenToBg3Ofs = 4;
                 }

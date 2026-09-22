@@ -52,7 +52,7 @@ u32 ProcessPauseButtonPress(void)
             fade = 2;
         }
 
-        StartColorFading(fade);
+        ColorFadingStart(fade);
     }
 
     return doingSomething;

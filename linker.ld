@@ -57,6 +57,7 @@ SECTIONS {
         . = 0x00000030; gDisplayLocationName = .;
         . = 0x00000033; gNumberOfNeverReformBlocks = .;
         . = 0x0000003b; gNumberOfCollectedTanks = .;
+        . = 0x00000043; gCurrentHazeValue = .;
         . = 0x00000044; gEffectYPosition = .;
         . = 0x00000046; gDoorUnlockTimer = .;
         . = 0x00000047; gUnk_3000047 = .;
@@ -461,8 +462,9 @@ SECTIONS {
         src/block.o(.text);
         src/bg_clip.o(.text);
         src/color_effects.o(.text);
+        src/color_fading.o(.text);
 
-        asm/disasm_0x0806dacc.o(.text);
+        asm/disasm_0x0806ed84.o(.text);
 
         src/animated_palette.o(.text);
         src/sound_event.o(.text);
@@ -640,6 +642,7 @@ SECTIONS {
         src/data/animated_graphics_data.o(.rodata);
         src/data/scroll_data.o(.rodata);
         src/data/block_data.o(.rodata);
+        src/data/color_fading_data.o(.rodata);
         src/data/animated_palette_data.o(.rodata);
         src/data/demo_data.o(.rodata);
         src/data/hud_data.o(.rodata);

@@ -12873,14 +12873,6 @@
     "size": 1
   },
   {
-    "path": "Blob_3c942c_3c94c0.bin",
-    "count": "0x94",
-    "addr": {
-      "us": "0x3C942C"
-    },
-    "size": 1
-  },
-  {
     "path": "Blob_3c94cc_3c94d0.bin",
     "count": "0x4",
     "addr": {
@@ -13161,10 +13153,10 @@
     "size": 1
   },
   {
-    "path": "Blob_3f21a1_3f2250.bin",
-    "count": "0xAF",
+    "path": "rooms/door_transition.tm.rle",
+    "count": "0xAC",
     "addr": {
-      "us": "0x3F21A1"
+      "us": "0x3F21A4"
     },
     "size": 1
   },

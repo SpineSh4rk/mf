@@ -154,7 +154,9 @@ const u8 sTest123_3_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-static const u8 sBlob_3f21a1_3f2250[] = INCBIN_U8("data/Blob_3f21a1_3f2250.bin");
+static const u8 sPadding_3f21a1[3] = { 0, 0, 0 };
+
+const u8 sDoorTransitionTilemap[172] = INCBIN_U8("data/rooms/door_transition.tm.rle");
 
 const u32 sBg3_Empty[64] = {
     BGCNT_SIZE_256x256,
